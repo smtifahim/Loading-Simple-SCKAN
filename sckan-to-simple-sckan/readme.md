@@ -1,6 +1,6 @@
 # Simple SCKAN Loading Process
 
-The python script that generates and loads the Simple SCKAN into Stardog server is called `load-simple-sckan.py`.
+The Python script that automates the loading process of Simple SCKAN for the Stardog server is called `load-simple-sckan.py`. It generates all the necessary files needed for Simple SCKAN and loads them into the Stardog server. 
 
 ### **Prerequisites**
 

@@ -1,6 +1,6 @@
-# This script assumes that the stardog server is running on the localhost, and the input turtle files are located in the same directory as the script. 
+# This script assumes that the stardog server is running on the localhost, and the input turtle files are located under ./input_ttl directory. 
 # It geneates the files necessary for simple sckan based on npo.ttl input file. It connects with Stardog DB server and loads the necessary data.
-# This script also assumes that stardog python client API is installed in your system.
+# This script also assumes that stardog python wrapper is installed in your system.
 # (version: 1.0; @Author: Fahim Imam)
 
 
@@ -22,7 +22,7 @@ conn_details = {
 # conn_details = {
 #   'endpoint': 'https://stardog.scicrunch.io:5821',
 #   'username': 'admin',
-#   'password': 'w8399Hzj78exJkaebz'
+#   'password': 'password from 1password'
 # }
 
 db_name = 'NPO-SIMPLE-SCKAN-TEST'
