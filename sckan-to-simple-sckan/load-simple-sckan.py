@@ -25,7 +25,7 @@ conn_details = {
 #   'password': 'w8399Hzj78exJkaebz'
 # }
 
-db_name = 'db-3'
+db_name = 'NPO-SIMPLE-SCKAN-TEST'
 
 
 # input files needed for simple-sckan
