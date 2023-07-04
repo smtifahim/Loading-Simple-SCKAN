@@ -1,3 +1,4 @@
+# ignore this version use load-simple-sckan.py
 # This script assumes that the stardog server is running on the localhost, and the turtle file is located in the same directory as the script. 
 # This script geneates the files necessary for simple sckan. It connects with Stardog DB server and loads the necessary data.
 # This script also assumes that stardog python client API is installed in your system.
