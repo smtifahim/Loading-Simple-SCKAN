@@ -23,7 +23,7 @@ conn_details = {
 # conn_details = {
 #   'endpoint': 'https://stardog.scicrunch.io:5821',
 #   'username': 'admin',
-#   'password': 'w8399Hzj78exJkaebz'
+#   'password': 'password from 1password'
 # }
 
 db_name = 'db-3'
