@@ -9,7 +9,7 @@ import sys
 import requests
 import subprocess
 import stardog
-from turtle_prefix_utilities import fixURIPrefixes
+from turtle_utilities import fixURIPrefixes 
 
 ## Stardog DB connection details using local host 
 conn_details = {
@@ -87,16 +87,15 @@ with stardog.Admin(**conn_details) as admin:
 
 print ("\nStep 3: Adding NPO to the database. Please wait...")
 with stardog.Connection(db_name, **conn_details) as conn:
+    # removeMultipleRDFSLabels (input_files['npo.ttl'], input_files['npo.ttl']) # fixes multiple labels for rdfs:label.
     conn.begin()
-    
     print ("        Adding npo-merged.ttl to the database.")    
     conn.add(stardog.content.File(input_files['npo.ttl']))
     print ("        Adding npo-merged-reasoned.ttl to the database.")    
     conn.add(stardog.content.File(input_files['npo-reasoned.ttl']))
     conn.commit()
 print ("Step 3: Done!")
-    
-    
+       
     # Run SPARQL construct query from file on the web
     # query_url = "https://example.com/sparql-query.rq"
     # query = stardog.content.File('./sparql-query/simple-sckan-constructs.rq')
@@ -143,11 +142,11 @@ with open(generated_files['simple-sckan.ttl'], "wb") as result_file:
     result_file.write(conn_ss.export())
     # fix URI Prefixes in the generated simple-sckan.ttl
     fixURIPrefixes (generated_files['simple-sckan.ttl'], generated_files['simple-sckan.ttl'])
-    result_file.close()   
+    # result_file.close()   
 
 # adding simple-sckan.ttl to the database.
 conn.begin()
-conn.add (stardog.content.File(generated_files['simple-sckan.ttl']))
+conn.add (stardog.content.File(generated_files['simple-sckan.ttl'])) #addig simple sckan to the database
 conn.commit()
 db_ss.drop() # simple-sckan database is no longer needed to be there in the database. it will be merged with npo in the databse in the next step. 
 conn_ss.close()
@@ -158,6 +157,7 @@ print ("\nStep 6: Saving npo-simple-sckan-merged.ttl...")
 with open(generated_files['npo-simple-sckan-merged.ttl'], "wb") as result_file:
     result_file.write (conn.export())
     fixURIPrefixes (generated_files['npo-simple-sckan-merged.ttl'], generated_files['npo-simple-sckan-merged.ttl'])
+    # removeMultipleRDFSLabels (generated_files['npo-simple-sckan-merged.ttl'], generated_files['npo-simple-sckan-merged.ttl']) # fixes multiple labels for rdfs:label.
     result_file.close()
     print ("        File saved at: " + generated_files['npo-simple-sckan-merged.ttl'])
 print ("Step 6: Done!")
