@@ -1,4 +1,4 @@
-# August 1, 2023 version. Includes hasProjectionPhenotype.
+# August 1, 2023 version. Update: changeed ilxtr:hasPhenotype to ilxtr:hasAnatomicalSystemPhenotype
 # CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
 # This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
 # axioms with intersections into individual superclass axioms
