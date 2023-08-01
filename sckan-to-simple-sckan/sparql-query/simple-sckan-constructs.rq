@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # August 1, 2023 version. Update: changeed ilxtr:hasPhenotype to ilxtr:hasAnatomicalSystemPhenotype
+=======
+# August 1, 2023 version. Includes ilxtr:hasAnatomicalSystemPhenotype instead of ilxtr:hasPhenotype.
+>>>>>>> 0590f352c76e396d1da05bed72deb4649691290e
 # CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
 # This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
 # axioms with intersections into individual superclass axioms
@@ -66,7 +70,7 @@ WHERE
        # mapping properties for other phenotypes
       (ilxtr:hasForwardConnectionPhenotype ilxtr:hasForwardConnection)
       (ilxtr:hasFunctionalCircuitRolePhenotype ilxtr:hasFunctionalCircuitRole)
-      (ilxtr:hasAnatomicalSystemPhenotype ilxtr:hasNeuronalPhenotype)  #changed from ilxtr:hasPhenotype to hasAnatomicalSystemPhenotype
+      (ilxtr:hasAnatomicalSystemPhenotype ilxtr:hasNeuronalPhenotype)  #changed from ilxtr:hasPhenotype to ilxtr:hasAnatomicalSystemPhenotype
       (ilxtr:hasProjectionPhenotype ilxtr:hasProjection)
       (ilxtr:hasCircuitRolePhenotype ilxtr:hasCircuitRole)
       (ilxtr:hasInstanceInTaxon ilxtr:isObservedInSpecies)
