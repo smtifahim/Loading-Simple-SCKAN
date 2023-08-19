@@ -1,6 +1,6 @@
-# Simple SCKAN Loading Process
+# SCKAN to Simple SCKAN Transformation
 
-The Python script that automates the loading process of Simple SCKAN for the Stardog server is called `load-simple-sckan.py`. It generates all the necessary files needed for Simple SCKAN and loads them into the Stardog server. Additionally, the script generates and saves the `simple-sckan.ttl` and `npo-simple-sckan-merged.ttl` under the `generated_ttl` directory. Check the Sample Output section below to understand the overall process. 
+The Python script that automates the loading process of Simple SCKAN for the Stardog server is called `load-simple-sckan.py`. It generates all the necessary files needed for Simple SCKAN and loads them into the Stardog server. Additionally, the script generates and saves the `simple-sckan.ttl` and `npo-simple-sckan-merged.ttl` under the `generated_ttl` directory. Observing the [Sample Output](#sample-output) section should provide the undestanding of the overall process.
 
 ### **Prerequisites**
 
@@ -10,6 +10,22 @@ The script assumes that you are running Python 3.3 or newer. Make sure that Star
   * [Stardog Installation and Setup](https://docs.stardog.com/install-stardog/)
 * You need to install [pystardog](https://pypi.org/project/pystardog/) which is a python wrapper for communicating with Stardog HTTP server.
   * Install pystardog from PyPI: `pip install pystardog`
+
+### Input Files
+
+After each [Pre-release or Release of SCKAN](https://github.com/SciCrunch/NIF-Ontology/releases) we need to replace the turtle files under the `input_ttl` directory with the corresponing files used in the SCKAN release. For now, this is a manual process that  involves the following steps:
+* Download the file where the name ends with `sckan.zip` from the release link and extract the files
+* Under the directory called `data` select and copy the following 4 files:
+    * (1) `npo-merged.ttl`
+    * (2) `npo-merged-reasoned.ttl`
+    * (3) `uberon.ttl`
+    * (4) `uberon-reasoned.ttl`
+* Paste the four files above under `input_ttl`.
+
+The other two input files required for the transformation process are the following.
+* `input_ttl/simple-sckan-properties.ttl` and `sparql-query/simple-sckan-constructs.rq`
+    * Updating these files would require the knowledge of updated relational properties used in NPO for SCKAN. 
+    * Otherwise, these two files do not need to be replaced or updated too frequently.
 
 ### Sample Output
 
