@@ -6,26 +6,49 @@ The Python script that automates the loading process of Simple SCKAN for the Sta
 
 The script assumes that you are running Python 3.3 or newer. Make sure that Stardog server is running, and all the input turtle files are available under ./input_ttl directory. The script also assumes that you have the pystradog wrapper library installed.
 
-* If you want to load Simple SCKAN using Stardog local host, please install Stardog for your system.
-  * [Stardog Installation and Setup](https://docs.stardog.com/install-stardog/)
+* If you don't have Stardog installed, please install Stardog for your system.
+
+  * Link to [Stardog Installation and Setup](https://docs.stardog.com/install-stardog/).
+  * To know more about accessing and running Simple SCKAN Queries via Stardog, [please review the documentation liked here](https://docs.stardog.com/install-stardog/).
 * You need to install [pystardog](https://pypi.org/project/pystardog/) which is a python wrapper for communicating with Stardog HTTP server.
-  * Install pystardog from PyPI: `pip install pystardog`
+
+  * `Install pystardog from PyPI: `pip install pystardog`
+
+You will need to specify the current endpoint, username, and password  in `load-simple-sckan.py` script for the Stardog DB server. Look for the comment `# Stardog DB connection details using stradog cloud endpoint` at the upper section of the script.
+
+* 'endpoint': 'https://sd-c1e74c63.stardog.cloud:5820'
+* 'user-name': 'sparc-admin'
+* 'password': use the password stored in your 1Password account
+  * If you don't have 1Password setup for FDI Lab, ask the FDI Lab system admin for the Stardog account's password.
 
 ### Input Files
 
 After each [Pre-release or Release of SCKAN](https://github.com/SciCrunch/NIF-Ontology/releases) we need to replace the turtle files under the `input_ttl` directory with the corresponing files used in the SCKAN release. For now, this is a manual process that  involves the following steps:
+
 * Download the file where the name ends with `sckan.zip` from the release link and extract the files
 * Under the directory called `data` select and copy the following 4 files:
-    * (1) `npo-merged.ttl`
-    * (2) `npo-merged-reasoned.ttl`
-    * (3) `uberon.ttl`
-    * (4) `uberon-reasoned.ttl`
+  * (1) `npo-merged.ttl`
+  * (2) `npo-merged-reasoned.ttl`
+  * (3) `uberon.ttl`
+  * (4) `uberon-reasoned.ttl`
 * Paste the four files above under `input_ttl`.
 
 The other two input files required for the transformation process are the following.
+
 * `input_ttl/simple-sckan-properties.ttl` and `sparql-query/simple-sckan-constructs.rq`
-    * Updating these files would require the knowledge of updated relational properties used in NPO for SCKAN. 
-    * Otherwise, these two files do not need to be replaced or updated too frequently.
+
+  * The `simple-sckan-properties.ttl` contains the annotation properties along with their hierarcies that are used for sckan to simple-sckan transformation. The description of the [Simple SCKAN properties are listed here](https://github.com/SciCrunch/sparc-curation/blob/master/docs/simple-sckan/readme.md#simple-sckan-properties).
+  * Updating these files would require the knowledge of updated relational properties used in NPO for SCKAN.
+    * Add or update any prefixes in `sparql-query/simple-sckan-constructs.rq` based on the updated  `npo-merged.ttl`.
+  * Otherwise, these two files do not need to be replaced or updated too frequently.
+
+### Output Files
+
+After running `load-simple-sckan.py` the follwing files will be generated under `generated_ttl` dierctory:
+
+* `simple-sckan.ttl` - this will contain the simplified rdf triples based on the inputs of npo-merged.ttl and the SPARQL Construct query specified in `sparql-query/simple-sckan-constructs.rq`
+* `npo-simple-sckan-merged.ttl` - this file contains the statements form `simple-sckan.ttl` and `npo-merged.ttl` merged into a single file. This will be used to submit the SCKAN contents as part of the [CFDE data distillary knoweledge graph](https://github.com/TaylorResearchLab/CFDE_DataDistillery/blob/main/user_guide/CFDE_DataDistillery_UserGuide.md) echo system.
+* After the loading process, a new database named `NPO-SIMPLE-SCKAN-TEST` will be created on the stardog server. It is recommended that you test the new database with the existing NPO queries stored in Stardog server before updating the replacing the exiting NPO database.
 
 ### Sample Output
 
