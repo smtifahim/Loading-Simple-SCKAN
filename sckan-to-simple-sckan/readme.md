@@ -48,7 +48,7 @@ After running `load-simple-sckan.py` the follwing files will be generated under 
 
 * `simple-sckan.ttl` - this will contain the simplified rdf triples based on the inputs of npo-merged.ttl and the SPARQL Construct query specified in `sparql-query/simple-sckan-constructs.rq`
 * `npo-simple-sckan-merged.ttl` - this file contains the statements form `simple-sckan.ttl` and `npo-merged.ttl` merged into a single file. This will be used to submit the SCKAN contents as part of the [CFDE data distillary knoweledge graph](https://github.com/TaylorResearchLab/CFDE_DataDistillery/blob/main/user_guide/CFDE_DataDistillery_UserGuide.md) echo system.
-* After the loading process, a new database named `NPO-SIMPLE-SCKAN-TEST` will be created on the stardog server. It is recommended that you test the new database with the existing NPO queries stored in Stardog server before updating the replacing the exiting NPO database.
+* After the loading process, a new database named `NPO-SIMPLE-SCKAN-TEST` will be created on the stardog server. It is recommended that you test the new database with the existing NPO queries stored in Stardog server before updating/replacing the exiting NPO database.
 
 ### Sample Output
 
