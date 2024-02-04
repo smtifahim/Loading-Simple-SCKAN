@@ -9,7 +9,7 @@ The script assumes that you are running Python 3.3 or newer. Make sure that Star
 * If you don't have Stardog installed, please install Stardog for your system.
 
   * Link to [Stardog Installation and Setup](https://docs.stardog.com/install-stardog/).
-  * To know more about accessing and running Simple SCKAN Queries via Stardog, [please review the documentation liked here](https://docs.stardog.com/install-stardog/).
+  * To know more about accessing and running Simple SCKAN Queries via Stardog, [please review the documentation linked here](https://docs.stardog.com/install-stardog/).
 * You need to install [pystardog](https://pypi.org/project/pystardog/) which is a python wrapper for communicating with Stardog HTTP server.
 
   * `Install pystardog from PyPI: `pip install pystardog`
