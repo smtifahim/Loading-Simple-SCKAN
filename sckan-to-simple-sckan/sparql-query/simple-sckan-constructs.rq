@@ -18,6 +18,7 @@ prefix mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
 prefix mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
 prefix mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
 prefix prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
+prefix femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/>
 prefix semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
 prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 prefix NIFEXT: <http://uri.neuinfo.org/nif/nifstd/nifext_>

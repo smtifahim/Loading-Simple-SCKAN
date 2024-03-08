@@ -12,11 +12,11 @@ import stardog
 from turtle_utilities import fixURIPrefixes 
 
 ## Stardog DB connection details using local host 
-conn_details = {
-  'endpoint': 'http://localhost:5820',
-  'username': 'admin',
-  'password': 'admin'
-}
+# conn_details = {
+#   'endpoint': 'http://localhost:5820',
+#   'username': 'admin',
+#   'password': 'admin'
+# }
 
 ## Stardog DB connection details using scicrunch endpoint
 # conn_details = {
@@ -24,6 +24,13 @@ conn_details = {
 #   'username': 'admin',
 #   'password': 'password from 1password'
 # }
+
+# Stardog DB connection details using stradog cloud endpoint
+conn_details = {
+  'endpoint': 'https://sd-c1e74c63.stardog.cloud:5820',
+  'username': 'sparc-admin',
+  'password': 'w8399Hzj78exJkaebz'
+}
 
 db_name = 'NPO-SIMPLE-SCKAN-TEST'
 
