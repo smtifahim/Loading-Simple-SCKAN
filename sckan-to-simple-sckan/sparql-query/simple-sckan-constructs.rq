@@ -20,6 +20,9 @@ prefix mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
 prefix prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
 prefix femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/>
 prefix semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
+prefix kidney: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/> 
+prefix liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/>
+prefix senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/> 
 prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 prefix NIFEXT: <http://uri.neuinfo.org/nif/nifstd/nifext_>
 prefix NIFRID: <http://uri.neuinfo.org/nif/nifstd/readable/>
