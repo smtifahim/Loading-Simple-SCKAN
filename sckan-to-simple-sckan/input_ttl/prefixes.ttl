@@ -1,3 +1,4 @@
+PREFIX : <file:///ERROR/EMPTY/PREFIX/BANNED/>
 PREFIX FIXME: <http://FIXME.org/>
 PREFIX ILXREPLACE: <http://ILXREPLACE.org/>
 PREFIX AIBSSPEC: <http://api.brain-map.org/api/v2/data/Specimen/>
@@ -168,6 +169,7 @@ PREFIX pax.rat: <http://uri.interlex.org/paxinos/uris/rat/>
 PREFIX PAXRAT: <http://uri.interlex.org/paxinos/uris/rat/labels/>
 PREFIX pax.rat.ver: <http://uri.interlex.org/paxinos/uris/rat/versions/>
 PREFIX PAXSPN: <http://uri.interlex.org/paxinos/uris/spine/labels/>
+PREFIX PRECISETBI.CDE: <http://uri.interlex.org/precise-tbi/uris/cde/>
 PREFIX ilxfr: <http://uri.interlex.org/smtifahim/uris/readable/>
 PREFIX TEMP: <http://uri.interlex.org/temp/uris/>
 PREFIX awards: <http://uri.interlex.org/temp/uris/awards/>
@@ -189,6 +191,8 @@ PREFIX mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
 PREFIX mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
 PREFIX mmset3: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset3/>
 PREFIX mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
+PREFIX prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
+PREFIX semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
 PREFIX sparc: <http://uri.interlex.org/tgbugs/uris/readable/sparc/>
 PREFIX tech: <http://uri.interlex.org/tgbugs/uris/readable/technique/>
 PREFIX wax.sd.ver: <http://uri.interlex.org/waxholm/uris/sd/versions/>
@@ -247,6 +251,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX collection: <https://api.pennsieve.io/collections/N:collection:>
 PREFIX dataset: <https://api.pennsieve.io/datasets/N:dataset:>
+PREFIX organization: <https://api.pennsieve.io/organizations/N:organization:>
 PREFIX user: <https://api.pennsieve.io/users/N:user:>
 PREFIX elements: <https://apinatomy.org/uris/elements/>
 PREFIX aacar: <https://apinatomy.org/uris/models/ard-arm-cardiac/ids/>

@@ -40,6 +40,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix PTHR: <http://www.pantherdb.org/panther/family.do?clsAccession=PTHR> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <http://purl.obolibrary.org/obo/RO_> .
 @prefix SAO: <http://uri.neuinfo.org/nif/nifstd/sao> .
 @prefix semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/> .
 @prefix SO: <http://purl.obolibrary.org/obo/SO_> .
@@ -51,7 +52,7 @@
     rdfs:label "The Neuron Phenotype Ontology" ;
     dc:title "The Neuron Phenotype Ontology" ;
     dc:description "An ontology of neuron types based on the phenotypic dimensions of cells that can be measure experimentally." ;
-    owl:versionInfo "2024-03-04" ;
+    owl:versionInfo "2024-08-01" ;
     dc:contributor "Bernard de Bono - https://orcid.org/0000-0003-0638-5274",
         "Fahim Imam - https://orcid.org/0000-0003-4752-543X",
         "Ilias Ziogas - https://orcid.org/0000-0002-9210-2455",
@@ -910,7 +911,21 @@ CHEBI:132943 a owl:Class ;
     rdfs:subClassOf CHEBI:33558,
         CHEBI:35693 .
 
+CL:0000066 a owl:Class .
+
+CL:0000069 a owl:Class .
+
+CL:0000115 a owl:Class .
+
+CL:0000182 a owl:Class ;
+    rdfs:subClassOf CL:0000066,
+        CL:0000417,
+        CL:0002371,
+        UBERON:0004119 .
+
 CL:0000225 a owl:Class .
+
+CL:0000417 a owl:Class .
 
 CL:0000558 a owl:Class ;
     rdfs:subClassOf CL:0000764,
@@ -918,9 +933,27 @@ CL:0000558 a owl:Class ;
 
 CL:0000764 a owl:Class .
 
+CL:0002371 a owl:Class .
+
 CL:0002422 a owl:Class ;
     rdfs:subClassOf CL:0000225,
         CL:0000558 .
+
+CL:0009094 a owl:Class ;
+    rdfs:subClassOf CL:0000115 .
+
+CL:1000488 a owl:Class ;
+    rdfs:subClassOf CL:0000069,
+        UBERON:0004119 .
+
+FMA:5874 a owl:Class ;
+    rdfs:subClassOf FMA:5985 .
+
+FMA:5875 a owl:Class ;
+    rdfs:subClassOf FMA:5874 .
+
+FMA:5876 a owl:Class ;
+    rdfs:subClassOf FMA:5874 .
 
 FMA:5884 a owl:Class ;
     rdfs:subClassOf FMA:11195 .
@@ -943,6 +976,12 @@ FMA:5901 a owl:Class ;
 FMA:5910 a owl:Class ;
     rdfs:subClassOf FMA:5901 .
 
+FMA:5983 a owl:Class ;
+    rdfs:subClassOf FMA:7052 .
+
+FMA:5985 a owl:Class ;
+    rdfs:subClassOf FMA:10982 .
+
 FMA:6472 a owl:Class ;
     rdfs:subClassOf FMA:5891 .
 
@@ -952,8 +991,29 @@ FMA:6473 a owl:Class ;
 FMA:6638 a owl:Class ;
     rdfs:subClassOf FMA:5910 .
 
+FMA:6797 a owl:Class ;
+    rdfs:subClassOf FMA:5983 .
+
+FMA:7052 a owl:Class ;
+    rdfs:subClassOf FMA:10982 .
+
+FMA:10982 a owl:Class ;
+    rdfs:subClassOf FMA:65132 .
+
 FMA:11195 a owl:Class ;
     rdfs:subClassOf FMA:83115 .
+
+FMA:11198 a owl:Class ;
+    rdfs:subClassOf FMA:5985 .
+
+FMA:14055 a owl:Class ;
+    rdfs:subClassOf FMA:5876 .
+
+FMA:14056 a owl:Class ;
+    rdfs:subClassOf FMA:5875 .
+
+FMA:16416 a owl:Class ;
+    rdfs:subClassOf FMA:11198 .
 
 FMA:49443 a owl:Class ;
     rdfs:subClassOf FMA:67135 .
@@ -962,6 +1022,9 @@ FMA:61775 a owl:Class ;
     rdfs:subClassOf FMA:62955 .
 
 FMA:62955 a owl:Class .
+
+FMA:65132 a owl:Class ;
+    rdfs:subClassOf FMA:11195 .
 
 FMA:67135 a owl:Class ;
     rdfs:subClassOf FMA:305751 .
@@ -1188,6 +1251,663 @@ GO:1990904 a owl:Class ;
 <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/104> a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
 
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/131> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/132> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/133> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/134> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/135> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/136> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/137> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/138> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/139> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/140> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/141> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/142> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/143> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/144> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/145> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/155> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/146> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/147> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/148> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/149> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/150> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/151> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/152> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/153> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/154> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/155> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/105> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/106> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/108> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/109> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/110> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/111> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/112> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/113> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/114> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/115> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/116> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/117> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/118> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/119> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/121> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/122> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/123> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/124> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/125> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/126> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/127> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/130> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/131> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/132> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/6> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/7> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/8> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/9> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/10> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/11> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/13> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/14> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/15> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/16> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/17> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/18> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/17> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/19> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/20> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/21> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/22> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/23> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/24> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/25> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/26> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/27> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/28> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/29> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/30> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/31> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/32> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/33> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/34> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/35> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/36> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/37> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/38> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/39> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/40> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/41> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/42> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/43> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/44> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/45> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/46> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/47> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/48> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/49> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/50> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/51> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/52> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/53> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/54> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/55> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/56> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/57> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/58> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/59> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/60> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/61> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/62> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/63> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/64> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/65> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/66> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/67> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/68> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/69> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/70> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/71> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/72> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/73> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/74> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/75> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/76> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/77> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/78> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/79> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/80> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/81> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/82> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/83> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/84> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/85> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/86> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/87> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/88> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/86> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/89> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/87> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/90> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/91> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/92> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/93> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/94> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/95> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/96> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/97> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/98> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/99> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/100> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/101> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/102> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/172> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/103> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/104> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/105> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/106> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/107> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/108> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/109> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/110> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/111> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/112> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/113> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/114> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/115> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/116> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/117> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/118> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/120> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/121> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/122> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/123> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/124> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/125> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/126> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/127> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/128> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/129> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/130> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/131> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/132> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/133> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/134> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/135> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/136> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/137> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/138> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/139> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/140> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/141> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/142> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/143> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/144> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/145> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/146> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/147> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/148> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/149> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/150> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/140> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/151> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/152> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/153> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/154> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/155> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/156> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/157> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/158> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/159> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/160> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/161> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/162> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/163> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/164> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/165> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/166> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/167> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/168> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/169> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/170> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/171> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
+<http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/172> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+
 ILX:0100559 a owl:Class .
 
 ILX:0101528 a owl:Class ;
@@ -1251,7 +1971,7 @@ ILX:0738325 a owl:Class ;
     rdfs:subClassOf UBERON:0016850 .
 
 ILX:0738372 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0738432 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
@@ -1275,7 +1995,7 @@ ILX:0739297 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
 
 ILX:0739299 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf ILX:0794914 .
 
 ILX:0739303 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
@@ -1287,6 +2007,9 @@ ILX:0770759 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
 
 ILX:0771089 a owl:Class ;
+    rdfs:subClassOf UBERON:0001062 .
+
+ILX:0771304 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
 
 ILX:0773760 a owl:Class ;
@@ -1347,7 +2070,7 @@ ILX:0784378 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
 ILX:0784439 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0784721 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
@@ -1359,13 +2082,13 @@ ILX:0785421 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
 
 ILX:0785733 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf ILX:0794914 .
 
 ILX:0785825 a owl:Class ;
-    rdfs:subClassOf UBERON:0001021 .
+    rdfs:subClassOf ILX:0794914 .
 
 ILX:0785932 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf ILX:0794914 .
 
 ILX:0786049 a owl:Class ;
     rdfs:subClassOf FMA:6473 .
@@ -1392,22 +2115,22 @@ ILX:0787009 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
 ILX:0787082 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0787520 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
 
 ILX:0787562 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0787722 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
 ILX:0787946 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0788022 a owl:Class ;
-    rdfs:subClassOf UBERON:0001021 .
+    rdfs:subClassOf FMA:5876 .
 
 ILX:0788026 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
@@ -1416,13 +2139,13 @@ ILX:0788315 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
 
 ILX:0788536 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf ILX:0794914 .
 
 ILX:0788675 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
 
 ILX:0788945 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0789109 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
@@ -1448,6 +2171,9 @@ ILX:0789968 a owl:Class ;
 ILX:0790146 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
+ILX:0790316 a owl:Class ;
+    rdfs:subClassOf UBERON:0000045 .
+
 ILX:0790472 a owl:Class ;
     rdfs:subClassOf FMA:6472 .
 
@@ -1461,7 +2187,7 @@ ILX:0791062 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
 ILX:0791105 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14055 .
 
 ILX:0791148 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
@@ -1469,8 +2195,11 @@ ILX:0791148 a owl:Class ;
 ILX:0791932 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
+ILX:0792433 a owl:Class ;
+    rdfs:subClassOf UBERON:0000045 .
+
 ILX:0792627 a owl:Class ;
-    rdfs:subClassOf UBERON:0001021 .
+    rdfs:subClassOf FMA:5875 .
 
 ILX:0792838 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
@@ -1488,28 +2217,28 @@ ILX:0793178 a owl:Class ;
     rdfs:subClassOf UBERON:0001805 .
 
 ILX:0793208 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0793209 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0793210 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0793211 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0793212 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:14056 .
 
 ILX:0793220 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:16416 .
 
 ILX:0793221 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:16416 .
 
 ILX:0793228 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf ILX:0794913 .
 
 ILX:0793335 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
@@ -1530,7 +2259,7 @@ ILX:0793360 a owl:Class ;
     rdfs:subClassOf UBERON:0002836 .
 
 ILX:0793361 a owl:Class ;
-    rdfs:subClassOf UBERON:0017642 .
+    rdfs:subClassOf FMA:16416 .
 
 ILX:0793362 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
@@ -1778,6 +2507,12 @@ ILX:0793822 a owl:Class ;
 ILX:0793823 a owl:Class ;
     rdfs:subClassOf UBERON:0000045 .
 
+ILX:0793826 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+ILX:0793827 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
 ILX:0793832 a owl:Class ;
     rdfs:subClassOf UBERON:0001810 .
 
@@ -1813,6 +2548,9 @@ ILX:0793884 a owl:Class ;
 
 ILX:0793897 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
+
+ILX:0794476 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
 
 ILX:0794730 a owl:Class ;
     rdfs:subClassOf UBERON:0001805 .
@@ -1861,6 +2599,171 @@ ILX:0794769 a owl:Class ;
 
 ILX:0794770 a owl:Class ;
     rdfs:subClassOf UBERON:0000995 .
+
+ILX:0794913 a owl:Class ;
+    rdfs:subClassOf FMA:5876 .
+
+ILX:0794914 a owl:Class ;
+    rdfs:subClassOf FMA:5876 .
+
+ILX:0794948 a owl:Class ;
+    rdfs:subClassOf UBERON:0001506 .
+
+ILX:0794949 a owl:Class ;
+    rdfs:subClassOf UBERON:0001148 .
+
+ILX:0794951 a owl:Class ;
+    rdfs:subClassOf UBERON:0002386 .
+
+ILX:0794952 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794953 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794954 a owl:Class ;
+    rdfs:subClassOf UBERON:0002398 .
+
+ILX:0794955 a owl:Class ;
+    rdfs:subClassOf UBERON:0002398 .
+
+ILX:0794956 a owl:Class ;
+    rdfs:subClassOf UBERON:0002377 .
+
+ILX:0794957 a owl:Class ;
+    rdfs:subClassOf UBERON:0002377 .
+
+ILX:0794958 a owl:Class ;
+    rdfs:subClassOf UBERON:0014377 .
+
+ILX:0794959 a owl:Class ;
+    rdfs:subClassOf FMA:6797 .
+
+ILX:0794960 a owl:Class ;
+    rdfs:subClassOf UBERON:0002398 .
+
+ILX:0794961 a owl:Class ;
+    rdfs:subClassOf UBERON:0002515 .
+
+ILX:0794962 a owl:Class ;
+    rdfs:subClassOf UBERON:0002384 .
+
+ILX:0794963 a owl:Class ;
+    rdfs:subClassOf UBERON:0004254 .
+
+ILX:0794964 a owl:Class ;
+    rdfs:subClassOf UBERON:0014376 .
+
+ILX:0794965 a owl:Class ;
+    rdfs:subClassOf UBERON:0001467 .
+
+ILX:0794966 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794967 a owl:Class ;
+    rdfs:subClassOf UBERON:0003433 .
+
+ILX:0794968 a owl:Class ;
+    rdfs:subClassOf UBERON:0003724 .
+
+ILX:0794969 a owl:Class ;
+    rdfs:subClassOf UBERON:0001494 .
+
+ILX:0794971 a owl:Class ;
+    rdfs:subClassOf UBERON:0001461 .
+
+ILX:0794973 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794975 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794976 a owl:Class ;
+    rdfs:subClassOf UBERON:0001499 .
+
+ILX:0794977 a owl:Class ;
+    rdfs:subClassOf UBERON:0001492 .
+
+ILX:0794978 a owl:Class ;
+    rdfs:subClassOf UBERON:0004254 .
+
+ILX:0794979 a owl:Class ;
+    rdfs:subClassOf UBERON:0001814 .
+
+ILX:0794980 a owl:Class ;
+    rdfs:subClassOf UBERON:0002324 .
+
+ILX:0794981 a owl:Class ;
+    rdfs:subClassOf UBERON:0002324 .
+
+ILX:0794983 a owl:Class ;
+    rdfs:subClassOf UBERON:0002426 .
+
+ILX:0794984 a owl:Class ;
+    rdfs:subClassOf UBERON:0001367 .
+
+ILX:0794985 a owl:Class ;
+    rdfs:subClassOf UBERON:0001367 .
+
+ILX:0794986 a owl:Class ;
+    rdfs:subClassOf UBERON:0001367 .
+
+ILX:0794987 a owl:Class ;
+    rdfs:subClassOf UBERON:0002356 .
+
+ILX:0794988 a owl:Class ;
+    rdfs:subClassOf UBERON:0034986 .
+
+ILX:0794989 a owl:Class ;
+    rdfs:subClassOf UBERON:0002324 .
+
+ILX:0794990 a owl:Class ;
+    rdfs:subClassOf UBERON:0034986 .
+
+ILX:0794991 a owl:Class ;
+    rdfs:subClassOf UBERON:0034986 .
+
+ILX:0794992 a owl:Class ;
+    rdfs:subClassOf UBERON:0001498 .
+
+ILX:0794993 a owl:Class ;
+    rdfs:subClassOf UBERON:0001498 .
+
+ILX:0794994 a owl:Class ;
+    rdfs:subClassOf UBERON:0001500 .
+
+ILX:0794995 a owl:Class ;
+    rdfs:subClassOf UBERON:0001498 .
+
+ILX:0794997 a owl:Class ;
+    rdfs:subClassOf UBERON:0034987 .
+
+ILX:0794998 a owl:Class ;
+    rdfs:subClassOf UBERON:0034987 .
+
+ILX:0794999 a owl:Class ;
+    rdfs:subClassOf UBERON:0034987 .
+
+ILX:0795000 a owl:Class ;
+    rdfs:subClassOf UBERON:0034986 .
+
+ILX:0795001 a owl:Class ;
+    rdfs:subClassOf UBERON:0034986 .
+
+ILX:0795002 a owl:Class ;
+    rdfs:subClassOf UBERON:0034987 .
+
+ILX:0795003 a owl:Class ;
+    rdfs:subClassOf UBERON:0013691 .
+
+ILX:0795004 a owl:Class ;
+    rdfs:subClassOf UBERON:0000916 .
+
+ILX:0795005 a owl:Class ;
+    rdfs:subClassOf UBERON:0001492 .
+
+ILX:0795006 a owl:Class ;
+    rdfs:subClassOf UBERON:0006839 .
 
 ilxtr:AccommodatingSpikingPhenotype a owl:Class ;
     rdfs:subClassOf ilxtr:SpikingPhenotype .
@@ -13001,11 +13904,6 @@ PR:000007786 a owl:Class ;
         SAO:26622963,
         TEMPIND:GABA .
 
-PR:000008235 a owl:Class ;
-    rdfs:subClassOf CHEBI:36080,
-        PR:000000001,
-        SAO:26622963 .
-
 PR:000008476 a owl:Class ;
     rdfs:subClassOf CHEBI:36080,
         PR:000000001,
@@ -13161,6 +14059,9 @@ PTHR:10558 a owl:Class ;
 
 PTHR:11653 a owl:Class ;
     rdfs:subClassOf TEMPIND:Pvalb .
+
+RO:0002577 a owl:Class ;
+    rdfs:subClassOf BFO:0000040 .
 
 SAO:26622963 a owl:Class ;
     rdfs:subClassOf CHEBI:33695,
@@ -13487,6 +14388,11 @@ UBERON:0000012 a owl:Class ;
 UBERON:0000013 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
 
+UBERON:0000014 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0004121,
+        UBERON:0034944 .
+
 UBERON:0000016 a owl:Class ;
     rdfs:subClassOf UBERON:0000471,
         UBERON:0004119 .
@@ -13494,7 +14400,8 @@ UBERON:0000016 a owl:Class ;
 UBERON:0000017 a owl:Class ;
     rdfs:subClassOf UBERON:0000409,
         UBERON:0004119,
-        UBERON:0005177 .
+        UBERON:0005177,
+        UBERON:0013765 .
 
 UBERON:0000019 a owl:Class ;
     rdfs:subClassOf UBERON:0000047,
@@ -13623,6 +14530,9 @@ UBERON:0000127 a owl:Class ;
 UBERON:0000153 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
+UBERON:0000154 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
 UBERON:0000158 a owl:Class ;
     rdfs:subClassOf UBERON:0004923 .
 
@@ -13654,6 +14564,13 @@ UBERON:0000204 a owl:Class ;
 UBERON:0000211 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
 
+UBERON:0000303 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252,
+        UBERON:0011144 .
+
+UBERON:0000311 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
 UBERON:0000317 a owl:Class ;
     rdfs:subClassOf UBERON:0001207 .
 
@@ -13664,6 +14581,10 @@ UBERON:0000344 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0004923 .
 
+UBERON:0000348 a owl:Class ;
+    rdfs:subClassOf UBERON:0004121,
+        UBERON:0011779 .
+
 UBERON:0000349 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0011216 .
@@ -13671,8 +14592,33 @@ UBERON:0000349 a owl:Class ;
 UBERON:0000353 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
+UBERON:0000366 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0000368 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252,
+        UBERON:0011144 .
+
 UBERON:0000369 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
+
+UBERON:0000370 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252,
+        UBERON:0011144 .
+
+UBERON:0000372 a owl:Class ;
+    rdfs:subClassOf UBERON:0000311,
+        UBERON:0001498 .
+
+UBERON:0000375 a owl:Class ;
+    rdfs:subClassOf UBERON:0011779 .
+
+UBERON:0000376 a owl:Class ;
+    rdfs:subClassOf UBERON:0002472,
+        UBERON:0008784 .
+
+UBERON:0000377 a owl:Class ;
+    rdfs:subClassOf UBERON:0011779 .
 
 UBERON:0000379 a owl:Class ;
     rdfs:subClassOf UBERON:0004785 .
@@ -13734,8 +14680,14 @@ UBERON:0000459 a owl:Class ;
     rdfs:subClassOf UBERON:0000060,
         UBERON:0005156 .
 
+UBERON:0000464 a owl:Class ;
+    rdfs:subClassOf UBERON:0000466 .
+
 UBERON:0000465 a owl:Class ;
     rdfs:subClassOf BFO:0000040 .
+
+UBERON:0000466 a owl:Class ;
+    rdfs:subClassOf BFO:0000141 .
 
 UBERON:0000467 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
@@ -13779,6 +14731,10 @@ UBERON:0000485 a owl:Class ;
 UBERON:0000486 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
 
+UBERON:0000487 a owl:Class ;
+    rdfs:subClassOf UBERON:0000490,
+        UBERON:0006914 .
+
 UBERON:0000488 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
 
@@ -13787,6 +14743,10 @@ UBERON:0000489 a owl:Class ;
 
 UBERON:0000490 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
+
+UBERON:0000711 a owl:Class ;
+    rdfs:subClassOf UBERON:0002252,
+        UBERON:0002377 .
 
 UBERON:0000908 a owl:Class .
 
@@ -13803,6 +14763,10 @@ UBERON:0000922 a owl:Class ;
 UBERON:0000936 a owl:Class .
 
 UBERON:0000941 a owl:Class .
+
+UBERON:0000942 a owl:Class ;
+    rdfs:subClassOf UBERON:0004121,
+        UBERON:0011779 .
 
 UBERON:0000945 a owl:Class ;
     rdfs:subClassOf UBERON:0004921,
@@ -13821,6 +14785,10 @@ UBERON:0000948 a owl:Class ;
 
 UBERON:0000949 a owl:Class ;
     rdfs:subClassOf UBERON:0015204 .
+
+UBERON:0000950 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252,
+        UBERON:0011144 .
 
 UBERON:0000955 a owl:Class ;
     rdfs:subClassOf UBERON:0000062,
@@ -13841,6 +14809,9 @@ UBERON:0000959 a owl:Class .
 UBERON:0000961 a owl:Class ;
     rdfs:subClassOf UBERON:0001807 .
 
+UBERON:0000962 a owl:Class ;
+    rdfs:subClassOf UBERON:0001780 .
+
 UBERON:0000966 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0005388 .
@@ -13850,6 +14821,10 @@ UBERON:0000970 a owl:Class ;
 
 UBERON:0000974 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0000978 a owl:Class ;
+    rdfs:subClassOf UBERON:0006058,
+        UBERON:0008784 .
 
 UBERON:0000982 a owl:Class ;
     rdfs:subClassOf UBERON:0004905 .
@@ -13889,6 +14864,10 @@ UBERON:0000997 a owl:Class ;
 UBERON:0000998 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0006868 .
+
+UBERON:0001003 a owl:Class ;
+    rdfs:subClassOf UBERON:0007376,
+        UBERON:3000961 .
 
 UBERON:0001004 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
@@ -13949,6 +14928,9 @@ UBERON:0001043 a owl:Class ;
 UBERON:0001044 a owl:Class ;
     rdfs:subClassOf UBERON:0010047 .
 
+UBERON:0001048 a owl:Class ;
+    rdfs:subClassOf UBERON:0005423 .
+
 UBERON:0001051 a owl:Class ;
     rdfs:subClassOf UBERON:0013522 .
 
@@ -13960,15 +14942,39 @@ UBERON:0001063 a owl:Class .
 UBERON:0001096 a owl:Class ;
     rdfs:subClassOf UBERON:0000328 .
 
+UBERON:0001100 a owl:Class ;
+    rdfs:subClassOf UBERON:0001495 .
+
 UBERON:0001103 a owl:Class ;
     rdfs:subClassOf UBERON:0003830,
         UBERON:0003831 .
+
+UBERON:0001111 a owl:Class ;
+    rdfs:subClassOf UBERON:0001630,
+        UBERON:0005175 .
+
+UBERON:0001112 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004120,
+        UBERON:0034908 .
+
+UBERON:0001129 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004120,
+        UBERON:0010891,
+        UBERON:0034908 .
+
+UBERON:0001134 a owl:Class ;
+    rdfs:subClassOf UBERON:0002036 .
 
 UBERON:0001135 a owl:Class ;
     rdfs:subClassOf UBERON:0002385 .
 
 UBERON:0001137 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0001148 a owl:Class ;
+    rdfs:subClassOf UBERON:0003433 .
 
 UBERON:0001155 a owl:Class ;
     rdfs:subClassOf UBERON:0004921 .
@@ -13997,8 +15003,16 @@ UBERON:0001172 a owl:Class ;
     rdfs:subClassOf UBERON:0004119,
         UBERON:0011858 .
 
+UBERON:0001173 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0004119,
+        UBERON:0013765 .
+
 UBERON:0001182 a owl:Class ;
     rdfs:subClassOf UBERON:0005616 .
+
+UBERON:0001184 a owl:Class ;
+    rdfs:subClassOf UBERON:0012254 .
 
 UBERON:0001190 a owl:Class ;
     rdfs:subClassOf UBERON:0001637 .
@@ -14039,6 +15053,31 @@ UBERON:0001213 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0004923 .
 
+UBERON:0001220 a owl:Class ;
+    rdfs:subClassOf UBERON:0002378,
+        UBERON:0003897,
+        UBERON:0004518 .
+
+UBERON:0001221 a owl:Class ;
+    rdfs:subClassOf UBERON:0002461 .
+
+UBERON:0001224 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064,
+        UBERON:0004111 .
+
+UBERON:0001225 a owl:Class ;
+    rdfs:subClassOf UBERON:0001851 .
+
+UBERON:0001229 a owl:Class ;
+    rdfs:subClassOf UBERON:0000063 .
+
+UBERON:0001230 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064 .
+
+UBERON:0001231 a owl:Class ;
+    rdfs:subClassOf UBERON:0004211,
+        UBERON:0009773 .
+
 UBERON:0001235 a owl:Class ;
     rdfs:subClassOf UBERON:0001851,
         UBERON:0004120,
@@ -14078,6 +15117,24 @@ UBERON:0001263 a owl:Class ;
 UBERON:0001264 a owl:Class ;
     rdfs:subClassOf UBERON:0002075 .
 
+UBERON:0001267 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431 .
+
+UBERON:0001271 a owl:Class ;
+    rdfs:subClassOf UBERON:0007823,
+        UBERON:0015212 .
+
+UBERON:0001272 a owl:Class ;
+    rdfs:subClassOf UBERON:0007830,
+        UBERON:0010428,
+        UBERON:0015212 .
+
+UBERON:0001273 a owl:Class ;
+    rdfs:subClassOf UBERON:0002513,
+        UBERON:0007830,
+        UBERON:0015054,
+        UBERON:0015212 .
+
 UBERON:0001277 a owl:Class ;
     rdfs:subClassOf UBERON:0000485,
         UBERON:0003350,
@@ -14093,12 +15150,27 @@ UBERON:0001280 a owl:Class ;
     rdfs:subClassOf UBERON:0000353,
         UBERON:0004119 .
 
+UBERON:0001281 a owl:Class ;
+    rdfs:subClassOf UBERON:0003909,
+        UBERON:0005911,
+        UBERON:0015796 .
+
+UBERON:0001282 a owl:Class ;
+    rdfs:subClassOf UBERON:0003704,
+        UBERON:0014716 .
+
+UBERON:0001285 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064 .
+
 UBERON:0001295 a owl:Class ;
     rdfs:subClassOf UBERON:0019042 .
 
 UBERON:0001296 a owl:Class ;
     rdfs:subClassOf UBERON:0005156,
         UBERON:0034933 .
+
+UBERON:0001298 a owl:Class ;
+    rdfs:subClassOf UBERON:0008450 .
 
 UBERON:0001300 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -14110,12 +15182,38 @@ UBERON:0001305 a owl:Class ;
         UBERON:0004120,
         UBERON:8450001 .
 
+UBERON:0001322 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+UBERON:0001323 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431 .
+
+UBERON:0001324 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431,
+        UBERON:0035652 .
+
+UBERON:0001325 a owl:Class ;
+    rdfs:subClassOf UBERON:0003833,
+        UBERON:0005179 .
+
+UBERON:0001327 a owl:Class ;
+    rdfs:subClassOf UBERON:0001325,
+        UBERON:0015212 .
+
+UBERON:0001331 a owl:Class ;
+    rdfs:subClassOf UBERON:0000014,
+        UBERON:0004120,
+        UBERON:0005156 .
+
 UBERON:0001333 a owl:Class ;
     rdfs:subClassOf UBERON:0000057 .
 
 UBERON:0001338 a owl:Class ;
     rdfs:subClassOf UBERON:0000414,
         UBERON:0004120 .
+
+UBERON:0001339 a owl:Class ;
+    rdfs:subClassOf UBERON:0002379 .
 
 UBERON:0001344 a owl:Class ;
     rdfs:subClassOf UBERON:0000486,
@@ -14124,12 +15222,110 @@ UBERON:0001344 a owl:Class ;
 UBERON:0001348 a owl:Class ;
     rdfs:subClassOf UBERON:0001013 .
 
+UBERON:0001353 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0001366 a owl:Class ;
+    rdfs:subClassOf UBERON:0022351 .
+
+UBERON:0001367 a owl:Class ;
+    rdfs:subClassOf UBERON:0003898,
+        UBERON:0004519,
+        UBERON:0004832,
+        UBERON:0004916,
+        UBERON:0007522 .
+
+UBERON:0001368 a owl:Class ;
+    rdfs:subClassOf UBERON:0011043,
+        UBERON:0011144 .
+
+UBERON:0001369 a owl:Class ;
+    rdfs:subClassOf UBERON:0001497 .
+
+UBERON:0001370 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000,
+        UBERON:0003897,
+        UBERON:0011645 .
+
+UBERON:0001371 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000 .
+
+UBERON:0001372 a owl:Class ;
+    rdfs:subClassOf UBERON:0008450 .
+
+UBERON:0001373 a owl:Class ;
+    rdfs:subClassOf UBERON:0001630 .
+
+UBERON:0001374 a owl:Class ;
+    rdfs:subClassOf UBERON:0002463 .
+
+UBERON:0001375 a owl:Class ;
+    rdfs:subClassOf UBERON:0002463 .
+
+UBERON:0001376 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000 .
+
+UBERON:0001377 a owl:Class ;
+    rdfs:subClassOf UBERON:0003663 .
+
+UBERON:0001378 a owl:Class ;
+    rdfs:subClassOf UBERON:0001377 .
+
+UBERON:0001379 a owl:Class ;
+    rdfs:subClassOf UBERON:0001377 .
+
+UBERON:0001380 a owl:Class ;
+    rdfs:subClassOf UBERON:0001377 .
+
+UBERON:0001381 a owl:Class ;
+    rdfs:subClassOf UBERON:0002463 .
+
+UBERON:0001382 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252,
+        UBERON:0011144 .
+
+UBERON:0001383 a owl:Class ;
+    rdfs:subClassOf UBERON:0003663 .
+
 UBERON:0001384 a owl:Class .
+
+UBERON:0001385 a owl:Class ;
+    rdfs:subClassOf UBERON:0008230 .
+
+UBERON:0001386 a owl:Class ;
+    rdfs:subClassOf UBERON:0000311,
+        UBERON:0003663 .
+
+UBERON:0001387 a owl:Class ;
+    rdfs:subClassOf UBERON:0009132 .
+
+UBERON:0001388 a owl:Class ;
+    rdfs:subClassOf UBERON:0004256 .
+
+UBERON:0001389 a owl:Class ;
+    rdfs:subClassOf UBERON:0004256 .
+
+UBERON:0001391 a owl:Class ;
+    rdfs:subClassOf UBERON:0001383 .
+
+UBERON:0001392 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0001383 .
 
 UBERON:0001393 a owl:Class .
 
+UBERON:0001419 a owl:Class ;
+    rdfs:subClassOf UBERON:0000014 .
+
+UBERON:0001421 a owl:Class ;
+    rdfs:subClassOf UBERON:0007823,
+        UBERON:0015212 .
+
 UBERON:0001434 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
+
+UBERON:0001443 a owl:Class ;
+    rdfs:subClassOf UBERON:0009569 .
 
 UBERON:0001444 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
@@ -14137,14 +15333,170 @@ UBERON:0001444 a owl:Class ;
 UBERON:0001456 a owl:Class ;
     rdfs:subClassOf UBERON:0001444 .
 
+UBERON:0001460 a owl:Class ;
+    rdfs:subClassOf UBERON:0006058,
+        UBERON:0008785 .
+
+UBERON:0001461 a owl:Class ;
+    rdfs:subClassOf UBERON:0008785 .
+
+UBERON:0001463 a owl:Class ;
+    rdfs:subClassOf UBERON:0006048,
+        UBERON:0019231 .
+
+UBERON:0001464 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0001465 a owl:Class ;
+    rdfs:subClassOf UBERON:0008784 .
+
+UBERON:0001467 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0001470 a owl:Class ;
+    rdfs:subClassOf UBERON:0011108,
+        UBERON:0011139,
+        UBERON:0016884 .
+
 UBERON:0001474 a owl:Class ;
     rdfs:subClassOf UBERON:0004765 .
+
+UBERON:0001476 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004120,
+        UBERON:0034908 .
+
+UBERON:0001477 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0010891,
+        UBERON:0034908 .
+
+UBERON:0001478 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0010467 .
+
+UBERON:0001482 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0001483 a owl:Class ;
+    rdfs:subClassOf UBERON:0000014 .
+
+UBERON:0001489 a owl:Class ;
+    rdfs:subClassOf UBERON:0003839,
+        UBERON:0003841,
+        UBERON:0011139 .
+
+UBERON:0001491 a owl:Class ;
+    rdfs:subClassOf UBERON:0001489 .
+
+UBERON:0001492 a owl:Class ;
+    rdfs:subClassOf UBERON:0003433 .
+
+UBERON:0001493 a owl:Class ;
+    rdfs:subClassOf UBERON:0003433 .
+
+UBERON:0001494 a owl:Class ;
+    rdfs:subClassOf UBERON:0003433 .
+
+UBERON:0001495 a owl:Class ;
+    rdfs:subClassOf UBERON:0003830,
+        UBERON:0004120,
+        UBERON:0008196 .
+
+UBERON:0001497 a owl:Class ;
+    rdfs:subClassOf UBERON:0001325,
+        UBERON:0010890 .
+
+UBERON:0001498 a owl:Class ;
+    rdfs:subClassOf UBERON:0003663 .
+
+UBERON:0001499 a owl:Class ;
+    rdfs:subClassOf UBERON:0003662 .
+
+UBERON:0001500 a owl:Class ;
+    rdfs:subClassOf UBERON:0003662 .
+
+UBERON:0001501 a owl:Class ;
+    rdfs:subClassOf UBERON:0014375 .
+
+UBERON:0001502 a owl:Class ;
+    rdfs:subClassOf UBERON:0006508,
+        UBERON:0014375 .
+
+UBERON:0001504 a owl:Class ;
+    rdfs:subClassOf UBERON:0014378 .
+
+UBERON:0001505 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004255 .
+
+UBERON:0001506 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0001499 .
+
+UBERON:0001507 a owl:Class ;
+    rdfs:subClassOf UBERON:0004255 .
 
 UBERON:0001508 a owl:Class ;
     rdfs:subClassOf UBERON:0001515 .
 
+UBERON:0001509 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004255,
+        UBERON:0034908 .
+
+UBERON:0001510 a owl:Class ;
+    rdfs:subClassOf UBERON:0001511 .
+
+UBERON:0001511 a owl:Class ;
+    rdfs:subClassOf UBERON:0003532 .
+
+UBERON:0001513 a owl:Class ;
+    rdfs:subClassOf UBERON:0003532,
+        UBERON:0015790 .
+
+UBERON:0001514 a owl:Class ;
+    rdfs:subClassOf UBERON:0005800 .
+
 UBERON:0001515 a owl:Class ;
     rdfs:subClassOf UBERON:0005800 .
+
+UBERON:0001516 a owl:Class ;
+    rdfs:subClassOf UBERON:0005800 .
+
+UBERON:0001517 a owl:Class ;
+    rdfs:subClassOf UBERON:0002427 .
+
+UBERON:0001519 a owl:Class ;
+    rdfs:subClassOf UBERON:0003531,
+        UBERON:0015790 .
+
+UBERON:0001520 a owl:Class ;
+    rdfs:subClassOf UBERON:0003662 .
+
+UBERON:0001521 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0004254 .
+
+UBERON:0001522 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0004254 .
+
+UBERON:0001523 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0004255 .
+
+UBERON:0001524 a owl:Class ;
+    rdfs:subClassOf UBERON:0011867 .
+
+UBERON:0001525 a owl:Class ;
+    rdfs:subClassOf UBERON:0011867 .
+
+UBERON:0001526 a owl:Class ;
+    rdfs:subClassOf UBERON:0011024 .
+
+UBERON:0001527 a owl:Class ;
+    rdfs:subClassOf UBERON:0011534 .
 
 UBERON:0001530 a owl:Class ;
     rdfs:subClassOf UBERON:0004573 .
@@ -14197,6 +15549,9 @@ UBERON:0001637 a owl:Class ;
 UBERON:0001638 a owl:Class ;
     rdfs:subClassOf UBERON:0003920 .
 
+UBERON:0001639 a owl:Class ;
+    rdfs:subClassOf UBERON:0002017 .
+
 UBERON:0001640 a owl:Class ;
     rdfs:subClassOf UBERON:0012254 .
 
@@ -14223,6 +15578,15 @@ UBERON:0001649 a owl:Class ;
 UBERON:0001650 a owl:Class ;
     rdfs:subClassOf UBERON:0001785 .
 
+UBERON:0001665 a owl:Class ;
+    rdfs:subClassOf UBERON:0004256 .
+
+UBERON:0001666 a owl:Class ;
+    rdfs:subClassOf UBERON:0001383 .
+
+UBERON:0001667 a owl:Class ;
+    rdfs:subClassOf UBERON:0008230 .
+
 UBERON:0001678 a owl:Class ;
     rdfs:subClassOf UBERON:0008193 .
 
@@ -14244,6 +15608,9 @@ UBERON:0001701 a owl:Class ;
 
 UBERON:0001703 a owl:Class ;
     rdfs:subClassOf UBERON:0011158 .
+
+UBERON:0001705 a owl:Class ;
+    rdfs:subClassOf UBERON:0009564 .
 
 UBERON:0001710 a owl:Class ;
     rdfs:subClassOf UBERON:0000475,
@@ -14365,6 +15732,17 @@ UBERON:0001808 a owl:Class ;
 
 UBERON:0001810 a owl:Class ;
     rdfs:subClassOf UBERON:0007651 .
+
+UBERON:0001813 a owl:Class ;
+    rdfs:subClassOf UBERON:0001810 .
+
+UBERON:0001814 a owl:Class ;
+    rdfs:subClassOf UBERON:0000122,
+        UBERON:0001813 .
+
+UBERON:0001815 a owl:Class ;
+    rdfs:subClassOf UBERON:0000122,
+        UBERON:0001813 .
 
 UBERON:0001816 a owl:Class ;
     rdfs:subClassOf UBERON:0001810 .
@@ -14621,6 +15999,9 @@ UBERON:0001961 a owl:Class ;
 UBERON:0001962 a owl:Class ;
     rdfs:subClassOf UBERON:0001961 .
 
+UBERON:0001964 a owl:Class ;
+    rdfs:subClassOf UBERON:0018679 .
+
 UBERON:0001965 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
         UBERON:0004121 .
@@ -14641,6 +16022,13 @@ UBERON:0001981 a owl:Class ;
         UBERON:0000055,
         UBERON:0004120 .
 
+UBERON:0001982 a owl:Class ;
+    rdfs:subClassOf UBERON:8410081 .
+
+UBERON:0001986 a owl:Class ;
+    rdfs:subClassOf UBERON:0000487,
+        UBERON:0012275 .
+
 UBERON:0001989 a owl:Class ;
     rdfs:subClassOf UBERON:0001991 .
 
@@ -14653,6 +16041,9 @@ UBERON:0001991 a owl:Class ;
 UBERON:0001997 a owl:Class ;
     rdfs:subClassOf UBERON:0005384,
         UBERON:0006934 .
+
+UBERON:0002000 a owl:Class ;
+    rdfs:subClassOf UBERON:0001497 .
 
 UBERON:0002005 a owl:Class ;
     rdfs:subClassOf UBERON:0010313,
@@ -14671,7 +16062,11 @@ UBERON:0002013 a owl:Class ;
 UBERON:0002014 a owl:Class ;
     rdfs:subClassOf UBERON:0001816 .
 
-UBERON:0002019 a owl:Class .
+UBERON:0002017 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638 .
+
+UBERON:0002019 a owl:Class ;
+    rdfs:subClassOf UBERON:0035642 .
 
 UBERON:0002020 a owl:Class ;
     rdfs:subClassOf UBERON:0011215 .
@@ -14696,6 +16091,9 @@ UBERON:0002034 a owl:Class ;
 UBERON:0002035 a owl:Class ;
     rdfs:subClassOf UBERON:0006568,
         UBERON:0007251 .
+
+UBERON:0002036 a owl:Class ;
+    rdfs:subClassOf UBERON:0002385 .
 
 UBERON:0002037 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
@@ -14765,14 +16163,30 @@ UBERON:0002084 a owl:Class ;
     rdfs:subClassOf UBERON:0002082,
         UBERON:0035553 .
 
+UBERON:0002091 a owl:Class ;
+    rdfs:subClassOf UBERON:0010912 .
+
 UBERON:0002095 a owl:Class ;
     rdfs:subClassOf UBERON:0000042 .
+
+UBERON:0002097 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0000062,
+        UBERON:0004121 .
 
 UBERON:0002100 a owl:Class ;
     rdfs:subClassOf UBERON:0011676 .
 
 UBERON:0002101 a owl:Class ;
     rdfs:subClassOf UBERON:0004708 .
+
+UBERON:0002102 a owl:Class ;
+    rdfs:subClassOf UBERON:0002101,
+        UBERON:0004710 .
+
+UBERON:0002103 a owl:Class ;
+    rdfs:subClassOf UBERON:0002101,
+        UBERON:0004709 .
 
 UBERON:0002104 a owl:Class ;
     rdfs:subClassOf UBERON:0001032 .
@@ -14798,6 +16212,11 @@ UBERON:0002108 a owl:Class ;
 
 UBERON:0002112 a owl:Class ;
     rdfs:subClassOf UBERON:0001135 .
+
+UBERON:0002113 a owl:Class ;
+    rdfs:subClassOf UBERON:0000489,
+        UBERON:0005172,
+        UBERON:0015212 .
 
 UBERON:0002118 a owl:Class ;
     rdfs:subClassOf UBERON:0000992,
@@ -14935,6 +16354,9 @@ UBERON:0002199 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0011216 .
 
+UBERON:0002201 a owl:Class ;
+    rdfs:subClassOf UBERON:0002049 .
+
 UBERON:0002204 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
 
@@ -14955,6 +16377,9 @@ UBERON:0002216 a owl:Class ;
     rdfs:subClassOf UBERON:0002209,
         UBERON:0002213 .
 
+UBERON:0002217 a owl:Class ;
+    rdfs:subClassOf UBERON:0000982 .
+
 UBERON:0002219 a owl:Class .
 
 UBERON:0002227 a owl:Class ;
@@ -14971,6 +16396,10 @@ UBERON:0002241 a owl:Class ;
     rdfs:subClassOf UBERON:0011159 .
 
 UBERON:0002245 a owl:Class .
+
+UBERON:0002252 a owl:Class ;
+    rdfs:subClassOf UBERON:0002324,
+        UBERON:0004518 .
 
 UBERON:0002256 a owl:Class ;
     rdfs:subClassOf UBERON:0015212,
@@ -15037,12 +16466,20 @@ UBERON:0002289 a owl:Class .
 
 UBERON:0002291 a owl:Class .
 
+UBERON:0002294 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0011216 .
+
 UBERON:0002298 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
 UBERON:0002301 a owl:Class ;
     rdfs:subClassOf UBERON:0022303,
         UBERON:8440004 .
+
+UBERON:0002303 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0000061 .
 
 UBERON:0002304 a owl:Class ;
     rdfs:subClassOf UBERON:0011215,
@@ -15075,11 +16512,18 @@ UBERON:0002316 a owl:Class ;
 UBERON:0002318 a owl:Class ;
     rdfs:subClassOf UBERON:0002316 .
 
+UBERON:0002324 a owl:Class ;
+    rdfs:subClassOf UBERON:0001774,
+        UBERON:0005174 .
+
 UBERON:0002330 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0000467 .
 
 UBERON:0002336 a owl:Class .
+
+UBERON:0002343 a owl:Class ;
+    rdfs:subClassOf UBERON:0004479 .
 
 UBERON:0002348 a owl:Class ;
     rdfs:subClassOf UBERON:0000481,
@@ -15088,7 +16532,13 @@ UBERON:0002348 a owl:Class ;
 UBERON:0002355 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
+UBERON:0002356 a owl:Class ;
+    rdfs:subClassOf UBERON:0009569 .
+
 UBERON:0002357 a owl:Class ;
+    rdfs:subClassOf UBERON:0000042 .
+
+UBERON:0002358 a owl:Class ;
     rdfs:subClassOf UBERON:0000042 .
 
 UBERON:0002365 a owl:Class ;
@@ -15120,6 +16570,40 @@ UBERON:0002370 a owl:Class ;
         UBERON:0005057,
         UBERON:0005058 .
 
+UBERON:0002371 a owl:Class ;
+    rdfs:subClassOf UBERON:0000479,
+        UBERON:0004120 .
+
+UBERON:0002377 a owl:Class ;
+    rdfs:subClassOf UBERON:0010959 .
+
+UBERON:0002378 a owl:Class ;
+    rdfs:subClassOf UBERON:0003833,
+        UBERON:0005172 .
+
+UBERON:0002379 a owl:Class ;
+    rdfs:subClassOf UBERON:0001325 .
+
+UBERON:0002380 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0004120,
+        UBERON:0010313 .
+
+UBERON:0002381 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0001495,
+        UBERON:0003897 .
+
+UBERON:0002382 a owl:Class ;
+    rdfs:subClassOf UBERON:0002461,
+        UBERON:0003897,
+        UBERON:0004120 .
+
+UBERON:0002383 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0010891,
+        UBERON:0034908 .
+
 UBERON:0002384 a owl:Class ;
     rdfs:subClassOf UBERON:0000479 .
 
@@ -15127,9 +16611,35 @@ UBERON:0002385 a owl:Class ;
     rdfs:subClassOf UBERON:0000479,
         UBERON:0004120 .
 
+UBERON:0002386 a owl:Class ;
+    rdfs:subClassOf UBERON:0002471,
+        UBERON:0008785 .
+
+UBERON:0002387 a owl:Class ;
+    rdfs:subClassOf UBERON:0002470,
+        UBERON:0008784 .
+
+UBERON:0002389 a owl:Class ;
+    rdfs:subClassOf UBERON:0002544 .
+
 UBERON:0002390 a owl:Class ;
     rdfs:subClassOf UBERON:0000467,
         UBERON:0004120 .
+
+UBERON:0002394 a owl:Class ;
+    rdfs:subClassOf UBERON:0000025,
+        UBERON:0003928,
+        UBERON:0004119 .
+
+UBERON:0002398 a owl:Class ;
+    rdfs:subClassOf UBERON:0002470,
+        UBERON:0008785 .
+
+UBERON:0002403 a owl:Class ;
+    rdfs:subClassOf UBERON:0001111 .
+
+UBERON:0002404 a owl:Class ;
+    rdfs:subClassOf UBERON:0002426 .
 
 UBERON:0002405 a owl:Class ;
     rdfs:subClassOf UBERON:0015203 .
@@ -15175,6 +16685,13 @@ UBERON:0002423 a owl:Class ;
 UBERON:0002425 a owl:Class ;
     rdfs:subClassOf UBERON:0022350 .
 
+UBERON:0002426 a owl:Class ;
+    rdfs:subClassOf UBERON:0003830,
+        UBERON:0005175 .
+
+UBERON:0002427 a owl:Class ;
+    rdfs:subClassOf UBERON:0003531 .
+
 UBERON:0002430 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
@@ -15197,11 +16714,26 @@ UBERON:0002440 a owl:Class ;
 UBERON:0002441 a owl:Class ;
     rdfs:subClassOf UBERON:0001991 .
 
+UBERON:0002461 a owl:Class ;
+    rdfs:subClassOf UBERON:0002378 .
+
+UBERON:0002463 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252 .
+
 UBERON:0002464 a owl:Class ;
     rdfs:subClassOf UBERON:0000122 .
 
 UBERON:0002465 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
+
+UBERON:0002470 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0002471 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0002472 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
 
 UBERON:0002474 a owl:Class .
 
@@ -15220,6 +16752,9 @@ UBERON:0002493 a owl:Class ;
         UBERON:0005156,
         UBERON:0015212 .
 
+UBERON:0002495 a owl:Class ;
+    rdfs:subClassOf UBERON:0001474 .
+
 UBERON:0002499 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
         UBERON:0004121 .
@@ -15232,14 +16767,29 @@ UBERON:0002509 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0015860 .
 
+UBERON:0002513 a owl:Class ;
+    rdfs:subClassOf UBERON:0001474,
+        UBERON:0010363 .
+
+UBERON:0002515 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0000158 .
+
 UBERON:0002517 a owl:Class ;
     rdfs:subClassOf UBERON:0000075 .
+
+UBERON:0002523 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0004923 .
 
 UBERON:0002529 a owl:Class ;
     rdfs:subClassOf UBERON:0010538 .
 
 UBERON:0002530 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
+
+UBERON:0002544 a owl:Class ;
+    rdfs:subClassOf UBERON:0005881 .
 
 UBERON:0002551 a owl:Class ;
     rdfs:subClassOf UBERON:0006331,
@@ -15546,6 +17096,9 @@ UBERON:0002836 a owl:Class ;
 UBERON:0002837 a owl:Class ;
     rdfs:subClassOf UBERON:0000044 .
 
+UBERON:0002842 a owl:Class ;
+    rdfs:subClassOf UBERON:0002834 .
+
 UBERON:0002843 a owl:Class ;
     rdfs:subClassOf UBERON:0002834 .
 
@@ -15565,6 +17118,15 @@ UBERON:0002848 a owl:Class ;
     rdfs:subClassOf UBERON:0002835 .
 
 UBERON:0002849 a owl:Class ;
+    rdfs:subClassOf UBERON:0002835 .
+
+UBERON:0002850 a owl:Class ;
+    rdfs:subClassOf UBERON:0002835 .
+
+UBERON:0002851 a owl:Class ;
+    rdfs:subClassOf UBERON:0002835 .
+
+UBERON:0002852 a owl:Class ;
     rdfs:subClassOf UBERON:0002835 .
 
 UBERON:0002853 a owl:Class ;
@@ -15722,6 +17284,9 @@ UBERON:0002985 a owl:Class .
 UBERON:0002987 a owl:Class ;
     rdfs:subClassOf UBERON:0007702 .
 
+UBERON:0002989 a owl:Class ;
+    rdfs:subClassOf UBERON:0004255 .
+
 UBERON:0002991 a owl:Class .
 
 UBERON:0002992 a owl:Class .
@@ -15801,6 +17366,9 @@ UBERON:0003100 a owl:Class ;
 UBERON:0003101 a owl:Class ;
     rdfs:subClassOf UBERON:0000468 .
 
+UBERON:0003102 a owl:Class ;
+    rdfs:subClassOf UBERON:0000061 .
+
 UBERON:0003103 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
 
@@ -15828,6 +17396,15 @@ UBERON:0003134 a owl:Class ;
 UBERON:0003135 a owl:Class ;
     rdfs:subClassOf UBERON:0003133 .
 
+UBERON:0003222 a owl:Class ;
+    rdfs:subClassOf UBERON:0004254 .
+
+UBERON:0003228 a owl:Class ;
+    rdfs:subClassOf UBERON:0004254 .
+
+UBERON:0003234 a owl:Class ;
+    rdfs:subClassOf UBERON:0011024 .
+
 UBERON:0003296 a owl:Class ;
     rdfs:subClassOf UBERON:0002530,
         UBERON:0004121 .
@@ -15845,9 +17422,18 @@ UBERON:0003386 a owl:Class ;
     rdfs:subClassOf UBERON:0001135,
         UBERON:0004121 .
 
+UBERON:0003403 a owl:Class ;
+    rdfs:subClassOf UBERON:0002427 .
+
 UBERON:0003408 a owl:Class ;
     rdfs:subClassOf UBERON:0002530,
         UBERON:0013765 .
+
+UBERON:0003431 a owl:Class ;
+    rdfs:subClassOf UBERON:0003442 .
+
+UBERON:0003433 a owl:Class ;
+    rdfs:subClassOf UBERON:0003441 .
 
 UBERON:0003438 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
@@ -15855,20 +17441,59 @@ UBERON:0003438 a owl:Class ;
 UBERON:0003439 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
+UBERON:0003440 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+UBERON:0003441 a owl:Class ;
+    rdfs:subClassOf UBERON:0003440 .
+
+UBERON:0003442 a owl:Class ;
+    rdfs:subClassOf UBERON:0003440 .
+
 UBERON:0003443 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
 UBERON:0003444 a owl:Class ;
     rdfs:subClassOf UBERON:0003825 .
 
+UBERON:0003463 a owl:Class ;
+    rdfs:subClassOf UBERON:0001474,
+        UBERON:0005177 .
+
+UBERON:0003497 a owl:Class ;
+    rdfs:subClassOf UBERON:0003835 .
+
 UBERON:0003509 a owl:Class ;
     rdfs:subClassOf UBERON:0001981 .
+
+UBERON:0003513 a owl:Class ;
+    rdfs:subClassOf UBERON:0001981 .
+
+UBERON:0003517 a owl:Class ;
+    rdfs:subClassOf UBERON:0003497 .
 
 UBERON:0003519 a owl:Class ;
     rdfs:subClassOf UBERON:0001981 .
 
+UBERON:0003527 a owl:Class ;
+    rdfs:subClassOf UBERON:0001982,
+        UBERON:0003517 .
+
 UBERON:0003528 a owl:Class ;
     rdfs:subClassOf UBERON:0002020 .
+
+UBERON:0003531 a owl:Class ;
+    rdfs:subClassOf UBERON:0001419 .
+
+UBERON:0003532 a owl:Class ;
+    rdfs:subClassOf UBERON:0001419 .
+
+UBERON:0003533 a owl:Class ;
+    rdfs:subClassOf UBERON:0001519,
+        UBERON:0015249 .
+
+UBERON:0003535 a owl:Class ;
+    rdfs:subClassOf UBERON:0002464 .
 
 UBERON:0003544 a owl:Class ;
     rdfs:subClassOf UBERON:0002316 .
@@ -15882,8 +17507,47 @@ UBERON:0003568 a owl:Class ;
 UBERON:0003586 a owl:Class ;
     rdfs:subClassOf UBERON:0002384 .
 
+UBERON:0003622 a owl:Class ;
+    rdfs:subClassOf UBERON:0006049,
+        UBERON:0019232 .
+
+UBERON:0003623 a owl:Class ;
+    rdfs:subClassOf UBERON:0006050,
+        UBERON:0019232 .
+
+UBERON:0003644 a owl:Class ;
+    rdfs:subClassOf UBERON:0003509,
+        UBERON:0003517 .
+
+UBERON:0003657 a owl:Class ;
+    rdfs:subClassOf UBERON:0000982 .
+
+UBERON:0003661 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0003662 a owl:Class ;
+    rdfs:subClassOf UBERON:0003661,
+        UBERON:0014794 .
+
+UBERON:0003663 a owl:Class ;
+    rdfs:subClassOf UBERON:0003661,
+        UBERON:0014795 .
+
+UBERON:0003683 a owl:Class ;
+    rdfs:subClassOf UBERON:0000477 .
+
+UBERON:0003692 a owl:Class ;
+    rdfs:subClassOf UBERON:0011108,
+        UBERON:0016884 .
+
 UBERON:0003697 a owl:Class ;
     rdfs:subClassOf UBERON:0000060 .
+
+UBERON:0003703 a owl:Class ;
+    rdfs:subClassOf UBERON:0002394 .
+
+UBERON:0003704 a owl:Class ;
+    rdfs:subClassOf UBERON:0002394 .
 
 UBERON:0003708 a owl:Class ;
     rdfs:subClassOf UBERON:0001530 .
@@ -15906,14 +17570,29 @@ UBERON:0003721 a owl:Class ;
 
 UBERON:0003723 a owl:Class .
 
+UBERON:0003724 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
 UBERON:0003729 a owl:Class ;
     rdfs:subClassOf UBERON:0000344 .
+
+UBERON:0003822 a owl:Class ;
+    rdfs:subClassOf UBERON:0002472,
+        UBERON:0008785 .
+
+UBERON:0003823 a owl:Class ;
+    rdfs:subClassOf UBERON:0002471,
+        UBERON:0008784 .
 
 UBERON:0003824 a owl:Class ;
     rdfs:subClassOf UBERON:0003439 .
 
 UBERON:0003825 a owl:Class ;
     rdfs:subClassOf UBERON:0003439 .
+
+UBERON:0003828 a owl:Class ;
+    rdfs:subClassOf UBERON:0003463,
+        UBERON:0005173 .
 
 UBERON:0003829 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -15931,8 +17610,21 @@ UBERON:0003832 a owl:Class ;
         UBERON:0005181,
         UBERON:0013765 .
 
+UBERON:0003833 a owl:Class ;
+    rdfs:subClassOf UBERON:0001774,
+        UBERON:0005173 .
+
+UBERON:0003835 a owl:Class ;
+    rdfs:subClassOf UBERON:0003513 .
+
 UBERON:0003838 a owl:Class ;
     rdfs:subClassOf UBERON:0003586 .
+
+UBERON:0003839 a owl:Class ;
+    rdfs:subClassOf UBERON:0003657 .
+
+UBERON:0003841 a owl:Class ;
+    rdfs:subClassOf UBERON:0003657 .
 
 UBERON:0003876 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
@@ -15957,8 +17649,17 @@ UBERON:0003891 a owl:Class ;
 UBERON:0003893 a owl:Class ;
     rdfs:subClassOf UBERON:0000158 .
 
+UBERON:0003897 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0003898 a owl:Class ;
+    rdfs:subClassOf UBERON:0001134 .
+
 UBERON:0003902 a owl:Class ;
     rdfs:subClassOf UBERON:0001781 .
+
+UBERON:0003909 a owl:Class ;
+    rdfs:subClassOf UBERON:2005260 .
 
 UBERON:0003914 a owl:Class ;
     rdfs:subClassOf UBERON:0000025,
@@ -15966,6 +17667,9 @@ UBERON:0003914 a owl:Class ;
 
 UBERON:0003920 a owl:Class ;
     rdfs:subClassOf UBERON:0001981 .
+
+UBERON:0003928 a owl:Class ;
+    rdfs:subClassOf UBERON:0000058 .
 
 UBERON:0003929 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
@@ -16044,6 +17748,14 @@ UBERON:0004082 a owl:Class .
 
 UBERON:0004083 a owl:Class .
 
+UBERON:0004084 a owl:Class ;
+    rdfs:subClassOf UBERON:0015212,
+        UBERON:8480029 .
+
+UBERON:0004085 a owl:Class ;
+    rdfs:subClassOf UBERON:0004084,
+        UBERON:0004120 .
+
 UBERON:0004086 a owl:Class ;
     rdfs:subClassOf UBERON:0003947,
         UBERON:0005358 .
@@ -16053,6 +17765,13 @@ UBERON:0004088 a owl:Class ;
 
 UBERON:0004089 a owl:Class ;
     rdfs:subClassOf UBERON:0001444 .
+
+UBERON:0004090 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0034921 .
+
+UBERON:0004105 a owl:Class ;
+    rdfs:subClassOf UBERON:0000477 .
 
 UBERON:0004111 a owl:Class ;
     rdfs:subClassOf UBERON:0010000 .
@@ -16099,6 +17818,9 @@ UBERON:0004177 a owl:Class ;
 UBERON:0004186 a owl:Class ;
     rdfs:subClassOf UBERON:0004001 .
 
+UBERON:0004211 a owl:Class ;
+    rdfs:subClassOf UBERON:0004819 .
+
 UBERON:0004220 a owl:Class ;
     rdfs:subClassOf UBERON:0004221 .
 
@@ -16122,9 +17844,30 @@ UBERON:0004243 a owl:Class ;
     rdfs:subClassOf UBERON:0001135,
         UBERON:0008715 .
 
+UBERON:0004252 a owl:Class ;
+    rdfs:subClassOf UBERON:0001383 .
+
+UBERON:0004254 a owl:Class ;
+    rdfs:subClassOf UBERON:0001499 .
+
+UBERON:0004255 a owl:Class ;
+    rdfs:subClassOf UBERON:0001499 .
+
+UBERON:0004256 a owl:Class ;
+    rdfs:subClassOf UBERON:0001383 .
+
+UBERON:0004262 a owl:Class ;
+    rdfs:subClassOf UBERON:0001511 .
+
+UBERON:0004263 a owl:Class ;
+    rdfs:subClassOf UBERON:0002427 .
+
 UBERON:0004277 a owl:Class ;
     rdfs:subClassOf UBERON:0001630,
         UBERON:0004121 .
+
+UBERON:0004288 a owl:Class ;
+    rdfs:subClassOf UBERON:0034925 .
 
 UBERON:0004293 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
@@ -16132,14 +17875,75 @@ UBERON:0004293 a owl:Class ;
 UBERON:0004295 a owl:Class ;
     rdfs:subClassOf UBERON:0002464 .
 
+UBERON:0004452 a owl:Class ;
+    rdfs:subClassOf UBERON:0006716,
+        UBERON:0008785 .
+
 UBERON:0004456 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
+
+UBERON:0004463 a owl:Class ;
+    rdfs:subClassOf UBERON:0004466 .
 
 UBERON:0004464 a owl:Class ;
     rdfs:subClassOf UBERON:0004479 .
 
+UBERON:0004465 a owl:Class ;
+    rdfs:subClassOf UBERON:0008229 .
+
+UBERON:0004466 a owl:Class ;
+    rdfs:subClassOf UBERON:0004482 .
+
+UBERON:0004469 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
+UBERON:0004470 a owl:Class ;
+    rdfs:subClassOf UBERON:0004479,
+        UBERON:0014792 .
+
+UBERON:0004471 a owl:Class ;
+    rdfs:subClassOf UBERON:0014793 .
+
+UBERON:0004474 a owl:Class ;
+    rdfs:subClassOf UBERON:0004481 .
+
+UBERON:0004476 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
 UBERON:0004479 a owl:Class ;
     rdfs:subClassOf UBERON:0001015 .
+
+UBERON:0004480 a owl:Class ;
+    rdfs:subClassOf UBERON:0007271 .
+
+UBERON:0004481 a owl:Class ;
+    rdfs:subClassOf UBERON:0004480,
+        UBERON:0007269 .
+
+UBERON:0004482 a owl:Class ;
+    rdfs:subClassOf UBERON:0004480,
+        UBERON:0007270 .
+
+UBERON:0004486 a owl:Class ;
+    rdfs:subClassOf UBERON:0004479 .
+
+UBERON:0004487 a owl:Class ;
+    rdfs:subClassOf UBERON:0004474 .
+
+UBERON:0004488 a owl:Class ;
+    rdfs:subClassOf UBERON:0004482 .
+
+UBERON:0004489 a owl:Class ;
+    rdfs:subClassOf UBERON:0004481 .
+
+UBERON:0004518 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0004519 a owl:Class ;
+    rdfs:subClassOf UBERON:0002379 .
+
+UBERON:0004529 a owl:Class ;
+    rdfs:subClassOf UBERON:0034768 .
 
 UBERON:0004535 a owl:Class ;
     rdfs:subClassOf PR:000050567,
@@ -16148,6 +17952,12 @@ UBERON:0004535 a owl:Class ;
 UBERON:0004537 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0002049 .
+
+UBERON:0004538 a owl:Class ;
+    rdfs:subClassOf UBERON:0002113 .
+
+UBERON:0004539 a owl:Class ;
+    rdfs:subClassOf UBERON:0002113 .
 
 UBERON:0004545 a owl:Class .
 
@@ -16168,9 +17978,25 @@ UBERON:0004582 a owl:Class ;
 UBERON:0004590 a owl:Class ;
     rdfs:subClassOf UBERON:0001630 .
 
+UBERON:0004638 a owl:Class ;
+    rdfs:subClassOf UBERON:0004852 .
+
+UBERON:0004639 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0001980,
+        UBERON:0003644 .
+
+UBERON:0004640 a owl:Class ;
+    rdfs:subClassOf UBERON:0001980,
+        UBERON:0003644 .
+
 UBERON:0004641 a owl:Class ;
     rdfs:subClassOf UBERON:0003893,
         UBERON:0004120 .
+
+UBERON:0004647 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064,
+        UBERON:0004119 .
 
 UBERON:0004665 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -16204,6 +18030,12 @@ UBERON:0004708 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0000026 .
 
+UBERON:0004709 a owl:Class ;
+    rdfs:subClassOf UBERON:0004708 .
+
+UBERON:0004710 a owl:Class ;
+    rdfs:subClassOf UBERON:0004708 .
+
 UBERON:0004713 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0005156,
@@ -16229,6 +18061,9 @@ UBERON:0004732 a owl:Class ;
 UBERON:0004733 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0004732 .
+
+UBERON:0004753 a owl:Class ;
+    rdfs:subClassOf UBERON:0004765 .
 
 UBERON:0004765 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
@@ -16275,6 +18110,20 @@ UBERON:0004808 a owl:Class ;
 UBERON:0004814 a owl:Class ;
     rdfs:subClassOf UBERON:0004802 .
 
+UBERON:0004819 a owl:Class ;
+    rdfs:subClassOf UBERON:0000483 .
+
+UBERON:0004820 a owl:Class ;
+    rdfs:subClassOf UBERON:0005911,
+        UBERON:0034932,
+        UBERON:0034969 .
+
+UBERON:0004832 a owl:Class ;
+    rdfs:subClassOf UBERON:0001134 .
+
+UBERON:0004852 a owl:Class ;
+    rdfs:subClassOf UBERON:0001986 .
+
 UBERON:0004859 a owl:Class ;
     rdfs:subClassOf UBERON:0002530 .
 
@@ -16297,9 +18146,15 @@ UBERON:0004909 a owl:Class ;
 UBERON:0004910 a owl:Class ;
     rdfs:subClassOf UBERON:0004909 .
 
+UBERON:0004916 a owl:Class ;
+    rdfs:subClassOf UBERON:0004590 .
+
 UBERON:0004917 a owl:Class ;
     rdfs:subClassOf UBERON:0003829,
         UBERON:0004590 .
+
+UBERON:0004919 a owl:Class ;
+    rdfs:subClassOf UBERON:0004917 .
 
 UBERON:0004921 a owl:Class ;
     rdfs:subClassOf UBERON:0013522 .
@@ -16308,6 +18163,9 @@ UBERON:0004922 a owl:Class .
 
 UBERON:0004923 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
+
+UBERON:0005006 a owl:Class ;
+    rdfs:subClassOf UBERON:0000344 .
 
 UBERON:0005051 a owl:Class ;
     rdfs:subClassOf UBERON:0002050 .
@@ -16334,6 +18192,9 @@ UBERON:0005156 a owl:Class ;
 UBERON:0005162 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
 
+UBERON:0005171 a owl:Class ;
+    rdfs:subClassOf UBERON:0002394 .
+
 UBERON:0005172 a owl:Class ;
     rdfs:subClassOf UBERON:0005173 .
 
@@ -16342,6 +18203,9 @@ UBERON:0005173 a owl:Class ;
 
 UBERON:0005174 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
+
+UBERON:0005175 a owl:Class ;
+    rdfs:subClassOf UBERON:0005181 .
 
 UBERON:0005177 a owl:Class ;
     rdfs:subClassOf UBERON:0000062 .
@@ -16356,6 +18220,23 @@ UBERON:0005179 a owl:Class ;
 UBERON:0005181 a owl:Class ;
     rdfs:subClassOf UBERON:0005177 .
 
+UBERON:0005272 a owl:Class ;
+    rdfs:subClassOf UBERON:0003527 .
+
+UBERON:0005273 a owl:Class ;
+    rdfs:subClassOf UBERON:0005275 .
+
+UBERON:0005275 a owl:Class ;
+    rdfs:subClassOf UBERON:0015249 .
+
+UBERON:0005276 a owl:Class ;
+    rdfs:subClassOf UBERON:0003533,
+        UBERON:0005275 .
+
+UBERON:0005278 a owl:Class ;
+    rdfs:subClassOf UBERON:0005273,
+        UBERON:0005276 .
+
 UBERON:0005281 a owl:Class ;
     rdfs:subClassOf UBERON:0000467,
         UBERON:0004121 .
@@ -16366,6 +18247,10 @@ UBERON:0005282 a owl:Class ;
 
 UBERON:0005290 a owl:Class ;
     rdfs:subClassOf UBERON:0004733 .
+
+UBERON:0005298 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:8480029 .
 
 UBERON:0005303 a owl:Class ;
     rdfs:subClassOf UBERON:0001816 .
@@ -16483,11 +18368,45 @@ UBERON:0005413 a owl:Class ;
 UBERON:0005423 a owl:Class ;
     rdfs:subClassOf UBERON:0000465 .
 
+UBERON:0005434 a owl:Class ;
+    rdfs:subClassOf UBERON:0011676 .
+
+UBERON:0005441 a owl:Class ;
+    rdfs:subClassOf UBERON:0001111 .
+
+UBERON:0005442 a owl:Class ;
+    rdfs:subClassOf UBERON:0035032 .
+
+UBERON:0005445 a owl:Class ;
+    rdfs:subClassOf UBERON:0008784,
+        UBERON:0012139 .
+
+UBERON:0005451 a owl:Class ;
+    rdfs:subClassOf UBERON:0008785,
+        UBERON:0012139 .
+
 UBERON:0005453 a owl:Class ;
     rdfs:subClassOf UBERON:0035769 .
 
+UBERON:0005454 a owl:Class ;
+    rdfs:subClassOf UBERON:0003897,
+        UBERON:0035032 .
+
+UBERON:0005461 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0003897,
+        UBERON:0004120,
+        UBERON:0004518,
+        UBERON:0034908 .
+
 UBERON:0005462 a owl:Class ;
     rdfs:subClassOf UBERON:0009569 .
+
+UBERON:0005465 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+UBERON:0005476 a owl:Class ;
+    rdfs:subClassOf UBERON:0002464 .
 
 UBERON:0005479 a owl:Class ;
     rdfs:subClassOf UBERON:0035769 .
@@ -16504,6 +18423,9 @@ UBERON:0005486 a owl:Class ;
 UBERON:0005488 a owl:Class ;
     rdfs:subClassOf UBERON:0000122,
         UBERON:0035771 .
+
+UBERON:0005604 a owl:Class ;
+    rdfs:subClassOf UBERON:0002394 .
 
 UBERON:0005616 a owl:Class ;
     rdfs:subClassOf UBERON:0012254 .
@@ -16537,6 +18459,9 @@ UBERON:0005800 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0013522 .
 
+UBERON:0005806 a owl:Class ;
+    rdfs:subClassOf UBERON:0002049 .
+
 UBERON:0005807 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
@@ -16556,6 +18481,9 @@ UBERON:0005844 a owl:Class ;
 
 UBERON:0005853 a owl:Class ;
     rdfs:subClassOf UBERON:0016551 .
+
+UBERON:0005881 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
 
 UBERON:0005904 a owl:Class ;
     rdfs:subClassOf UBERON:0000058,
@@ -16589,8 +18517,20 @@ UBERON:0005984 a owl:Class ;
 UBERON:0006003 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
+UBERON:0006048 a owl:Class ;
+    rdfs:subClassOf UBERON:0019221 .
+
+UBERON:0006049 a owl:Class ;
+    rdfs:subClassOf UBERON:0019222 .
+
+UBERON:0006050 a owl:Class ;
+    rdfs:subClassOf UBERON:0019222 .
+
 UBERON:0006058 a owl:Class ;
     rdfs:subClassOf UBERON:0010758 .
+
+UBERON:0006067 a owl:Class ;
+    rdfs:subClassOf UBERON:0004466 .
 
 UBERON:0006083 a owl:Class .
 
@@ -16717,10 +18657,30 @@ UBERON:0006492 a owl:Class ;
 UBERON:0006493 a owl:Class ;
     rdfs:subClassOf UBERON:0007714 .
 
+UBERON:0006497 a owl:Class ;
+    rdfs:subClassOf UBERON:0006508,
+        UBERON:0014378 .
+
+UBERON:0006499 a owl:Class ;
+    rdfs:subClassOf UBERON:0006497 .
+
+UBERON:0006502 a owl:Class ;
+    rdfs:subClassOf UBERON:0006497 .
+
+UBERON:0006505 a owl:Class ;
+    rdfs:subClassOf UBERON:0001502 .
+
+UBERON:0006508 a owl:Class ;
+    rdfs:subClassOf UBERON:0003661 .
+
 UBERON:0006514 a owl:Class ;
     rdfs:subClassOf UBERON:0003528 .
 
 UBERON:0006516 a owl:Class .
+
+UBERON:0006544 a owl:Class ;
+    rdfs:subClassOf UBERON:0002201,
+        UBERON:0006876 .
 
 UBERON:0006555 a owl:Class ;
     rdfs:subClassOf UBERON:0000025 .
@@ -16769,6 +18729,12 @@ UBERON:0006676 a owl:Class ;
 
 UBERON:0006698 a owl:Class .
 
+UBERON:0006716 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0006729 a owl:Class ;
+    rdfs:subClassOf UBERON:0000464 .
+
 UBERON:0006779 a owl:Class .
 
 UBERON:0006780 a owl:Class .
@@ -16784,20 +18750,45 @@ UBERON:0006786 a owl:Class ;
 UBERON:0006794 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
 
+UBERON:0006839 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
 UBERON:0006840 a owl:Class ;
     rdfs:subClassOf UBERON:0002308 .
+
+UBERON:0006845 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
 
 UBERON:0006847 a owl:Class .
 
 UBERON:0006848 a owl:Class .
+
+UBERON:0006851 a owl:Class ;
+    rdfs:subClassOf UBERON:0005272 .
+
+UBERON:0006853 a owl:Class ;
+    rdfs:subClassOf UBERON:0007685 .
 
 UBERON:0006858 a owl:Class ;
     rdfs:subClassOf UBERON:0002368,
         UBERON:0004120,
         UBERON:0010313 .
 
+UBERON:0006867 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064 .
+
 UBERON:0006868 a owl:Class ;
     rdfs:subClassOf UBERON:0005399 .
+
+UBERON:0006876 a owl:Class ;
+    rdfs:subClassOf UBERON:0002049 .
+
+UBERON:0006877 a owl:Class ;
+    rdfs:subClassOf UBERON:0002201,
+        UBERON:0006876 .
+
+UBERON:0006914 a owl:Class ;
+    rdfs:subClassOf UBERON:0000483 .
 
 UBERON:0006925 a owl:Class ;
     rdfs:subClassOf UBERON:0002368,
@@ -16815,6 +18806,13 @@ UBERON:0006960 a owl:Class ;
     rdfs:subClassOf UBERON:0003891,
         UBERON:0005156 .
 
+UBERON:0006965 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0005423 .
+
+UBERON:0006984 a owl:Class ;
+    rdfs:subClassOf UBERON:0010199 .
+
 UBERON:0007023 a owl:Class ;
     rdfs:subClassOf UBERON:0000468 .
 
@@ -16829,6 +18827,11 @@ UBERON:0007134 a owl:Class ;
 
 UBERON:0007177 a owl:Class ;
     rdfs:subClassOf UBERON:0011189 .
+
+UBERON:0007195 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0003891,
+        UBERON:0004120 .
 
 UBERON:0007196 a owl:Class ;
     rdfs:subClassOf PR:000050567,
@@ -16857,6 +18860,17 @@ UBERON:0007247 a owl:Class ;
 UBERON:0007251 a owl:Class ;
     rdfs:subClassOf UBERON:0006569 .
 
+UBERON:0007269 a owl:Class ;
+    rdfs:subClassOf UBERON:0007271,
+        UBERON:0014793 .
+
+UBERON:0007270 a owl:Class ;
+    rdfs:subClassOf UBERON:0007271,
+        UBERON:0014792 .
+
+UBERON:0007271 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
 UBERON:0007324 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0000064,
@@ -16873,6 +18887,10 @@ UBERON:0007364 a owl:Class ;
 
 UBERON:0007366 a owl:Class ;
     rdfs:subClassOf UBERON:0000945 .
+
+UBERON:0007376 a owl:Class ;
+    rdfs:subClassOf UBERON:0003102,
+        UBERON:0010371 .
 
 UBERON:0007412 a owl:Class .
 
@@ -16904,12 +18922,21 @@ UBERON:0007502 a owl:Class ;
 UBERON:0007521 a owl:Class ;
     rdfs:subClassOf UBERON:0004590 .
 
+UBERON:0007522 a owl:Class ;
+    rdfs:subClassOf UBERON:0004590 .
+
 UBERON:0007592 a owl:Class ;
     rdfs:subClassOf UBERON:0000485,
         UBERON:0007601 .
 
 UBERON:0007601 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
+
+UBERON:0007612 a owl:Class ;
+    rdfs:subClassOf UBERON:0011024 .
+
+UBERON:0007614 a owl:Class ;
+    rdfs:subClassOf UBERON:0011024 .
 
 UBERON:0007626 a owl:Class .
 
@@ -16955,6 +18982,14 @@ UBERON:0007651 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
 
 UBERON:0007656 a owl:Class .
+
+UBERON:0007684 a owl:Class ;
+    rdfs:subClassOf UBERON:0003914,
+        UBERON:0004819,
+        UBERON:0006555 .
+
+UBERON:0007685 a owl:Class ;
+    rdfs:subClassOf UBERON:0001231 .
 
 UBERON:0007692 a owl:Class ;
     rdfs:subClassOf UBERON:0006569 .
@@ -17010,6 +19045,27 @@ UBERON:0007809 a owl:Class ;
 UBERON:0007811 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
+UBERON:0007823 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0007828 a owl:Class ;
+    rdfs:subClassOf UBERON:0010740 .
+
+UBERON:0007830 a owl:Class ;
+    rdfs:subClassOf UBERON:0003828,
+        UBERON:0004120,
+        UBERON:0005179,
+        UBERON:0005913,
+        UBERON:0007828,
+        UBERON:0010742 .
+
+UBERON:0007831 a owl:Class ;
+    rdfs:subClassOf UBERON:0010719 .
+
+UBERON:0007832 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0010719 .
+
 UBERON:0007845 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0002384 .
@@ -17018,8 +19074,21 @@ UBERON:0007846 a owl:Class ;
     rdfs:subClassOf UBERON:0007845,
         UBERON:0011823 .
 
+UBERON:0008114 a owl:Class ;
+    rdfs:subClassOf UBERON:0000982 .
+
 UBERON:0008193 a owl:Class ;
     rdfs:subClassOf UBERON:0001474 .
+
+UBERON:0008196 a owl:Class ;
+    rdfs:subClassOf UBERON:0010891 .
+
+UBERON:0008229 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
+UBERON:0008230 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0004256 .
 
 UBERON:0008231 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
@@ -17035,16 +19104,81 @@ UBERON:0008331 a owl:Class ;
     rdfs:subClassOf UBERON:0001135,
         UBERON:0005156 .
 
+UBERON:0008338 a owl:Class ;
+    rdfs:subClassOf UBERON:0005445,
+        UBERON:0008837 .
+
+UBERON:0008446 a owl:Class ;
+    rdfs:subClassOf UBERON:0004254 .
+
+UBERON:0008450 a owl:Class ;
+    rdfs:subClassOf UBERON:0008549 .
+
+UBERON:0008454 a owl:Class ;
+    rdfs:subClassOf UBERON:0002377,
+        UBERON:0004518 .
+
+UBERON:0008455 a owl:Class ;
+    rdfs:subClassOf UBERON:0002377,
+        UBERON:0003897,
+        UBERON:0004518 .
+
+UBERON:0008464 a owl:Class ;
+    rdfs:subClassOf UBERON:0001498 .
+
+UBERON:0008465 a owl:Class ;
+    rdfs:subClassOf UBERON:0001500,
+        UBERON:0011534 .
+
+UBERON:0008521 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000 .
+
+UBERON:0008529 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000,
+        UBERON:0003897 .
+
+UBERON:0008544 a owl:Class ;
+    rdfs:subClassOf UBERON:0002252 .
+
+UBERON:0008549 a owl:Class ;
+    rdfs:subClassOf UBERON:0004518 .
+
+UBERON:0008617 a owl:Class ;
+    rdfs:subClassOf UBERON:0001111 .
+
+UBERON:0008713 a owl:Class ;
+    rdfs:subClassOf UBERON:0001134 .
+
 UBERON:0008715 a owl:Class ;
     rdfs:subClassOf UBERON:0000077,
         UBERON:0002385,
         UBERON:0005156 .
+
+UBERON:0008777 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0004479 .
+
+UBERON:0008779 a owl:Class ;
+    rdfs:subClassOf UBERON:0001495 .
+
+UBERON:0008784 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0008785 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
 
 UBERON:0008810 a owl:Class ;
     rdfs:subClassOf UBERON:0011779 .
 
 UBERON:0008811 a owl:Class ;
     rdfs:subClassOf UBERON:0003135 .
+
+UBERON:0008837 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0008846 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0000211 .
 
 UBERON:0008856 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -17062,6 +19196,10 @@ UBERON:0008862 a owl:Class ;
 UBERON:0008863 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0012369 .
+
+UBERON:0008878 a owl:Class ;
+    rdfs:subClassOf UBERON:0005451,
+        UBERON:0008837 .
 
 UBERON:0008886 a owl:Class ;
     rdfs:subClassOf PR:000050567,
@@ -17082,11 +19220,11 @@ UBERON:0008946 a owl:Class ;
 UBERON:0008982 a owl:Class ;
     rdfs:subClassOf UBERON:0007846 .
 
+UBERON:0008987 a owl:Class ;
+    rdfs:subClassOf UBERON:0000353 .
+
 UBERON:0008993 a owl:Class ;
     rdfs:subClassOf UBERON:0007692 .
-
-UBERON:0008995 a owl:Class ;
-    rdfs:subClassOf UBERON:0009662 .
 
 UBERON:0009009 a owl:Class ;
     rdfs:subClassOf UBERON:0011779 .
@@ -17110,6 +19248,16 @@ UBERON:0009121 a owl:Class .
 UBERON:0009127 a owl:Class ;
     rdfs:subClassOf UBERON:0001714,
         UBERON:0004121 .
+
+UBERON:0009132 a owl:Class ;
+    rdfs:subClassOf UBERON:0004256 .
+
+UBERON:0009551 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0009564 a owl:Class ;
+    rdfs:subClassOf UBERON:0004121,
+        UBERON:0013703 .
 
 UBERON:0009569 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
@@ -17144,6 +19292,10 @@ UBERON:0009663 a owl:Class ;
 UBERON:0009675 a owl:Class ;
     rdfs:subClassOf UBERON:0001785 .
 
+UBERON:0009773 a owl:Class ;
+    rdfs:subClassOf UBERON:0003914,
+        UBERON:0006555 .
+
 UBERON:0009777 a owl:Class .
 
 UBERON:0009842 a owl:Class ;
@@ -17156,6 +19308,9 @@ UBERON:0009870 a owl:Class ;
     rdfs:subClassOf UBERON:0004921,
         UBERON:0034944 .
 
+UBERON:0009877 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
 UBERON:0009907 a owl:Class .
 
 UBERON:0009911 a owl:Class ;
@@ -17163,6 +19318,12 @@ UBERON:0009911 a owl:Class ;
 
 UBERON:0009912 a owl:Class ;
     rdfs:subClassOf UBERON:0000063 .
+
+UBERON:0009913 a owl:Class ;
+    rdfs:subClassOf UBERON:0009912 .
+
+UBERON:0009914 a owl:Class ;
+    rdfs:subClassOf UBERON:0009911 .
 
 UBERON:0009916 a owl:Class ;
     rdfs:subClassOf UBERON:0000060,
@@ -17232,6 +19393,12 @@ UBERON:0010186 a owl:Class ;
 UBERON:0010191 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
 
+UBERON:0010194 a owl:Class ;
+    rdfs:subClassOf UBERON:0005806 .
+
+UBERON:0010199 a owl:Class ;
+    rdfs:subClassOf UBERON:0000466 .
+
 UBERON:0010225 a owl:Class ;
     rdfs:subClassOf UBERON:0007245,
         UBERON:0019269 .
@@ -17249,6 +19416,9 @@ UBERON:0010314 a owl:Class ;
 
 UBERON:0010323 a owl:Class ;
     rdfs:subClassOf UBERON:0000075 .
+
+UBERON:0010363 a owl:Class ;
+    rdfs:subClassOf UBERON:0004765 .
 
 UBERON:0010368 a owl:Class ;
     rdfs:subClassOf PR:000050567,
@@ -17282,6 +19452,17 @@ UBERON:0010409 a owl:Class ;
 
 UBERON:0010415 a owl:Class .
 
+UBERON:0010428 a owl:Class ;
+    rdfs:subClassOf UBERON:0001474 .
+
+UBERON:0010467 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0034908 .
+
+UBERON:0010496 a owl:Class ;
+    rdfs:subClassOf UBERON:0010467,
+        UBERON:0010891 .
+
 UBERON:0010498 a owl:Class ;
     rdfs:subClassOf UBERON:0000485 .
 
@@ -17292,12 +19473,33 @@ UBERON:0010499 a owl:Class ;
 UBERON:0010523 a owl:Class ;
     rdfs:subClassOf UBERON:0000055 .
 
+UBERON:0010524 a owl:Class ;
+    rdfs:subClassOf UBERON:0009132 .
+
+UBERON:0010526 a owl:Class ;
+    rdfs:subClassOf UBERON:0009132 .
+
 UBERON:0010538 a owl:Class ;
     rdfs:subClassOf UBERON:0010758 .
 
 UBERON:0010707 a owl:Class ;
     rdfs:subClassOf UBERON:0000475,
         UBERON:0015212 .
+
+UBERON:0010708 a owl:Class ;
+    rdfs:subClassOf UBERON:0010707 .
+
+UBERON:0010709 a owl:Class ;
+    rdfs:subClassOf UBERON:0010707 .
+
+UBERON:0010719 a owl:Class ;
+    rdfs:subClassOf UBERON:0010912 .
+
+UBERON:0010740 a owl:Class ;
+    rdfs:subClassOf UBERON:0001474 .
+
+UBERON:0010742 a owl:Class ;
+    rdfs:subClassOf UBERON:0010740 .
 
 UBERON:0010743 a owl:Class ;
     rdfs:subClassOf PR:000050567,
@@ -17306,12 +19508,56 @@ UBERON:0010743 a owl:Class ;
 UBERON:0010758 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
+UBERON:0010890 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0010891 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
 UBERON:0010899 a owl:Class ;
     rdfs:subClassOf UBERON:0007197 .
+
+UBERON:0010912 a owl:Class ;
+    rdfs:subClassOf UBERON:0011216 .
+
+UBERON:0010959 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
+UBERON:0011011 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0001499 .
+
+UBERON:0011012 a owl:Class ;
+    rdfs:subClassOf UBERON:0001500 .
+
+UBERON:0011015 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0005913 .
+
+UBERON:0011016 a owl:Class ;
+    rdfs:subClassOf UBERON:0002461 .
+
+UBERON:0011022 a owl:Class ;
+    rdfs:subClassOf UBERON:0000366,
+        UBERON:0014378 .
+
+UBERON:0011024 a owl:Class ;
+    rdfs:subClassOf UBERON:0000311,
+        UBERON:0004254 .
+
+UBERON:0011043 a owl:Class ;
+    rdfs:subClassOf UBERON:0002000 .
+
+UBERON:0011048 a owl:Class ;
+    rdfs:subClassOf UBERON:0011043 .
 
 UBERON:0011096 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0011779 .
+
+UBERON:0011108 a owl:Class ;
+    rdfs:subClassOf UBERON:0002217,
+        UBERON:0008114 .
 
 UBERON:0011134 a owl:Class ;
     rdfs:subClassOf UBERON:0000982 .
@@ -17319,9 +19565,20 @@ UBERON:0011134 a owl:Class ;
 UBERON:0011137 a owl:Class ;
     rdfs:subClassOf UBERON:0000075 .
 
+UBERON:0011139 a owl:Class ;
+    rdfs:subClassOf UBERON:0002217,
+        UBERON:0003657 .
+
 UBERON:0011143 a owl:Class ;
     rdfs:subClassOf UBERON:0011216,
         UBERON:0015212 .
+
+UBERON:0011144 a owl:Class ;
+    rdfs:subClassOf UBERON:0010890,
+        UBERON:0011145 .
+
+UBERON:0011145 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
 
 UBERON:0011158 a owl:Class ;
     rdfs:subClassOf UBERON:0000075 .
@@ -17388,15 +19645,35 @@ UBERON:0011374 a owl:Class ;
         UBERON:0005156,
         UBERON:0034929 .
 
+UBERON:0011380 a owl:Class ;
+    rdfs:subClassOf UBERON:0004919,
+        UBERON:0005156 .
+
+UBERON:0011389 a owl:Class ;
+    rdfs:subClassOf UBERON:0002379 .
+
 UBERON:0011390 a owl:Class ;
     rdfs:subClassOf UBERON:0003444 .
+
+UBERON:0011391 a owl:Class ;
+    rdfs:subClassOf UBERON:0003444 .
+
+UBERON:0011534 a owl:Class ;
+    rdfs:subClassOf UBERON:0003662,
+        UBERON:0006845 .
 
 UBERON:0011595 a owl:Class ;
     rdfs:subClassOf UBERON:0000475,
         UBERON:0010314 .
 
+UBERON:0011645 a owl:Class ;
+    rdfs:subClassOf UBERON:0001325 .
+
 UBERON:0011676 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0011695 a owl:Class ;
+    rdfs:subClassOf UBERON:0004535 .
 
 UBERON:0011768 a owl:Class .
 
@@ -17427,9 +19704,19 @@ UBERON:0011823 a owl:Class ;
 UBERON:0011858 a owl:Class ;
     rdfs:subClassOf UBERON:0009842 .
 
+UBERON:0011867 a owl:Class ;
+    rdfs:subClassOf UBERON:0001482,
+        UBERON:0011024 .
+
+UBERON:0011878 a owl:Class ;
+    rdfs:subClassOf UBERON:0018261 .
+
 UBERON:0011892 a owl:Class ;
     rdfs:subClassOf UBERON:0000481,
         UBERON:0004121 .
+
+UBERON:0011905 a owl:Class ;
+    rdfs:subClassOf UBERON:0004256 .
 
 UBERON:0011924 a owl:Class ;
     rdfs:subClassOf UBERON:0003041 .
@@ -17451,6 +19738,9 @@ UBERON:0011954 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0009870 .
 
+UBERON:0011968 a owl:Class ;
+    rdfs:subClassOf UBERON:0001491 .
+
 UBERON:0012069 a owl:Class ;
     rdfs:subClassOf UBERON:0001744 .
 
@@ -17460,6 +19750,16 @@ UBERON:0012102 a owl:Class ;
 UBERON:0012125 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0000467 .
+
+UBERON:0012139 a owl:Class ;
+    rdfs:subClassOf UBERON:0002529 .
+
+UBERON:0012140 a owl:Class ;
+    rdfs:subClassOf UBERON:0012139 .
+
+UBERON:0012141 a owl:Class ;
+    rdfs:subClassOf UBERON:0005451,
+        UBERON:0012140 .
 
 UBERON:0012170 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
@@ -17477,6 +19777,12 @@ UBERON:0012275 a owl:Class ;
     rdfs:subClassOf UBERON:0000483,
         UBERON:0004120 .
 
+UBERON:0012348 a owl:Class ;
+    rdfs:subClassOf UBERON:0015790 .
+
+UBERON:0012354 a owl:Class ;
+    rdfs:subClassOf UBERON:0012139 .
+
 UBERON:0012367 a owl:Class ;
     rdfs:subClassOf UBERON:0018261 .
 
@@ -17489,6 +19795,18 @@ UBERON:0012369 a owl:Class ;
 UBERON:0012399 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0012369 .
+
+UBERON:0012469 a owl:Class ;
+    rdfs:subClassOf UBERON:0000481 .
+
+UBERON:0012475 a owl:Class ;
+    rdfs:subClassOf UBERON:0010912 .
+
+UBERON:0012476 a owl:Class ;
+    rdfs:subClassOf UBERON:0010912 .
+
+UBERON:0012477 a owl:Class ;
+    rdfs:subClassOf UBERON:0005434 .
 
 UBERON:0012648 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
@@ -17543,11 +19861,22 @@ UBERON:0013657 a owl:Class ;
     rdfs:subClassOf PR:000050567,
         UBERON:0000481 .
 
+UBERON:0013691 a owl:Class ;
+    rdfs:subClassOf UBERON:0015212,
+        UBERON:0034929 .
+
+UBERON:0013700 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
 UBERON:0013701 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
 UBERON:0013702 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
+
+UBERON:0013703 a owl:Class ;
+    rdfs:subClassOf UBERON:0004529,
+        UBERON:0006003 .
 
 UBERON:0013734 a owl:Class .
 
@@ -17562,6 +19891,13 @@ UBERON:0013765 a owl:Class ;
 UBERON:0013768 a owl:Class ;
     rdfs:subClassOf UBERON:0001981 .
 
+UBERON:0013776 a owl:Class ;
+    rdfs:subClassOf UBERON:0015790 .
+
+UBERON:0013777 a owl:Class ;
+    rdfs:subClassOf UBERON:0001519,
+        UBERON:0013776 .
+
 UBERON:0014169 a owl:Class .
 
 UBERON:0014277 a owl:Class ;
@@ -17574,6 +19910,23 @@ UBERON:0014283 a owl:Class ;
 
 UBERON:0014284 a owl:Class ;
     rdfs:subClassOf UBERON:0009663 .
+
+UBERON:0014375 a owl:Class ;
+    rdfs:subClassOf UBERON:0001500,
+        UBERON:0035112 .
+
+UBERON:0014376 a owl:Class ;
+    rdfs:subClassOf UBERON:0014375 .
+
+UBERON:0014377 a owl:Class ;
+    rdfs:subClassOf UBERON:0014375 .
+
+UBERON:0014378 a owl:Class ;
+    rdfs:subClassOf UBERON:0001498,
+        UBERON:0035112 .
+
+UBERON:0014379 a owl:Class ;
+    rdfs:subClassOf UBERON:0014378 .
 
 UBERON:0014468 a owl:Class .
 
@@ -17674,10 +20027,31 @@ UBERON:0014634 a owl:Class ;
     rdfs:subClassOf UBERON:0002260,
         UBERON:0009632 .
 
+UBERON:0014716 a owl:Class ;
+    rdfs:subClassOf UBERON:0035050 .
+
 UBERON:0014761 a owl:Class .
 
 UBERON:0014778 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
+
+UBERON:0014791 a owl:Class ;
+    rdfs:subClassOf UBERON:0004474 .
+
+UBERON:0014792 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
+UBERON:0014793 a owl:Class ;
+    rdfs:subClassOf UBERON:0001015 .
+
+UBERON:0014794 a owl:Class ;
+    rdfs:subClassOf UBERON:0010891 .
+
+UBERON:0014795 a owl:Class ;
+    rdfs:subClassOf UBERON:0010890 .
+
+UBERON:0014847 a owl:Class ;
+    rdfs:subClassOf UBERON:0001377 .
 
 UBERON:0014891 a owl:Class ;
     rdfs:subClassOf UBERON:0003544 .
@@ -17685,9 +20059,17 @@ UBERON:0014891 a owl:Class ;
 UBERON:0014892 a owl:Class ;
     rdfs:subClassOf UBERON:0001630 .
 
+UBERON:0014903 a owl:Class ;
+    rdfs:subClassOf UBERON:0001048 .
+
 UBERON:0014915 a owl:Class .
 
 UBERON:0014918 a owl:Class .
+
+UBERON:0015054 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0005179,
+        UBERON:0010363 .
 
 UBERON:0015152 a owl:Class ;
     rdfs:subClassOf UBERON:0002530 .
@@ -17723,11 +20105,21 @@ UBERON:0015234 a owl:Class ;
 UBERON:0015244 a owl:Class ;
     rdfs:subClassOf UBERON:0004001 .
 
+UBERON:0015249 a owl:Class ;
+    rdfs:subClassOf UBERON:0015790 .
+
 UBERON:0015410 a owl:Class ;
     rdfs:subClassOf UBERON:0005178 .
 
+UBERON:0015423 a owl:Class ;
+    rdfs:subClassOf UBERON:0005171 .
+
 UBERON:0015432 a owl:Class ;
     rdfs:subClassOf UBERON:0004001 .
+
+UBERON:0015479 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:8480029 .
 
 UBERON:0015599 a owl:Class .
 
@@ -17746,9 +20138,16 @@ UBERON:0015788 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0015787 .
 
+UBERON:0015790 a owl:Class ;
+    rdfs:subClassOf UBERON:0001419 .
+
 UBERON:0015793 a owl:Class ;
     rdfs:subClassOf UBERON:0016536,
         UBERON:0016555 .
+
+UBERON:0015796 a owl:Class ;
+    rdfs:subClassOf UBERON:0000077,
+        UBERON:0003497 .
 
 UBERON:0015800 a owl:Class ;
     rdfs:subClassOf UBERON:0016536,
@@ -17759,6 +20158,9 @@ UBERON:0015860 a owl:Class ;
 
 UBERON:0016490 a owl:Class ;
     rdfs:subClassOf UBERON:0007037 .
+
+UBERON:0016493 a owl:Class ;
+    rdfs:subClassOf UBERON:0003662 .
 
 UBERON:0016508 a owl:Class ;
     rdfs:subClassOf UBERON:0003964 .
@@ -17845,8 +20247,11 @@ UBERON:0016848 a owl:Class ;
 UBERON:0016850 a owl:Class ;
     rdfs:subClassOf UBERON:0011777 .
 
-UBERON:0017642 a owl:Class ;
-    rdfs:subClassOf UBERON:0001021 .
+UBERON:0016884 a owl:Class ;
+    rdfs:subClassOf UBERON:0000982 .
+
+UBERON:0017618 a owl:Class ;
+    rdfs:subClassOf UBERON:0011024 .
 
 UBERON:0017672 a owl:Class ;
     rdfs:subClassOf UBERON:0002075,
@@ -17881,6 +20286,9 @@ UBERON:0018675 a owl:Class ;
     rdfs:subClassOf UBERON:0003715,
         UBERON:0004293 .
 
+UBERON:0018676 a owl:Class ;
+    rdfs:subClassOf UBERON:0001816 .
+
 UBERON:0018679 a owl:Class ;
     rdfs:subClassOf UBERON:0003715,
         UBERON:0003824 .
@@ -17902,10 +20310,33 @@ UBERON:0019042 a owl:Class ;
     rdfs:subClassOf UBERON:0000344,
         UBERON:0005156 .
 
+UBERON:0019201 a owl:Class ;
+    rdfs:subClassOf UBERON:0004252 .
+
+UBERON:0019202 a owl:Class ;
+    rdfs:subClassOf UBERON:0019201 .
+
+UBERON:0019203 a owl:Class ;
+    rdfs:subClassOf UBERON:0019201 .
+
 UBERON:0019207 a owl:Class ;
     rdfs:subClassOf UBERON:0000481,
         UBERON:0004121,
         UBERON:0010314 .
+
+UBERON:0019221 a owl:Class ;
+    rdfs:subClassOf UBERON:0002544 .
+
+UBERON:0019222 a owl:Class ;
+    rdfs:subClassOf UBERON:0002544 .
+
+UBERON:0019231 a owl:Class ;
+    rdfs:subClassOf UBERON:0002389,
+        UBERON:0019221 .
+
+UBERON:0019232 a owl:Class ;
+    rdfs:subClassOf UBERON:0002389,
+        UBERON:0019222 .
 
 UBERON:0019258 a owl:Class ;
     rdfs:subClassOf UBERON:0003544 .
@@ -17955,6 +20386,10 @@ UBERON:0022272 a owl:Class .
 UBERON:0022278 a owl:Class ;
     rdfs:subClassOf UBERON:0011777 .
 
+UBERON:0022300 a owl:Class ;
+    rdfs:subClassOf UBERON:0004121,
+        UBERON:0011779 .
+
 UBERON:0022301 a owl:Class ;
     rdfs:subClassOf UBERON:0003438,
         UBERON:0004121,
@@ -17985,6 +20420,10 @@ UBERON:0022347 a owl:Class ;
     rdfs:subClassOf UBERON:0002304 .
 
 UBERON:0022350 a owl:Class ;
+    rdfs:subClassOf UBERON:0004120,
+        UBERON:0004923 .
+
+UBERON:0022351 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
         UBERON:0004923 .
 
@@ -18023,6 +20462,9 @@ UBERON:0034728 a owl:Class ;
 UBERON:0034729 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
+UBERON:0034736 a owl:Class ;
+    rdfs:subClassOf UBERON:0008846 .
+
 UBERON:0034768 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
 
@@ -18030,6 +20472,9 @@ UBERON:0034769 a owl:Class ;
     rdfs:subClassOf UBERON:0015757 .
 
 UBERON:0034896 a owl:Class .
+
+UBERON:0034908 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
 
 UBERON:0034921 a owl:Class ;
     rdfs:subClassOf UBERON:0010000 .
@@ -18049,6 +20494,9 @@ UBERON:0034929 a owl:Class ;
 
 UBERON:0034931 a owl:Class .
 
+UBERON:0034932 a owl:Class ;
+    rdfs:subClassOf UBERON:0000483 .
+
 UBERON:0034933 a owl:Class ;
     rdfs:subClassOf UBERON:0018260 .
 
@@ -18065,6 +20513,15 @@ UBERON:0034978 a owl:Class ;
 UBERON:0034979 a owl:Class ;
     rdfs:subClassOf UBERON:0034978 .
 
+UBERON:0034984 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+UBERON:0034986 a owl:Class ;
+    rdfs:subClassOf UBERON:0001815 .
+
+UBERON:0034987 a owl:Class ;
+    rdfs:subClassOf UBERON:0001815 .
+
 UBERON:0035011 a owl:Class ;
     rdfs:subClassOf UBERON:0002020 .
 
@@ -18073,13 +20530,43 @@ UBERON:0035013 a owl:Class .
 UBERON:0035014 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
+UBERON:0035032 a owl:Class ;
+    rdfs:subClassOf UBERON:0002461 .
+
 UBERON:0035044 a owl:Class ;
     rdfs:subClassOf UBERON:0011215,
         UBERON:0022303 .
 
+UBERON:0035050 a owl:Class ;
+    rdfs:subClassOf UBERON:0000058 .
+
+UBERON:0035109 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431 .
+
+UBERON:0035110 a owl:Class ;
+    rdfs:subClassOf UBERON:0035109 .
+
+UBERON:0035111 a owl:Class ;
+    rdfs:subClassOf UBERON:0035109 .
+
+UBERON:0035112 a owl:Class ;
+    rdfs:subClassOf UBERON:0014892 .
+
 UBERON:0035113 a owl:Class .
 
 UBERON:0035114 a owl:Class .
+
+UBERON:0035207 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431,
+        UBERON:0035652 .
+
+UBERON:0035258 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475,
+        UBERON:0005156 .
+
+UBERON:0035526 a owl:Class ;
+    rdfs:subClassOf UBERON:0003431,
+        UBERON:0035652 .
 
 UBERON:0035553 a owl:Class ;
     rdfs:subClassOf UBERON:0004151,
@@ -18099,6 +20586,9 @@ UBERON:0035639 a owl:Class ;
     rdfs:subClassOf UBERON:0034921 .
 
 UBERON:0035642 a owl:Class ;
+    rdfs:subClassOf UBERON:0001021 .
+
+UBERON:0035652 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
 UBERON:0035769 a owl:Class ;
@@ -18133,6 +20623,10 @@ UBERON:0035814 a owl:Class ;
 
 UBERON:0035818 a owl:Class ;
     rdfs:subClassOf UBERON:0001013 .
+
+UBERON:0035820 a owl:Class ;
+    rdfs:subClassOf UBERON:0002075,
+        UBERON:0005906 .
 
 UBERON:0035872 a owl:Class .
 
@@ -18220,7 +20714,22 @@ UBERON:0036007 a owl:Class .
 
 UBERON:0036012 a owl:Class .
 
+UBERON:0036014 a owl:Class ;
+    rdfs:subClassOf UBERON:0007651 .
+
+UBERON:0036172 a owl:Class ;
+    rdfs:subClassOf UBERON:0014377 .
+
+UBERON:0036174 a owl:Class ;
+    rdfs:subClassOf UBERON:0014377 .
+
+UBERON:0036176 a owl:Class ;
+    rdfs:subClassOf UBERON:0014377 .
+
 UBERON:0036216 a owl:Class ;
+    rdfs:subClassOf UBERON:0011779 .
+
+UBERON:0036264 a owl:Class ;
     rdfs:subClassOf UBERON:0011779 .
 
 UBERON:0036295 a owl:Class ;
@@ -18236,6 +20745,51 @@ UBERON:1000023 a owl:Class ;
 UBERON:1000024 a owl:Class ;
     rdfs:subClassOf UBERON:0000353,
         UBERON:0004120 .
+
+UBERON:2005260 a owl:Class ;
+    rdfs:subClassOf UBERON:0001982,
+        UBERON:0004638 .
+
+UBERON:3000961 a owl:Class ;
+    rdfs:subClassOf UBERON:0003102 .
+
+UBERON:4200013 a owl:Class ;
+    rdfs:subClassOf UBERON:4200230 .
+
+UBERON:4200230 a owl:Class ;
+    rdfs:subClassOf UBERON:0006984 .
+
+UBERON:5001463 a owl:Class ;
+    rdfs:subClassOf UBERON:5002389,
+        UBERON:5006048 .
+
+UBERON:5002389 a owl:Class ;
+    rdfs:subClassOf UBERON:5002544 .
+
+UBERON:5002544 a owl:Class ;
+    rdfs:subClassOf UBERON:0000475 .
+
+UBERON:5003622 a owl:Class ;
+    rdfs:subClassOf UBERON:5002389,
+        UBERON:5006049 .
+
+UBERON:5003623 a owl:Class ;
+    rdfs:subClassOf UBERON:5002389,
+        UBERON:5006050 .
+
+UBERON:5006048 a owl:Class ;
+    rdfs:subClassOf UBERON:5002544 .
+
+UBERON:5006049 a owl:Class ;
+    rdfs:subClassOf UBERON:5002544 .
+
+UBERON:5006050 a owl:Class ;
+    rdfs:subClassOf UBERON:5002544 .
+
+UBERON:8410003 a owl:Class ;
+    rdfs:subClassOf PR:000050567,
+        UBERON:0004119,
+        UBERON:0010000 .
 
 UBERON:8410010 a owl:Class ;
     rdfs:subClassOf UBERON:0003889 .
@@ -18259,15 +20813,8 @@ UBERON:8410081 a owl:Class ;
 UBERON:8440004 a owl:Class ;
     rdfs:subClassOf UBERON:0011215 .
 
-UBERON:8440013 a owl:Class ;
-    rdfs:subClassOf UBERON:0000064,
-        UBERON:0004121 .
-
 UBERON:8440015 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
-
-UBERON:8440043 a owl:Class ;
-    rdfs:subClassOf UBERON:0007247 .
 
 UBERON:8450001 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
@@ -18275,6 +20822,10 @@ UBERON:8450001 a owl:Class ;
 
 UBERON:8450002 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
+
+UBERON:8480029 a owl:Class ;
+    rdfs:subClassOf UBERON:0000014,
+        UBERON:0005156 .
 
 UBERON:8480069 a owl:Class ;
     rdfs:subClassOf UBERON:0001444 .

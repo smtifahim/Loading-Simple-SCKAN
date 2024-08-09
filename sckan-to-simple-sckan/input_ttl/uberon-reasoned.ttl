@@ -20,7 +20,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 obo:uberon.owl a owl:Ontology ;
-    owl:versionIRI <http://purl.obolibrary.org/obo/uberon/releases/2024-02-20/uberon.owl> ;
+    owl:versionIRI <http://purl.obolibrary.org/obo/uberon/releases/2024-07-02/uberon.owl> ;
     dc:title "Uber-anatomy ontology" ;
     dc:description "Uberon is an integrated cross-species anatomy ontology representing a variety of entities classified according to traditional anatomical criteria such as structure, function and developmental lineage. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data." ;
     rdfs:comment "Aurelie Comte, Bill Bug, Catherine Leroy, Duncan Davidson and Trish Whetzel are also contributors. However their ORCIDs were not found." ;
@@ -254,6 +254,16 @@ CHEBI:3892 a owl:Class ;
 CHEBI:3992 a owl:Class ;
     rdfs:subClassOf CHEBI:17087 .
 
+CHEBI:4167 a owl:Class ;
+    rdfs:subClassOf CHEBI:17634,
+        CHEBI:37661 .
+
+CHEBI:4194 a owl:Class ;
+    rdfs:subClassOf CHEBI:18133 .
+
+CHEBI:4705 a owl:Class ;
+    rdfs:subClassOf CHEBI:16991 .
+
 CHEBI:5254 a owl:Class ;
     rdfs:subClassOf CHEBI:33563 .
 
@@ -410,6 +420,9 @@ CHEBI:16541 a owl:Class ;
 CHEBI:16646 a owl:Class ;
     rdfs:subClassOf CHEBI:78616 .
 
+CHEBI:16666 a owl:Class ;
+    rdfs:subClassOf CHEBI:36145 .
+
 CHEBI:16670 a owl:Class ;
     rdfs:subClassOf CHEBI:37622,
         CHEBI:50047 .
@@ -421,6 +434,12 @@ CHEBI:16708 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:20706,
         CHEBI:26386 .
+
+CHEBI:16716 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:22712,
+        CHEBI:33842,
+        CHEBI:134179 .
 
 CHEBI:16733 a owl:Class ;
     rdfs:subClassOf CHEBI:83925 .
@@ -460,6 +479,10 @@ CHEBI:16991 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:33696 .
 
+CHEBI:16998 a owl:Class ;
+    rdfs:subClassOf CHEBI:16733,
+        CHEBI:28044 .
+
 CHEBI:17026 a owl:Class ;
     rdfs:subClassOf CHEBI:36885,
         CHEBI:47909,
@@ -484,6 +507,14 @@ CHEBI:17234 a owl:Class ;
 CHEBI:17258 a owl:Class ;
     rdfs:subClassOf CHEBI:35584 .
 
+CHEBI:17272 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:78113 .
+
+CHEBI:17295 a owl:Class ;
+    rdfs:subClassOf CHEBI:28044,
+        CHEBI:73690 .
+
 CHEBI:17326 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:25608 .
@@ -502,10 +533,24 @@ CHEBI:17544 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:35604 .
 
+CHEBI:17578 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:27024,
+        CHEBI:38975,
+        CHEBI:134179 .
+
 CHEBI:17579 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:35163,
         CHEBI:139120 .
+
+CHEBI:17608 a owl:Class ;
+    rdfs:subClassOf CHEBI:4194,
+        CHEBI:33917 .
+
+CHEBI:17634 a owl:Class ;
+    rdfs:subClassOf CHEBI:17234,
+        CHEBI:17608 .
 
 CHEBI:17668 a owl:Class ;
     rdfs:subClassOf CHEBI:16862 .
@@ -516,6 +561,10 @@ CHEBI:17761 a owl:Class ;
 
 CHEBI:17891 a owl:Class ;
     rdfs:subClassOf CHEBI:51086 .
+
+CHEBI:17895 a owl:Class ;
+    rdfs:subClassOf CHEBI:18186,
+        CHEBI:73690 .
 
 CHEBI:17968 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
@@ -537,6 +586,11 @@ CHEBI:18154 a owl:Class ;
     rdfs:subClassOf CHEBI:16646,
         CHEBI:33694,
         CHEBI:167559 .
+
+CHEBI:18186 a owl:Class ;
+    rdfs:subClassOf CHEBI:26167,
+        CHEBI:33704,
+        CHEBI:33856 .
 
 CHEBI:18237 a owl:Class ;
     rdfs:subClassOf CHEBI:26167,
@@ -588,6 +642,11 @@ CHEBI:21731 a owl:Class ;
     rdfs:subClassOf CHEBI:35352,
         CHEBI:63161 .
 
+CHEBI:21968 a owl:Class ;
+    rdfs:subClassOf CHEBI:25703,
+        CHEBI:26051,
+        CHEBI:37734 .
+
 CHEBI:22160 a owl:Class ;
     rdfs:subClassOf CHEBI:37622 .
 
@@ -614,6 +673,9 @@ CHEBI:22315 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:35352 .
 
+CHEBI:22492 a owl:Class ;
+    rdfs:subClassOf CHEBI:17478 .
+
 CHEBI:22506 a owl:Class ;
     rdfs:subClassOf CHEBI:35352,
         CHEBI:65212 .
@@ -630,10 +692,17 @@ CHEBI:22586 a owl:Class ;
 CHEBI:22695 a owl:Class ;
     rdfs:subClassOf CHEBI:51086 .
 
+CHEBI:22712 a owl:Class ;
+    rdfs:subClassOf CHEBI:33836 .
+
 CHEBI:22728 a owl:Class ;
     rdfs:subClassOf CHEBI:27171,
         CHEBI:38101,
         CHEBI:38180 .
+
+CHEBI:22744 a owl:Class ;
+    rdfs:subClassOf CHEBI:33452,
+        CHEBI:50325 .
 
 CHEBI:22868 a owl:Class ;
     rdfs:subClassOf CHEBI:36078,
@@ -892,6 +961,9 @@ CHEBI:25741 a owl:Class ;
     rdfs:subClassOf CHEBI:25806,
         CHEBI:37577 .
 
+CHEBI:25754 a owl:Class ;
+    rdfs:subClassOf CHEBI:33575 .
+
 CHEBI:25805 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:25585,
@@ -910,8 +982,14 @@ CHEBI:25901 a owl:Class ;
 CHEBI:25905 a owl:Class ;
     rdfs:subClassOf CHEBI:16670 .
 
+CHEBI:25985 a owl:Class ;
+    rdfs:subClassOf CHEBI:83821 .
+
 CHEBI:26020 a owl:Class ;
     rdfs:subClassOf CHEBI:26079 .
+
+CHEBI:26051 a owl:Class ;
+    rdfs:subClassOf CHEBI:83821 .
 
 CHEBI:26078 a owl:Class ;
     rdfs:subClassOf CHEBI:59698 .
@@ -1045,6 +1123,9 @@ CHEBI:26932 a owl:Class ;
 CHEBI:26935 a owl:Class ;
     rdfs:subClassOf CHEBI:26873 .
 
+CHEBI:27024 a owl:Class ;
+    rdfs:subClassOf CHEBI:22712 .
+
 CHEBI:27027 a owl:Class ;
     rdfs:subClassOf CHEBI:33284 .
 
@@ -1057,6 +1138,10 @@ CHEBI:27162 a owl:Class ;
 CHEBI:27171 a owl:Class ;
     rdfs:subClassOf CHEBI:33672,
         CHEBI:38166 .
+
+CHEBI:27177 a owl:Class ;
+    rdfs:subClassOf CHEBI:62761,
+        CHEBI:84144 .
 
 CHEBI:27207 a owl:Class ;
     rdfs:subClassOf CHEBI:37838 .
@@ -1087,6 +1172,10 @@ CHEBI:27594 a owl:Class ;
         CHEBI:25585,
         CHEBI:33306 .
 
+CHEBI:28044 a owl:Class ;
+    rdfs:subClassOf CHEBI:33704,
+        CHEBI:33856 .
+
 CHEBI:28087 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:24384 .
@@ -1095,6 +1184,10 @@ CHEBI:28425 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:35163,
         CHEBI:139120 .
+
+CHEBI:28479 a owl:Class ;
+    rdfs:subClassOf CHEBI:16733,
+        CHEBI:18186 .
 
 CHEBI:28616 a owl:Class ;
     rdfs:subClassOf CHEBI:35352,
@@ -1179,9 +1272,14 @@ CHEBI:29412 a owl:Class ;
 CHEBI:29793 a owl:Class ;
     rdfs:subClassOf CHEBI:33693 .
 
+CHEBI:29934 a owl:Class ;
+    rdfs:subClassOf CHEBI:57852 .
+
+CHEBI:29976 a owl:Class ;
+    rdfs:subClassOf CHEBI:32789 .
+
 CHEBI:29985 a owl:Class ;
-    rdfs:subClassOf CHEBI:14321,
-        CHEBI:62031 .
+    rdfs:subClassOf CHEBI:14321 .
 
 CHEBI:29986 a owl:Class ;
     rdfs:subClassOf CHEBI:14321 .
@@ -1218,12 +1316,75 @@ CHEBI:30616 a owl:Class ;
 CHEBI:30751 a owl:Class ;
     rdfs:subClassOf CHEBI:25384 .
 
+CHEBI:30768 a owl:Class ;
+    rdfs:subClassOf CHEBI:26607,
+        CHEBI:26666 .
+
 CHEBI:30772 a owl:Class ;
     rdfs:subClassOf CHEBI:39418,
         CHEBI:140601 .
 
 CHEBI:30879 a owl:Class ;
     rdfs:subClassOf CHEBI:33822 .
+
+CHEBI:32486 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32504,
+        CHEBI:59814 .
+
+CHEBI:32487 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32505 .
+
+CHEBI:32494 a owl:Class ;
+    rdfs:subClassOf CHEBI:32504 .
+
+CHEBI:32495 a owl:Class ;
+    rdfs:subClassOf CHEBI:32505 .
+
+CHEBI:32504 a owl:Class ;
+    rdfs:subClassOf CHEBI:33558,
+        CHEBI:63473 .
+
+CHEBI:32505 a owl:Class ;
+    rdfs:subClassOf CHEBI:33719 .
+
+CHEBI:32760 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32784,
+        CHEBI:59814 .
+
+CHEBI:32761 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32785 .
+
+CHEBI:32762 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32786 .
+
+CHEBI:32773 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32784 .
+
+CHEBI:32774 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32785 .
+
+CHEBI:32775 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:32786 .
+
+CHEBI:32784 a owl:Class ;
+    rdfs:subClassOf CHEBI:33558 .
+
+CHEBI:32785 a owl:Class ;
+    rdfs:subClassOf CHEBI:33558 .
+
+CHEBI:32786 a owl:Class ;
+    rdfs:subClassOf CHEBI:33719 .
+
+CHEBI:32789 a owl:Class ;
+    rdfs:subClassOf CHEBI:33710 .
 
 CHEBI:32952 a owl:Class ;
     rdfs:subClassOf CHEBI:50047 .
@@ -1371,6 +1532,9 @@ CHEBI:33447 a owl:Class ;
     rdfs:subClassOf CHEBI:26816,
         CHEBI:63367 .
 
+CHEBI:33452 a owl:Class ;
+    rdfs:subClassOf CHEBI:33249 .
+
 CHEBI:33457 a owl:Class ;
     rdfs:subClassOf CHEBI:33408,
         CHEBI:36360 .
@@ -1432,10 +1596,6 @@ CHEBI:33567 a owl:Class ;
     rdfs:subClassOf CHEBI:25375,
         CHEBI:33566 .
 
-CHEBI:33568 a owl:Class ;
-    rdfs:subClassOf BFO:0000004,
-        CHEBI:60911 .
-
 CHEBI:33569 a owl:Class ;
     rdfs:subClassOf CHEBI:33567 .
 
@@ -1459,6 +1619,13 @@ CHEBI:33582 a owl:Class ;
 CHEBI:33595 a owl:Class ;
     rdfs:subClassOf CHEBI:25367 .
 
+CHEBI:33597 a owl:Class ;
+    rdfs:subClassOf CHEBI:33595 .
+
+CHEBI:33598 a owl:Class ;
+    rdfs:subClassOf CHEBI:33597,
+        CHEBI:33832 .
+
 CHEBI:33608 a owl:Class ;
     rdfs:subClassOf CHEBI:33674 .
 
@@ -1474,12 +1641,26 @@ CHEBI:33653 a owl:Class ;
 CHEBI:33655 a owl:Class ;
     rdfs:subClassOf CHEBI:33595 .
 
+CHEBI:33658 a owl:Class ;
+    rdfs:subClassOf CHEBI:33659,
+        CHEBI:33663 .
+
 CHEBI:33659 a owl:Class ;
     rdfs:subClassOf CHEBI:33655,
         CHEBI:33832 .
 
 CHEBI:33661 a owl:Class ;
     rdfs:subClassOf CHEBI:33595 .
+
+CHEBI:33662 a owl:Class ;
+    rdfs:subClassOf CHEBI:33664 .
+
+CHEBI:33663 a owl:Class ;
+    rdfs:subClassOf CHEBI:24632,
+        CHEBI:33598 .
+
+CHEBI:33664 a owl:Class ;
+    rdfs:subClassOf CHEBI:33663 .
 
 CHEBI:33670 a owl:Class ;
     rdfs:subClassOf CHEBI:5686,
@@ -1529,6 +1710,10 @@ CHEBI:33702 a owl:Class ;
     rdfs:subClassOf CHEBI:36358,
         CHEBI:36916 .
 
+CHEBI:33703 a owl:Class ;
+    rdfs:subClassOf CHEBI:25697,
+        CHEBI:33702 .
+
 CHEBI:33704 a owl:Class ;
     rdfs:subClassOf CHEBI:33709 .
 
@@ -1544,6 +1729,9 @@ CHEBI:33709 a owl:Class ;
 
 CHEBI:33710 a owl:Class ;
     rdfs:subClassOf CHEBI:33708 .
+
+CHEBI:33719 a owl:Class ;
+    rdfs:subClassOf CHEBI:33703 .
 
 CHEBI:33720 a owl:Class ;
     rdfs:subClassOf CHEBI:16646,
@@ -1576,6 +1764,10 @@ CHEBI:33833 a owl:Class ;
     rdfs:subClassOf CHEBI:24532,
         CHEBI:33659 .
 
+CHEBI:33836 a owl:Class ;
+    rdfs:subClassOf CHEBI:33598,
+        CHEBI:33659 .
+
 CHEBI:33837 a owl:Class ;
     rdfs:subClassOf CHEBI:36080 .
 
@@ -1587,9 +1779,20 @@ CHEBI:33838 a owl:Class ;
 CHEBI:33839 a owl:Class ;
     rdfs:subClassOf CHEBI:36357 .
 
+CHEBI:33842 a owl:Class ;
+    rdfs:subClassOf CHEBI:33662,
+        CHEBI:33847 .
+
+CHEBI:33847 a owl:Class ;
+    rdfs:subClassOf CHEBI:33658 .
+
 CHEBI:33853 a owl:Class ;
     rdfs:subClassOf CHEBI:33659,
         CHEBI:33822 .
+
+CHEBI:33856 a owl:Class ;
+    rdfs:subClassOf CHEBI:33659,
+        CHEBI:33709 .
 
 CHEBI:33893 a owl:Class ;
     rdfs:subClassOf CHEBI:33232 .
@@ -1706,6 +1909,12 @@ CHEBI:35406 a owl:Class ;
     rdfs:subClassOf CHEBI:25741,
         CHEBI:33273 .
 
+CHEBI:35416 a owl:Class ;
+    rdfs:subClassOf CHEBI:64898 .
+
+CHEBI:35441 a owl:Class ;
+    rdfs:subClassOf CHEBI:23888 .
+
 CHEBI:35470 a owl:Class ;
     rdfs:subClassOf CHEBI:23888 .
 
@@ -1811,6 +2020,9 @@ CHEBI:35693 a owl:Class ;
 CHEBI:35701 a owl:Class ;
     rdfs:subClassOf CHEBI:36963 .
 
+CHEBI:35718 a owl:Class ;
+    rdfs:subClassOf CHEBI:33281 .
+
 CHEBI:35722 a owl:Class ;
     rdfs:subClassOf CHEBI:18085,
         CHEBI:35724 .
@@ -1852,6 +2064,9 @@ CHEBI:35881 a owl:Class ;
     rdfs:subClassOf CHEBI:33242,
         CHEBI:33302 .
 
+CHEBI:35903 a owl:Class ;
+    rdfs:subClassOf CHEBI:29067 .
+
 CHEBI:35942 a owl:Class ;
     rdfs:subClassOf CHEBI:23888,
         CHEBI:52210 .
@@ -1861,6 +2076,10 @@ CHEBI:36078 a owl:Class ;
 
 CHEBI:36080 a owl:Class ;
     rdfs:subClassOf CHEBI:33695 .
+
+CHEBI:36145 a owl:Class ;
+    rdfs:subClassOf CHEBI:25754,
+        CHEBI:35692 .
 
 CHEBI:36235 a owl:Class ;
     rdfs:subClassOf CHEBI:35757,
@@ -2070,9 +2289,17 @@ CHEBI:37622 a owl:Class ;
         CHEBI:35352,
         CHEBI:36963 .
 
+CHEBI:37661 a owl:Class ;
+    rdfs:subClassOf CHEBI:17234 .
+
 CHEBI:37734 a owl:Class ;
     rdfs:subClassOf CHEBI:26079,
         CHEBI:35701 .
+
+CHEBI:37788 a owl:Class ;
+    rdfs:subClassOf CHEBI:27177,
+        CHEBI:74956,
+        CHEBI:83822 .
 
 CHEBI:37826 a owl:Class ;
     rdfs:subClassOf CHEBI:33424 .
@@ -2141,6 +2368,13 @@ CHEBI:38867 a owl:Class ;
 CHEBI:38958 a owl:Class ;
     rdfs:subClassOf CHEBI:22315 .
 
+CHEBI:38975 a owl:Class ;
+    rdfs:subClassOf CHEBI:38976 .
+
+CHEBI:38976 a owl:Class ;
+    rdfs:subClassOf CHEBI:22712,
+        CHEBI:33847 .
+
 CHEBI:39015 a owl:Class ;
     rdfs:subClassOf CHEBI:13850 .
 
@@ -2197,6 +2431,11 @@ CHEBI:43474 a owl:Class ;
 CHEBI:45696 a owl:Class ;
     rdfs:subClassOf CHEBI:33482 .
 
+CHEBI:46209 a owl:Class ;
+    rdfs:subClassOf CHEBI:22492,
+        CHEBI:33853,
+        CHEBI:50994 .
+
 CHEBI:46629 a owl:Class ;
     rdfs:subClassOf CHEBI:33246 .
 
@@ -2212,6 +2451,11 @@ CHEBI:46723 a owl:Class ;
 CHEBI:46787 a owl:Class ;
     rdfs:subClassOf CHEBI:33232,
         CHEBI:51086 .
+
+CHEBI:46858 a owl:Class ;
+    rdfs:subClassOf CHEBI:32789,
+        CHEBI:33700,
+        CHEBI:83228 .
 
 CHEBI:46883 a owl:Class ;
     rdfs:subClassOf CHEBI:33249 .
@@ -2258,6 +2502,9 @@ CHEBI:48154 a owl:Class ;
 CHEBI:48354 a owl:Class ;
     rdfs:subClassOf CHEBI:46787 .
 
+CHEBI:48355 a owl:Class ;
+    rdfs:subClassOf CHEBI:46787 .
+
 CHEBI:48356 a owl:Class ;
     rdfs:subClassOf CHEBI:39141,
         CHEBI:48354 .
@@ -2287,6 +2534,9 @@ CHEBI:48705 a owl:Class ;
 
 CHEBI:48706 a owl:Class ;
     rdfs:subClassOf CHEBI:52210 .
+
+CHEBI:48873 a owl:Class ;
+    rdfs:subClassOf CHEBI:38323 .
 
 CHEBI:49323 a owl:Class ;
     rdfs:subClassOf CHEBI:50689 .
@@ -2343,6 +2593,9 @@ CHEBI:50325 a owl:Class ;
 CHEBI:50329 a owl:Class ;
     rdfs:subClassOf CHEBI:50325 .
 
+CHEBI:50336 a owl:Class ;
+    rdfs:subClassOf CHEBI:50325 .
+
 CHEBI:50402 a owl:Class ;
     rdfs:subClassOf CHEBI:35341 .
 
@@ -2378,11 +2631,13 @@ CHEBI:50858 a owl:Class ;
 CHEBI:50860 a owl:Class ;
     rdfs:subClassOf CHEBI:33582 .
 
+CHEBI:50903 a owl:Class ;
+    rdfs:subClassOf CHEBI:52209 .
+
 CHEBI:50904 a owl:Class ;
     rdfs:subClassOf CHEBI:52209 .
 
-CHEBI:50906 a owl:Class ;
-    rdfs:subClassOf PATO:0000001 .
+CHEBI:50906 a owl:Class .
 
 CHEBI:50910 a owl:Class ;
     rdfs:subClassOf CHEBI:52209,
@@ -2483,6 +2738,10 @@ CHEBI:57299 a owl:Class ;
 CHEBI:57652 a owl:Class ;
     rdfs:subClassOf CHEBI:61469 .
 
+CHEBI:57852 a owl:Class ;
+    rdfs:subClassOf BFO:0000004,
+        CHEBI:28965 .
+
 CHEBI:57867 a owl:Class ;
     rdfs:subClassOf CHEBI:58945 .
 
@@ -2498,12 +2757,27 @@ CHEBI:57977 a owl:Class ;
         CHEBI:28965,
         CHEBI:59252 .
 
+CHEBI:57981 a owl:Class ;
+    rdfs:subClassOf CHEBI:59871 .
+
+CHEBI:58095 a owl:Class ;
+    rdfs:subClassOf CHEBI:35238 .
+
 CHEBI:58104 a owl:Class ;
     rdfs:subClassOf CHEBI:59724 .
+
+CHEBI:58315 a owl:Class ;
+    rdfs:subClassOf CHEBI:35238 .
 
 CHEBI:58432 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:35274 .
+
+CHEBI:58570 a owl:Class ;
+    rdfs:subClassOf CHEBI:59871 .
+
+CHEBI:58942 a owl:Class ;
+    rdfs:subClassOf CHEBI:64769 .
 
 CHEBI:58945 a owl:Class ;
     rdfs:subClassOf CHEBI:25696,
@@ -2521,6 +2795,9 @@ CHEBI:58954 a owl:Class ;
 CHEBI:58958 a owl:Class ;
     rdfs:subClassOf CHEBI:25696,
         CHEBI:33482 .
+
+CHEBI:59132 a owl:Class ;
+    rdfs:subClassOf CHEBI:24432 .
 
 CHEBI:59202 a owl:Class ;
     rdfs:subClassOf CHEBI:35366 .
@@ -2585,11 +2862,11 @@ CHEBI:60466 a owl:Class ;
 CHEBI:60809 a owl:Class ;
     rdfs:subClassOf CHEBI:52217 .
 
+CHEBI:60816 a owl:Class ;
+    rdfs:subClassOf CHEBI:59132 .
+
 CHEBI:60895 a owl:Class ;
     rdfs:subClassOf CHEBI:33558 .
-
-CHEBI:60911 a owl:Class ;
-    rdfs:subClassOf CHEBI:60004 .
 
 CHEBI:60924 a owl:Class ;
     rdfs:subClassOf CHEBI:35722,
@@ -2621,14 +2898,29 @@ CHEBI:61469 a owl:Class ;
 CHEBI:61557 a owl:Class ;
     rdfs:subClassOf CHEBI:59724 .
 
+CHEBI:61972 a owl:Class ;
+    rdfs:subClassOf CHEBI:83228 .
+
+CHEBI:61978 a owl:Class ;
+    rdfs:subClassOf CHEBI:35416 .
+
 CHEBI:62031 a owl:Class ;
     rdfs:subClassOf CHEBI:35238 .
+
+CHEBI:62338 a owl:Class ;
+    rdfs:subClassOf CHEBI:74955 .
 
 CHEBI:62488 a owl:Class ;
     rdfs:subClassOf CHEBI:33280 .
 
 CHEBI:62643 a owl:Class ;
     rdfs:subClassOf CHEBI:58945 .
+
+CHEBI:62761 a owl:Class ;
+    rdfs:subClassOf CHEBI:25985 .
+
+CHEBI:62803 a owl:Class ;
+    rdfs:subClassOf CHEBI:51086 .
 
 CHEBI:62941 a owl:Class ;
     rdfs:subClassOf CHEBI:17761,
@@ -2643,6 +2935,9 @@ CHEBI:63248 a owl:Class ;
 CHEBI:63299 a owl:Class ;
     rdfs:subClassOf CHEBI:78616 .
 
+CHEBI:63332 a owl:Class ;
+    rdfs:subClassOf CHEBI:76775 .
+
 CHEBI:63367 a owl:Class ;
     rdfs:subClassOf CHEBI:63299 .
 
@@ -2651,6 +2946,9 @@ CHEBI:63409 a owl:Class ;
 
 CHEBI:63436 a owl:Class ;
     rdfs:subClassOf CHEBI:63299 .
+
+CHEBI:63473 a owl:Class ;
+    rdfs:subClassOf CHEBI:37022 .
 
 CHEBI:63534 a owl:Class ;
     rdfs:subClassOf CHEBI:64365 .
@@ -2667,6 +2965,9 @@ CHEBI:64049 a owl:Class ;
 
 CHEBI:64365 a owl:Class ;
     rdfs:subClassOf CHEBI:50047 .
+
+CHEBI:64416 a owl:Class ;
+    rdfs:subClassOf CHEBI:76857 .
 
 CHEBI:64583 a owl:Class ;
     rdfs:subClassOf CHEBI:35284,
@@ -2690,6 +2991,21 @@ CHEBI:64708 a owl:Class ;
 
 CHEBI:64709 a owl:Class ;
     rdfs:subClassOf CHEBI:50860 .
+
+CHEBI:64766 a owl:Class ;
+    rdfs:subClassOf CHEBI:24433 .
+
+CHEBI:64767 a owl:Class ;
+    rdfs:subClassOf CHEBI:24433 .
+
+CHEBI:64769 a owl:Class ;
+    rdfs:subClassOf CHEBI:64766 .
+
+CHEBI:64775 a owl:Class ;
+    rdfs:subClassOf CHEBI:64767 .
+
+CHEBI:64898 a owl:Class ;
+    rdfs:subClassOf CHEBI:64775 .
 
 CHEBI:64909 a owl:Class ;
     rdfs:subClassOf CHEBI:24432 .
@@ -2755,8 +3071,29 @@ CHEBI:73398 a owl:Class ;
 CHEBI:73541 a owl:Class ;
     rdfs:subClassOf CHEBI:52845 .
 
+CHEBI:73690 a owl:Class ;
+    rdfs:subClassOf CHEBI:15705,
+        CHEBI:83813 .
+
+CHEBI:74656 a owl:Class ;
+    rdfs:subClassOf CHEBI:74955 .
+
 CHEBI:74783 a owl:Class ;
     rdfs:subClassOf CHEBI:23888 .
+
+CHEBI:74955 a owl:Class ;
+    rdfs:subClassOf CHEBI:58945 .
+
+CHEBI:74956 a owl:Class ;
+    rdfs:subClassOf CHEBI:21968,
+        CHEBI:33856,
+        CHEBI:62761,
+        CHEBI:83925 .
+
+CHEBI:74959 a owl:Class ;
+    rdfs:subClassOf CHEBI:16733,
+        CHEBI:74956,
+        CHEBI:84124 .
 
 CHEBI:75600 a owl:Class ;
     rdfs:subClassOf CHEBI:75603 .
@@ -2782,6 +3119,9 @@ CHEBI:75772 a owl:Class ;
 CHEBI:75787 a owl:Class ;
     rdfs:subClassOf CHEBI:25212 .
 
+CHEBI:76042 a owl:Class ;
+    rdfs:subClassOf CHEBI:35238 .
+
 CHEBI:76206 a owl:Class ;
     rdfs:subClassOf CHEBI:25212 .
 
@@ -2791,17 +3131,32 @@ CHEBI:76413 a owl:Class ;
 CHEBI:76414 a owl:Class ;
     rdfs:subClassOf CHEBI:33232 .
 
+CHEBI:76725 a owl:Class ;
+    rdfs:subClassOf CHEBI:23924 .
+
+CHEBI:76729 a owl:Class ;
+    rdfs:subClassOf CHEBI:76725 .
+
 CHEBI:76759 a owl:Class ;
     rdfs:subClassOf CHEBI:23924 .
 
+CHEBI:76760 a owl:Class ;
+    rdfs:subClassOf CHEBI:76759 .
+
 CHEBI:76764 a owl:Class ;
     rdfs:subClassOf CHEBI:76759 .
+
+CHEBI:76775 a owl:Class ;
+    rdfs:subClassOf CHEBI:76760 .
 
 CHEBI:76807 a owl:Class ;
     rdfs:subClassOf CHEBI:76764 .
 
 CHEBI:76823 a owl:Class ;
     rdfs:subClassOf CHEBI:75600 .
+
+CHEBI:76857 a owl:Class ;
+    rdfs:subClassOf CHEBI:76729 .
 
 CHEBI:76924 a owl:Class ;
     rdfs:subClassOf CHEBI:75763 .
@@ -2838,12 +3193,19 @@ CHEBI:78017 a owl:Class ;
     rdfs:subClassOf CHEBI:64047,
         CHEBI:76414 .
 
+CHEBI:78113 a owl:Class ;
+    rdfs:subClassOf CHEBI:58951,
+        CHEBI:58953 .
+
 CHEBI:78115 a owl:Class ;
     rdfs:subClassOf CHEBI:58951,
         CHEBI:58953 .
 
 CHEBI:78295 a owl:Class ;
     rdfs:subClassOf CHEBI:52211 .
+
+CHEBI:78298 a owl:Class ;
+    rdfs:subClassOf CHEBI:51086 .
 
 CHEBI:78433 a owl:Class ;
     rdfs:subClassOf CHEBI:33232 .
@@ -2869,6 +3231,9 @@ CHEBI:79388 a owl:Class ;
 CHEBI:79389 a owl:Class ;
     rdfs:subClassOf CHEBI:24834 .
 
+CHEBI:82620 a owl:Class ;
+    rdfs:subClassOf CHEBI:35416 .
+
 CHEBI:82663 a owl:Class ;
     rdfs:subClassOf CHEBI:24873,
         CHEBI:33259 .
@@ -2882,6 +3247,15 @@ CHEBI:83056 a owl:Class ;
 CHEBI:83057 a owl:Class ;
     rdfs:subClassOf CHEBI:83039 .
 
+CHEBI:83228 a owl:Class ;
+    rdfs:subClassOf CHEBI:33710 .
+
+CHEBI:83811 a owl:Class ;
+    rdfs:subClassOf CHEBI:83821 .
+
+CHEBI:83812 a owl:Class ;
+    rdfs:subClassOf CHEBI:83821 .
+
 CHEBI:83813 a owl:Class ;
     rdfs:subClassOf CHEBI:33709 .
 
@@ -2890,6 +3264,10 @@ CHEBI:83820 a owl:Class ;
 
 CHEBI:83821 a owl:Class ;
     rdfs:subClassOf CHEBI:35352 .
+
+CHEBI:83822 a owl:Class ;
+    rdfs:subClassOf CHEBI:15705,
+        CHEBI:83925 .
 
 CHEBI:83925 a owl:Class ;
     rdfs:subClassOf CHEBI:33704,
@@ -2902,12 +3280,31 @@ CHEBI:84055 a owl:Class ;
 CHEBI:84087 a owl:Class ;
     rdfs:subClassOf CHEBI:77746 .
 
+CHEBI:84124 a owl:Class ;
+    rdfs:subClassOf CHEBI:62761,
+        CHEBI:84143 .
+
+CHEBI:84143 a owl:Class ;
+    rdfs:subClassOf CHEBI:25985,
+        CHEBI:83812 .
+
+CHEBI:84144 a owl:Class ;
+    rdfs:subClassOf CHEBI:25985,
+        CHEBI:83811 .
+
+CHEBI:84387 a owl:Class ;
+    rdfs:subClassOf CHEBI:16666 .
+
 CHEBI:84729 a owl:Class ;
     rdfs:subClassOf CHEBI:24828,
         CHEBI:33822 .
 
 CHEBI:84735 a owl:Class ;
     rdfs:subClassOf CHEBI:75763 .
+
+CHEBI:86327 a owl:Class ;
+    rdfs:subClassOf CHEBI:35441,
+        CHEBI:35718 .
 
 CHEBI:87518 a owl:Class ;
     rdfs:subClassOf CHEBI:58945 .
@@ -2931,6 +3328,13 @@ CHEBI:131927 a owl:Class ;
 CHEBI:132153 a owl:Class ;
     rdfs:subClassOf CHEBI:61469,
         CHEBI:63551 .
+
+CHEBI:133294 a owl:Class ;
+    rdfs:subClassOf CHEBI:28965,
+        CHEBI:35903 .
+
+CHEBI:134179 a owl:Class ;
+    rdfs:subClassOf CHEBI:72695 .
 
 CHEBI:136849 a owl:Class ;
     rdfs:subClassOf CHEBI:33247 .
@@ -2966,6 +3370,9 @@ CHEBI:140325 a owl:Class ;
 CHEBI:140601 a owl:Class ;
     rdfs:subClassOf CHEBI:26666 .
 
+CHEBI:141668 a owl:Class ;
+    rdfs:subClassOf CHEBI:65296 .
+
 CHEBI:142163 a owl:Class ;
     rdfs:subClassOf BFO:0000004,
         CHEBI:24433 .
@@ -3000,6 +3407,10 @@ CHEBI:190295 a owl:Class ;
 
 CHEBI:194548 a owl:Class ;
     rdfs:subClassOf CHEBI:33567 .
+
+CHEBI:228364 a owl:Class ;
+    rdfs:subClassOf CHEBI:33232,
+        CHEBI:51086 .
 
 CHEBI:237958 a owl:Class ;
     rdfs:subClassOf CHEBI:37045,
@@ -3110,7 +3521,6 @@ CL:0000039 a owl:Class ;
 CL:0000040 a owl:Class ;
     rdfs:subClassOf CL:0000763,
         CL:0002194,
-        PR:000050567,
         UBERON:0004120 .
 
 CL:0000048 a owl:Class ;
@@ -3163,8 +3573,7 @@ CL:0000062 a owl:Class ;
         UBERON:0010313 .
 
 CL:0000064 a owl:Class ;
-    rdfs:subClassOf CL:0000000,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000000 .
 
 CL:0000065 a owl:Class ;
     rdfs:subClassOf CL:0000067,
@@ -3226,13 +3635,11 @@ CL:0000092 a owl:Class ;
     rdfs:subClassOf CL:0000518,
         CL:0000766,
         CL:0001035,
-        PR:000050567,
         UBERON:0004120 .
 
 CL:0000094 a owl:Class ;
     rdfs:subClassOf CL:0000081,
-        CL:0000766,
-        PR:000050567 .
+        CL:0000766 .
 
 CL:0000095 a owl:Class ;
     rdfs:subClassOf CL:0002319,
@@ -3465,8 +3872,7 @@ CL:0000183 a owl:Class ;
 
 CL:0000185 a owl:Class ;
     rdfs:subClassOf CL:0000075,
-        CL:0000183,
-        CL:0002078 .
+        CL:0000183 .
 
 CL:0000187 a owl:Class ;
     rdfs:subClassOf CL:0000183,
@@ -3497,9 +3903,7 @@ CL:0000199 a owl:Class ;
     rdfs:subClassOf CL:0000101 .
 
 CL:0000200 a owl:Class ;
-    rdfs:subClassOf CL:0000006,
-        CL:0000199,
-        CL:4023168 .
+    rdfs:subClassOf CL:0000199 .
 
 CL:0000202 a owl:Class ;
     rdfs:subClassOf CL:0000855 .
@@ -3736,6 +4140,9 @@ CL:0000359 a owl:Class ;
     rdfs:subClassOf CL:0000192,
         CL:4033054 .
 
+CL:0000361 a owl:Class ;
+    rdfs:subClassOf CL:0000007 .
+
 CL:0000362 a owl:Class ;
     rdfs:subClassOf CL:0002159 .
 
@@ -3743,6 +4150,10 @@ CL:0000365 a owl:Class ;
     rdfs:subClassOf CL:0000007,
         CL:0000255,
         CL:0010017 .
+
+CL:0000373 a owl:Class ;
+    rdfs:subClassOf CL:0000255,
+        CL:0011026 .
 
 CL:0000377 a owl:Class ;
     rdfs:subClassOf CL:0000069 .
@@ -3793,6 +4204,14 @@ CL:0000417 a owl:Class ;
 CL:0000424 a owl:Class ;
     rdfs:subClassOf CL:0000151 .
 
+CL:0000430 a owl:Class ;
+    rdfs:subClassOf CL:0000147,
+        UBERON:0010313 .
+
+CL:0000431 a owl:Class ;
+    rdfs:subClassOf CL:0000147,
+        UBERON:0010313 .
+
 CL:0000432 a owl:Class ;
     rdfs:subClassOf CL:0000057 .
 
@@ -3831,8 +4250,7 @@ CL:0000449 a owl:Class ;
 
 CL:0000451 a owl:Class ;
     rdfs:subClassOf CL:0000113,
-        CL:0000145,
-        PR:000050567 .
+        CL:0000145 .
 
 CL:0000453 a owl:Class ;
     rdfs:subClassOf CL:0000766,
@@ -3955,21 +4373,17 @@ CL:0000541 a owl:Class ;
         UBERON:0010313 .
 
 CL:0000542 a owl:Class ;
-    rdfs:subClassOf CL:0000842,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000842 .
 
 CL:0000547 a owl:Class ;
     rdfs:subClassOf CL:0000764,
-        CL:0002242,
-        PR:000050567 .
+        CL:0002242 .
 
 CL:0000549 a owl:Class ;
-    rdfs:subClassOf CL:0000765,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000765 .
 
 CL:0000550 a owl:Class ;
-    rdfs:subClassOf CL:0000765,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000765 .
 
 CL:0000552 a owl:Class ;
     rdfs:subClassOf CL:0000765 .
@@ -3988,17 +4402,14 @@ CL:0000557 a owl:Class ;
     rdfs:subClassOf CL:0000763,
         CL:0001012,
         CL:0011026,
-        CL:1001610,
-        PR:000050567 .
+        CL:1001610 .
 
 CL:0000558 a owl:Class ;
-    rdfs:subClassOf CL:0000764,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000764 .
 
 CL:0000559 a owl:Class ;
     rdfs:subClassOf CL:0000763,
         CL:0002194,
-        PR:000050567,
         UBERON:0004120 .
 
 CL:0000561 a owl:Class ;
@@ -4012,8 +4423,7 @@ CL:0000562 a owl:Class ;
 
 CL:0000566 a owl:Class ;
     rdfs:subClassOf CL:0000134,
-        CL:0011026,
-        PR:000050567 .
+        CL:0011026 .
 
 CL:0000568 a owl:Class ;
     rdfs:subClassOf CL:0000165 .
@@ -4026,12 +4436,15 @@ CL:0000570 a owl:Class ;
     rdfs:subClassOf CL:0000443,
         CL:0000458,
         CL:0000710,
-        PR:000050567,
         UBERON:0004119,
         UBERON:0010313 .
 
 CL:0000573 a owl:Class ;
     rdfs:subClassOf CL:0010009 .
+
+CL:0000574 a owl:Class ;
+    rdfs:subClassOf CL:0000147,
+        UBERON:0010313 .
 
 CL:0000575 a owl:Class ;
     rdfs:subClassOf CL:0000076,
@@ -4074,6 +4487,9 @@ CL:0000622 a owl:Class ;
     rdfs:subClassOf CL:0000150,
         CL:0000154 .
 
+CL:0000623 a owl:Class ;
+    rdfs:subClassOf CL:0001067 .
+
 CL:0000626 a owl:Class ;
     rdfs:subClassOf CL:0000120,
         CL:0012001,
@@ -4088,7 +4504,6 @@ CL:0000630 a owl:Class ;
 CL:0000632 a owl:Class ;
     rdfs:subClassOf CL:0000057,
         CL:0000327,
-        PR:000050567,
         UBERON:0004119 .
 
 CL:0000636 a owl:Class ;
@@ -4312,12 +4727,27 @@ CL:0000817 a owl:Class ;
 CL:0000818 a owl:Class ;
     rdfs:subClassOf CL:0001201 .
 
+CL:0000819 a owl:Class ;
+    rdfs:subClassOf CL:0000785 .
+
+CL:0000820 a owl:Class ;
+    rdfs:subClassOf CL:0000819 .
+
+CL:0000821 a owl:Class ;
+    rdfs:subClassOf CL:0000819 .
+
 CL:0000822 a owl:Class ;
     rdfs:subClassOf CL:0000785 .
 
+CL:0000823 a owl:Class ;
+    rdfs:subClassOf CL:0000623,
+        CL:0001082 .
+
+CL:0000825 a owl:Class ;
+    rdfs:subClassOf CL:0000838 .
+
 CL:0000826 a owl:Class ;
-    rdfs:subClassOf CL:0000838,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000838 .
 
 CL:0000827 a owl:Class ;
     rdfs:subClassOf CL:0000838 .
@@ -4335,12 +4765,10 @@ CL:0000834 a owl:Class ;
 CL:0000835 a owl:Class ;
     rdfs:subClassOf CL:0000763,
         CL:0002191,
-        PR:000050567,
         UBERON:0004120 .
 
 CL:0000837 a owl:Class ;
-    rdfs:subClassOf CL:0008001,
-        PR:000050567 .
+    rdfs:subClassOf CL:0008001 .
 
 CL:0000838 a owl:Class ;
     rdfs:subClassOf CL:0002031,
@@ -4394,8 +4822,7 @@ CL:0000858 a owl:Class ;
     rdfs:subClassOf CL:0000515 .
 
 CL:0000860 a owl:Class ;
-    rdfs:subClassOf CL:0000576,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000576 .
 
 CL:0000864 a owl:Class ;
     rdfs:subClassOf CL:0000235 .
@@ -4406,13 +4833,11 @@ CL:0000878 a owl:Class ;
         UBERON:0004121 .
 
 CL:0000881 a owl:Class ;
-    rdfs:subClassOf CL:0000878,
-        CL:4033054,
-        PR:000050567 .
+    rdfs:subClassOf CL:4033054,
+        CL:4042003 .
 
 CL:0000889 a owl:Class ;
-    rdfs:subClassOf CL:0000766,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000766 .
 
 CL:0000893 a owl:Class ;
     rdfs:subClassOf CL:0002420,
@@ -4420,12 +4845,14 @@ CL:0000893 a owl:Class ;
 
 CL:0000894 a owl:Class ;
     rdfs:subClassOf CL:0000827,
-        PR:000050567,
         UBERON:0000077 .
 
 CL:0000936 a owl:Class ;
     rdfs:subClassOf CL:0000837,
         CL:0011026 .
+
+CL:0000937 a owl:Class ;
+    rdfs:subClassOf CL:0000623 .
 
 CL:0000941 a owl:Class ;
     rdfs:subClassOf CL:0000990,
@@ -4512,8 +4939,7 @@ CL:0000995 a owl:Class ;
     rdfs:subClassOf CL:0001060 .
 
 CL:0001008 a owl:Class ;
-    rdfs:subClassOf CL:0000037,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000037 .
 
 CL:0001012 a owl:Class ;
     rdfs:subClassOf CL:0001060 .
@@ -4523,27 +4949,23 @@ CL:0001019 a owl:Class ;
 
 CL:0001021 a owl:Class ;
     rdfs:subClassOf CL:0000051,
-        CL:0000995,
-        PR:000050567 .
+        CL:0000995 .
 
 CL:0001022 a owl:Class ;
     rdfs:subClassOf CL:0000576,
         CL:0000839,
-        CL:0001019,
-        PR:000050567 .
+        CL:0001019 .
 
 CL:0001023 a owl:Class ;
     rdfs:subClassOf CL:0001030,
         CL:0001059 .
 
 CL:0001024 a owl:Class ;
-    rdfs:subClassOf CL:0000037,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000037 .
 
 CL:0001025 a owl:Class ;
     rdfs:subClassOf CL:0000051,
-        CL:0001030,
-        PR:000050567 .
+        CL:0001030 .
 
 CL:0001026 a owl:Class ;
     rdfs:subClassOf CL:0000995,
@@ -4551,17 +4973,14 @@ CL:0001026 a owl:Class ;
 
 CL:0001027 a owl:Class ;
     rdfs:subClassOf CL:0000051,
-        CL:0001012,
-        PR:000050567 .
+        CL:0001012 .
 
 CL:0001028 a owl:Class ;
-    rdfs:subClassOf CL:0000051,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000051 .
 
 CL:0001029 a owl:Class ;
     rdfs:subClassOf CL:0000763,
         CL:0001019,
-        PR:000050567,
         UBERON:0004120 .
 
 CL:0001030 a owl:Class ;
@@ -4594,8 +5013,7 @@ CL:0001053 a owl:Class ;
     rdfs:subClassOf CL:0000787 .
 
 CL:0001054 a owl:Class ;
-    rdfs:subClassOf CL:0000576,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000576 .
 
 CL:0001055 a owl:Class ;
     rdfs:subClassOf CL:0002393,
@@ -4603,15 +5021,31 @@ CL:0001055 a owl:Class ;
 
 CL:0001059 a owl:Class ;
     rdfs:subClassOf CL:0000049,
-        CL:0011026,
-        PR:000050567 .
+        CL:0011026 .
 
 CL:0001060 a owl:Class ;
     rdfs:subClassOf CL:0002032 .
 
+CL:0001065 a owl:Class ;
+    rdfs:subClassOf CL:0000542 .
+
 CL:0001066 a owl:Class ;
-    rdfs:subClassOf CL:0000038,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000038 .
+
+CL:0001067 a owl:Class ;
+    rdfs:subClassOf CL:0001065 .
+
+CL:0001072 a owl:Class ;
+    rdfs:subClassOf CL:0001082 .
+
+CL:0001073 a owl:Class ;
+    rdfs:subClassOf CL:0001072 .
+
+CL:0001074 a owl:Class ;
+    rdfs:subClassOf CL:0001082 .
+
+CL:0001082 a owl:Class ;
+    rdfs:subClassOf CL:0001065 .
 
 CL:0001200 a owl:Class ;
     rdfs:subClassOf CL:0000945 .
@@ -4636,12 +5070,10 @@ CL:0002004 a owl:Class ;
     rdfs:subClassOf CL:0000547 .
 
 CL:0002005 a owl:Class ;
-    rdfs:subClassOf CL:0000050,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000050 .
 
 CL:0002006 a owl:Class ;
-    rdfs:subClassOf CL:0000050,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000050 .
 
 CL:0002009 a owl:Class ;
     rdfs:subClassOf CL:0000763,
@@ -4650,8 +5082,7 @@ CL:0002009 a owl:Class ;
         UBERON:0004120 .
 
 CL:0002011 a owl:Class ;
-    rdfs:subClassOf CL:0002009,
-        PR:000050567 .
+    rdfs:subClassOf CL:0002009 .
 
 CL:0002012 a owl:Class ;
     rdfs:subClassOf CL:0000547 .
@@ -4669,12 +5100,10 @@ CL:0002016 a owl:Class ;
     rdfs:subClassOf CL:0000550 .
 
 CL:0002017 a owl:Class ;
-    rdfs:subClassOf CL:0000552,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000552 .
 
 CL:0002018 a owl:Class ;
-    rdfs:subClassOf CL:0000552,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000552 .
 
 CL:0002019 a owl:Class ;
     rdfs:subClassOf CL:0002422 .
@@ -4683,12 +5112,10 @@ CL:0002020 a owl:Class ;
     rdfs:subClassOf CL:0002422 .
 
 CL:0002021 a owl:Class ;
-    rdfs:subClassOf CL:0000595,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000595 .
 
 CL:0002022 a owl:Class ;
-    rdfs:subClassOf CL:0000595,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000595 .
 
 CL:0002031 a owl:Class ;
     rdfs:subClassOf CL:0008001 .
@@ -4813,6 +5240,9 @@ CL:0002087 a owl:Class ;
 
 CL:0002088 a owl:Class ;
     rdfs:subClassOf CL:0000710 .
+
+CL:0002090 a owl:Class ;
+    rdfs:subClassOf CL:0000021 .
 
 CL:0002092 a owl:Class ;
     rdfs:subClassOf CL:0001035,
@@ -5273,12 +5703,18 @@ CL:0002335 a owl:Class ;
 CL:0002336 a owl:Class ;
     rdfs:subClassOf CL:0002261 .
 
+CL:0002338 a owl:Class ;
+    rdfs:subClassOf CL:0000823 .
+
 CL:0002339 a owl:Class ;
     rdfs:subClassOf CL:0000048,
         CL:0002341 .
 
 CL:0002341 a owl:Class ;
     rdfs:subClassOf CL:0002231 .
+
+CL:0002344 a owl:Class ;
+    rdfs:subClassOf CL:0000823 .
 
 CL:0002350 a owl:Class ;
     rdfs:subClassOf CL:0010008 .
@@ -5291,12 +5727,10 @@ CL:0002352 a owl:Class ;
 
 CL:0002353 a owl:Class ;
     rdfs:subClassOf CL:0002352,
-        PR:000050567,
         UBERON:0004119 .
 
 CL:0002354 a owl:Class ;
-    rdfs:subClassOf CL:0002352,
-        PR:000050567 .
+    rdfs:subClassOf CL:0002352 .
 
 CL:0002359 a owl:Class ;
     rdfs:subClassOf CL:0002352,
@@ -5380,8 +5814,7 @@ CL:0002422 a owl:Class ;
         CL:0000558 .
 
 CL:0002425 a owl:Class ;
-    rdfs:subClassOf CL:0000827,
-        PR:000050567 .
+    rdfs:subClassOf CL:0000827 .
 
 CL:0002453 a owl:Class ;
     rdfs:subClassOf CL:0000123,
@@ -5833,8 +6266,27 @@ CL:0002681 a owl:Class ;
 CL:0005000 a owl:Class ;
     rdfs:subClassOf CL:0000402 .
 
+CL:0005001 a owl:Class ;
+    rdfs:subClassOf CL:0000055,
+        CL:0011026,
+        UBERON:0010313 .
+
+CL:0005002 a owl:Class ;
+    rdfs:subClassOf CL:0000055,
+        CL:0011026,
+        UBERON:0010313 .
+
+CL:0005004 a owl:Class ;
+    rdfs:subClassOf CL:0000055,
+        CL:0011026,
+        UBERON:0010313 .
+
 CL:0005006 a owl:Class ;
     rdfs:subClassOf CL:0000066 .
+
+CL:0005007 a owl:Class ;
+    rdfs:subClassOf CL:0005000,
+        CL:0011005 .
 
 CL:0005008 a owl:Class ;
     rdfs:subClassOf CL:0000202,
@@ -5886,6 +6338,18 @@ CL:0007003 a owl:Class ;
 CL:0007004 a owl:Class ;
     rdfs:subClassOf CL:0011012,
         UBERON:0004121 .
+
+CL:0007005 a owl:Class ;
+    rdfs:subClassOf CL:0000000,
+        UBERON:0004120,
+        UBERON:0004121 .
+
+CL:0007006 a owl:Class ;
+    rdfs:subClassOf CL:0000222,
+        UBERON:0004120 .
+
+CL:0007008 a owl:Class ;
+    rdfs:subClassOf CL:0007005 .
 
 CL:0007009 a owl:Class ;
     rdfs:subClassOf CL:0000055 .
@@ -6240,6 +6704,7 @@ CL:0010008 a owl:Class ;
 
 CL:0010009 a owl:Class ;
     rdfs:subClassOf CL:0000287,
+        CL:0009004,
         UBERON:0004121 .
 
 CL:0010010 a owl:Class ;
@@ -6796,6 +7261,7 @@ CL:1000444 a owl:Class ;
 
 CL:1000445 a owl:Class ;
     rdfs:subClassOf CL:0000185,
+        UBERON:0004120,
         UBERON:0004121 .
 
 CL:1000447 a owl:Class ;
@@ -7602,7 +8068,7 @@ CL:2000044 a owl:Class ;
         UBERON:0004121 .
 
 CL:2000045 a owl:Class ;
-    rdfs:subClassOf CL:0000148,
+    rdfs:subClassOf CL:1000458,
         UBERON:0004120 .
 
 CL:2000046 a owl:Class ;
@@ -7717,10 +8183,6 @@ CL:2000080 a owl:Class ;
 
 CL:2000081 a owl:Class ;
     rdfs:subClassOf CL:1000458 .
-
-CL:2000082 a owl:Class ;
-    rdfs:subClassOf CL:1000458,
-        CL:2000045 .
 
 CL:2000083 a owl:Class ;
     rdfs:subClassOf CL:0000346 .
@@ -7963,8 +8425,7 @@ CL:4033002 a owl:Class ;
 
 CL:4033003 a owl:Class ;
     rdfs:subClassOf CL:0000185,
-        CL:0002328,
-        UBERON:0000077 .
+        CL:0002328 .
 
 CL:4033004 a owl:Class ;
     rdfs:subClassOf CL:1000279 .
@@ -8018,8 +8479,7 @@ CL:4033020 a owl:Class ;
 
 CL:4033021 a owl:Class ;
     rdfs:subClassOf CL:0000185,
-        CL:0000307,
-        UBERON:0000077 .
+        CL:0000307 .
 
 CL:4033022 a owl:Class ;
     rdfs:subClassOf CL:0002328,
@@ -8074,8 +8534,8 @@ CL:4040003 a owl:Class ;
 CL:4040004 a owl:Class ;
     rdfs:subClassOf CL:0002570 .
 
-GO:0000003 a owl:Class ;
-    rdfs:subClassOf GO:0008150 .
+CL:4042003 a owl:Class ;
+    rdfs:subClassOf CL:0000878 .
 
 GO:0000011 a owl:Class ;
     rdfs:subClassOf GO:0007033,
@@ -8093,6 +8553,10 @@ GO:0000041 a owl:Class ;
 GO:0000070 a owl:Class ;
     rdfs:subClassOf GO:0000819,
         GO:1903047 .
+
+GO:0000122 a owl:Class ;
+    rdfs:subClassOf GO:0006357,
+        GO:0045892 .
 
 GO:0000139 a owl:Class ;
     rdfs:subClassOf GO:0098588 .
@@ -8168,8 +8632,38 @@ GO:0000820 a owl:Class ;
 GO:0000902 a owl:Class ;
     rdfs:subClassOf GO:0009653 .
 
+GO:0000976 a owl:Class ;
+    rdfs:subClassOf GO:0001067,
+        GO:1990837 .
+
+GO:0000977 a owl:Class ;
+    rdfs:subClassOf GO:0000976 .
+
+GO:0000981 a owl:Class ;
+    rdfs:subClassOf GO:0003700 .
+
+GO:0001067 a owl:Class ;
+    rdfs:subClassOf GO:0003676 .
+
 GO:0001101 a owl:Class ;
     rdfs:subClassOf GO:0042221 .
+
+GO:0001172 a owl:Class ;
+    rdfs:subClassOf GO:0009059 .
+
+GO:0001216 a owl:Class ;
+    rdfs:subClassOf GO:0003700 .
+
+GO:0001217 a owl:Class ;
+    rdfs:subClassOf GO:0003700 .
+
+GO:0001227 a owl:Class ;
+    rdfs:subClassOf GO:0000981,
+        GO:0001217 .
+
+GO:0001228 a owl:Class ;
+    rdfs:subClassOf GO:0000981,
+        GO:0001216 .
 
 GO:0001501 a owl:Class ;
     rdfs:subClassOf GO:0048731 .
@@ -8190,8 +8684,7 @@ GO:0001539 a owl:Class ;
     rdfs:subClassOf GO:0048870 .
 
 GO:0001541 a owl:Class ;
-    rdfs:subClassOf GO:0003006,
-        GO:0048856 .
+    rdfs:subClassOf GO:0048856 .
 
 GO:0001545 a owl:Class ;
     rdfs:subClassOf GO:0022602,
@@ -8215,17 +8708,18 @@ GO:0001553 a owl:Class ;
 
 GO:0001555 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0048588 .
 
 GO:0001556 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0048469 .
 
 GO:0001558 a owl:Class ;
     rdfs:subClassOf GO:0040008,
         GO:0051128 .
+
+GO:0001560 a owl:Class ;
+    rdfs:subClassOf GO:0001558 .
 
 GO:0001568 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
@@ -8394,6 +8888,9 @@ GO:0001768 a owl:Class ;
 GO:0001769 a owl:Class ;
     rdfs:subClassOf GO:0001767 .
 
+GO:0001770 a owl:Class ;
+    rdfs:subClassOf GO:0001767 .
+
 GO:0001773 a owl:Class ;
     rdfs:subClassOf GO:0002274 .
 
@@ -8407,6 +8904,10 @@ GO:0001776 a owl:Class ;
 
 GO:0001777 a owl:Class ;
     rdfs:subClassOf GO:0042098 .
+
+GO:0001779 a owl:Class ;
+    rdfs:subClassOf GO:0030098,
+        GO:0030101 .
 
 GO:0001780 a owl:Class ;
     rdfs:subClassOf GO:0001776,
@@ -8422,6 +8923,10 @@ GO:0001782 a owl:Class ;
 
 GO:0001783 a owl:Class ;
     rdfs:subClassOf GO:0070227 .
+
+GO:0001787 a owl:Class ;
+    rdfs:subClassOf GO:0030101,
+        GO:0046651 .
 
 GO:0001816 a owl:Class ;
     rdfs:subClassOf GO:0010467,
@@ -8540,8 +9045,64 @@ GO:0001893 a owl:Class ;
 GO:0001894 a owl:Class ;
     rdfs:subClassOf GO:0060249 .
 
+GO:0001906 a owl:Class ;
+    rdfs:subClassOf GO:0009987 .
+
+GO:0001909 a owl:Class ;
+    rdfs:subClassOf GO:0001906,
+        GO:0002443 .
+
+GO:0001910 a owl:Class ;
+    rdfs:subClassOf GO:0002703,
+        GO:0031341 .
+
+GO:0001911 a owl:Class ;
+    rdfs:subClassOf GO:0001910,
+        GO:0002704,
+        GO:0031342 .
+
+GO:0001912 a owl:Class ;
+    rdfs:subClassOf GO:0001910,
+        GO:0002705,
+        GO:0031343 .
+
+GO:0001913 a owl:Class ;
+    rdfs:subClassOf GO:0001909,
+        GO:0002456 .
+
+GO:0001914 a owl:Class ;
+    rdfs:subClassOf GO:0001910,
+        GO:0002709 .
+
+GO:0001915 a owl:Class ;
+    rdfs:subClassOf GO:0001911,
+        GO:0001914,
+        GO:0002710 .
+
+GO:0001916 a owl:Class ;
+    rdfs:subClassOf GO:0001912,
+        GO:0001914,
+        GO:0002711 .
+
 GO:0001917 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
+
+GO:0001922 a owl:Class ;
+    rdfs:subClassOf GO:0001782 .
+
+GO:0001923 a owl:Class ;
+    rdfs:subClassOf GO:0002335 .
+
+GO:0001924 a owl:Class ;
+    rdfs:subClassOf GO:0045577 .
+
+GO:0001925 a owl:Class ;
+    rdfs:subClassOf GO:0001924,
+        GO:0045578 .
+
+GO:0001926 a owl:Class ;
+    rdfs:subClassOf GO:0001924,
+        GO:0045579 .
 
 GO:0001932 a owl:Class ;
     rdfs:subClassOf GO:0031399,
@@ -8835,6 +9396,14 @@ GO:0002225 a owl:Class ;
         GO:0002760,
         GO:0002784 .
 
+GO:0002227 a owl:Class ;
+    rdfs:subClassOf GO:0002385,
+        GO:0045087 .
+
+GO:0002228 a owl:Class ;
+    rdfs:subClassOf GO:0002449,
+        GO:0045087 .
+
 GO:0002232 a owl:Class ;
     rdfs:subClassOf GO:0002523,
         GO:0030595 .
@@ -8953,9 +9522,24 @@ GO:0002319 a owl:Class ;
 GO:0002320 a owl:Class ;
     rdfs:subClassOf GO:0002244 .
 
+GO:0002321 a owl:Class ;
+    rdfs:subClassOf GO:0002320 .
+
 GO:0002322 a owl:Class ;
     rdfs:subClassOf GO:0002312,
         GO:0042100 .
+
+GO:0002323 a owl:Class ;
+    rdfs:subClassOf GO:0002285,
+        GO:0030101 .
+
+GO:0002324 a owl:Class ;
+    rdfs:subClassOf GO:0001787,
+        GO:0002323 .
+
+GO:0002325 a owl:Class ;
+    rdfs:subClassOf GO:0001779,
+        GO:0002323 .
 
 GO:0002327 a owl:Class ;
     rdfs:subClassOf GO:0030183 .
@@ -8971,6 +9555,12 @@ GO:0002332 a owl:Class ;
 
 GO:0002335 a owl:Class ;
     rdfs:subClassOf GO:0030183 .
+
+GO:0002337 a owl:Class ;
+    rdfs:subClassOf GO:0001923 .
+
+GO:0002338 a owl:Class ;
+    rdfs:subClassOf GO:0001923 .
 
 GO:0002339 a owl:Class ;
     rdfs:subClassOf GO:0002376 .
@@ -8990,6 +9580,9 @@ GO:0002351 a owl:Class ;
 GO:0002358 a owl:Class ;
     rdfs:subClassOf GO:0042100 .
 
+GO:0002359 a owl:Class ;
+    rdfs:subClassOf GO:0042100 .
+
 GO:0002366 a owl:Class ;
     rdfs:subClassOf GO:0002263,
         GO:0045321 .
@@ -9005,6 +9598,10 @@ GO:0002368 a owl:Class ;
 GO:0002369 a owl:Class ;
     rdfs:subClassOf GO:0002367,
         GO:0002456 .
+
+GO:0002370 a owl:Class ;
+    rdfs:subClassOf GO:0002228,
+        GO:0002367 .
 
 GO:0002371 a owl:Class ;
     rdfs:subClassOf GO:0002367,
@@ -9025,6 +9622,9 @@ GO:0002381 a owl:Class ;
     rdfs:subClassOf GO:0002377 .
 
 GO:0002384 a owl:Class ;
+    rdfs:subClassOf GO:0002251 .
+
+GO:0002385 a owl:Class ;
     rdfs:subClassOf GO:0002251 .
 
 GO:0002387 a owl:Class ;
@@ -9463,6 +10063,20 @@ GO:0002714 a owl:Class ;
         GO:0002712,
         GO:0002824 .
 
+GO:0002715 a owl:Class ;
+    rdfs:subClassOf GO:0002706,
+        GO:0045088 .
+
+GO:0002716 a owl:Class ;
+    rdfs:subClassOf GO:0002707,
+        GO:0002715,
+        GO:0045824 .
+
+GO:0002717 a owl:Class ;
+    rdfs:subClassOf GO:0002708,
+        GO:0002715,
+        GO:0045089 .
+
 GO:0002718 a owl:Class ;
     rdfs:subClassOf GO:0001817,
         GO:0002700 .
@@ -9504,6 +10118,20 @@ GO:0002726 a owl:Class ;
     rdfs:subClassOf GO:0002711,
         GO:0002720,
         GO:0002724 .
+
+GO:0002727 a owl:Class ;
+    rdfs:subClassOf GO:0002715,
+        GO:0002718 .
+
+GO:0002728 a owl:Class ;
+    rdfs:subClassOf GO:0002716,
+        GO:0002719,
+        GO:0002727 .
+
+GO:0002729 a owl:Class ;
+    rdfs:subClassOf GO:0002717,
+        GO:0002720,
+        GO:0002727 .
 
 GO:0002730 a owl:Class ;
     rdfs:subClassOf GO:0002703,
@@ -10257,7 +10885,7 @@ GO:0003332 a owl:Class ;
 
 GO:0003333 a owl:Class ;
     rdfs:subClassOf GO:0006865,
-        GO:1903825 .
+        GO:0055085 .
 
 GO:0003334 a owl:Class ;
     rdfs:subClassOf GO:0002064 .
@@ -10349,9 +10977,6 @@ GO:0003381 a owl:Class ;
 GO:0003382 a owl:Class ;
     rdfs:subClassOf GO:0000902 .
 
-GO:0003385 a owl:Class ;
-    rdfs:subClassOf GO:0007267 .
-
 GO:0003386 a owl:Class ;
     rdfs:subClassOf GO:0007423 .
 
@@ -10437,8 +11062,14 @@ GO:0003677 a owl:Class ;
 GO:0003682 a owl:Class ;
     rdfs:subClassOf GO:0044877 .
 
+GO:0003690 a owl:Class ;
+    rdfs:subClassOf GO:0003677 .
+
+GO:0003700 a owl:Class ;
+    rdfs:subClassOf GO:0140110 .
+
 GO:0003707 a owl:Class ;
-    rdfs:subClassOf GO:0038023 .
+    rdfs:subClassOf GO:0004879 .
 
 GO:0003723 a owl:Class ;
     rdfs:subClassOf GO:0003676 .
@@ -10464,6 +11095,11 @@ GO:0004713 a owl:Class ;
 GO:0004714 a owl:Class ;
     rdfs:subClassOf GO:0004713,
         GO:0019199 .
+
+GO:0004879 a owl:Class ;
+    rdfs:subClassOf GO:0000981,
+        GO:0038023,
+        GO:0098531 .
 
 GO:0004883 a owl:Class ;
     rdfs:subClassOf GO:0003707 .
@@ -10534,12 +11170,19 @@ GO:0005277 a owl:Class ;
         GO:0015101,
         GO:1901375 .
 
+GO:0005302 a owl:Class ;
+    rdfs:subClassOf GO:0015171 .
+
 GO:0005310 a owl:Class ;
     rdfs:subClassOf GO:0005342 .
 
 GO:0005313 a owl:Class ;
     rdfs:subClassOf GO:0015172,
         GO:0046943 .
+
+GO:0005315 a owl:Class ;
+    rdfs:subClassOf GO:0015103,
+        GO:0015291 .
 
 GO:0005319 a owl:Class ;
     rdfs:subClassOf GO:0005215 .
@@ -10564,7 +11207,7 @@ GO:0005347 a owl:Class ;
     rdfs:subClassOf GO:0008514 .
 
 GO:0005355 a owl:Class ;
-    rdfs:subClassOf GO:0015149 .
+    rdfs:subClassOf GO:0055056 .
 
 GO:0005372 a owl:Class ;
     rdfs:subClassOf GO:0015318 .
@@ -10664,6 +11307,9 @@ GO:0005640 a owl:Class ;
     rdfs:subClassOf GO:0031965,
         GO:0031968 .
 
+GO:0005667 a owl:Class ;
+    rdfs:subClassOf GO:0032991 .
+
 GO:0005694 a owl:Class ;
     rdfs:subClassOf GO:0043232 .
 
@@ -10697,12 +11343,14 @@ GO:0005794 a owl:Class ;
 GO:0005798 a owl:Class ;
     rdfs:subClassOf GO:0031410 .
 
+GO:0005811 a owl:Class ;
+    rdfs:subClassOf GO:0043232 .
+
 GO:0005829 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
 
 GO:0005840 a owl:Class ;
-    rdfs:subClassOf GO:0043232,
-        PR:000050567 .
+    rdfs:subClassOf GO:0043232 .
 
 GO:0005856 a owl:Class ;
     rdfs:subClassOf GO:0043232 .
@@ -10721,6 +11369,9 @@ GO:0005881 a owl:Class ;
 
 GO:0005882 a owl:Class ;
     rdfs:subClassOf GO:0099513 .
+
+GO:0005883 a owl:Class ;
+    rdfs:subClassOf GO:0005882 .
 
 GO:0005884 a owl:Class ;
     rdfs:subClassOf GO:0099513 .
@@ -10743,8 +11394,7 @@ GO:0005923 a owl:Class ;
 
 GO:0005929 a owl:Class ;
     rdfs:subClassOf GO:0043227,
-        GO:0120025,
-        PR:000050567 .
+        GO:0120025 .
 
 GO:0005930 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
@@ -10753,8 +11403,7 @@ GO:0005938 a owl:Class ;
     rdfs:subClassOf GO:0005737 .
 
 GO:0005975 a owl:Class ;
-    rdfs:subClassOf GO:0044238,
-        GO:0071704 .
+    rdfs:subClassOf GO:0044238 .
 
 GO:0005976 a owl:Class ;
     rdfs:subClassOf GO:0005975,
@@ -10844,13 +11493,11 @@ GO:0006066 a owl:Class ;
         GO:1901615 .
 
 GO:0006081 a owl:Class ;
-    rdfs:subClassOf GO:0044237,
-        GO:0071704 .
+    rdfs:subClassOf GO:0044237 .
 
 GO:0006082 a owl:Class ;
     rdfs:subClassOf GO:0044237,
-        GO:0044281,
-        GO:0071704 .
+        GO:0044281 .
 
 GO:0006083 a owl:Class ;
     rdfs:subClassOf GO:0032787 .
@@ -10876,11 +11523,7 @@ GO:0006113 a owl:Class ;
     rdfs:subClassOf GO:0015980 .
 
 GO:0006139 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0034641,
-        GO:0044238,
-        GO:0046483,
-        GO:1901360 .
+    rdfs:subClassOf GO:0044238 .
 
 GO:0006140 a owl:Class ;
     rdfs:subClassOf GO:0019219,
@@ -10936,8 +11579,7 @@ GO:0006259 a owl:Class ;
 
 GO:0006308 a owl:Class ;
     rdfs:subClassOf GO:0006259,
-        GO:0009057,
-        GO:0034655 .
+        GO:0141188 .
 
 GO:0006309 a owl:Class ;
     rdfs:subClassOf GO:0006308 .
@@ -10948,10 +11590,21 @@ GO:0006310 a owl:Class ;
 GO:0006325 a owl:Class ;
     rdfs:subClassOf GO:0071824 .
 
+GO:0006351 a owl:Class ;
+    rdfs:subClassOf GO:0009059 .
+
+GO:0006355 a owl:Class ;
+    rdfs:subClassOf GO:0010468 .
+
+GO:0006357 a owl:Class ;
+    rdfs:subClassOf GO:0006355 .
+
+GO:0006366 a owl:Class ;
+    rdfs:subClassOf GO:0006351 .
+
 GO:0006401 a owl:Class ;
-    rdfs:subClassOf GO:0009057,
-        GO:0016070,
-        GO:0034655 .
+    rdfs:subClassOf GO:0016070,
+        GO:0141188 .
 
 GO:0006403 a owl:Class ;
     rdfs:subClassOf GO:0033036 .
@@ -10966,8 +11619,7 @@ GO:0006405 a owl:Class ;
 
 GO:0006412 a owl:Class ;
     rdfs:subClassOf GO:0009059,
-        GO:0019538,
-        GO:0043043 .
+        GO:0019538 .
 
 GO:0006413 a owl:Class ;
     rdfs:subClassOf GO:0044237 .
@@ -10980,7 +11632,6 @@ GO:0006415 a owl:Class ;
 
 GO:0006417 a owl:Class ;
     rdfs:subClassOf GO:0010608,
-        GO:0034248,
         GO:0051246 .
 
 GO:0006446 a owl:Class ;
@@ -11011,12 +11662,10 @@ GO:0006516 a owl:Class ;
         GO:1901136 .
 
 GO:0006518 a owl:Class ;
-    rdfs:subClassOf GO:0043603,
-        GO:1901564 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0006520 a owl:Class ;
-    rdfs:subClassOf GO:0044238,
-        GO:0071704 .
+    rdfs:subClassOf GO:0044238 .
 
 GO:0006521 a owl:Class ;
     rdfs:subClassOf GO:0010565,
@@ -11029,13 +11678,32 @@ GO:0006536 a owl:Class ;
 
 GO:0006537 a owl:Class ;
     rdfs:subClassOf GO:0006536,
-        GO:0008652,
-        GO:0009084 .
+        GO:0009084,
+        GO:0046394 .
 
 GO:0006538 a owl:Class ;
     rdfs:subClassOf GO:0006536,
-        GO:0009063,
-        GO:0009065 .
+        GO:0009065,
+        GO:0046395 .
+
+GO:0006558 a owl:Class ;
+    rdfs:subClassOf GO:0006520 .
+
+GO:0006559 a owl:Class ;
+    rdfs:subClassOf GO:0006558,
+        GO:0009063 .
+
+GO:0006570 a owl:Class ;
+    rdfs:subClassOf GO:0006520 .
+
+GO:0006571 a owl:Class ;
+    rdfs:subClassOf GO:0006570,
+        GO:0008652,
+        GO:0009095 .
+
+GO:0006572 a owl:Class ;
+    rdfs:subClassOf GO:0006570,
+        GO:0009063 .
 
 GO:0006575 a owl:Class ;
     rdfs:subClassOf GO:0044237,
@@ -11046,11 +11714,15 @@ GO:0006576 a owl:Class ;
 
 GO:0006581 a owl:Class ;
     rdfs:subClassOf GO:0008291,
-        GO:1901575 .
+        GO:0009056 .
 
 GO:0006584 a owl:Class ;
     rdfs:subClassOf GO:0006576,
         GO:0009712 .
+
+GO:0006585 a owl:Class ;
+    rdfs:subClassOf GO:0006570,
+        GO:0042416 .
 
 GO:0006586 a owl:Class ;
     rdfs:subClassOf GO:0006576,
@@ -11073,8 +11745,7 @@ GO:0006624 a owl:Class ;
     rdfs:subClassOf GO:0016485 .
 
 GO:0006629 a owl:Class ;
-    rdfs:subClassOf GO:0044238,
-        GO:0071704 .
+    rdfs:subClassOf GO:0044238 .
 
 GO:0006631 a owl:Class ;
     rdfs:subClassOf GO:0032787,
@@ -11134,8 +11805,7 @@ GO:0006688 a owl:Class ;
 
 GO:0006694 a owl:Class ;
     rdfs:subClassOf GO:0008202,
-        GO:0008610,
-        GO:1901362 .
+        GO:0008610 .
 
 GO:0006699 a owl:Class ;
     rdfs:subClassOf GO:0006694,
@@ -11166,8 +11836,7 @@ GO:0006705 a owl:Class ;
 
 GO:0006706 a owl:Class ;
     rdfs:subClassOf GO:0008202,
-        GO:0016042,
-        GO:1901361 .
+        GO:0016042 .
 
 GO:0006709 a owl:Class ;
     rdfs:subClassOf GO:0008208,
@@ -11210,9 +11879,6 @@ GO:0006721 a owl:Class ;
 GO:0006723 a owl:Class ;
     rdfs:subClassOf GO:0120251 .
 
-GO:0006725 a owl:Class ;
-    rdfs:subClassOf GO:0044237 .
-
 GO:0006753 a owl:Class ;
     rdfs:subClassOf GO:0006796,
         GO:0019637,
@@ -11242,8 +11908,8 @@ GO:0006793 a owl:Class ;
 GO:0006796 a owl:Class ;
     rdfs:subClassOf GO:0006793 .
 
-GO:0006807 a owl:Class ;
-    rdfs:subClassOf GO:0008152 .
+GO:0006805 a owl:Class ;
+    rdfs:subClassOf GO:0044237 .
 
 GO:0006810 a owl:Class ;
     rdfs:subClassOf GO:0051234 .
@@ -11299,11 +11965,10 @@ GO:0006863 a owl:Class ;
     rdfs:subClassOf GO:0015851 .
 
 GO:0006865 a owl:Class ;
-    rdfs:subClassOf GO:0015849,
-        GO:0071705 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0006869 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0006873 a owl:Class ;
     rdfs:subClassOf GO:0050801,
@@ -11525,16 +12190,14 @@ GO:0007135 a owl:Class ;
         GO:0140013 .
 
 GO:0007140 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0140013 .
+    rdfs:subClassOf GO:0140013 .
 
 GO:0007142 a owl:Class ;
     rdfs:subClassOf GO:0007135,
         GO:0007140 .
 
 GO:0007143 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0140013 .
+    rdfs:subClassOf GO:0140013 .
 
 GO:0007147 a owl:Class ;
     rdfs:subClassOf GO:0007135,
@@ -11627,12 +12290,10 @@ GO:0007283 a owl:Class ;
         GO:0048232 .
 
 GO:0007284 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0051301 .
+    rdfs:subClassOf GO:0051301 .
 
 GO:0007285 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0048588 .
 
 GO:0007286 a owl:Class ;
@@ -11640,12 +12301,10 @@ GO:0007286 a owl:Class ;
 
 GO:0007288 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0035082 .
 
 GO:0007289 a owl:Class ;
-    rdfs:subClassOf GO:0006997,
-        GO:0022412 .
+    rdfs:subClassOf GO:0006997 .
 
 GO:0007292 a owl:Class ;
     rdfs:subClassOf GO:0007276 .
@@ -11655,8 +12314,7 @@ GO:0007293 a owl:Class ;
         GO:0048646 .
 
 GO:0007297 a owl:Class ;
-    rdfs:subClassOf GO:0010631,
-        GO:0022412 .
+    rdfs:subClassOf GO:0010631 .
 
 GO:0007304 a owl:Class ;
     rdfs:subClassOf GO:0030703 .
@@ -11672,7 +12330,6 @@ GO:0007306 a owl:Class ;
 
 GO:0007308 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0048469 .
 
 GO:0007309 a owl:Class ;
@@ -11692,8 +12349,7 @@ GO:0007338 a owl:Class ;
     rdfs:subClassOf GO:0009566 .
 
 GO:0007343 a owl:Class ;
-    rdfs:subClassOf GO:0001775,
-        GO:0022414 .
+    rdfs:subClassOf GO:0001775 .
 
 GO:0007346 a owl:Class ;
     rdfs:subClassOf GO:0051726 .
@@ -11812,6 +12468,10 @@ GO:0007481 a owl:Class ;
 
 GO:0007482 a owl:Class ;
     rdfs:subClassOf GO:0048737 .
+
+GO:0007488 a owl:Class ;
+    rdfs:subClassOf GO:0000902,
+        GO:0007560 .
 
 GO:0007492 a owl:Class ;
     rdfs:subClassOf GO:0009888 .
@@ -12016,8 +12676,7 @@ GO:0008188 a owl:Class ;
     rdfs:subClassOf GO:0008528 .
 
 GO:0008202 a owl:Class ;
-    rdfs:subClassOf GO:0006629,
-        GO:1901360 .
+    rdfs:subClassOf GO:0006629 .
 
 GO:0008206 a owl:Class ;
     rdfs:subClassOf GO:0008202,
@@ -12051,6 +12710,10 @@ GO:0008219 a owl:Class ;
 GO:0008227 a owl:Class ;
     rdfs:subClassOf GO:0004930 .
 
+GO:0008271 a owl:Class ;
+    rdfs:subClassOf GO:0015116,
+        GO:0015291 .
+
 GO:0008272 a owl:Class ;
     rdfs:subClassOf GO:0015698,
         GO:0072348 .
@@ -12076,8 +12739,7 @@ GO:0008289 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
 
 GO:0008291 a owl:Class ;
-    rdfs:subClassOf GO:0006807,
-        GO:1900619 .
+    rdfs:subClassOf GO:1900619 .
 
 GO:0008292 a owl:Class ;
     rdfs:subClassOf GO:0008291,
@@ -12113,8 +12775,7 @@ GO:0008348 a owl:Class ;
         GO:0032102 .
 
 GO:0008354 a owl:Class ;
-    rdfs:subClassOf GO:0016477,
-        GO:0022412 .
+    rdfs:subClassOf GO:0016477 .
 
 GO:0008355 a owl:Class ;
     rdfs:subClassOf GO:0008306,
@@ -12167,17 +12828,17 @@ GO:0008595 a owl:Class ;
 
 GO:0008610 a owl:Class ;
     rdfs:subClassOf GO:0006629,
-        GO:1901576 .
+        GO:0009058 .
 
 GO:0008643 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0008645 a owl:Class ;
     rdfs:subClassOf GO:0015749 .
 
 GO:0008652 a owl:Class ;
-    rdfs:subClassOf GO:0046394,
-        GO:1901566 .
+    rdfs:subClassOf GO:0006520,
+        GO:0009058 .
 
 GO:0008654 a owl:Class ;
     rdfs:subClassOf GO:0006644,
@@ -12188,16 +12849,15 @@ GO:0009056 a owl:Class ;
     rdfs:subClassOf GO:0008152 .
 
 GO:0009057 a owl:Class ;
-    rdfs:subClassOf GO:0043170,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0043170 .
 
 GO:0009058 a owl:Class ;
     rdfs:subClassOf GO:0008152 .
 
 GO:0009059 a owl:Class ;
     rdfs:subClassOf GO:0043170,
-        GO:0044249,
-        GO:1901576 .
+        GO:0044249 .
 
 GO:0009062 a owl:Class ;
     rdfs:subClassOf GO:0006631,
@@ -12205,8 +12865,8 @@ GO:0009062 a owl:Class ;
         GO:0072329 .
 
 GO:0009063 a owl:Class ;
-    rdfs:subClassOf GO:0046395,
-        GO:1901565 .
+    rdfs:subClassOf GO:0006520,
+        GO:0009056 .
 
 GO:0009064 a owl:Class ;
     rdfs:subClassOf GO:0170039,
@@ -12216,9 +12876,32 @@ GO:0009065 a owl:Class ;
     rdfs:subClassOf GO:0009064,
         GO:0170040 .
 
+GO:0009072 a owl:Class ;
+    rdfs:subClassOf GO:0006082,
+        GO:0006520,
+        GO:1901564 .
+
+GO:0009073 a owl:Class ;
+    rdfs:subClassOf GO:0009072,
+        GO:0016053,
+        GO:1901566 .
+
+GO:0009074 a owl:Class ;
+    rdfs:subClassOf GO:0009072,
+        GO:0016054,
+        GO:1901565 .
+
 GO:0009084 a owl:Class ;
     rdfs:subClassOf GO:0009064,
         GO:0170038 .
+
+GO:0009094 a owl:Class ;
+    rdfs:subClassOf GO:0006558,
+        GO:0008652,
+        GO:0009095 .
+
+GO:0009095 a owl:Class ;
+    rdfs:subClassOf GO:0009073 .
 
 GO:0009100 a owl:Class ;
     rdfs:subClassOf GO:0043170,
@@ -12254,16 +12937,15 @@ GO:0009119 a owl:Class ;
     rdfs:subClassOf GO:0009116 .
 
 GO:0009132 a owl:Class ;
-    rdfs:subClassOf GO:0006793,
-        GO:0071704 .
+    rdfs:subClassOf GO:0006793 .
 
 GO:0009133 a owl:Class ;
-    rdfs:subClassOf GO:0009132,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0009132 .
 
 GO:0009134 a owl:Class ;
-    rdfs:subClassOf GO:0009132,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0009132 .
 
 GO:0009135 a owl:Class ;
     rdfs:subClassOf GO:0006753 .
@@ -12277,16 +12959,15 @@ GO:0009137 a owl:Class ;
         GO:1901292 .
 
 GO:0009141 a owl:Class ;
-    rdfs:subClassOf GO:0006793,
-        GO:0071704 .
+    rdfs:subClassOf GO:0006793 .
 
 GO:0009142 a owl:Class ;
-    rdfs:subClassOf GO:0009141,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0009141 .
 
 GO:0009143 a owl:Class ;
-    rdfs:subClassOf GO:0009141,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0009141 .
 
 GO:0009144 a owl:Class ;
     rdfs:subClassOf GO:0006753 .
@@ -12424,7 +13105,6 @@ GO:0009308 a owl:Class ;
 
 GO:0009309 a owl:Class ;
     rdfs:subClassOf GO:0009308,
-        GO:0044271,
         GO:1901566 .
 
 GO:0009310 a owl:Class ;
@@ -12446,7 +13126,6 @@ GO:0009414 a owl:Class ;
 GO:0009415 a owl:Class ;
     rdfs:subClassOf GO:0001101,
         GO:0009628,
-        GO:0010035,
         GO:1901700 .
 
 GO:0009416 a owl:Class ;
@@ -12457,12 +13136,12 @@ GO:0009448 a owl:Class ;
         GO:0032787 .
 
 GO:0009449 a owl:Class ;
-    rdfs:subClassOf GO:0009448,
-        GO:1901576 .
+    rdfs:subClassOf GO:0008652,
+        GO:0009448 .
 
 GO:0009450 a owl:Class ;
-    rdfs:subClassOf GO:0009448,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009063,
+        GO:0009448 .
 
 GO:0009566 a owl:Class ;
     rdfs:subClassOf GO:0022414 .
@@ -12533,12 +13212,10 @@ GO:0009719 a owl:Class ;
     rdfs:subClassOf GO:0050896 .
 
 GO:0009725 a owl:Class ;
-    rdfs:subClassOf GO:0009719,
-        GO:0010033 .
+    rdfs:subClassOf GO:0009719 .
 
 GO:0009743 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:0009746 a owl:Class ;
     rdfs:subClassOf GO:0034284 .
@@ -12574,7 +13251,6 @@ GO:0009821 a owl:Class ;
 
 GO:0009822 a owl:Class ;
     rdfs:subClassOf GO:0009820,
-        GO:0044270,
         GO:1901565 .
 
 GO:0009880 a owl:Class ;
@@ -12649,6 +13325,10 @@ GO:0009968 a owl:Class ;
         GO:0023057,
         GO:0048585 .
 
+GO:0009977 a owl:Class ;
+    rdfs:subClassOf GO:0008320,
+        GO:0015291 .
+
 GO:0009987 a owl:Class ;
     rdfs:subClassOf GO:0008150 .
 
@@ -12658,7 +13338,6 @@ GO:0009992 a owl:Class ;
 
 GO:0009994 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0030154 .
 
 GO:0010001 a owl:Class ;
@@ -12675,28 +13354,23 @@ GO:0010032 a owl:Class ;
     rdfs:subClassOf GO:0030261,
         GO:0070192 .
 
-GO:0010033 a owl:Class ;
-    rdfs:subClassOf GO:0042221 .
-
 GO:0010034 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
-
-GO:0010035 a owl:Class ;
-    rdfs:subClassOf GO:0042221 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:0010037 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:0010038 a owl:Class ;
-    rdfs:subClassOf GO:0010035 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:0010039 a owl:Class ;
     rdfs:subClassOf GO:0010038 .
 
 GO:0010070 a owl:Class ;
     rdfs:subClassOf GO:0008356 .
+
+GO:0010155 a owl:Class ;
+    rdfs:subClassOf GO:1904062 .
 
 GO:0010160 a owl:Class ;
     rdfs:subClassOf GO:0003002,
@@ -12714,8 +13388,7 @@ GO:0010232 a owl:Class ;
         GO:0006810 .
 
 GO:0010243 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901698 .
+    rdfs:subClassOf GO:1901698 .
 
 GO:0010256 a owl:Class ;
     rdfs:subClassOf GO:0016043 .
@@ -13085,7 +13758,8 @@ GO:0010771 a owl:Class ;
 
 GO:0010816 a owl:Class ;
     rdfs:subClassOf GO:0042447,
-        GO:0043171 .
+        GO:0043603,
+        GO:1901565 .
 
 GO:0010817 a owl:Class .
 
@@ -13326,7 +14000,8 @@ GO:0014046 a owl:Class ;
 GO:0014047 a owl:Class ;
     rdfs:subClassOf GO:0015800,
         GO:0032940,
-        GO:0046942 .
+        GO:0046942,
+        GO:0071705 .
 
 GO:0014048 a owl:Class ;
     rdfs:subClassOf GO:0051955,
@@ -13347,15 +14022,18 @@ GO:0014051 a owl:Class ;
         GO:0046717 .
 
 GO:0014052 a owl:Class ;
-    rdfs:subClassOf GO:0051046 .
+    rdfs:subClassOf GO:0051046,
+        GO:0051955 .
 
 GO:0014053 a owl:Class ;
     rdfs:subClassOf GO:0014052,
-        GO:0051048 .
+        GO:0051048,
+        GO:0051956 .
 
 GO:0014054 a owl:Class ;
     rdfs:subClassOf GO:0014052,
-        GO:0051047 .
+        GO:0051047,
+        GO:0051957 .
 
 GO:0014055 a owl:Class ;
     rdfs:subClassOf GO:0007269,
@@ -13402,7 +14080,7 @@ GO:0014064 a owl:Class ;
         GO:1903532 .
 
 GO:0014070 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:0014074 a owl:Class ;
     rdfs:subClassOf GO:0010243,
@@ -13610,11 +14288,14 @@ GO:0014912 a owl:Class ;
 GO:0015031 a owl:Class ;
     rdfs:subClassOf GO:0008104,
         GO:0045184,
-        GO:0071702,
         GO:0071705 .
 
 GO:0015075 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
+
+GO:0015078 a owl:Class ;
+    rdfs:subClassOf GO:0008324,
+        GO:0022890 .
 
 GO:0015081 a owl:Class ;
     rdfs:subClassOf GO:0046873 .
@@ -13631,9 +14312,6 @@ GO:0015103 a owl:Class ;
 GO:0015106 a owl:Class ;
     rdfs:subClassOf GO:0008514 .
 
-GO:0015114 a owl:Class ;
-    rdfs:subClassOf GO:0015103 .
-
 GO:0015116 a owl:Class ;
     rdfs:subClassOf GO:0015103,
         GO:1901682 .
@@ -13642,8 +14320,8 @@ GO:0015123 a owl:Class ;
     rdfs:subClassOf GO:0046943 .
 
 GO:0015125 a owl:Class ;
-    rdfs:subClassOf GO:0005319,
-        GO:0008028,
+    rdfs:subClassOf GO:0008028,
+        GO:0170055,
         GO:1901618 .
 
 GO:0015127 a owl:Class ;
@@ -13666,16 +14344,22 @@ GO:0015159 a owl:Class ;
         GO:0022884 .
 
 GO:0015171 a owl:Class ;
-    rdfs:subClassOf GO:0005342 .
+    rdfs:subClassOf GO:0022857 .
 
 GO:0015172 a owl:Class ;
     rdfs:subClassOf GO:0015171 .
 
+GO:0015173 a owl:Class ;
+    rdfs:subClassOf GO:0005342 .
+
 GO:0015179 a owl:Class ;
-    rdfs:subClassOf GO:0022857 .
+    rdfs:subClassOf GO:0015171 .
 
 GO:0015185 a owl:Class ;
-    rdfs:subClassOf GO:0022857 .
+    rdfs:subClassOf GO:0015171 .
+
+GO:0015192 a owl:Class ;
+    rdfs:subClassOf GO:0015171 .
 
 GO:0015205 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
@@ -13700,11 +14384,18 @@ GO:0015220 a owl:Class ;
     rdfs:subClassOf GO:0015101 .
 
 GO:0015245 a owl:Class ;
-    rdfs:subClassOf GO:0005319,
-        GO:0046943 .
+    rdfs:subClassOf GO:0046943,
+        GO:0170055 .
+
+GO:0015291 a owl:Class ;
+    rdfs:subClassOf GO:0022804 .
 
 GO:0015318 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
+
+GO:0015355 a owl:Class ;
+    rdfs:subClassOf GO:0008028,
+        GO:0015291 .
 
 GO:0015464 a owl:Class ;
     rdfs:subClassOf GO:0004888,
@@ -13712,6 +14403,9 @@ GO:0015464 a owl:Class ;
 
 GO:0015499 a owl:Class ;
     rdfs:subClassOf GO:0046943 .
+
+GO:0015552 a owl:Class ;
+    rdfs:subClassOf GO:0015636 .
 
 GO:0015567 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
@@ -13751,11 +14445,10 @@ GO:0015671 a owl:Class ;
     rdfs:subClassOf GO:0015669 .
 
 GO:0015695 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015697 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0015698 a owl:Class ;
     rdfs:subClassOf GO:0006810 .
@@ -13764,7 +14457,7 @@ GO:0015701 a owl:Class ;
     rdfs:subClassOf GO:0015711 .
 
 GO:0015711 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015718 a owl:Class ;
     rdfs:subClassOf GO:0046942 .
@@ -13781,8 +14474,11 @@ GO:0015723 a owl:Class ;
 GO:0015724 a owl:Class ;
     rdfs:subClassOf GO:0015718 .
 
+GO:0015730 a owl:Class ;
+    rdfs:subClassOf GO:0015913 .
+
 GO:0015748 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015749 a owl:Class ;
     rdfs:subClassOf GO:0034219 .
@@ -13799,38 +14495,45 @@ GO:0015774 a owl:Class ;
 GO:0015800 a owl:Class ;
     rdfs:subClassOf GO:0006865 .
 
+GO:0015801 a owl:Class ;
+    rdfs:subClassOf GO:0015849,
+        GO:0071705 .
+
 GO:0015807 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006865 .
 
 GO:0015812 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006865 .
 
 GO:0015813 a owl:Class ;
     rdfs:subClassOf GO:0003333,
         GO:0051938,
         GO:1905039 .
 
+GO:0015823 a owl:Class ;
+    rdfs:subClassOf GO:0046942,
+        GO:0071705 .
+
+GO:0015828 a owl:Class ;
+    rdfs:subClassOf GO:0006865 .
+
 GO:0015833 a owl:Class ;
-    rdfs:subClassOf GO:0042886,
-        GO:0071702 .
+    rdfs:subClassOf GO:0042886 .
 
 GO:0015837 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0015844 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0015849 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015850 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015851 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0015853 a owl:Class ;
     rdfs:subClassOf GO:0006863 .
@@ -13882,7 +14585,7 @@ GO:0015874 a owl:Class ;
         GO:0051937 .
 
 GO:0015895 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0015908 a owl:Class ;
     rdfs:subClassOf GO:0006869,
@@ -13900,8 +14603,7 @@ GO:0015914 a owl:Class ;
         GO:0015748 .
 
 GO:0015931 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0015932 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
@@ -13921,7 +14623,7 @@ GO:0016020 a owl:Class ;
 
 GO:0016042 a owl:Class ;
     rdfs:subClassOf GO:0006629,
-        GO:1901575 .
+        GO:0009056 .
 
 GO:0016043 a owl:Class ;
     rdfs:subClassOf GO:0071840 .
@@ -13940,23 +14642,21 @@ GO:0016050 a owl:Class ;
 
 GO:0016051 a owl:Class ;
     rdfs:subClassOf GO:0005975,
-        GO:1901576 .
+        GO:0009058 .
 
 GO:0016052 a owl:Class ;
     rdfs:subClassOf GO:0005975,
-        GO:1901575 .
+        GO:0009056 .
 
 GO:0016053 a owl:Class ;
     rdfs:subClassOf GO:0006082,
         GO:0044249,
-        GO:0044283,
-        GO:1901576 .
+        GO:0044283 .
 
 GO:0016054 a owl:Class ;
     rdfs:subClassOf GO:0006082,
         GO:0044248,
-        GO:0044282,
-        GO:1901575 .
+        GO:0044282 .
 
 GO:0016057 a owl:Class ;
     rdfs:subClassOf GO:0042391 .
@@ -14052,12 +14752,10 @@ GO:0016319 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
 
 GO:0016321 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0045132 .
+    rdfs:subClassOf GO:0045132 .
 
 GO:0016325 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0030951 .
+    rdfs:subClassOf GO:0030951 .
 
 GO:0016331 a owl:Class ;
     rdfs:subClassOf GO:0002009,
@@ -14092,8 +14790,8 @@ GO:0016485 a owl:Class ;
         GO:0051604 .
 
 GO:0016486 a owl:Class ;
-    rdfs:subClassOf GO:0006518,
-        GO:0042445,
+    rdfs:subClassOf GO:0042445,
+        GO:0043603,
         GO:0140448 .
 
 GO:0016500 a owl:Class ;
@@ -14114,7 +14812,7 @@ GO:0016595 a owl:Class ;
     rdfs:subClassOf GO:0031406 .
 
 GO:0016597 a owl:Class ;
-    rdfs:subClassOf GO:0043177 .
+    rdfs:subClassOf GO:0005488 .
 
 GO:0016740 a owl:Class ;
     rdfs:subClassOf GO:0003824 .
@@ -14140,8 +14838,11 @@ GO:0016917 a owl:Class ;
     rdfs:subClassOf GO:0004888 .
 
 GO:0017046 a owl:Class ;
-    rdfs:subClassOf GO:0042277,
+    rdfs:subClassOf GO:0033218,
         GO:0042562 .
+
+GO:0017053 a owl:Class ;
+    rdfs:subClassOf GO:0005667 .
 
 GO:0017076 a owl:Class ;
     rdfs:subClassOf GO:0000166 .
@@ -14159,7 +14860,6 @@ GO:0017145 a owl:Class ;
 GO:0017148 a owl:Class ;
     rdfs:subClassOf GO:0006417,
         GO:0010629,
-        GO:0034249,
         GO:0051248 .
 
 GO:0017157 a owl:Class ;
@@ -14169,10 +14869,6 @@ GO:0017157 a owl:Class ;
 GO:0018108 a owl:Class ;
     rdfs:subClassOf GO:0006468,
         GO:0018212 .
-
-GO:0018130 a owl:Class ;
-    rdfs:subClassOf GO:0044249,
-        GO:0046483 .
 
 GO:0018146 a owl:Class ;
     rdfs:subClassOf GO:0006024,
@@ -14185,17 +14881,23 @@ GO:0018193 a owl:Class ;
 GO:0018212 a owl:Class ;
     rdfs:subClassOf GO:0018193 .
 
+GO:0018910 a owl:Class ;
+    rdfs:subClassOf GO:0042537,
+        GO:0120252 .
+
 GO:0018958 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:1901360,
-        GO:1901615 .
+    rdfs:subClassOf GO:1901615 .
+
+GO:0018970 a owl:Class ;
+    rdfs:subClassOf GO:0072490,
+        GO:0120252 .
 
 GO:0018989 a owl:Class ;
     rdfs:subClassOf GO:0022404 .
 
 GO:0019098 a owl:Class ;
     rdfs:subClassOf GO:0007610,
-        GO:0022414 .
+        GO:0048609 .
 
 GO:0019199 a owl:Class ;
     rdfs:subClassOf GO:0004672,
@@ -14215,9 +14917,7 @@ GO:0019218 a owl:Class ;
     rdfs:subClassOf GO:0019216 .
 
 GO:0019219 a owl:Class ;
-    rdfs:subClassOf GO:0031323,
-        GO:0051171,
-        GO:0080090 .
+    rdfs:subClassOf GO:0080090 .
 
 GO:0019220 a owl:Class ;
     rdfs:subClassOf GO:0051174 .
@@ -14240,8 +14940,10 @@ GO:0019230 a owl:Class ;
 GO:0019233 a owl:Class ;
     rdfs:subClassOf GO:0007600 .
 
-GO:0019236 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+GO:0019236 a owl:Class .
+
+GO:0019293 a owl:Class ;
+    rdfs:subClassOf GO:0006571 .
 
 GO:0019302 a owl:Class ;
     rdfs:subClassOf GO:0006014,
@@ -14275,8 +14977,6 @@ GO:0019323 a owl:Class ;
 
 GO:0019336 a owl:Class ;
     rdfs:subClassOf GO:0018958,
-        GO:0019439,
-        GO:1901361,
         GO:1901616 .
 
 GO:0019374 a owl:Class ;
@@ -14299,21 +14999,24 @@ GO:0019413 a owl:Class ;
     rdfs:subClassOf GO:0006083,
         GO:0072330 .
 
-GO:0019438 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0044249 .
-
-GO:0019439 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0044248 .
-
 GO:0019478 a owl:Class ;
-    rdfs:subClassOf GO:0046416,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009063,
+        GO:0046416 .
 
 GO:0019538 a owl:Class ;
     rdfs:subClassOf GO:0044238,
         GO:1901564 .
+
+GO:0019541 a owl:Class ;
+    rdfs:subClassOf GO:0046459 .
+
+GO:0019542 a owl:Class ;
+    rdfs:subClassOf GO:0019541,
+        GO:0051790 .
+
+GO:0019543 a owl:Class ;
+    rdfs:subClassOf GO:0019541,
+        GO:0019626 .
 
 GO:0019605 a owl:Class ;
     rdfs:subClassOf GO:0046459 .
@@ -14327,8 +15030,7 @@ GO:0019626 a owl:Class ;
         GO:0046459 .
 
 GO:0019637 a owl:Class ;
-    rdfs:subClassOf GO:0006793,
-        GO:0071704 .
+    rdfs:subClassOf GO:0006793 .
 
 GO:0019653 a owl:Class ;
     rdfs:subClassOf GO:0006145,
@@ -14339,8 +15041,7 @@ GO:0019654 a owl:Class ;
         GO:0006113 .
 
 GO:0019666 a owl:Class ;
-    rdfs:subClassOf GO:0006113,
-        GO:0006807 .
+    rdfs:subClassOf GO:0006113 .
 
 GO:0019693 a owl:Class ;
     rdfs:subClassOf GO:0006796,
@@ -14348,8 +15049,7 @@ GO:0019693 a owl:Class ;
         GO:1901135 .
 
 GO:0019695 a owl:Class ;
-    rdfs:subClassOf GO:0071704,
-        GO:0097164 .
+    rdfs:subClassOf GO:0097164 .
 
 GO:0019724 a owl:Class ;
     rdfs:subClassOf GO:0002449,
@@ -14373,7 +15073,7 @@ GO:0019752 a owl:Class ;
     rdfs:subClassOf GO:0043436 .
 
 GO:0019755 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:0019814 a owl:Class ;
     rdfs:subClassOf GO:0032991 .
@@ -14402,7 +15102,7 @@ GO:0019882 a owl:Class ;
     rdfs:subClassOf GO:0002376 .
 
 GO:0019953 a owl:Class ;
-    rdfs:subClassOf GO:0000003 .
+    rdfs:subClassOf GO:0022414 .
 
 GO:0019955 a owl:Class ;
     rdfs:subClassOf GO:0005515 .
@@ -15345,7 +16045,7 @@ GO:0022411 a owl:Class ;
 
 GO:0022412 a owl:Class ;
     rdfs:subClassOf GO:0009987,
-        GO:0022414 .
+        GO:0048609 .
 
 GO:0022414 a owl:Class ;
     rdfs:subClassOf GO:0008150 .
@@ -15503,6 +16203,9 @@ GO:0030099 a owl:Class ;
 GO:0030100 a owl:Class ;
     rdfs:subClassOf GO:0051128,
         GO:0060627 .
+
+GO:0030101 a owl:Class ;
+    rdfs:subClassOf GO:0046649 .
 
 GO:0030103 a owl:Class ;
     rdfs:subClassOf GO:0030072 .
@@ -15785,11 +16488,11 @@ GO:0030502 a owl:Class ;
         GO:0070168 .
 
 GO:0030518 a owl:Class ;
-    rdfs:subClassOf GO:0030522,
-        GO:0043401 .
+    rdfs:subClassOf GO:0043401,
+        GO:0141193 .
 
 GO:0030522 a owl:Class ;
-    rdfs:subClassOf GO:0007165 .
+    rdfs:subClassOf GO:0035556 .
 
 GO:0030539 a owl:Class ;
     rdfs:subClassOf GO:0048806,
@@ -15867,42 +16570,40 @@ GO:0030705 a owl:Class ;
 
 GO:0030707 a owl:Class ;
     rdfs:subClassOf GO:0002064,
-        GO:0003006,
-        GO:0022412 .
+        GO:0003006 .
 
 GO:0030718 a owl:Class ;
     rdfs:subClassOf GO:0019827 .
 
 GO:0030720 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0051674 .
+    rdfs:subClassOf GO:0051674 .
 
 GO:0030808 a owl:Class ;
     rdfs:subClassOf GO:0006140,
-        GO:0031326 .
+        GO:0009889 .
 
 GO:0030809 a owl:Class ;
-    rdfs:subClassOf GO:0030808,
-        GO:0031327,
+    rdfs:subClassOf GO:0009890,
+        GO:0030808,
         GO:0045980 .
 
 GO:0030810 a owl:Class ;
-    rdfs:subClassOf GO:0030808,
-        GO:0031328,
+    rdfs:subClassOf GO:0009891,
+        GO:0030808,
         GO:0045981 .
 
 GO:0030811 a owl:Class ;
     rdfs:subClassOf GO:0006140,
-        GO:0031329 .
+        GO:0009894 .
 
 GO:0030812 a owl:Class ;
-    rdfs:subClassOf GO:0030811,
-        GO:0031330,
+    rdfs:subClassOf GO:0009895,
+        GO:0030811,
         GO:0045980 .
 
 GO:0030813 a owl:Class ;
-    rdfs:subClassOf GO:0030811,
-        GO:0031331,
+    rdfs:subClassOf GO:0009896,
+        GO:0030811,
         GO:0045981 .
 
 GO:0030850 a owl:Class ;
@@ -15937,6 +16638,19 @@ GO:0030857 a owl:Class ;
 GO:0030858 a owl:Class ;
     rdfs:subClassOf GO:0030856,
         GO:0045597 .
+
+GO:0030863 a owl:Class ;
+    rdfs:subClassOf GO:0005856 .
+
+GO:0030864 a owl:Class ;
+    rdfs:subClassOf GO:0030863 .
+
+GO:0030865 a owl:Class ;
+    rdfs:subClassOf GO:0007010 .
+
+GO:0030866 a owl:Class ;
+    rdfs:subClassOf GO:0030036,
+        GO:0030865 .
 
 GO:0030878 a owl:Class ;
     rdfs:subClassOf GO:0048732 .
@@ -16203,6 +16917,17 @@ GO:0031340 a owl:Class ;
         GO:0031338,
         GO:0051050 .
 
+GO:0031341 a owl:Class ;
+    rdfs:subClassOf GO:0050794 .
+
+GO:0031342 a owl:Class ;
+    rdfs:subClassOf GO:0031341,
+        GO:0048523 .
+
+GO:0031343 a owl:Class ;
+    rdfs:subClassOf GO:0031341,
+        GO:0048522 .
+
 GO:0031344 a owl:Class ;
     rdfs:subClassOf GO:0051128 .
 
@@ -16300,6 +17025,9 @@ GO:0031727 a owl:Class ;
 GO:0031737 a owl:Class ;
     rdfs:subClassOf GO:0042379 .
 
+GO:0031887 a owl:Class ;
+    rdfs:subClassOf GO:0072384 .
+
 GO:0031943 a owl:Class ;
     rdfs:subClassOf GO:0019218,
         GO:0031323,
@@ -16358,16 +17086,13 @@ GO:0031965 a owl:Class ;
     rdfs:subClassOf GO:0031090 .
 
 GO:0031967 a owl:Class ;
-    rdfs:subClassOf GO:0031975 .
+    rdfs:subClassOf GO:0110165 .
 
 GO:0031968 a owl:Class ;
     rdfs:subClassOf GO:0019867,
         GO:0098588 .
 
 GO:0031974 a owl:Class ;
-    rdfs:subClassOf GO:0110165 .
-
-GO:0031975 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
 
 GO:0031981 a owl:Class ;
@@ -16378,6 +17103,9 @@ GO:0031982 a owl:Class ;
 
 GO:0031987 a owl:Class ;
     rdfs:subClassOf GO:0040011 .
+
+GO:0032019 a owl:Class ;
+    rdfs:subClassOf GO:0043232 .
 
 GO:0032024 a owl:Class ;
     rdfs:subClassOf GO:0050714,
@@ -16806,10 +17534,6 @@ GO:0032501 a owl:Class ;
 GO:0032502 a owl:Class ;
     rdfs:subClassOf GO:0008150 .
 
-GO:0032504 a owl:Class ;
-    rdfs:subClassOf GO:0000003,
-        GO:0032501 .
-
 GO:0032507 a owl:Class ;
     rdfs:subClassOf GO:0045185,
         GO:0051651 .
@@ -16864,10 +17588,23 @@ GO:0032594 a owl:Class ;
     rdfs:subClassOf GO:0006886,
         GO:0061024 .
 
+GO:0032609 a owl:Class ;
+    rdfs:subClassOf GO:0001816 .
+
+GO:0032649 a owl:Class ;
+    rdfs:subClassOf GO:0001817 .
+
+GO:0032689 a owl:Class ;
+    rdfs:subClassOf GO:0001818,
+        GO:0032649 .
+
+GO:0032729 a owl:Class ;
+    rdfs:subClassOf GO:0001819,
+        GO:0032649 .
+
 GO:0032774 a owl:Class ;
-    rdfs:subClassOf GO:0009059,
-        GO:0016070,
-        GO:0034654 .
+    rdfs:subClassOf GO:0016070,
+        GO:0141187 .
 
 GO:0032782 a owl:Class ;
     rdfs:subClassOf GO:0015718,
@@ -16889,6 +17626,77 @@ GO:0032811 a owl:Class ;
 GO:0032812 a owl:Class ;
     rdfs:subClassOf GO:0014060,
         GO:0051047 .
+
+GO:0032814 a owl:Class ;
+    rdfs:subClassOf GO:0051249 .
+
+GO:0032815 a owl:Class ;
+    rdfs:subClassOf GO:0032814,
+        GO:0051250 .
+
+GO:0032816 a owl:Class ;
+    rdfs:subClassOf GO:0032814,
+        GO:0051251 .
+
+GO:0032817 a owl:Class ;
+    rdfs:subClassOf GO:0032814,
+        GO:0050670 .
+
+GO:0032818 a owl:Class ;
+    rdfs:subClassOf GO:0032815,
+        GO:0032817,
+        GO:0050672 .
+
+GO:0032819 a owl:Class ;
+    rdfs:subClassOf GO:0032816,
+        GO:0032817,
+        GO:0050671 .
+
+GO:0032820 a owl:Class ;
+    rdfs:subClassOf GO:0002697,
+        GO:0032817,
+        GO:0050776 .
+
+GO:0032821 a owl:Class ;
+    rdfs:subClassOf GO:0002698,
+        GO:0032818,
+        GO:0032820,
+        GO:0050777 .
+
+GO:0032822 a owl:Class ;
+    rdfs:subClassOf GO:0002699,
+        GO:0032819,
+        GO:0032820 .
+
+GO:0032823 a owl:Class ;
+    rdfs:subClassOf GO:0032814,
+        GO:0045619 .
+
+GO:0032824 a owl:Class ;
+    rdfs:subClassOf GO:0032815,
+        GO:0032823,
+        GO:0045620 .
+
+GO:0032825 a owl:Class ;
+    rdfs:subClassOf GO:0032816,
+        GO:0032823,
+        GO:0045621 .
+
+GO:0032826 a owl:Class ;
+    rdfs:subClassOf GO:0002697,
+        GO:0032823 .
+
+GO:0032827 a owl:Class ;
+    rdfs:subClassOf GO:0002698,
+        GO:0032824,
+        GO:0032826,
+        GO:0050777 .
+
+GO:0032828 a owl:Class ;
+    rdfs:subClassOf GO:0002699,
+        GO:0032825,
+        GO:0032826,
+        GO:0050778 .
 
 GO:0032835 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
@@ -16914,8 +17722,7 @@ GO:0032869 a owl:Class ;
         GO:0071375 .
 
 GO:0032870 a owl:Class ;
-    rdfs:subClassOf GO:0071310,
-        GO:0071495 .
+    rdfs:subClassOf GO:0071495 .
 
 GO:0032871 a owl:Class ;
     rdfs:subClassOf GO:1903353 .
@@ -16934,8 +17741,7 @@ GO:0032881 a owl:Class ;
         GO:0060255 .
 
 GO:0032882 a owl:Class ;
-    rdfs:subClassOf GO:0032881,
-        GO:0051171 .
+    rdfs:subClassOf GO:0032881 .
 
 GO:0032883 a owl:Class ;
     rdfs:subClassOf GO:0032882,
@@ -17038,11 +17844,10 @@ GO:0032988 a owl:Class ;
         GO:0071826 .
 
 GO:0032989 a owl:Class ;
-    rdfs:subClassOf GO:0009653 .
+    rdfs:subClassOf GO:0016043 .
 
 GO:0032991 a owl:Class ;
-    rdfs:subClassOf GO:0005575,
-        PR:000050567 .
+    rdfs:subClassOf GO:0005575 .
 
 GO:0032993 a owl:Class ;
     rdfs:subClassOf GO:0032991 .
@@ -17057,25 +17862,14 @@ GO:0033002 a owl:Class ;
     rdfs:subClassOf GO:0008283 .
 
 GO:0033013 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0046483,
-        GO:1901360,
-        GO:1901564 .
+    rdfs:subClassOf GO:1901564 .
 
 GO:0033014 a owl:Class ;
-    rdfs:subClassOf GO:0018130,
-        GO:0019438,
-        GO:0033013,
-        GO:0044271,
-        GO:1901362,
+    rdfs:subClassOf GO:0033013,
         GO:1901566 .
 
 GO:0033015 a owl:Class ;
-    rdfs:subClassOf GO:0019439,
-        GO:0033013,
-        GO:0044270,
-        GO:0046700,
-        GO:1901361,
+    rdfs:subClassOf GO:0033013,
         GO:1901565 .
 
 GO:0033028 a owl:Class ;
@@ -17201,15 +17995,15 @@ GO:0033123 a owl:Class ;
         GO:1900544 .
 
 GO:0033143 a owl:Class ;
-    rdfs:subClassOf GO:0009966 .
+    rdfs:subClassOf GO:1902531 .
 
 GO:0033144 a owl:Class ;
-    rdfs:subClassOf GO:0009968,
-        GO:0033143 .
+    rdfs:subClassOf GO:0033143,
+        GO:1902532 .
 
 GO:0033145 a owl:Class ;
-    rdfs:subClassOf GO:0009967,
-        GO:0033143 .
+    rdfs:subClassOf GO:0033143,
+        GO:1902533 .
 
 GO:0033151 a owl:Class ;
     rdfs:subClassOf GO:0002562 .
@@ -17227,7 +18021,7 @@ GO:0033162 a owl:Class ;
         UBERON:0010313 .
 
 GO:0033198 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:0033212 a owl:Class ;
     rdfs:subClassOf GO:0006826,
@@ -17238,15 +18032,15 @@ GO:0033218 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
 
 GO:0033238 a owl:Class ;
-    rdfs:subClassOf GO:0051171 .
+    rdfs:subClassOf GO:0019222 .
 
 GO:0033239 a owl:Class ;
-    rdfs:subClassOf GO:0033238,
-        GO:0051172 .
+    rdfs:subClassOf GO:0009892,
+        GO:0033238 .
 
 GO:0033240 a owl:Class ;
-    rdfs:subClassOf GO:0033238,
-        GO:0051173 .
+    rdfs:subClassOf GO:0009893,
+        GO:0033238 .
 
 GO:0033241 a owl:Class ;
     rdfs:subClassOf GO:0009894,
@@ -17264,6 +18058,9 @@ GO:0033243 a owl:Class ;
 
 GO:0033265 a owl:Class ;
     rdfs:subClassOf GO:0043169 .
+
+GO:0033268 a owl:Class ;
+    rdfs:subClassOf GO:0110165 .
 
 GO:0033278 a owl:Class ;
     rdfs:subClassOf GO:0061351 .
@@ -17338,6 +18135,10 @@ GO:0033508 a owl:Class ;
     rdfs:subClassOf GO:0006538,
         GO:0019605 .
 
+GO:0033509 a owl:Class ;
+    rdfs:subClassOf GO:0006538,
+        GO:0019541 .
+
 GO:0033526 a owl:Class ;
     rdfs:subClassOf GO:0006536,
         GO:0033014 .
@@ -17407,6 +18208,9 @@ GO:0033690 a owl:Class ;
     rdfs:subClassOf GO:0008284,
         GO:0033688 .
 
+GO:0033693 a owl:Class ;
+    rdfs:subClassOf GO:0045110 .
+
 GO:0033750 a owl:Class ;
     rdfs:subClassOf GO:0051640 .
 
@@ -17414,13 +18218,13 @@ GO:0033762 a owl:Class ;
     rdfs:subClassOf GO:0043434 .
 
 GO:0033993 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:0034067 a owl:Class ;
     rdfs:subClassOf GO:0033365 .
 
 GO:0034097 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:1901652 .
 
 GO:0034101 a owl:Class ;
     rdfs:subClassOf GO:0002262 .
@@ -17453,15 +18257,15 @@ GO:0034242 a owl:Class ;
         GO:0060142 .
 
 GO:0034248 a owl:Class ;
-    rdfs:subClassOf GO:0051171 .
+    rdfs:subClassOf GO:0019222 .
 
 GO:0034249 a owl:Class ;
-    rdfs:subClassOf GO:0034248,
-        GO:0051172 .
+    rdfs:subClassOf GO:0009892,
+        GO:0034248 .
 
 GO:0034250 a owl:Class ;
-    rdfs:subClassOf GO:0034248,
-        GO:0051173 .
+    rdfs:subClassOf GO:0009893,
+        GO:0034248 .
 
 GO:0034251 a owl:Class ;
     rdfs:subClassOf GO:0009894,
@@ -17512,6 +18316,9 @@ GO:0034352 a owl:Class ;
     rdfs:subClassOf GO:0034350,
         GO:0043065 .
 
+GO:0034389 a owl:Class ;
+    rdfs:subClassOf GO:0006996 .
+
 GO:0034390 a owl:Class ;
     rdfs:subClassOf GO:0010657 .
 
@@ -17553,23 +18360,13 @@ GO:0034504 a owl:Class ;
 GO:0034505 a owl:Class ;
     rdfs:subClassOf GO:0031214 .
 
-GO:0034641 a owl:Class ;
-    rdfs:subClassOf GO:0006807,
-        GO:0044237 .
-
 GO:0034654 a owl:Class ;
     rdfs:subClassOf GO:0006139,
-        GO:0018130,
-        GO:0019438,
-        GO:0044271,
-        GO:1901362 .
+        GO:0009058 .
 
 GO:0034655 a owl:Class ;
     rdfs:subClassOf GO:0006139,
-        GO:0019439,
-        GO:0044270,
-        GO:0046700,
-        GO:1901361 .
+        GO:0009056 .
 
 GO:0034656 a owl:Class ;
     rdfs:subClassOf GO:0034655,
@@ -17650,12 +18447,10 @@ GO:0035019 a owl:Class ;
 
 GO:0035039 a owl:Class ;
     rdfs:subClassOf GO:0006997,
-        GO:0022414,
         GO:0070925 .
 
 GO:0035040 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0051081 .
+    rdfs:subClassOf GO:0051081 .
 
 GO:0035045 a owl:Class ;
     rdfs:subClassOf GO:0007009,
@@ -17949,6 +18744,9 @@ GO:0035735 a owl:Class ;
 GO:0035736 a owl:Class ;
     rdfs:subClassOf GO:0008283 .
 
+GO:0035747 a owl:Class ;
+    rdfs:subClassOf GO:0048247 .
+
 GO:0035754 a owl:Class ;
     rdfs:subClassOf GO:0048247 .
 
@@ -18040,8 +18838,7 @@ GO:0035847 a owl:Class ;
     rdfs:subClassOf GO:0035846 .
 
 GO:0035848 a owl:Class ;
-    rdfs:subClassOf GO:0003006,
-        GO:0009887,
+    rdfs:subClassOf GO:0009887,
         GO:0035239 .
 
 GO:0035850 a owl:Class ;
@@ -18161,12 +18958,14 @@ GO:0036072 a owl:Class ;
 GO:0036073 a owl:Class ;
     rdfs:subClassOf GO:0001957 .
 
+GO:0036074 a owl:Class ;
+    rdfs:subClassOf GO:0036072 .
+
 GO:0036075 a owl:Class ;
     rdfs:subClassOf GO:0001503 .
 
 GO:0036093 a owl:Class ;
-    rdfs:subClassOf GO:0008283,
-        GO:0022412 .
+    rdfs:subClassOf GO:0008283 .
 
 GO:0036094 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
@@ -18394,7 +19193,7 @@ GO:0042048 a owl:Class ;
     rdfs:subClassOf GO:0007635 .
 
 GO:0042053 a owl:Class ;
-    rdfs:subClassOf GO:0051171 .
+    rdfs:subClassOf GO:0019222 .
 
 GO:0042060 a owl:Class ;
     rdfs:subClassOf GO:0009611 .
@@ -18406,8 +19205,7 @@ GO:0042065 a owl:Class ;
     rdfs:subClassOf GO:0048588 .
 
 GO:0042069 a owl:Class ;
-    rdfs:subClassOf GO:0031323,
-        GO:0033238,
+    rdfs:subClassOf GO:0033238,
         GO:0080090 .
 
 GO:0042073 a owl:Class ;
@@ -18418,8 +19216,7 @@ GO:0042074 a owl:Class ;
     rdfs:subClassOf GO:0001667 .
 
 GO:0042078 a owl:Class ;
-    rdfs:subClassOf GO:0017145,
-        GO:0022412 .
+    rdfs:subClassOf GO:0017145 .
 
 GO:0042092 a owl:Class ;
     rdfs:subClassOf GO:0006955 .
@@ -18497,26 +19294,33 @@ GO:0042177 a owl:Class ;
         GO:0042176,
         GO:0051248 .
 
+GO:0042178 a owl:Class ;
+    rdfs:subClassOf GO:0006805,
+        GO:0044248 .
+
 GO:0042180 a owl:Class ;
     rdfs:subClassOf GO:0044237,
-        GO:0044281,
-        GO:0071704 .
+        GO:0044281 .
 
 GO:0042181 a owl:Class ;
     rdfs:subClassOf GO:0042180,
         GO:0044249,
-        GO:0044283,
-        GO:1901576 .
+        GO:0044283 .
 
 GO:0042182 a owl:Class ;
     rdfs:subClassOf GO:0042180,
         GO:0044248,
-        GO:0044282,
-        GO:1901575 .
+        GO:0044282 .
 
 GO:0042183 a owl:Class ;
     rdfs:subClassOf GO:0015942,
         GO:0072329 .
+
+GO:0042203 a owl:Class ;
+    rdfs:subClassOf GO:0018970,
+        GO:0042178,
+        GO:0072491,
+        GO:0120253 .
 
 GO:0042214 a owl:Class ;
     rdfs:subClassOf GO:0006720,
@@ -18539,8 +19343,16 @@ GO:0042254 a owl:Class ;
 GO:0042255 a owl:Class ;
     rdfs:subClassOf GO:0140694 .
 
+GO:0042267 a owl:Class ;
+    rdfs:subClassOf GO:0001909,
+        GO:0002228 .
+
+GO:0042269 a owl:Class ;
+    rdfs:subClassOf GO:0001910,
+        GO:0002715 .
+
 GO:0042277 a owl:Class ;
-    rdfs:subClassOf GO:0033218 .
+    rdfs:subClassOf GO:0005488 .
 
 GO:0042278 a owl:Class ;
     rdfs:subClassOf GO:0009116,
@@ -18643,15 +19455,14 @@ GO:0042414 a owl:Class ;
     rdfs:subClassOf GO:0008152 .
 
 GO:0042415 a owl:Class ;
-    rdfs:subClassOf GO:0006807,
-        GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0042416 a owl:Class ;
     rdfs:subClassOf GO:0009058,
         GO:0042417 .
 
 GO:0042417 a owl:Class ;
-    rdfs:subClassOf GO:0006807 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0042418 a owl:Class ;
     rdfs:subClassOf GO:0009058,
@@ -18666,12 +19477,12 @@ GO:0042420 a owl:Class ;
         GO:0042417 .
 
 GO:0042421 a owl:Class ;
-    rdfs:subClassOf GO:0042415,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0042415 .
 
 GO:0042422 a owl:Class ;
-    rdfs:subClassOf GO:0042415,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0042415 .
 
 GO:0042423 a owl:Class ;
     rdfs:subClassOf GO:0006584,
@@ -18706,26 +19517,14 @@ GO:0042429 a owl:Class ;
         GO:0042428 .
 
 GO:0042430 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0034641,
-        GO:0046483,
-        GO:1901360,
-        GO:1901564 .
+    rdfs:subClassOf GO:1901564 .
 
 GO:0042435 a owl:Class ;
-    rdfs:subClassOf GO:0018130,
-        GO:0019438,
-        GO:0042430,
-        GO:0044271,
-        GO:1901362,
+    rdfs:subClassOf GO:0042430,
         GO:1901566 .
 
 GO:0042436 a owl:Class ;
-    rdfs:subClassOf GO:0019439,
-        GO:0042430,
-        GO:0044270,
-        GO:0046700,
-        GO:1901361,
+    rdfs:subClassOf GO:0042430,
         GO:1901565 .
 
 GO:0042440 a owl:Class ;
@@ -18834,6 +19633,9 @@ GO:0042490 a owl:Class ;
 GO:0042491 a owl:Class ;
     rdfs:subClassOf GO:0035315,
         GO:0060113 .
+
+GO:0042537 a owl:Class ;
+    rdfs:subClassOf GO:0008152 .
 
 GO:0042551 a owl:Class ;
     rdfs:subClassOf GO:0048469 .
@@ -18955,15 +19757,15 @@ GO:0042923 a owl:Class ;
     rdfs:subClassOf GO:0042277 .
 
 GO:0042940 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006865 .
 
 GO:0042943 a owl:Class ;
-    rdfs:subClassOf GO:0022857 .
+    rdfs:subClassOf GO:0015171 .
 
 GO:0042953 a owl:Class ;
-    rdfs:subClassOf GO:0044872,
-        GO:0045184,
-        GO:0071702 .
+    rdfs:subClassOf GO:0006810,
+        GO:0044872,
+        GO:0045184 .
 
 GO:0042981 a owl:Class ;
     rdfs:subClassOf GO:0043067 .
@@ -19031,8 +19833,7 @@ GO:0043032 a owl:Class ;
 
 GO:0043043 a owl:Class ;
     rdfs:subClassOf GO:0006518,
-        GO:0043604,
-        GO:1901566 .
+        GO:0009058 .
 
 GO:0043049 a owl:Class ;
     rdfs:subClassOf GO:0060788 .
@@ -19107,12 +19908,11 @@ GO:0043169 a owl:Class ;
     rdfs:subClassOf GO:0043167 .
 
 GO:0043170 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0043171 a owl:Class ;
     rdfs:subClassOf GO:0006518,
-        GO:0044248,
-        GO:1901565 .
+        GO:0044248 .
 
 GO:0043176 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
@@ -19131,9 +19931,7 @@ GO:0043199 a owl:Class ;
         GO:1901681 .
 
 GO:0043200 a owl:Class ;
-    rdfs:subClassOf GO:0001101,
-        GO:0010243,
-        GO:1901700 .
+    rdfs:subClassOf GO:0001101 .
 
 GO:0043207 a owl:Class ;
     rdfs:subClassOf GO:0009605,
@@ -19269,6 +20067,23 @@ GO:0043315 a owl:Class ;
         GO:0043313,
         GO:0050778 .
 
+GO:0043320 a owl:Class ;
+    rdfs:subClassOf GO:0043299 .
+
+GO:0043321 a owl:Class ;
+    rdfs:subClassOf GO:0042269,
+        GO:0043300 .
+
+GO:0043322 a owl:Class ;
+    rdfs:subClassOf GO:0043301,
+        GO:0043321,
+        GO:0045953 .
+
+GO:0043323 a owl:Class ;
+    rdfs:subClassOf GO:0043302,
+        GO:0043321,
+        GO:0045954 .
+
 GO:0043324 a owl:Class ;
     rdfs:subClassOf GO:0043474 .
 
@@ -19324,9 +20139,14 @@ GO:0043417 a owl:Class ;
         GO:0048640,
         GO:0061045 .
 
+GO:0043433 a owl:Class ;
+    rdfs:subClassOf GO:0044092,
+        GO:0051090 .
+
 GO:0043434 a owl:Class ;
     rdfs:subClassOf GO:0009725,
-        GO:1901652 .
+        GO:0010243,
+        GO:1901700 .
 
 GO:0043436 a owl:Class ;
     rdfs:subClassOf GO:0006082 .
@@ -19414,6 +20234,9 @@ GO:0043559 a owl:Class ;
     rdfs:subClassOf GO:0005515,
         GO:0017046 .
 
+GO:0043565 a owl:Class ;
+    rdfs:subClassOf GO:0003677 .
+
 GO:0043576 a owl:Class ;
     rdfs:subClassOf GO:0051239 .
 
@@ -19439,11 +20262,11 @@ GO:0043589 a owl:Class ;
     rdfs:subClassOf GO:0009887 .
 
 GO:0043603 a owl:Class ;
-    rdfs:subClassOf GO:0006807 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0043604 a owl:Class ;
-    rdfs:subClassOf GO:0043603,
-        GO:0044271 .
+    rdfs:subClassOf GO:0009058,
+        GO:0043603 .
 
 GO:0043605 a owl:Class ;
     rdfs:subClassOf GO:0009056,
@@ -19555,14 +20378,6 @@ GO:0044255 a owl:Class ;
 GO:0044258 a owl:Class ;
     rdfs:subClassOf GO:0016042 .
 
-GO:0044270 a owl:Class ;
-    rdfs:subClassOf GO:0034641,
-        GO:0044248 .
-
-GO:0044271 a owl:Class ;
-    rdfs:subClassOf GO:0034641,
-        GO:0044249 .
-
 GO:0044272 a owl:Class ;
     rdfs:subClassOf GO:0006790,
         GO:0044249 .
@@ -19583,6 +20398,9 @@ GO:0044283 a owl:Class ;
         GO:0044281 .
 
 GO:0044297 a owl:Class ;
+    rdfs:subClassOf GO:0110165 .
+
+GO:0044304 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
 
 GO:0044342 a owl:Class ;
@@ -19662,6 +20480,23 @@ GO:0045055 a owl:Class ;
 GO:0045058 a owl:Class ;
     rdfs:subClassOf GO:0002376 .
 
+GO:0045087 a owl:Class ;
+    rdfs:subClassOf GO:0006955,
+        GO:0140546 .
+
+GO:0045088 a owl:Class ;
+    rdfs:subClassOf GO:0002831,
+        GO:0031347,
+        GO:0032101,
+        GO:0050776 .
+
+GO:0045089 a owl:Class ;
+    rdfs:subClassOf GO:0002833,
+        GO:0031349,
+        GO:0032103,
+        GO:0045088,
+        GO:0050778 .
+
 GO:0045095 a owl:Class ;
     rdfs:subClassOf GO:0005882 .
 
@@ -19685,7 +20520,6 @@ GO:0045111 a owl:Class ;
 
 GO:0045117 a owl:Class ;
     rdfs:subClassOf GO:0055085,
-        GO:0071702,
         GO:0071705 .
 
 GO:0045120 a owl:Class ;
@@ -20103,8 +20937,7 @@ GO:0045687 a owl:Class ;
 
 GO:0045700 a owl:Class ;
     rdfs:subClassOf GO:0051239,
-        GO:1903353,
-        GO:2000241 .
+        GO:1903353 .
 
 GO:0045701 a owl:Class ;
     rdfs:subClassOf GO:0010639,
@@ -20160,7 +20993,6 @@ GO:0045725 a owl:Class ;
 GO:0045727 a owl:Class ;
     rdfs:subClassOf GO:0006417,
         GO:0010628,
-        GO:0034250,
         GO:0051247 .
 
 GO:0045732 a owl:Class ;
@@ -20287,6 +21119,13 @@ GO:0045823 a owl:Class ;
     rdfs:subClassOf GO:0008016,
         GO:1903524 .
 
+GO:0045824 a owl:Class ;
+    rdfs:subClassOf GO:0002832,
+        GO:0031348,
+        GO:0032102,
+        GO:0045088,
+        GO:0050777 .
+
 GO:0045827 a owl:Class ;
     rdfs:subClassOf GO:0019747,
         GO:0031324,
@@ -20354,12 +21193,6 @@ GO:0045844 a owl:Class ;
         GO:0048636,
         GO:1901863 .
 
-GO:0045851 a owl:Class ;
-    rdfs:subClassOf GO:0006885 .
-
-GO:0045852 a owl:Class ;
-    rdfs:subClassOf GO:0006885 .
-
 GO:0045859 a owl:Class ;
     rdfs:subClassOf GO:0001932,
         GO:0043549 .
@@ -20376,6 +21209,14 @@ GO:0045861 a owl:Class ;
 GO:0045862 a owl:Class ;
     rdfs:subClassOf GO:0030162,
         GO:0051247 .
+
+GO:0045892 a owl:Class ;
+    rdfs:subClassOf GO:0006355,
+        GO:0010558 .
+
+GO:0045893 a owl:Class ;
+    rdfs:subClassOf GO:0006355,
+        GO:0010557 .
 
 GO:0045900 a owl:Class ;
     rdfs:subClassOf GO:0006448,
@@ -20412,13 +21253,11 @@ GO:0045913 a owl:Class ;
         GO:0009893 .
 
 GO:0045914 a owl:Class ;
-    rdfs:subClassOf GO:0031324,
-        GO:0033239,
+    rdfs:subClassOf GO:0033239,
         GO:0042069 .
 
 GO:0045915 a owl:Class ;
-    rdfs:subClassOf GO:0031325,
-        GO:0033240,
+    rdfs:subClassOf GO:0033240,
         GO:0042069 .
 
 GO:0045920 a owl:Class ;
@@ -20476,14 +21315,12 @@ GO:0045933 a owl:Class ;
         GO:0051240 .
 
 GO:0045934 a owl:Class ;
-    rdfs:subClassOf GO:0019219,
-        GO:0031324,
-        GO:0051172 .
+    rdfs:subClassOf GO:0009892,
+        GO:0019219 .
 
 GO:0045935 a owl:Class ;
-    rdfs:subClassOf GO:0019219,
-        GO:0031325,
-        GO:0051173 .
+    rdfs:subClassOf GO:0009893,
+        GO:0019219 .
 
 GO:0045936 a owl:Class ;
     rdfs:subClassOf GO:0010563,
@@ -20506,6 +21343,10 @@ GO:0045940 a owl:Class ;
     rdfs:subClassOf GO:0019218,
         GO:0045834 .
 
+GO:0045944 a owl:Class ;
+    rdfs:subClassOf GO:0006357,
+        GO:0045893 .
+
 GO:0045947 a owl:Class ;
     rdfs:subClassOf GO:0006446,
         GO:0017148 .
@@ -20519,13 +21360,23 @@ GO:0045952 a owl:Class ;
         GO:0031329,
         GO:0050994 .
 
+GO:0045953 a owl:Class ;
+    rdfs:subClassOf GO:0001911,
+        GO:0002716,
+        GO:0042269 .
+
+GO:0045954 a owl:Class ;
+    rdfs:subClassOf GO:0001912,
+        GO:0002717,
+        GO:0042269 .
+
 GO:0045963 a owl:Class ;
-    rdfs:subClassOf GO:0042053,
-        GO:0051172 .
+    rdfs:subClassOf GO:0009892,
+        GO:0042053 .
 
 GO:0045964 a owl:Class ;
-    rdfs:subClassOf GO:0042053,
-        GO:0051173 .
+    rdfs:subClassOf GO:0009893,
+        GO:0042053 .
 
 GO:0045968 a owl:Class ;
     rdfs:subClassOf GO:0007557,
@@ -20655,14 +21506,10 @@ GO:0046086 a owl:Class ;
 
 GO:0046112 a owl:Class ;
     rdfs:subClassOf GO:0009112,
-        GO:0018130,
-        GO:1901362,
         GO:1901566 .
 
 GO:0046113 a owl:Class ;
     rdfs:subClassOf GO:0009112,
-        GO:0046700,
-        GO:1901361,
         GO:1901565 .
 
 GO:0046128 a owl:Class ;
@@ -20694,18 +21541,14 @@ GO:0046165 a owl:Class ;
 
 GO:0046184 a owl:Class ;
     rdfs:subClassOf GO:0006081,
-        GO:0044249,
-        GO:1901576 .
+        GO:0044249 .
 
 GO:0046185 a owl:Class ;
     rdfs:subClassOf GO:0006081,
-        GO:0044248,
-        GO:1901575 .
+        GO:0044248 .
 
 GO:0046189 a owl:Class ;
     rdfs:subClassOf GO:0018958,
-        GO:0019438,
-        GO:1901362,
         GO:1901617 .
 
 GO:0046219 a owl:Class ;
@@ -20722,6 +21565,10 @@ GO:0046247 a owl:Class ;
     rdfs:subClassOf GO:0008300,
         GO:0042214,
         GO:0120253 .
+
+GO:0046252 a owl:Class ;
+    rdfs:subClassOf GO:0018970,
+        GO:0120251 .
 
 GO:0046348 a owl:Class ;
     rdfs:subClassOf GO:0006040,
@@ -20766,12 +21613,12 @@ GO:0046416 a owl:Class ;
     rdfs:subClassOf GO:0006520 .
 
 GO:0046434 a owl:Class ;
-    rdfs:subClassOf GO:0019637,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0019637 .
 
 GO:0046437 a owl:Class ;
-    rdfs:subClassOf GO:0046416,
-        GO:1901576 .
+    rdfs:subClassOf GO:0008652,
+        GO:0046416 .
 
 GO:0046459 a owl:Class ;
     rdfs:subClassOf GO:0006631 .
@@ -20799,9 +21646,6 @@ GO:0046479 a owl:Class ;
     rdfs:subClassOf GO:0006687,
         GO:0019377,
         GO:0030149 .
-
-GO:0046483 a owl:Class ;
-    rdfs:subClassOf GO:0044237 .
 
 GO:0046513 a owl:Class ;
     rdfs:subClassOf GO:0006672,
@@ -20933,16 +21777,12 @@ GO:0046681 a owl:Class ;
         GO:1901700 .
 
 GO:0046683 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:0046692 a owl:Class ;
     rdfs:subClassOf GO:0044703,
         GO:0044706,
         GO:0048609 .
-
-GO:0046700 a owl:Class ;
-    rdfs:subClassOf GO:0044248,
-        GO:0046483 .
 
 GO:0046716 a owl:Class ;
     rdfs:subClassOf GO:0019725 .
@@ -21178,8 +22018,7 @@ GO:0048132 a owl:Class ;
     rdfs:subClassOf GO:0098728 .
 
 GO:0048137 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:0051301 .
+    rdfs:subClassOf GO:0051301 .
 
 GO:0048143 a owl:Class ;
     rdfs:subClassOf GO:0061900 .
@@ -21225,7 +22064,8 @@ GO:0048240 a owl:Class ;
         GO:0048469 .
 
 GO:0048241 a owl:Class ;
-    rdfs:subClassOf GO:0006810 .
+    rdfs:subClassOf GO:0015695,
+        GO:0071705 .
 
 GO:0048242 a owl:Class ;
     rdfs:subClassOf GO:0046903,
@@ -21702,8 +22542,29 @@ GO:0048770 a owl:Class ;
 GO:0048771 a owl:Class ;
     rdfs:subClassOf GO:0032501 .
 
+GO:0048773 a owl:Class ;
+    rdfs:subClassOf GO:0050931 .
+
+GO:0048778 a owl:Class ;
+    rdfs:subClassOf GO:0050932 .
+
+GO:0048779 a owl:Class ;
+    rdfs:subClassOf GO:0048778,
+        GO:0050941 .
+
+GO:0048780 a owl:Class ;
+    rdfs:subClassOf GO:0048778,
+        GO:0050942 .
+
 GO:0048785 a owl:Class ;
     rdfs:subClassOf GO:0048732 .
+
+GO:0048786 a owl:Class ;
+    rdfs:subClassOf GO:0110165 .
+
+GO:0048788 a owl:Class ;
+    rdfs:subClassOf GO:0030863,
+        GO:0099569 .
 
 GO:0048793 a owl:Class ;
     rdfs:subClassOf GO:0001822 .
@@ -21820,8 +22681,8 @@ GO:0048857 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
 
 GO:0048858 a owl:Class ;
-    rdfs:subClassOf GO:0030030,
-        GO:0032989 .
+    rdfs:subClassOf GO:0009653,
+        GO:0030030 .
 
 GO:0048859 a owl:Class ;
     rdfs:subClassOf GO:0048646 .
@@ -22349,6 +23210,18 @@ GO:0050931 a owl:Class ;
 GO:0050932 a owl:Class ;
     rdfs:subClassOf GO:0045595 .
 
+GO:0050935 a owl:Class ;
+    rdfs:subClassOf GO:0050931 .
+
+GO:0050936 a owl:Class ;
+    rdfs:subClassOf GO:0050931 .
+
+GO:0050937 a owl:Class ;
+    rdfs:subClassOf GO:0050932 .
+
+GO:0050938 a owl:Class ;
+    rdfs:subClassOf GO:0050932 .
+
 GO:0050941 a owl:Class ;
     rdfs:subClassOf GO:0045596,
         GO:0048086,
@@ -22358,6 +23231,22 @@ GO:0050942 a owl:Class ;
     rdfs:subClassOf GO:0045597,
         GO:0048087,
         GO:0050932 .
+
+GO:0050943 a owl:Class ;
+    rdfs:subClassOf GO:0050937,
+        GO:0050941 .
+
+GO:0050944 a owl:Class ;
+    rdfs:subClassOf GO:0050938,
+        GO:0050941 .
+
+GO:0050945 a owl:Class ;
+    rdfs:subClassOf GO:0050937,
+        GO:0050942 .
+
+GO:0050946 a owl:Class ;
+    rdfs:subClassOf GO:0050938,
+        GO:0050942 .
 
 GO:0050951 a owl:Class ;
     rdfs:subClassOf GO:0007600 .
@@ -22525,6 +23414,14 @@ GO:0051081 a owl:Class ;
     rdfs:subClassOf GO:0030397,
         GO:0071763 .
 
+GO:0051090 a owl:Class ;
+    rdfs:subClassOf GO:0006355,
+        GO:0065009 .
+
+GO:0051091 a owl:Class ;
+    rdfs:subClassOf GO:0044093,
+        GO:0051090 .
+
 GO:0051093 a owl:Class ;
     rdfs:subClassOf GO:0048519,
         GO:0050793 .
@@ -22609,17 +23506,6 @@ GO:0051169 a owl:Class ;
 GO:0051170 a owl:Class ;
     rdfs:subClassOf GO:0006913 .
 
-GO:0051171 a owl:Class ;
-    rdfs:subClassOf GO:0019222 .
-
-GO:0051172 a owl:Class ;
-    rdfs:subClassOf GO:0009892,
-        GO:0051171 .
-
-GO:0051173 a owl:Class ;
-    rdfs:subClassOf GO:0009893,
-        GO:0051171 .
-
 GO:0051174 a owl:Class ;
     rdfs:subClassOf GO:0031323 .
 
@@ -22681,15 +23567,14 @@ GO:0051241 a owl:Class ;
         GO:0051239 .
 
 GO:0051246 a owl:Class ;
-    rdfs:subClassOf GO:0051171,
-        GO:0080090 .
+    rdfs:subClassOf GO:0080090 .
 
 GO:0051247 a owl:Class ;
-    rdfs:subClassOf GO:0051173,
+    rdfs:subClassOf GO:0009893,
         GO:0051246 .
 
 GO:0051248 a owl:Class ;
-    rdfs:subClassOf GO:0051172,
+    rdfs:subClassOf GO:0009892,
         GO:0051246 .
 
 GO:0051249 a owl:Class ;
@@ -22799,7 +23684,8 @@ GO:0051378 a owl:Class ;
         GO:0043176 .
 
 GO:0051379 a owl:Class ;
-    rdfs:subClassOf GO:0042562 .
+    rdfs:subClassOf GO:0042562,
+        GO:0043169 .
 
 GO:0051380 a owl:Class ;
     rdfs:subClassOf GO:0043169 .
@@ -22962,20 +23848,6 @@ GO:0051622 a owl:Class ;
 GO:0051623 a owl:Class ;
     rdfs:subClassOf GO:0051050,
         GO:0051621 .
-
-GO:0051625 a owl:Class ;
-    rdfs:subClassOf GO:0048241 .
-
-GO:0051626 a owl:Class ;
-    rdfs:subClassOf GO:0051049 .
-
-GO:0051627 a owl:Class ;
-    rdfs:subClassOf GO:0051051,
-        GO:0051626 .
-
-GO:0051628 a owl:Class ;
-    rdfs:subClassOf GO:0051050,
-        GO:0051626 .
 
 GO:0051630 a owl:Class ;
     rdfs:subClassOf GO:0015870 .
@@ -23172,7 +24044,8 @@ GO:0051937 a owl:Class ;
 
 GO:0051938 a owl:Class ;
     rdfs:subClassOf GO:0015800,
-        GO:0046942 .
+        GO:0046942,
+        GO:0071705 .
 
 GO:0051939 a owl:Class ;
     rdfs:subClassOf GO:0015800,
@@ -23190,17 +24063,14 @@ GO:0051954 a owl:Class ;
         GO:0051952 .
 
 GO:0051955 a owl:Class ;
-    rdfs:subClassOf GO:0032890,
-        GO:0051952 .
+    rdfs:subClassOf GO:0051952 .
 
 GO:0051956 a owl:Class ;
-    rdfs:subClassOf GO:0032891,
-        GO:0051953,
+    rdfs:subClassOf GO:0051953,
         GO:0051955 .
 
 GO:0051957 a owl:Class ;
-    rdfs:subClassOf GO:0032892,
-        GO:0051954,
+    rdfs:subClassOf GO:0051954,
         GO:0051955 .
 
 GO:0051960 a owl:Class ;
@@ -23268,18 +24138,10 @@ GO:0051985 a owl:Class ;
         GO:0051983 .
 
 GO:0052803 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0034641,
-        GO:0046483,
-        GO:1901360,
-        GO:1901564 .
+    rdfs:subClassOf GO:1901564 .
 
 GO:0052805 a owl:Class ;
-    rdfs:subClassOf GO:0019439,
-        GO:0044270,
-        GO:0046700,
-        GO:0052803,
-        GO:1901361,
+    rdfs:subClassOf GO:0052803,
         GO:1901565 .
 
 GO:0055001 a owl:Class ;
@@ -23354,6 +24216,9 @@ GO:0055026 a owl:Class ;
     rdfs:subClassOf GO:0045843,
         GO:0055024 .
 
+GO:0055056 a owl:Class ;
+    rdfs:subClassOf GO:0015149 .
+
 GO:0055057 a owl:Class ;
     rdfs:subClassOf GO:0051301 .
 
@@ -23402,7 +24267,7 @@ GO:0055091 a owl:Class ;
 
 GO:0055094 a owl:Class ;
     rdfs:subClassOf GO:0009719,
-        GO:0010033 .
+        GO:0042221 .
 
 GO:0055107 a owl:Class ;
     rdfs:subClassOf GO:0046907 .
@@ -23446,8 +24311,7 @@ GO:0060009 a owl:Class ;
         GO:0003006 .
 
 GO:0060011 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0050673 .
+    rdfs:subClassOf GO:0050673 .
 
 GO:0060014 a owl:Class ;
     rdfs:subClassOf GO:0030855 .
@@ -23469,6 +24333,9 @@ GO:0060022 a owl:Class ;
 
 GO:0060023 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
+
+GO:0060034 a owl:Class ;
+    rdfs:subClassOf GO:0030154 .
 
 GO:0060037 a owl:Class ;
     rdfs:subClassOf GO:0048731 .
@@ -23796,8 +24663,7 @@ GO:0060351 a owl:Class ;
     rdfs:subClassOf GO:0051216 .
 
 GO:0060359 a owl:Class ;
-    rdfs:subClassOf GO:0010035,
-        GO:1901698 .
+    rdfs:subClassOf GO:1901698 .
 
 GO:0060361 a owl:Class ;
     rdfs:subClassOf GO:0040011 .
@@ -23865,6 +24731,9 @@ GO:0060414 a owl:Class ;
 
 GO:0060415 a owl:Class ;
     rdfs:subClassOf GO:0048729 .
+
+GO:0060417 a owl:Class ;
+    rdfs:subClassOf GO:0110165 .
 
 GO:0060419 a owl:Class ;
     rdfs:subClassOf GO:0035265 .
@@ -24011,8 +24880,7 @@ GO:0060467 a owl:Class ;
         GO:2000242 .
 
 GO:0060468 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0060467 .
+    rdfs:subClassOf GO:0060467 .
 
 GO:0060474 a owl:Class ;
     rdfs:subClassOf GO:0022414,
@@ -24432,12 +25300,10 @@ GO:0060737 a owl:Class ;
         GO:0060736 .
 
 GO:0060738 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0060684 .
+    rdfs:subClassOf GO:0060684 .
 
 GO:0060739 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0060638 .
+    rdfs:subClassOf GO:0060638 .
 
 GO:0060740 a owl:Class ;
     rdfs:subClassOf GO:0002009,
@@ -24452,8 +25318,7 @@ GO:0060742 a owl:Class ;
         GO:0030855 .
 
 GO:0060743 a owl:Class ;
-    rdfs:subClassOf GO:0002070,
-        GO:0003006 .
+    rdfs:subClassOf GO:0002070 .
 
 GO:0060749 a owl:Class ;
     rdfs:subClassOf GO:0048856 .
@@ -24481,12 +25346,10 @@ GO:0060764 a owl:Class ;
     rdfs:subClassOf GO:0007267 .
 
 GO:0060767 a owl:Class ;
-    rdfs:subClassOf GO:0022414,
-        GO:0050673 .
+    rdfs:subClassOf GO:0050673 .
 
 GO:0060768 a owl:Class ;
-    rdfs:subClassOf GO:0050678,
-        GO:2000241 .
+    rdfs:subClassOf GO:0050678 .
 
 GO:0060769 a owl:Class ;
     rdfs:subClassOf GO:0050679,
@@ -24502,12 +25365,10 @@ GO:0060770 a owl:Class ;
         GO:2000242 .
 
 GO:0060781 a owl:Class ;
-    rdfs:subClassOf GO:0010463,
-        GO:0022414 .
+    rdfs:subClassOf GO:0010463 .
 
 GO:0060782 a owl:Class ;
-    rdfs:subClassOf GO:0010464,
-        GO:2000241 .
+    rdfs:subClassOf GO:0010464 .
 
 GO:0060784 a owl:Class ;
     rdfs:subClassOf GO:0042127 .
@@ -25421,8 +26282,7 @@ GO:0061449 a owl:Class ;
     rdfs:subClassOf GO:0048666 .
 
 GO:0061450 a owl:Class ;
-    rdfs:subClassOf GO:0001667,
-        GO:0022414 .
+    rdfs:subClassOf GO:0001667 .
 
 GO:0061451 a owl:Class ;
     rdfs:subClassOf GO:0048857 .
@@ -25483,10 +26343,6 @@ GO:0061526 a owl:Class ;
 GO:0061527 a owl:Class ;
     rdfs:subClassOf GO:0007269,
         GO:0099124 .
-
-GO:0061529 a owl:Class ;
-    rdfs:subClassOf GO:0007269,
-        GO:0048242 .
 
 GO:0061533 a owl:Class ;
     rdfs:subClassOf GO:0048243,
@@ -25562,12 +26418,10 @@ GO:0061629 a owl:Class ;
     rdfs:subClassOf GO:0140297 .
 
 GO:0061682 a owl:Class ;
-    rdfs:subClassOf GO:0003006,
-        GO:0022612 .
+    rdfs:subClassOf GO:0022612 .
 
 GO:0061683 a owl:Class ;
-    rdfs:subClassOf GO:0003006,
-        GO:0061138 .
+    rdfs:subClassOf GO:0061138 .
 
 GO:0061687 a owl:Class ;
     rdfs:subClassOf GO:0098754 .
@@ -25638,7 +26492,7 @@ GO:0061900 a owl:Class ;
 
 GO:0061934 a owl:Class ;
     rdfs:subClassOf GO:0006141,
-        GO:0031326 .
+        GO:0009889 .
 
 GO:0061938 a owl:Class ;
     rdfs:subClassOf GO:0008104 .
@@ -25857,6 +26711,20 @@ GO:0070244 a owl:Class ;
 GO:0070245 a owl:Class ;
     rdfs:subClassOf GO:0070234,
         GO:0070243 .
+
+GO:0070246 a owl:Class ;
+    rdfs:subClassOf GO:0070227 .
+
+GO:0070247 a owl:Class ;
+    rdfs:subClassOf GO:0070228 .
+
+GO:0070248 a owl:Class ;
+    rdfs:subClassOf GO:0070229,
+        GO:0070247 .
+
+GO:0070249 a owl:Class ;
+    rdfs:subClassOf GO:0070230,
+        GO:0070247 .
 
 GO:0070253 a owl:Class ;
     rdfs:subClassOf GO:0030072 .
@@ -26099,6 +26967,24 @@ GO:0070925 a owl:Class ;
     rdfs:subClassOf GO:0006996,
         GO:0022607 .
 
+GO:0070942 a owl:Class ;
+    rdfs:subClassOf GO:0001909,
+        GO:0002446 .
+
+GO:0070948 a owl:Class ;
+    rdfs:subClassOf GO:0001910,
+        GO:0002886 .
+
+GO:0070954 a owl:Class ;
+    rdfs:subClassOf GO:0001911,
+        GO:0002887,
+        GO:0070948 .
+
+GO:0070960 a owl:Class ;
+    rdfs:subClassOf GO:0001912,
+        GO:0002888,
+        GO:0070948 .
+
 GO:0070977 a owl:Class ;
     rdfs:subClassOf GO:0048799 .
 
@@ -26131,12 +27017,13 @@ GO:0071214 a owl:Class ;
 
 GO:0071230 a owl:Class ;
     rdfs:subClassOf GO:0043200,
-        GO:0071417,
-        GO:1901701 .
-
-GO:0071241 a owl:Class ;
-    rdfs:subClassOf GO:0010035,
         GO:0070887 .
+
+GO:0071234 a owl:Class ;
+    rdfs:subClassOf GO:0071407,
+        GO:0071417,
+        GO:0080053,
+        GO:1901701 .
 
 GO:0071242 a owl:Class ;
     rdfs:subClassOf GO:0060359,
@@ -26144,12 +27031,11 @@ GO:0071242 a owl:Class ;
 
 GO:0071244 a owl:Class ;
     rdfs:subClassOf GO:0010037,
-        GO:0071241,
         GO:1901701 .
 
 GO:0071248 a owl:Class ;
     rdfs:subClassOf GO:0010038,
-        GO:0071241 .
+        GO:0070887 .
 
 GO:0071277 a owl:Class ;
     rdfs:subClassOf GO:0051592,
@@ -26159,13 +27045,8 @@ GO:0071281 a owl:Class ;
     rdfs:subClassOf GO:0010039,
         GO:0071248 .
 
-GO:0071310 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:0070887 .
-
 GO:0071311 a owl:Class ;
     rdfs:subClassOf GO:0010034,
-        GO:0071310,
         GO:1901701 .
 
 GO:0071312 a owl:Class ;
@@ -26178,7 +27059,6 @@ GO:0071318 a owl:Class ;
 
 GO:0071322 a owl:Class ;
     rdfs:subClassOf GO:0009743,
-        GO:0071310,
         GO:1901701 .
 
 GO:0071323 a owl:Class ;
@@ -26200,12 +27080,12 @@ GO:0071333 a owl:Class ;
         GO:0071331 .
 
 GO:0071345 a owl:Class ;
-    rdfs:subClassOf GO:0034097,
-        GO:0071310 .
+    rdfs:subClassOf GO:0034097 .
 
 GO:0071375 a owl:Class ;
     rdfs:subClassOf GO:0043434,
-        GO:1901653 .
+        GO:0071417,
+        GO:1901701 .
 
 GO:0071377 a owl:Class ;
     rdfs:subClassOf GO:0033762,
@@ -26241,7 +27121,7 @@ GO:0071394 a owl:Class ;
 
 GO:0071396 a owl:Class ;
     rdfs:subClassOf GO:0033993,
-        GO:0071310 .
+        GO:0070887 .
 
 GO:0071398 a owl:Class ;
     rdfs:subClassOf GO:0070542,
@@ -26250,11 +27130,10 @@ GO:0071398 a owl:Class ;
 
 GO:0071407 a owl:Class ;
     rdfs:subClassOf GO:0014070,
-        GO:0071310 .
+        GO:0070887 .
 
 GO:0071417 a owl:Class ;
     rdfs:subClassOf GO:0010243,
-        GO:0071310,
         GO:0071495,
         GO:1901699 .
 
@@ -26372,12 +27251,6 @@ GO:0071699 a owl:Class ;
 GO:0071700 a owl:Class ;
     rdfs:subClassOf GO:0071695 .
 
-GO:0071702 a owl:Class ;
-    rdfs:subClassOf GO:0006810 .
-
-GO:0071704 a owl:Class ;
-    rdfs:subClassOf GO:0008152 .
-
 GO:0071705 a owl:Class ;
     rdfs:subClassOf GO:0006810 .
 
@@ -26426,8 +27299,7 @@ GO:0071764 a owl:Class ;
 
 GO:0071806 a owl:Class ;
     rdfs:subClassOf GO:0045184,
-        GO:0055085,
-        GO:0071702 .
+        GO:0055085 .
 
 GO:0071824 a owl:Class ;
     rdfs:subClassOf GO:0043933 .
@@ -26459,16 +27331,8 @@ GO:0071870 a owl:Class ;
         GO:0071869,
         GO:1901701 .
 
-GO:0071871 a owl:Class ;
-    rdfs:subClassOf GO:0042221 .
-
-GO:0071872 a owl:Class ;
-    rdfs:subClassOf GO:0070887,
-        GO:0071871 .
-
 GO:0071873 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901698 .
+    rdfs:subClassOf GO:1901698 .
 
 GO:0071874 a owl:Class ;
     rdfs:subClassOf GO:0071873,
@@ -26490,8 +27354,7 @@ GO:0071895 a owl:Class ;
 
 GO:0071897 a owl:Class ;
     rdfs:subClassOf GO:0006259,
-        GO:0009059,
-        GO:0034654 .
+        GO:0141187 .
 
 GO:0071944 a owl:Class ;
     rdfs:subClassOf GO:0110165 .
@@ -27246,8 +28109,7 @@ GO:0072330 a owl:Class ;
         GO:0046394 .
 
 GO:0072337 a owl:Class ;
-    rdfs:subClassOf GO:0071702,
-        GO:0071705 .
+    rdfs:subClassOf GO:0071705 .
 
 GO:0072341 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
@@ -27272,40 +28134,37 @@ GO:0072488 a owl:Class ;
     rdfs:subClassOf GO:0071705,
         GO:0098662 .
 
+GO:0072490 a owl:Class ;
+    rdfs:subClassOf GO:0042537 .
+
+GO:0072491 a owl:Class ;
+    rdfs:subClassOf GO:0009056,
+        GO:0072490 .
+
 GO:0072520 a owl:Class ;
     rdfs:subClassOf GO:0035295,
         GO:0048608 .
 
 GO:0072521 a owl:Class ;
-    rdfs:subClassOf GO:0006725,
-        GO:0034641,
-        GO:0046483,
-        GO:1901360,
-        GO:1901564 .
+    rdfs:subClassOf GO:1901564 .
 
 GO:0072522 a owl:Class ;
-    rdfs:subClassOf GO:0018130,
-        GO:0019438,
-        GO:0044271,
-        GO:0072521,
-        GO:1901362,
+    rdfs:subClassOf GO:0072521,
         GO:1901566 .
 
 GO:0072523 a owl:Class ;
-    rdfs:subClassOf GO:0019439,
-        GO:0044270,
-        GO:0046700,
-        GO:0072521,
-        GO:1901361,
+    rdfs:subClassOf GO:0072521,
         GO:1901565 .
 
 GO:0072530 a owl:Class ;
     rdfs:subClassOf GO:0055085,
-        GO:0071702,
         GO:0071705 .
 
 GO:0072537 a owl:Class ;
     rdfs:subClassOf GO:0001775 .
+
+GO:0072545 a owl:Class ;
+    rdfs:subClassOf GO:0016597 .
 
 GO:0072560 a owl:Class ;
     rdfs:subClassOf GO:0002071 .
@@ -27362,6 +28221,11 @@ GO:0072697 a owl:Class ;
 
 GO:0072698 a owl:Class ;
     rdfs:subClassOf GO:0044380 .
+
+GO:0080053 a owl:Class ;
+    rdfs:subClassOf GO:0010243,
+        GO:0014070,
+        GO:1901700 .
 
 GO:0080090 a owl:Class ;
     rdfs:subClassOf GO:0019222 .
@@ -27548,19 +28412,16 @@ GO:0090153 a owl:Class ;
     rdfs:subClassOf GO:0010556,
         GO:0044087,
         GO:0046890,
-        GO:0051171,
         GO:1905038 .
 
 GO:0090154 a owl:Class ;
     rdfs:subClassOf GO:0031328,
         GO:0046889,
-        GO:0051173,
         GO:0090153 .
 
 GO:0090155 a owl:Class ;
     rdfs:subClassOf GO:0031327,
         GO:0051055,
-        GO:0051172,
         GO:0090153 .
 
 GO:0090156 a owl:Class ;
@@ -27756,8 +28617,8 @@ GO:0090394 a owl:Class ;
     rdfs:subClassOf GO:0065007 .
 
 GO:0090407 a owl:Class ;
-    rdfs:subClassOf GO:0019637,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0019637 .
 
 GO:0090425 a owl:Class ;
     rdfs:subClassOf GO:0002067 .
@@ -27768,6 +28629,7 @@ GO:0090435 a owl:Class ;
 GO:0090454 a owl:Class ;
     rdfs:subClassOf GO:0015800,
         GO:0032975,
+        GO:0071705,
         GO:1905039 .
 
 GO:0090461 a owl:Class ;
@@ -27785,6 +28647,10 @@ GO:0090496 a owl:Class ;
 GO:0090497 a owl:Class ;
     rdfs:subClassOf GO:0001667 .
 
+GO:0090514 a owl:Class ;
+    rdfs:subClassOf GO:0015828,
+        GO:0032975 .
+
 GO:0090515 a owl:Class ;
     rdfs:subClassOf GO:0015813,
         GO:0090454 .
@@ -27800,8 +28666,7 @@ GO:0090596 a owl:Class ;
     rdfs:subClassOf GO:0009887 .
 
 GO:0090598 a owl:Class ;
-    rdfs:subClassOf GO:0003006,
-        GO:0009653 .
+    rdfs:subClassOf GO:0009653 .
 
 GO:0090685 a owl:Class ;
     rdfs:subClassOf GO:0006403 .
@@ -27879,7 +28744,7 @@ GO:0097159 a owl:Class ;
     rdfs:subClassOf GO:0005488 .
 
 GO:0097164 a owl:Class ;
-    rdfs:subClassOf GO:0006807 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0097186 a owl:Class ;
     rdfs:subClassOf GO:0042475,
@@ -27922,12 +28787,10 @@ GO:0097284 a owl:Class ;
     rdfs:subClassOf GO:1904019 .
 
 GO:0097305 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:0097306 a owl:Class ;
-    rdfs:subClassOf GO:0071310,
-        GO:0097305,
+    rdfs:subClassOf GO:0097305,
         GO:1901701 .
 
 GO:0097324 a owl:Class ;
@@ -28094,6 +28957,9 @@ GO:0098528 a owl:Class ;
 GO:0098529 a owl:Class ;
     rdfs:subClassOf GO:0007528 .
 
+GO:0098531 a owl:Class ;
+    rdfs:subClassOf GO:0003700 .
+
 GO:0098542 a owl:Class ;
     rdfs:subClassOf GO:0006952,
         GO:0051707 .
@@ -28149,8 +29015,7 @@ GO:0098643 a owl:Class ;
         GO:0099512 .
 
 GO:0098644 a owl:Class ;
-    rdfs:subClassOf GO:0099080,
-        PR:000050567 .
+    rdfs:subClassOf GO:0099080 .
 
 GO:0098645 a owl:Class ;
     rdfs:subClassOf GO:0098644,
@@ -28291,6 +29156,9 @@ GO:0098815 a owl:Class ;
     rdfs:subClassOf GO:0009966,
         GO:0031644,
         GO:0050804 .
+
+GO:0098831 a owl:Class ;
+    rdfs:subClassOf GO:0099738 .
 
 GO:0098840 a owl:Class ;
     rdfs:subClassOf GO:0006886,
@@ -28486,7 +29354,6 @@ GO:0099112 a owl:Class ;
     rdfs:subClassOf GO:0007017,
         GO:0045184,
         GO:0046907,
-        GO:0071702,
         GO:0099111 .
 
 GO:0099118 a owl:Class ;
@@ -28865,8 +29732,7 @@ GO:0110095 a owl:Class ;
     rdfs:subClassOf GO:1990748 .
 
 GO:0110096 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901701 .
+    rdfs:subClassOf GO:1901701 .
 
 GO:0110110 a owl:Class ;
     rdfs:subClassOf GO:0051094,
@@ -28949,6 +29815,10 @@ GO:0120023 a owl:Class ;
 
 GO:0120025 a owl:Class ;
     rdfs:subClassOf GO:0042995 .
+
+GO:0120029 a owl:Class ;
+    rdfs:subClassOf GO:0140115,
+        GO:1902600 .
 
 GO:0120031 a owl:Class ;
     rdfs:subClassOf GO:0030031,
@@ -29037,26 +29907,26 @@ GO:0120229 a owl:Class ;
     rdfs:subClassOf GO:0061512 .
 
 GO:0120251 a owl:Class ;
-    rdfs:subClassOf GO:0120252,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0120252 .
 
 GO:0120252 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0120253 a owl:Class ;
-    rdfs:subClassOf GO:0120252,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0120252 .
 
 GO:0120254 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:0120255 a owl:Class ;
-    rdfs:subClassOf GO:0120254,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:0120254 .
 
 GO:0120256 a owl:Class ;
-    rdfs:subClassOf GO:0120254,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:0120254 .
 
 GO:0120275 a owl:Class ;
     rdfs:subClassOf GO:0008015 .
@@ -29077,7 +29947,6 @@ GO:0120305 a owl:Class ;
 
 GO:0120316 a owl:Class ;
     rdfs:subClassOf GO:0003006,
-        GO:0022412,
         GO:0044458 .
 
 GO:0120331 a owl:Class ;
@@ -29093,6 +29962,9 @@ GO:0140014 a owl:Class ;
 
 GO:0140029 a owl:Class ;
     rdfs:subClassOf GO:0009987 .
+
+GO:0140039 a owl:Class ;
+    rdfs:subClassOf GO:0098609 .
 
 GO:0140056 a owl:Class ;
     rdfs:subClassOf GO:0022406,
@@ -29123,6 +29995,9 @@ GO:0140098 a owl:Class ;
 
 GO:0140103 a owl:Class ;
     rdfs:subClassOf GO:0003824 .
+
+GO:0140110 a owl:Class ;
+    rdfs:subClassOf GO:0003674 .
 
 GO:0140112 a owl:Class ;
     rdfs:subClassOf GO:0044085 .
@@ -29252,6 +30127,9 @@ GO:0140734 a owl:Class ;
 GO:0140820 a owl:Class ;
     rdfs:subClassOf GO:0055085 .
 
+GO:0140925 a owl:Class ;
+    rdfs:subClassOf GO:0089718 .
+
 GO:0140961 a owl:Class ;
     rdfs:subClassOf GO:0061687,
         GO:1990748 .
@@ -29266,8 +30144,18 @@ GO:0140979 a owl:Class ;
 GO:0140980 a owl:Class ;
     rdfs:subClassOf GO:0055082 .
 
-GO:0141067 a owl:Class ;
-    rdfs:subClassOf GO:0055082 .
+GO:0141187 a owl:Class ;
+    rdfs:subClassOf GO:0009059,
+        GO:0034654,
+        GO:0090304 .
+
+GO:0141188 a owl:Class ;
+    rdfs:subClassOf GO:0009057,
+        GO:0034655,
+        GO:0090304 .
+
+GO:0141193 a owl:Class ;
+    rdfs:subClassOf GO:0030522 .
 
 GO:0150031 a owl:Class ;
     rdfs:subClassOf GO:0032880 .
@@ -29368,6 +30256,13 @@ GO:0160043 a owl:Class ;
 GO:0160048 a owl:Class ;
     rdfs:subClassOf GO:0060349 .
 
+GO:0160077 a owl:Class ;
+    rdfs:subClassOf GO:0034389,
+        GO:0048284 .
+
+GO:0160078 a owl:Class ;
+    rdfs:subClassOf GO:0010639 .
+
 GO:0160093 a owl:Class ;
     rdfs:subClassOf GO:0060465 .
 
@@ -29375,7 +30270,10 @@ GO:0160094 a owl:Class ;
     rdfs:subClassOf GO:0060465 .
 
 GO:0160095 a owl:Class ;
-    rdfs:subClassOf GO:0048856 .
+    rdfs:subClassOf GO:0060465 .
+
+GO:0160173 a owl:Class ;
+    rdfs:subClassOf GO:0022857 .
 
 GO:0170033 a owl:Class ;
     rdfs:subClassOf GO:1901605 .
@@ -29417,6 +30315,10 @@ GO:0170044 a owl:Class ;
     rdfs:subClassOf GO:0016054,
         GO:0170041,
         GO:1901565 .
+
+GO:0170055 a owl:Class ;
+    rdfs:subClassOf GO:0005319,
+        GO:0022857 .
 
 GO:1900006 a owl:Class ;
     rdfs:subClassOf GO:0010976,
@@ -29523,19 +30425,16 @@ GO:1900122 a owl:Class ;
         GO:1900120 .
 
 GO:1900125 a owl:Class ;
-    rdfs:subClassOf GO:0032885,
-        GO:0051171 .
+    rdfs:subClassOf GO:0032885 .
 
 GO:1900126 a owl:Class ;
     rdfs:subClassOf GO:0010558,
         GO:0045912,
-        GO:0051172,
         GO:1900125 .
 
 GO:1900127 a owl:Class ;
     rdfs:subClassOf GO:0010557,
         GO:0045913,
-        GO:0051173,
         GO:1900125 .
 
 GO:1900130 a owl:Class ;
@@ -29800,11 +30699,39 @@ GO:1900544 a owl:Class ;
         GO:1900542 .
 
 GO:1900619 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:1900620 a owl:Class ;
-    rdfs:subClassOf GO:1900619,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:1900619 .
+
+GO:1900828 a owl:Class ;
+    rdfs:subClassOf GO:0046416 .
+
+GO:1900829 a owl:Class ;
+    rdfs:subClassOf GO:0019478,
+        GO:1900828 .
+
+GO:1900929 a owl:Class ;
+    rdfs:subClassOf GO:0010958 .
+
+GO:1900930 a owl:Class ;
+    rdfs:subClassOf GO:0034763,
+        GO:0051956,
+        GO:1900929 .
+
+GO:1900931 a owl:Class ;
+    rdfs:subClassOf GO:0034764,
+        GO:0051957,
+        GO:1900929 .
+
+GO:1900996 a owl:Class ;
+    rdfs:subClassOf GO:0018910,
+        GO:0120253 .
+
+GO:1900997 a owl:Class ;
+    rdfs:subClassOf GO:0018910,
+        GO:0120251 .
 
 GO:1901003 a owl:Class ;
     rdfs:subClassOf GO:0031324,
@@ -29839,15 +30766,15 @@ GO:1901089 a owl:Class ;
     rdfs:subClassOf GO:1900619 .
 
 GO:1901135 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:1901136 a owl:Class ;
-    rdfs:subClassOf GO:1901135,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:1901135 .
 
 GO:1901137 a owl:Class ;
-    rdfs:subClassOf GO:1901135,
-        GO:1901576 .
+    rdfs:subClassOf GO:0009058,
+        GO:1901135 .
 
 GO:1901142 a owl:Class ;
     rdfs:subClassOf GO:0019538 .
@@ -29882,8 +30809,7 @@ GO:1901162 a owl:Class ;
         GO:1901566 .
 
 GO:1901163 a owl:Class ;
-    rdfs:subClassOf GO:0030334,
-        GO:2000241 .
+    rdfs:subClassOf GO:0030334 .
 
 GO:1901164 a owl:Class ;
     rdfs:subClassOf GO:0030336,
@@ -29975,7 +30901,7 @@ GO:1901251 a owl:Class ;
         GO:1901249 .
 
 GO:1901264 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:1901265 a owl:Class ;
     rdfs:subClassOf GO:0097159 .
@@ -30022,22 +30948,11 @@ GO:1901343 a owl:Class ;
         GO:0051241,
         GO:1901342 .
 
-GO:1901360 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
-
-GO:1901361 a owl:Class ;
-    rdfs:subClassOf GO:1901360,
-        GO:1901575 .
-
-GO:1901362 a owl:Class ;
-    rdfs:subClassOf GO:1901360,
-        GO:1901576 .
-
 GO:1901363 a owl:Class ;
     rdfs:subClassOf GO:0036094 .
 
 GO:1901374 a owl:Class ;
-    rdfs:subClassOf GO:0071702 .
+    rdfs:subClassOf GO:0006810 .
 
 GO:1901375 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
@@ -30054,30 +30969,27 @@ GO:1901384 a owl:Class ;
         GO:1901382 .
 
 GO:1901401 a owl:Class ;
-    rdfs:subClassOf GO:0031323,
-        GO:0051171 .
+    rdfs:subClassOf GO:0019222 .
 
 GO:1901402 a owl:Class ;
-    rdfs:subClassOf GO:0031324,
-        GO:0051172,
+    rdfs:subClassOf GO:0009892,
         GO:1901401 .
 
 GO:1901403 a owl:Class ;
-    rdfs:subClassOf GO:0031325,
-        GO:0051173,
+    rdfs:subClassOf GO:0009893,
         GO:1901401 .
 
 GO:1901404 a owl:Class ;
-    rdfs:subClassOf GO:0031329,
+    rdfs:subClassOf GO:0009894,
         GO:1901401 .
 
 GO:1901405 a owl:Class ;
-    rdfs:subClassOf GO:0031330,
+    rdfs:subClassOf GO:0009895,
         GO:1901402,
         GO:1901404 .
 
 GO:1901406 a owl:Class ;
-    rdfs:subClassOf GO:0031331,
+    rdfs:subClassOf GO:0009896,
         GO:1901403,
         GO:1901404 .
 
@@ -30106,9 +31018,61 @@ GO:1901421 a owl:Class ;
     rdfs:subClassOf GO:0048584,
         GO:1901419 .
 
+GO:1901423 a owl:Class ;
+    rdfs:subClassOf GO:0014070 .
+
+GO:1901424 a owl:Class ;
+    rdfs:subClassOf GO:0014070 .
+
 GO:1901425 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
+
+GO:1901434 a owl:Class ;
+    rdfs:subClassOf GO:0031329,
+        GO:1901437 .
+
+GO:1901435 a owl:Class ;
+    rdfs:subClassOf GO:0031330,
+        GO:1901434,
+        GO:1901438 .
+
+GO:1901436 a owl:Class ;
+    rdfs:subClassOf GO:0031331,
+        GO:1901434,
+        GO:1901439 .
+
+GO:1901437 a owl:Class ;
+    rdfs:subClassOf GO:0019222 .
+
+GO:1901438 a owl:Class ;
+    rdfs:subClassOf GO:0009892,
+        GO:1901437 .
+
+GO:1901439 a owl:Class ;
+    rdfs:subClassOf GO:0009893,
+        GO:1901437 .
+
+GO:1901451 a owl:Class ;
+    rdfs:subClassOf GO:0048583 .
+
+GO:1901452 a owl:Class ;
+    rdfs:subClassOf GO:0048585,
+        GO:1901451 .
+
+GO:1901453 a owl:Class ;
+    rdfs:subClassOf GO:0048584,
+        GO:1901451 .
+
+GO:1901454 a owl:Class ;
+    rdfs:subClassOf GO:0048583 .
+
+GO:1901455 a owl:Class ;
+    rdfs:subClassOf GO:0048585,
+        GO:1901454 .
+
+GO:1901456 a owl:Class ;
+    rdfs:subClassOf GO:0048584,
+        GO:1901454 .
 
 GO:1901457 a owl:Class ;
     rdfs:subClassOf GO:0048583 .
@@ -30133,16 +31097,16 @@ GO:1901462 a owl:Class ;
         GO:1901460 .
 
 GO:1901463 a owl:Class ;
-    rdfs:subClassOf GO:0031326,
+    rdfs:subClassOf GO:0009889,
         GO:1901401 .
 
 GO:1901464 a owl:Class ;
-    rdfs:subClassOf GO:0031327,
+    rdfs:subClassOf GO:0009890,
         GO:1901402,
         GO:1901463 .
 
 GO:1901465 a owl:Class ;
-    rdfs:subClassOf GO:0031328,
+    rdfs:subClassOf GO:0009891,
         GO:1901403,
         GO:1901463 .
 
@@ -30194,24 +31158,15 @@ GO:1901552 a owl:Class ;
         GO:1901550 .
 
 GO:1901564 a owl:Class ;
-    rdfs:subClassOf GO:0006807,
-        GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:1901565 a owl:Class ;
-    rdfs:subClassOf GO:1901564,
-        GO:1901575 .
+    rdfs:subClassOf GO:0009056,
+        GO:1901564 .
 
 GO:1901566 a owl:Class ;
-    rdfs:subClassOf GO:1901564,
-        GO:1901576 .
-
-GO:1901575 a owl:Class ;
-    rdfs:subClassOf GO:0009056,
-        GO:0071704 .
-
-GO:1901576 a owl:Class ;
     rdfs:subClassOf GO:0009058,
-        GO:0071704 .
+        GO:1901564 .
 
 GO:1901577 a owl:Class ;
     rdfs:subClassOf GO:0031326 .
@@ -30234,11 +31189,11 @@ GO:1901605 a owl:Class ;
     rdfs:subClassOf GO:0006520 .
 
 GO:1901606 a owl:Class ;
-    rdfs:subClassOf GO:1901575,
+    rdfs:subClassOf GO:0009063,
         GO:1901605 .
 
 GO:1901607 a owl:Class ;
-    rdfs:subClassOf GO:1901576,
+    rdfs:subClassOf GO:0008652,
         GO:1901605 .
 
 GO:1901608 a owl:Class ;
@@ -30253,14 +31208,14 @@ GO:1901610 a owl:Class ;
         GO:1901608 .
 
 GO:1901615 a owl:Class ;
-    rdfs:subClassOf GO:0071704 .
+    rdfs:subClassOf GO:0008152 .
 
 GO:1901616 a owl:Class ;
-    rdfs:subClassOf GO:1901575,
+    rdfs:subClassOf GO:0009056,
         GO:1901615 .
 
 GO:1901617 a owl:Class ;
-    rdfs:subClassOf GO:1901576,
+    rdfs:subClassOf GO:0009058,
         GO:1901615 .
 
 GO:1901618 a owl:Class ;
@@ -30302,17 +31257,14 @@ GO:1901647 a owl:Class ;
         GO:1901645 .
 
 GO:1901652 a owl:Class ;
-    rdfs:subClassOf GO:0010243,
-        GO:1901700 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:1901653 a owl:Class ;
-    rdfs:subClassOf GO:0071417,
-        GO:1901652,
-        GO:1901701 .
+    rdfs:subClassOf GO:0070887,
+        GO:1901652 .
 
 GO:1901654 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:1901655 a owl:Class ;
     rdfs:subClassOf GO:1901654,
@@ -30338,6 +31290,9 @@ GO:1901681 a owl:Class ;
 
 GO:1901682 a owl:Class ;
     rdfs:subClassOf GO:0022857 .
+
+GO:1901691 a owl:Class ;
+    rdfs:subClassOf GO:0043169 .
 
 GO:1901692 a owl:Class ;
     rdfs:subClassOf GO:0042981 .
@@ -30399,6 +31354,17 @@ GO:1901723 a owl:Class ;
 GO:1901724 a owl:Class ;
     rdfs:subClassOf GO:0008284,
         GO:1901722 .
+
+GO:1901745 a owl:Class ;
+    rdfs:subClassOf GO:0043648 .
+
+GO:1901746 a owl:Class ;
+    rdfs:subClassOf GO:0043649,
+        GO:1901745 .
+
+GO:1901747 a owl:Class ;
+    rdfs:subClassOf GO:0043650,
+        GO:1901745 .
 
 GO:1901810 a owl:Class ;
     rdfs:subClassOf GO:0016116,
@@ -30626,6 +31592,17 @@ GO:1902213 a owl:Class ;
 GO:1902217 a owl:Class ;
     rdfs:subClassOf GO:0033028 .
 
+GO:1902221 a owl:Class ;
+    rdfs:subClassOf GO:0170039 .
+
+GO:1902222 a owl:Class ;
+    rdfs:subClassOf GO:0170040,
+        GO:1902221 .
+
+GO:1902223 a owl:Class ;
+    rdfs:subClassOf GO:0170038,
+        GO:1902221 .
+
 GO:1902250 a owl:Class ;
     rdfs:subClassOf GO:0033032 .
 
@@ -30691,7 +31668,7 @@ GO:1902362 a owl:Class ;
     rdfs:subClassOf GO:0006915 .
 
 GO:1902369 a owl:Class ;
-    rdfs:subClassOf GO:0031330,
+    rdfs:subClassOf GO:0009895,
         GO:0051253 .
 
 GO:1902396 a owl:Class ;
@@ -30725,8 +31702,8 @@ GO:1902474 a owl:Class ;
         GO:1903829 .
 
 GO:1902475 a owl:Class ;
-    rdfs:subClassOf GO:0015807,
-        GO:0055085 .
+    rdfs:subClassOf GO:0003333,
+        GO:0015807 .
 
 GO:1902484 a owl:Class ;
     rdfs:subClassOf GO:1904019 .
@@ -30805,6 +31782,10 @@ GO:1902584 a owl:Class ;
     rdfs:subClassOf GO:0048584,
         GO:2000070 .
 
+GO:1902600 a owl:Class ;
+    rdfs:subClassOf GO:0098655,
+        GO:0098662 .
+
 GO:1902622 a owl:Class ;
     rdfs:subClassOf GO:0002685 .
 
@@ -30851,14 +31832,6 @@ GO:1902685 a owl:Class ;
 
 GO:1902692 a owl:Class ;
     rdfs:subClassOf GO:2000177 .
-
-GO:1902698 a owl:Class ;
-    rdfs:subClassOf GO:0019323,
-        GO:0019605 .
-
-GO:1902699 a owl:Class ;
-    rdfs:subClassOf GO:0006083,
-        GO:0019323 .
 
 GO:1902710 a owl:Class ;
     rdfs:subClassOf GO:0043235 .
@@ -30907,7 +31880,7 @@ GO:1902761 a owl:Class ;
         GO:0061181 .
 
 GO:1902778 a owl:Class ;
-    rdfs:subClassOf GO:0010033 .
+    rdfs:subClassOf GO:0042221 .
 
 GO:1902779 a owl:Class ;
     rdfs:subClassOf GO:0070887,
@@ -31100,6 +32073,13 @@ GO:1903019 a owl:Class ;
 GO:1903020 a owl:Class ;
     rdfs:subClassOf GO:0010604,
         GO:1903018 .
+
+GO:1903025 a owl:Class ;
+    rdfs:subClassOf GO:2000677 .
+
+GO:1903026 a owl:Class ;
+    rdfs:subClassOf GO:1903025,
+        GO:2000678 .
 
 GO:1903034 a owl:Class ;
     rdfs:subClassOf GO:0080134 .
@@ -31442,8 +32422,7 @@ GO:1903532 a owl:Class ;
         GO:1903530 .
 
 GO:1903537 a owl:Class ;
-    rdfs:subClassOf GO:0022412,
-        GO:1903046 .
+    rdfs:subClassOf GO:1903046 .
 
 GO:1903538 a owl:Class ;
     rdfs:subClassOf GO:0010564,
@@ -31534,16 +32513,16 @@ GO:1903580 a owl:Class ;
         GO:1903578 .
 
 GO:1903624 a owl:Class ;
-    rdfs:subClassOf GO:0031329,
+    rdfs:subClassOf GO:0009894,
         GO:0051052 .
 
 GO:1903625 a owl:Class ;
-    rdfs:subClassOf GO:0031330,
+    rdfs:subClassOf GO:0009895,
         GO:0051053,
         GO:1903624 .
 
 GO:1903626 a owl:Class ;
-    rdfs:subClassOf GO:0031331,
+    rdfs:subClassOf GO:0009896,
         GO:0051054,
         GO:1903624 .
 
@@ -31651,6 +32630,10 @@ GO:1903796 a owl:Class ;
 GO:1903797 a owl:Class ;
     rdfs:subClassOf GO:0034764,
         GO:1903795 .
+
+GO:1903808 a owl:Class ;
+    rdfs:subClassOf GO:0015828,
+        GO:0089718 .
 
 GO:1903825 a owl:Class ;
     rdfs:subClassOf GO:0015849,
@@ -31843,6 +32826,14 @@ GO:1904064 a owl:Class ;
 
 GO:1904065 a owl:Class ;
     rdfs:subClassOf GO:0007213 .
+
+GO:1904071 a owl:Class ;
+    rdfs:subClassOf GO:0022607,
+        GO:1990709 .
+
+GO:1904072 a owl:Class ;
+    rdfs:subClassOf GO:0022411,
+        GO:1990709 .
 
 GO:1904073 a owl:Class ;
     rdfs:subClassOf GO:0042127,
@@ -32116,6 +33107,13 @@ GO:1904377 a owl:Class ;
     rdfs:subClassOf GO:1903829,
         GO:1904375 .
 
+GO:1904386 a owl:Class ;
+    rdfs:subClassOf GO:0010243 .
+
+GO:1904387 a owl:Class ;
+    rdfs:subClassOf GO:0071417,
+        GO:1904386 .
+
 GO:1904390 a owl:Class ;
     rdfs:subClassOf GO:0060040 .
 
@@ -32203,8 +33201,7 @@ GO:1904528 a owl:Class ;
         GO:1904526 .
 
 GO:1904587 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901700 .
+    rdfs:subClassOf GO:1901700 .
 
 GO:1904588 a owl:Class ;
     rdfs:subClassOf GO:1901701,
@@ -32277,7 +33274,7 @@ GO:1904677 a owl:Class ;
         GO:1904675 .
 
 GO:1904680 a owl:Class ;
-    rdfs:subClassOf GO:0042887 .
+    rdfs:subClassOf GO:0022857 .
 
 GO:1904688 a owl:Class ;
     rdfs:subClassOf GO:0006446,
@@ -32639,8 +33636,7 @@ GO:1905142 a owl:Class ;
         GO:1905140 .
 
 GO:1905144 a owl:Class ;
-    rdfs:subClassOf GO:0010033,
-        GO:1901698,
+    rdfs:subClassOf GO:1901698,
         GO:1901700 .
 
 GO:1905145 a owl:Class ;
@@ -32989,6 +33985,17 @@ GO:1905517 a owl:Class ;
     rdfs:subClassOf GO:0071674,
         GO:0097529 .
 
+GO:1905518 a owl:Class ;
+    rdfs:subClassOf GO:0051128 .
+
+GO:1905519 a owl:Class ;
+    rdfs:subClassOf GO:1905518,
+        GO:1905607 .
+
+GO:1905520 a owl:Class ;
+    rdfs:subClassOf GO:1905518,
+        GO:1905608 .
+
 GO:1905521 a owl:Class ;
     rdfs:subClassOf GO:0071675 .
 
@@ -33053,20 +34060,14 @@ GO:1905608 a owl:Class ;
         GO:1905606 .
 
 GO:1905627 a owl:Class ;
-    rdfs:subClassOf GO:0009889,
-        GO:0031323,
-        GO:0051171 .
+    rdfs:subClassOf GO:0009889 .
 
 GO:1905628 a owl:Class ;
     rdfs:subClassOf GO:0009890,
-        GO:0031324,
-        GO:0051172,
         GO:1905627 .
 
 GO:1905629 a owl:Class ;
     rdfs:subClassOf GO:0009891,
-        GO:0031325,
-        GO:0051173,
         GO:1905627 .
 
 GO:1905632 a owl:Class ;
@@ -33077,6 +34078,10 @@ GO:1905633 a owl:Class ;
 
 GO:1905634 a owl:Class ;
     rdfs:subClassOf GO:0032880 .
+
+GO:1905636 a owl:Class ;
+    rdfs:subClassOf GO:1903025,
+        GO:2000679 .
 
 GO:1905651 a owl:Class ;
     rdfs:subClassOf GO:0022603 .
@@ -33111,6 +34116,10 @@ GO:1905673 a owl:Class ;
 
 GO:1905690 a owl:Class ;
     rdfs:subClassOf GO:0006997,
+        GO:1903008 .
+
+GO:1905691 a owl:Class ;
+    rdfs:subClassOf GO:0034389,
         GO:1903008 .
 
 GO:1905720 a owl:Class ;
@@ -33265,20 +34274,17 @@ GO:1905923 a owl:Class ;
 
 GO:1905936 a owl:Class ;
     rdfs:subClassOf GO:0042127,
-        GO:0051239,
-        GO:2000241 .
+        GO:0051239 .
 
 GO:1905937 a owl:Class ;
     rdfs:subClassOf GO:0008285,
         GO:0051241,
-        GO:1905936,
-        GO:2000242 .
+        GO:1905936 .
 
 GO:1905938 a owl:Class ;
     rdfs:subClassOf GO:0008284,
         GO:0051240,
-        GO:1905936,
-        GO:2000243 .
+        GO:1905936 .
 
 GO:1905939 a owl:Class ;
     rdfs:subClassOf GO:0050793,
@@ -33360,6 +34366,9 @@ GO:1990034 a owl:Class ;
     rdfs:subClassOf GO:0070588,
         GO:0140115 .
 
+GO:1990044 a owl:Class ;
+    rdfs:subClassOf GO:0033365 .
+
 GO:1990048 a owl:Class ;
     rdfs:subClassOf GO:0008089,
         GO:0047496,
@@ -33422,6 +34431,9 @@ GO:1990654 a owl:Class ;
 GO:1990705 a owl:Class ;
     rdfs:subClassOf GO:0050673 .
 
+GO:1990709 a owl:Class ;
+    rdfs:subClassOf GO:0016043 .
+
 GO:1990739 a owl:Class ;
     rdfs:subClassOf GO:0050673 .
 
@@ -33445,8 +34457,21 @@ GO:1990770 a owl:Class ;
 GO:1990778 a owl:Class ;
     rdfs:subClassOf GO:0008104 .
 
+GO:1990784 a owl:Class ;
+    rdfs:subClassOf GO:0014070,
+        GO:1901698 .
+
+GO:1990786 a owl:Class ;
+    rdfs:subClassOf GO:0071407,
+        GO:1901699,
+        GO:1990784 .
+
 GO:1990791 a owl:Class ;
     rdfs:subClassOf GO:0061548 .
+
+GO:1990837 a owl:Class ;
+    rdfs:subClassOf GO:0003690,
+        GO:0043565 .
 
 GO:1990845 a owl:Class ;
     rdfs:subClassOf GO:0008152 .
@@ -33790,10 +34815,12 @@ GO:2000254 a owl:Class ;
 
 GO:2000255 a owl:Class ;
     rdfs:subClassOf GO:1905937,
+        GO:2000242,
         GO:2000254 .
 
 GO:2000256 a owl:Class ;
     rdfs:subClassOf GO:1905938,
+        GO:2000243,
         GO:2000254 .
 
 GO:2000269 a owl:Class ;
@@ -33825,20 +34852,17 @@ GO:2000279 a owl:Class ;
         GO:2000278 .
 
 GO:2000282 a owl:Class ;
-    rdfs:subClassOf GO:0031326,
-        GO:0051171,
-        GO:0062012 .
+    rdfs:subClassOf GO:0006521,
+        GO:0009889 .
 
 GO:2000283 a owl:Class ;
-    rdfs:subClassOf GO:0031327,
-        GO:0051172,
-        GO:0062014,
+    rdfs:subClassOf GO:0009890,
+        GO:0045763,
         GO:2000282 .
 
 GO:2000284 a owl:Class ;
-    rdfs:subClassOf GO:0031328,
-        GO:0051173,
-        GO:0062013,
+    rdfs:subClassOf GO:0009891,
+        GO:0045764,
         GO:2000282 .
 
 GO:2000287 a owl:Class ;
@@ -33914,12 +34938,10 @@ GO:2000353 a owl:Class ;
         GO:2000351 .
 
 GO:2000354 a owl:Class ;
-    rdfs:subClassOf GO:0050793,
-        GO:2000241 .
+    rdfs:subClassOf GO:0050793 .
 
 GO:2000355 a owl:Class ;
     rdfs:subClassOf GO:0051093,
-        GO:2000242,
         GO:2000354 .
 
 GO:2000374 a owl:Class ;
@@ -33957,7 +34979,6 @@ GO:2000385 a owl:Class ;
 
 GO:2000386 a owl:Class ;
     rdfs:subClassOf GO:0051094,
-        GO:2000243,
         GO:2000354 .
 
 GO:2000387 a owl:Class ;
@@ -34060,6 +35081,17 @@ GO:2000497 a owl:Class ;
     rdfs:subClassOf GO:0008284,
         GO:2000495 .
 
+GO:2000501 a owl:Class ;
+    rdfs:subClassOf GO:1901623 .
+
+GO:2000502 a owl:Class ;
+    rdfs:subClassOf GO:1901624,
+        GO:2000501 .
+
+GO:2000503 a owl:Class ;
+    rdfs:subClassOf GO:0140131,
+        GO:2000501 .
+
 GO:2000508 a owl:Class ;
     rdfs:subClassOf GO:0002688,
         GO:0071675 .
@@ -34144,19 +35176,16 @@ GO:2000608 a owl:Class ;
 
 GO:2000609 a owl:Class ;
     rdfs:subClassOf GO:0031323,
-        GO:0032350,
-        GO:0051171 .
+        GO:0032350 .
 
 GO:2000610 a owl:Class ;
     rdfs:subClassOf GO:0031324,
         GO:0032351,
-        GO:0051172,
         GO:2000609 .
 
 GO:2000611 a owl:Class ;
     rdfs:subClassOf GO:0031325,
         GO:0032352,
-        GO:0051173,
         GO:2000609 .
 
 GO:2000647 a owl:Class ;
@@ -34233,6 +35262,17 @@ GO:2000675 a owl:Class ;
 GO:2000676 a owl:Class ;
     rdfs:subClassOf GO:1904037,
         GO:2000674 .
+
+GO:2000677 a owl:Class ;
+    rdfs:subClassOf GO:0051101 .
+
+GO:2000678 a owl:Class ;
+    rdfs:subClassOf GO:0043392,
+        GO:2000677 .
+
+GO:2000679 a owl:Class ;
+    rdfs:subClassOf GO:0043388,
+        GO:2000677 .
 
 GO:2000690 a owl:Class ;
     rdfs:subClassOf GO:0045661,
@@ -34338,6 +35378,11 @@ GO:2000818 a owl:Class ;
 
 GO:2000821 a owl:Class ;
     rdfs:subClassOf GO:0050795 .
+
+GO:2000825 a owl:Class ;
+    rdfs:subClassOf GO:0006357,
+        GO:0051091,
+        GO:2000273 .
 
 GO:2000826 a owl:Class ;
     rdfs:subClassOf GO:2000027 .
@@ -34564,6 +35609,15 @@ GO:2001036 a owl:Class ;
 GO:2001037 a owl:Class ;
     rdfs:subClassOf GO:1902811,
         GO:2001035 .
+
+GO:2001038 a owl:Class ;
+    rdfs:subClassOf GO:0065007 .
+
+GO:2001039 a owl:Class ;
+    rdfs:subClassOf GO:2001038 .
+
+GO:2001040 a owl:Class ;
+    rdfs:subClassOf GO:2001038 .
 
 GO:2001049 a owl:Class ;
     rdfs:subClassOf GO:0045595 .
@@ -35257,8 +36311,14 @@ NCBITaxon:9305 a owl:Class ;
 NCBITaxon:9307 a owl:Class ;
     rdfs:subClassOf NCBITaxon:38609 .
 
+NCBITaxon:9312 a owl:Class ;
+    rdfs:subClassOf NCBITaxon:9307 .
+
 NCBITaxon:9321 a owl:Class ;
     rdfs:subClassOf NCBITaxon:2182372 .
+
+NCBITaxon:9322 a owl:Class ;
+    rdfs:subClassOf NCBITaxon:2649300 .
 
 NCBITaxon:9338 a owl:Class ;
     rdfs:subClassOf NCBITaxon:38609 .
@@ -36199,6 +37259,9 @@ NCBITaxon:2605435 a owl:Class ;
 NCBITaxon:2611352 a owl:Class ;
     rdfs:subClassOf NCBITaxon:2759 .
 
+NCBITaxon:2649300 a owl:Class ;
+    rdfs:subClassOf NCBITaxon:9312 .
+
 NCBITaxon:2653789 a owl:Class ;
     rdfs:subClassOf NCBITaxon:91561 .
 
@@ -36232,7 +37295,59 @@ NCBITaxon:3072905 a owl:Class ;
 NCBITaxon:3072906 a owl:Class ;
     rdfs:subClassOf NCBITaxon:379584 .
 
+obo:BSPO_0000000 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000054 .
+
+obo:BSPO_0000007 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000054 .
+
+obo:BSPO_0000010 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000008 .
+
+obo:BSPO_0000013 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000010 .
+
+obo:BSPO_0000016 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000010 .
+
+obo:BSPO_0000017 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000010 .
+
+obo:BSPO_0000018 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000400 .
+
+obo:BSPO_0000019 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000400 .
+
+obo:BSPO_0000054 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000070 .
+
+obo:BSPO_0000070 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000003 .
+
+obo:BSPO_0000400 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000010 .
+
+obo:BSPO_0000417 a owl:Class ;
+    rdfs:subClassOf obo:BSPO_0000010,
+        obo:BSPO_0000400 .
+
 obo:CARO_0000000 a owl:Class .
+
+obo:CARO_0000003 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000006 .
+
+obo:CARO_0000006 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000000 .
+
+obo:CARO_0000007 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000000 .
+
+obo:CARO_0000008 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000007 .
+
+obo:CARO_0000010 a owl:Class ;
+    rdfs:subClassOf obo:CARO_0000007 .
 
 obo:NBO_0000001 a owl:Class ;
     rdfs:subClassOf obo:NBO_0000338 .
@@ -36802,7 +37917,7 @@ PATO:0070060 a owl:Class ;
 
 PR:000000001 a owl:Class ;
     rdfs:subClassOf PR:000018263,
-        PR:000050567 .
+        PR:000064867 .
 
 PR:000001002 a owl:Class ;
     rdfs:subClassOf PR:000000001 .
@@ -36898,6 +38013,9 @@ PR:000001355 a owl:Class ;
     rdfs:subClassOf PR:000000001 .
 
 PR:000001380 a owl:Class ;
+    rdfs:subClassOf PR:000000001 .
+
+PR:000001381 a owl:Class ;
     rdfs:subClassOf PR:000000001 .
 
 PR:000001408 a owl:Class ;
@@ -37215,7 +38333,8 @@ PR:000030026 a owl:Class ;
         PR:000029067 .
 
 PR:000030035 a owl:Class ;
-    rdfs:subClassOf PR:000000001 .
+    rdfs:subClassOf BFO:0000040,
+        PR:000000001 .
 
 PR:000036194 a owl:Class ;
     rdfs:subClassOf PR:000000001 .
@@ -37236,8 +38355,8 @@ PR:000050025 a owl:Class ;
 PR:000050216 a owl:Class ;
     rdfs:subClassOf PR:000001006 .
 
-PR:000050567 a owl:Class ;
-    rdfs:subClassOf BFO:0000040 .
+PR:000064867 a owl:Class ;
+    rdfs:subClassOf CHEBI:23367 .
 
 PR:A1EA95 a owl:Class ;
     rdfs:subClassOf PR:000001869,
@@ -37527,6 +38646,10 @@ PR:P14676 a owl:Class ;
     rdfs:subClassOf PR:000013246,
         PR:000029063 .
 
+PR:P14784 a owl:Class ;
+    rdfs:subClassOf PR:000001381,
+        PR:000029067 .
+
 PR:P15379 a owl:Class ;
     rdfs:subClassOf PR:000001307,
         PR:000029032 .
@@ -37566,6 +38689,10 @@ PR:P16070 a owl:Class ;
 PR:P16150 a owl:Class ;
     rdfs:subClassOf PR:000001879,
         PR:000029067 .
+
+PR:P16297 a owl:Class ;
+    rdfs:subClassOf PR:000001381,
+        PR:000029032 .
 
 PR:P16406 a owl:Class ;
     rdfs:subClassOf PR:000002039,
@@ -38002,7 +39129,9 @@ UBERON:0000006 a owl:Class ;
 
 UBERON:0000007 a owl:Class ;
     rdfs:subClassOf UBERON:0002368,
+        UBERON:0003133,
         UBERON:0003296,
+        UBERON:0003937,
         UBERON:0010314 .
 
 UBERON:0000009 a owl:Class ;
@@ -38022,8 +39151,7 @@ UBERON:0000013 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
 
 UBERON:0000014 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0034944 .
 
 UBERON:0000015 a owl:Class ;
@@ -38036,7 +39164,8 @@ UBERON:0000016 a owl:Class ;
 UBERON:0000017 a owl:Class ;
     rdfs:subClassOf UBERON:0000409,
         UBERON:0004119,
-        UBERON:0005177 .
+        UBERON:0005177,
+        UBERON:0013765 .
 
 UBERON:0000018 a owl:Class ;
     rdfs:subClassOf UBERON:0015165 .
@@ -38071,8 +39200,7 @@ UBERON:0000026 a owl:Class ;
     rdfs:subClassOf UBERON:0000475 .
 
 UBERON:0000029 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005057 .
+    rdfs:subClassOf UBERON:0005057 .
 
 UBERON:0000030 a owl:Class ;
     rdfs:subClassOf UBERON:0004923 .
@@ -38084,16 +39212,13 @@ UBERON:0000033 a owl:Class ;
     rdfs:subClassOf UBERON:0011676 .
 
 UBERON:0000035 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001305 .
+    rdfs:subClassOf UBERON:0001305 .
 
 UBERON:0000036 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001305 .
+    rdfs:subClassOf UBERON:0001305 .
 
 UBERON:0000037 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001305 .
+    rdfs:subClassOf UBERON:0001305 .
 
 UBERON:0000038 a owl:Class ;
     rdfs:subClassOf UBERON:0000463 .
@@ -38111,8 +39236,7 @@ UBERON:0000041 a owl:Class ;
         UBERON:0010314 .
 
 UBERON:0000042 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000481,
+    rdfs:subClassOf UBERON:0000481,
         UBERON:0004120 .
 
 UBERON:0000043 a owl:Class ;
@@ -38169,8 +39293,7 @@ UBERON:0000057 a owl:Class ;
         UBERON:0004120 .
 
 UBERON:0000058 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000063 .
+    rdfs:subClassOf UBERON:0000063 .
 
 UBERON:0000059 a owl:Class ;
     rdfs:subClassOf UBERON:0004921,
@@ -38289,8 +39412,7 @@ UBERON:0000093 a owl:Class ;
     rdfs:subClassOf UBERON:0000464 .
 
 UBERON:0000094 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062 .
+    rdfs:subClassOf UBERON:0000062 .
 
 UBERON:0000095 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
@@ -38350,8 +39472,7 @@ UBERON:0000116 a owl:Class ;
         UBERON:0004119 .
 
 UBERON:0000117 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000025,
+    rdfs:subClassOf UBERON:0000025,
         UBERON:0004119 .
 
 UBERON:0000118 a owl:Class ;
@@ -38418,8 +39539,7 @@ UBERON:0000155 a owl:Class ;
         UBERON:0005156 .
 
 UBERON:0000156 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158,
+    rdfs:subClassOf UBERON:0000158,
         UBERON:0004120,
         UBERON:0005156 .
 
@@ -38487,8 +39607,7 @@ UBERON:0000177 a owl:Class ;
     rdfs:subClassOf UBERON:0000463 .
 
 UBERON:0000178 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000179 .
+    rdfs:subClassOf UBERON:0000179 .
 
 UBERON:0000179 a owl:Class ;
     rdfs:subClassOf UBERON:0006314 .
@@ -38568,12 +39687,10 @@ UBERON:0000303 a owl:Class ;
         UBERON:0011144 .
 
 UBERON:0000304 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0000305 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004120,
+    rdfs:subClassOf UBERON:0004120,
         UBERON:0005631 .
 
 UBERON:0000307 a owl:Class ;
@@ -38589,8 +39706,7 @@ UBERON:0000311 a owl:Class ;
     rdfs:subClassOf UBERON:0014892 .
 
 UBERON:0000312 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158,
+    rdfs:subClassOf UBERON:0000158,
         UBERON:0010314 .
 
 UBERON:0000313 a owl:Class ;
@@ -38645,8 +39761,7 @@ UBERON:0000341 a owl:Class ;
     rdfs:subClassOf UBERON:0034929 .
 
 UBERON:0000344 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0000345 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
@@ -38744,12 +39859,10 @@ UBERON:0000383 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
 
 UBERON:0000387 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0010000 .
+    rdfs:subClassOf UBERON:0010000 .
 
 UBERON:0000388 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0013522 .
+    rdfs:subClassOf UBERON:0013522 .
 
 UBERON:0000389 a owl:Class ;
     rdfs:subClassOf UBERON:0000479,
@@ -38794,8 +39907,7 @@ UBERON:0000402 a owl:Class ;
     rdfs:subClassOf UBERON:0002553 .
 
 UBERON:0000403 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0034921 .
+    rdfs:subClassOf UBERON:0034921 .
 
 UBERON:0000407 a owl:Class ;
     rdfs:subClassOf UBERON:0000062,
@@ -38875,8 +39987,7 @@ UBERON:0000437 a owl:Class ;
         UBERON:0010313 .
 
 UBERON:0000439 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000440,
+    rdfs:subClassOf UBERON:0000440,
         UBERON:0010313 .
 
 UBERON:0000440 a owl:Class ;
@@ -38917,8 +40028,7 @@ UBERON:0000457 a owl:Class ;
     rdfs:subClassOf UBERON:0001637 .
 
 UBERON:0000458 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000064,
+    rdfs:subClassOf UBERON:0000064,
         UBERON:0005156 .
 
 UBERON:0000459 a owl:Class ;
@@ -38995,8 +40105,7 @@ UBERON:0000482 a owl:Class ;
     rdfs:subClassOf UBERON:0005764 .
 
 UBERON:0000483 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000479 .
+    rdfs:subClassOf UBERON:0000479 .
 
 UBERON:0000484 a owl:Class ;
     rdfs:subClassOf UBERON:0000490,
@@ -39175,8 +40284,7 @@ UBERON:0000963 a owl:Class ;
     rdfs:subClassOf UBERON:0002536 .
 
 UBERON:0000964 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0010000,
+    rdfs:subClassOf UBERON:0010000,
         UBERON:0010313 .
 
 UBERON:0000965 a owl:Class ;
@@ -39435,7 +40543,7 @@ UBERON:0001052 a owl:Class ;
     rdfs:subClassOf UBERON:0004921 .
 
 UBERON:0001053 a owl:Class ;
-    rdfs:subClassOf UBERON:0002368 .
+    rdfs:subClassOf UBERON:0010133 .
 
 UBERON:0001054 a owl:Class ;
     rdfs:subClassOf UBERON:0009773 .
@@ -39466,8 +40574,7 @@ UBERON:0001065 a owl:Class ;
     rdfs:subClassOf UBERON:0035048 .
 
 UBERON:0001066 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0011135 .
+    rdfs:subClassOf UBERON:0011135 .
 
 UBERON:0001067 a owl:Class ;
     rdfs:subClassOf UBERON:0002217 .
@@ -39658,7 +40765,6 @@ UBERON:0001121 a owl:Class ;
 
 UBERON:0001122 a owl:Class ;
     rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897,
         UBERON:0004518 .
 
 UBERON:0001123 a owl:Class ;
@@ -39677,7 +40783,6 @@ UBERON:0001127 a owl:Class ;
 
 UBERON:0001128 a owl:Class ;
     rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897,
         UBERON:0004120,
         UBERON:0011364 .
 
@@ -39781,15 +40886,13 @@ UBERON:0001159 a owl:Class ;
     rdfs:subClassOf UBERON:0000168 .
 
 UBERON:0001160 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0009870 .
+    rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0001161 a owl:Class ;
     rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0001162 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0009870 .
+    rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0001163 a owl:Class ;
     rdfs:subClassOf UBERON:0009870 .
@@ -39801,8 +40904,7 @@ UBERON:0001165 a owl:Class ;
     rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0001166 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0009870 .
+    rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0001167 a owl:Class ;
     rdfs:subClassOf UBERON:0000328 .
@@ -39827,8 +40929,7 @@ UBERON:0001172 a owl:Class ;
         UBERON:0011858 .
 
 UBERON:0001173 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004119,
+    rdfs:subClassOf UBERON:0004119,
         UBERON:0013765 .
 
 UBERON:0001174 a owl:Class ;
@@ -39957,8 +41058,7 @@ UBERON:0001212 a owl:Class ;
         UBERON:0011148 .
 
 UBERON:0001213 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0001214 a owl:Class ;
     rdfs:subClassOf UBERON:0002017 .
@@ -39980,7 +41080,6 @@ UBERON:0001219 a owl:Class ;
 
 UBERON:0001220 a owl:Class ;
     rdfs:subClassOf UBERON:0002378,
-        UBERON:0003897,
         UBERON:0004518 .
 
 UBERON:0001221 a owl:Class ;
@@ -40085,8 +41184,7 @@ UBERON:0001249 a owl:Class ;
         UBERON:0004120 .
 
 UBERON:0001250 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:1000023 .
+    rdfs:subClassOf UBERON:1000023 .
 
 UBERON:0001251 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
@@ -40211,8 +41309,7 @@ UBERON:0001278 a owl:Class ;
     rdfs:subClassOf UBERON:0001277 .
 
 UBERON:0001279 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004119,
+    rdfs:subClassOf UBERON:0004119,
         UBERON:0034921 .
 
 UBERON:0001280 a owl:Class ;
@@ -40538,7 +41635,6 @@ UBERON:0001369 a owl:Class ;
 
 UBERON:0001370 a owl:Class ;
     rdfs:subClassOf UBERON:0002000,
-        UBERON:0003897,
         UBERON:0011645 .
 
 UBERON:0001371 a owl:Class ;
@@ -40639,8 +41735,7 @@ UBERON:0001401 a owl:Class ;
     rdfs:subClassOf UBERON:0000392 .
 
 UBERON:0001402 a owl:Class ;
-    rdfs:subClassOf UBERON:0000392,
-        UBERON:0003897 .
+    rdfs:subClassOf UBERON:0000392 .
 
 UBERON:0001403 a owl:Class ;
     rdfs:subClassOf UBERON:0000392 .
@@ -41852,8 +42947,7 @@ UBERON:0001743 a owl:Class ;
         UBERON:0008845 .
 
 UBERON:0001744 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0034769 .
+    rdfs:subClassOf UBERON:0034769 .
 
 UBERON:0001745 a owl:Class ;
     rdfs:subClassOf UBERON:0000444 .
@@ -41863,14 +42957,12 @@ UBERON:0001746 a owl:Class ;
         UBERON:0004119 .
 
 UBERON:0001747 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000353,
+    rdfs:subClassOf UBERON:0000353,
         UBERON:0004119,
         UBERON:0010314 .
 
 UBERON:0001748 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003893 .
+    rdfs:subClassOf UBERON:0003893 .
 
 UBERON:0001749 a owl:Class ;
     rdfs:subClassOf UBERON:0000353 .
@@ -42072,8 +43164,7 @@ UBERON:0001803 a owl:Class ;
         UBERON:0015808 .
 
 UBERON:0001804 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0005764 .
 
 UBERON:0001805 a owl:Class ;
@@ -42166,8 +43257,7 @@ UBERON:0001826 a owl:Class ;
         UBERON:0004121 .
 
 UBERON:0001827 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000456 .
+    rdfs:subClassOf UBERON:0000456 .
 
 UBERON:0001828 a owl:Class ;
     rdfs:subClassOf UBERON:0003729 .
@@ -42461,8 +43551,7 @@ UBERON:0001912 a owl:Class ;
         UBERON:0009911 .
 
 UBERON:0001913 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0006314,
+    rdfs:subClassOf UBERON:0006314,
         UBERON:0006539 .
 
 UBERON:0001914 a owl:Class ;
@@ -42612,8 +43701,7 @@ UBERON:0001955 a owl:Class ;
     rdfs:subClassOf UBERON:0002051 .
 
 UBERON:0001956 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003603 .
+    rdfs:subClassOf UBERON:0003603 .
 
 UBERON:0001957 a owl:Class ;
     rdfs:subClassOf UBERON:0004119,
@@ -42623,8 +43711,7 @@ UBERON:0001958 a owl:Class ;
     rdfs:subClassOf UBERON:0002051 .
 
 UBERON:0001959 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:1000023 .
+    rdfs:subClassOf UBERON:1000023 .
 
 UBERON:0001960 a owl:Class ;
     rdfs:subClassOf UBERON:0004177,
@@ -42659,8 +43746,7 @@ UBERON:0001968 a owl:Class ;
     rdfs:subClassOf UBERON:0000463 .
 
 UBERON:0001969 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000179 .
+    rdfs:subClassOf UBERON:0000179 .
 
 UBERON:0001970 a owl:Class ;
     rdfs:subClassOf UBERON:0000456,
@@ -42697,8 +43783,7 @@ UBERON:0001980 a owl:Class ;
         UBERON:8410081 .
 
 UBERON:0001981 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000055,
+    rdfs:subClassOf UBERON:0000055,
         UBERON:0004120 .
 
 UBERON:0001982 a owl:Class ;
@@ -42737,8 +43822,7 @@ UBERON:0001991 a owl:Class ;
     rdfs:subClassOf UBERON:0001807 .
 
 UBERON:0001992 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0013754 .
 
 UBERON:0001993 a owl:Class ;
@@ -42746,12 +43830,10 @@ UBERON:0001993 a owl:Class ;
         UBERON:0013754 .
 
 UBERON:0001994 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002418 .
+    rdfs:subClassOf UBERON:0002418 .
 
 UBERON:0001995 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002418 .
+    rdfs:subClassOf UBERON:0002418 .
 
 UBERON:0001996 a owl:Class ;
     rdfs:subClassOf UBERON:0011589 .
@@ -42855,12 +43937,11 @@ UBERON:0002025 a owl:Class ;
         UBERON:0013754 .
 
 UBERON:0002026 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0013754 .
 
 UBERON:0002027 a owl:Class ;
-    rdfs:subClassOf UBERON:0003055,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0013754 .
 
 UBERON:0002028 a owl:Class ;
@@ -42953,8 +44034,7 @@ UBERON:0002051 a owl:Class ;
         UBERON:0008397 .
 
 UBERON:0002052 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003893,
+    rdfs:subClassOf UBERON:0003893,
         UBERON:0004120,
         UBERON:0010313 .
 
@@ -43011,8 +44091,7 @@ UBERON:0002066 a owl:Class ;
         UBERON:0010260 .
 
 UBERON:0002067 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0010314,
         UBERON:0013754 .
 
@@ -43032,8 +44111,7 @@ UBERON:0002071 a owl:Class ;
         UBERON:0013754 .
 
 UBERON:0002072 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004120,
+    rdfs:subClassOf UBERON:0004120,
         UBERON:0013754 .
 
 UBERON:0002073 a owl:Class ;
@@ -43116,8 +44194,7 @@ UBERON:0002095 a owl:Class ;
     rdfs:subClassOf UBERON:0000042 .
 
 UBERON:0002097 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062,
+    rdfs:subClassOf UBERON:0000062,
         UBERON:0004121 .
 
 UBERON:0002098 a owl:Class ;
@@ -43210,8 +44287,7 @@ UBERON:0002122 a owl:Class ;
         UBERON:0003893 .
 
 UBERON:0002123 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000077,
+    rdfs:subClassOf UBERON:0000077,
         UBERON:0001851 .
 
 UBERON:0002124 a owl:Class ;
@@ -43219,8 +44295,7 @@ UBERON:0002124 a owl:Class ;
         UBERON:0000958 .
 
 UBERON:0002125 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000077,
+    rdfs:subClassOf UBERON:0000077,
         UBERON:0009911 .
 
 UBERON:0002126 a owl:Class ;
@@ -43268,8 +44343,7 @@ UBERON:0002138 a owl:Class ;
     rdfs:subClassOf UBERON:0005838 .
 
 UBERON:0002139 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0010134 .
+    rdfs:subClassOf UBERON:0010134 .
 
 UBERON:0002140 a owl:Class ;
     rdfs:subClassOf UBERON:0011214 .
@@ -43467,19 +44541,21 @@ UBERON:0002195 a owl:Class ;
 UBERON:0002196 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
         UBERON:0004121,
+        UBERON:0005156,
         UBERON:0010314 .
 
 UBERON:0002197 a owl:Class ;
     rdfs:subClassOf UBERON:0003296,
+        UBERON:0003937,
         UBERON:0010134 .
 
 UBERON:0002198 a owl:Class ;
     rdfs:subClassOf UBERON:0003296,
+        UBERON:0003937,
         UBERON:0010134 .
 
 UBERON:0002199 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0011216 .
+    rdfs:subClassOf UBERON:0011216 .
 
 UBERON:0002200 a owl:Class ;
     rdfs:subClassOf UBERON:0002049 .
@@ -43533,8 +44609,7 @@ UBERON:0002214 a owl:Class ;
     rdfs:subClassOf UBERON:0000054 .
 
 UBERON:0002215 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002209,
+    rdfs:subClassOf UBERON:0002209,
         UBERON:0002213 .
 
 UBERON:0002216 a owl:Class ;
@@ -43626,8 +44701,7 @@ UBERON:0002241 a owl:Class ;
     rdfs:subClassOf UBERON:0011159 .
 
 UBERON:0002242 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062,
+    rdfs:subClassOf UBERON:0000062,
         UBERON:0002384,
         UBERON:0004120,
         UBERON:0004121 .
@@ -43663,8 +44737,7 @@ UBERON:0002250 a owl:Class ;
     rdfs:subClassOf UBERON:0001637 .
 
 UBERON:0002251 a owl:Class ;
-    rdfs:subClassOf UBERON:0003897,
-        UBERON:0004518 .
+    rdfs:subClassOf UBERON:0004518 .
 
 UBERON:0002252 a owl:Class ;
     rdfs:subClassOf UBERON:0002324,
@@ -43817,8 +44890,7 @@ UBERON:0002293 a owl:Class ;
         UBERON:0002215 .
 
 UBERON:0002294 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0011216 .
+    rdfs:subClassOf UBERON:0011216 .
 
 UBERON:0002295 a owl:Class ;
     rdfs:subClassOf UBERON:0011060,
@@ -43845,8 +44917,7 @@ UBERON:0002302 a owl:Class ;
     rdfs:subClassOf UBERON:0002349 .
 
 UBERON:0002303 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000061 .
+    rdfs:subClassOf UBERON:0000061 .
 
 UBERON:0002304 a owl:Class ;
     rdfs:subClassOf UBERON:0011215,
@@ -43936,8 +45007,7 @@ UBERON:0002329 a owl:Class ;
         UBERON:0007503 .
 
 UBERON:0002330 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000467 .
+    rdfs:subClassOf UBERON:0000467 .
 
 UBERON:0002331 a owl:Class ;
     rdfs:subClassOf UBERON:0000478 .
@@ -44059,8 +45129,7 @@ UBERON:0002364 a owl:Class ;
     rdfs:subClassOf UBERON:0000094 .
 
 UBERON:0002365 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002530 .
+    rdfs:subClassOf UBERON:0002530 .
 
 UBERON:0002366 a owl:Class ;
     rdfs:subClassOf UBERON:0006868,
@@ -44080,8 +45149,7 @@ UBERON:0002369 a owl:Class ;
         UBERON:0015212 .
 
 UBERON:0002370 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000077,
+    rdfs:subClassOf UBERON:0000077,
         UBERON:0002368,
         UBERON:0004177,
         UBERON:0005057,
@@ -44105,8 +45173,7 @@ UBERON:0002374 a owl:Class ;
         UBERON:0015042 .
 
 UBERON:0002375 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001739 .
+    rdfs:subClassOf UBERON:0001739 .
 
 UBERON:0002376 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -44129,12 +45196,10 @@ UBERON:0002380 a owl:Class ;
 
 UBERON:0002381 a owl:Class ;
     rdfs:subClassOf UBERON:0001482,
-        UBERON:0001495,
-        UBERON:0003897 .
+        UBERON:0001495 .
 
 UBERON:0002382 a owl:Class ;
     rdfs:subClassOf UBERON:0002461,
-        UBERON:0003897,
         UBERON:0004120 .
 
 UBERON:0002383 a owl:Class ;
@@ -44173,8 +45238,7 @@ UBERON:0002392 a owl:Class ;
         UBERON:0004121 .
 
 UBERON:0002393 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062 .
+    rdfs:subClassOf UBERON:0000062 .
 
 UBERON:0002394 a owl:Class ;
     rdfs:subClassOf UBERON:0000025,
@@ -44229,8 +45293,7 @@ UBERON:0002406 a owl:Class ;
         UBERON:0005906 .
 
 UBERON:0002407 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000481 .
+    rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0002408 a owl:Class ;
     rdfs:subClassOf UBERON:0022351 .
@@ -44268,8 +45331,7 @@ UBERON:0002415 a owl:Class ;
     rdfs:subClassOf UBERON:0011676 .
 
 UBERON:0002416 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000467 .
+    rdfs:subClassOf UBERON:0000467 .
 
 UBERON:0002417 a owl:Class ;
     rdfs:subClassOf UBERON:0009569,
@@ -44294,8 +45356,7 @@ UBERON:0002422 a owl:Class ;
     rdfs:subClassOf UBERON:0004086 .
 
 UBERON:0002423 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0011216 .
+    rdfs:subClassOf UBERON:0011216 .
 
 UBERON:0002424 a owl:Class ;
     rdfs:subClassOf UBERON:0003350,
@@ -44324,14 +45385,17 @@ UBERON:0002430 a owl:Class ;
 
 UBERON:0002432 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
-        UBERON:0004121 .
+        UBERON:0004121,
+        UBERON:0005156 .
 
 UBERON:0002433 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
-        UBERON:0004121 .
+        UBERON:0004121,
+        UBERON:0005156 .
 
 UBERON:0002434 a owl:Class ;
-    rdfs:subClassOf UBERON:0002616 .
+    rdfs:subClassOf UBERON:0002616,
+        UBERON:0005156 .
 
 UBERON:0002435 a owl:Class ;
     rdfs:subClassOf UBERON:0011300 .
@@ -44609,8 +45673,7 @@ UBERON:0002514 a owl:Class ;
     rdfs:subClassOf UBERON:0001474 .
 
 UBERON:0002515 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158 .
+    rdfs:subClassOf UBERON:0000158 .
 
 UBERON:0002516 a owl:Class ;
     rdfs:subClassOf UBERON:0001994 .
@@ -44636,8 +45699,7 @@ UBERON:0002522 a owl:Class ;
     rdfs:subClassOf UBERON:0004797 .
 
 UBERON:0002523 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0002524 a owl:Class ;
     rdfs:subClassOf UBERON:0005178,
@@ -45014,7 +46076,8 @@ UBERON:0002647 a owl:Class ;
     rdfs:subClassOf UBERON:0019269 .
 
 UBERON:0002648 a owl:Class ;
-    rdfs:subClassOf UBERON:0002616 .
+    rdfs:subClassOf UBERON:0002616,
+        UBERON:0005156 .
 
 UBERON:0002649 a owl:Class ;
     rdfs:subClassOf UBERON:0007702 .
@@ -45026,7 +46089,8 @@ UBERON:0002651 a owl:Class ;
     rdfs:subClassOf UBERON:0002285 .
 
 UBERON:0002652 a owl:Class ;
-    rdfs:subClassOf UBERON:0002616 .
+    rdfs:subClassOf UBERON:0002616,
+        UBERON:0005156 .
 
 UBERON:0002653 a owl:Class ;
     rdfs:subClassOf UBERON:0005821,
@@ -46192,8 +47256,7 @@ UBERON:0003046 a owl:Class ;
         UBERON:0019293 .
 
 UBERON:0003049 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001002 .
+    rdfs:subClassOf UBERON:0001002 .
 
 UBERON:0003050 a owl:Class ;
     rdfs:subClassOf UBERON:0009955 .
@@ -46218,7 +47281,8 @@ UBERON:0003054 a owl:Class ;
 
 UBERON:0003055 a owl:Class ;
     rdfs:subClassOf UBERON:0000487,
-        UBERON:0010371 .
+        UBERON:0007376,
+        UBERON:3000961 .
 
 UBERON:0003056 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
@@ -46358,8 +47422,7 @@ UBERON:0003091 a owl:Class ;
         UBERON:0004119 .
 
 UBERON:0003092 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002368,
+    rdfs:subClassOf UBERON:0002368,
         UBERON:0004119,
         UBERON:0010314 .
 
@@ -46473,8 +47536,7 @@ UBERON:0003126 a owl:Class ;
     rdfs:subClassOf UBERON:0000117 .
 
 UBERON:0003127 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001005 .
+    rdfs:subClassOf UBERON:0001005 .
 
 UBERON:0003128 a owl:Class ;
     rdfs:subClassOf UBERON:0000075 .
@@ -46555,7 +47617,8 @@ UBERON:0003216 a owl:Class ;
 
 UBERON:0003217 a owl:Class ;
     rdfs:subClassOf UBERON:0002616,
-        UBERON:0004120 .
+        UBERON:0004120,
+        UBERON:0005156 .
 
 UBERON:0003218 a owl:Class ;
     rdfs:subClassOf UBERON:0003037 .
@@ -48706,8 +49769,7 @@ UBERON:0003987 a owl:Class ;
         UBERON:0034922 .
 
 UBERON:0003988 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000077,
+    rdfs:subClassOf UBERON:0000077,
         UBERON:0007651 .
 
 UBERON:0003989 a owl:Class ;
@@ -49021,8 +50083,7 @@ UBERON:0004089 a owl:Class ;
     rdfs:subClassOf UBERON:0001444 .
 
 UBERON:0004090 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0034921 .
+    rdfs:subClassOf UBERON:0034921 .
 
 UBERON:0004092 a owl:Class ;
     rdfs:subClassOf UBERON:0000467 .
@@ -50361,15 +51422,13 @@ UBERON:0004534 a owl:Class ;
         UBERON:0015212 .
 
 UBERON:0004535 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000467 .
+    rdfs:subClassOf UBERON:0000467 .
 
 UBERON:0004536 a owl:Class ;
     rdfs:subClassOf UBERON:0002049 .
 
 UBERON:0004537 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002049 .
+    rdfs:subClassOf UBERON:0002049 .
 
 UBERON:0004538 a owl:Class ;
     rdfs:subClassOf UBERON:0002113 .
@@ -50438,8 +51497,7 @@ UBERON:0004571 a owl:Class ;
     rdfs:subClassOf UBERON:0007798 .
 
 UBERON:0004572 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0007798 .
+    rdfs:subClassOf UBERON:0007798 .
 
 UBERON:0004573 a owl:Class ;
     rdfs:subClassOf UBERON:0001637 .
@@ -50448,8 +51506,7 @@ UBERON:0004581 a owl:Class ;
     rdfs:subClassOf UBERON:0002049 .
 
 UBERON:0004582 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0007798 .
+    rdfs:subClassOf UBERON:0007798 .
 
 UBERON:0004590 a owl:Class ;
     rdfs:subClassOf UBERON:0001630 .
@@ -50799,8 +51856,7 @@ UBERON:0004707 a owl:Class ;
     rdfs:subClassOf UBERON:0000105 .
 
 UBERON:0004708 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000026 .
+    rdfs:subClassOf UBERON:0000026 .
 
 UBERON:0004709 a owl:Class ;
     rdfs:subClassOf UBERON:0004708 .
@@ -51784,8 +52840,7 @@ UBERON:0005051 a owl:Class ;
     rdfs:subClassOf UBERON:0002050 .
 
 UBERON:0005052 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000945 .
+    rdfs:subClassOf UBERON:0000945 .
 
 UBERON:0005053 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
@@ -52231,8 +53286,7 @@ UBERON:0005205 a owl:Class ;
         UBERON:0005156 .
 
 UBERON:0005206 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003891,
+    rdfs:subClassOf UBERON:0003891,
         UBERON:0004121 .
 
 UBERON:0005207 a owl:Class ;
@@ -52390,8 +53444,7 @@ UBERON:0005269 a owl:Class ;
         UBERON:0014401 .
 
 UBERON:0005270 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005215 .
+    rdfs:subClassOf UBERON:0005215 .
 
 UBERON:0005271 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
@@ -52610,8 +53663,7 @@ UBERON:0005335 a owl:Class ;
         UBERON:0005631 .
 
 UBERON:0005336 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923,
+    rdfs:subClassOf UBERON:0004923,
         UBERON:0010313 .
 
 UBERON:0005337 a owl:Class ;
@@ -52663,8 +53715,7 @@ UBERON:0005351 a owl:Class ;
         UBERON:0027331 .
 
 UBERON:0005352 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005156,
+    rdfs:subClassOf UBERON:0005156,
         UBERON:0034921 .
 
 UBERON:0005353 a owl:Class ;
@@ -52992,8 +54043,7 @@ UBERON:0005453 a owl:Class ;
     rdfs:subClassOf UBERON:0035769 .
 
 UBERON:0005454 a owl:Class ;
-    rdfs:subClassOf UBERON:0003897,
-        UBERON:0035032 .
+    rdfs:subClassOf UBERON:0035032 .
 
 UBERON:0005455 a owl:Class ;
     rdfs:subClassOf UBERON:0006846 .
@@ -53017,7 +54067,6 @@ UBERON:0005460 a owl:Class ;
 
 UBERON:0005461 a owl:Class ;
     rdfs:subClassOf UBERON:0001482,
-        UBERON:0003897,
         UBERON:0004120,
         UBERON:0004518,
         UBERON:0034908 .
@@ -53368,8 +54417,7 @@ UBERON:0005628 a owl:Class ;
     rdfs:subClassOf UBERON:0004573 .
 
 UBERON:0005629 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002049 .
+    rdfs:subClassOf UBERON:0002049 .
 
 UBERON:0005630 a owl:Class ;
     rdfs:subClassOf UBERON:0005631 .
@@ -53683,8 +54731,7 @@ UBERON:0005733 a owl:Class ;
     rdfs:subClassOf UBERON:0005732 .
 
 UBERON:0005734 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004797,
+    rdfs:subClassOf UBERON:0004797,
         UBERON:0005742 .
 
 UBERON:0005737 a owl:Class ;
@@ -53737,8 +54784,7 @@ UBERON:0005764 a owl:Class ;
     rdfs:subClassOf UBERON:0000476 .
 
 UBERON:0005769 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005764 .
+    rdfs:subClassOf UBERON:0005764 .
 
 UBERON:0005777 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -54002,8 +55048,7 @@ UBERON:0005905 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
 UBERON:0005906 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062 .
+    rdfs:subClassOf UBERON:0000062 .
 
 UBERON:0005908 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
@@ -54153,8 +55198,7 @@ UBERON:0005983 a owl:Class ;
         UBERON:0004923 .
 
 UBERON:0005984 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005983 .
+    rdfs:subClassOf UBERON:0005983 .
 
 UBERON:0005985 a owl:Class ;
     rdfs:subClassOf UBERON:0000055,
@@ -55151,7 +56195,7 @@ UBERON:0006376 a owl:Class ;
 
 UBERON:0006377 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
-        UBERON:0010000 .
+        UBERON:0005156 .
 
 UBERON:0006378 a owl:Class ;
     rdfs:subClassOf UBERON:0001037 .
@@ -55581,8 +56625,7 @@ UBERON:0006609 a owl:Class ;
     rdfs:subClassOf UBERON:0008324 .
 
 UBERON:0006610 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158,
+    rdfs:subClassOf UBERON:0000158,
         UBERON:0005156 .
 
 UBERON:0006611 a owl:Class ;
@@ -55685,8 +56728,7 @@ UBERON:0006649 a owl:Class ;
         UBERON:0008841 .
 
 UBERON:0006650 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158,
+    rdfs:subClassOf UBERON:0000158,
         UBERON:0004120,
         UBERON:0005156 .
 
@@ -55708,8 +56750,7 @@ UBERON:0006654 a owl:Class ;
         UBERON:0003838 .
 
 UBERON:0006655 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000060,
+    rdfs:subClassOf UBERON:0000060,
         UBERON:0004120,
         UBERON:0005156 .
 
@@ -56074,8 +57115,7 @@ UBERON:0006803 a owl:Class ;
         UBERON:0004120 .
 
 UBERON:0006804 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0011825 .
+    rdfs:subClassOf UBERON:0011825 .
 
 UBERON:0006805 a owl:Class ;
     rdfs:subClassOf UBERON:0005055 .
@@ -56433,11 +57473,11 @@ UBERON:0006960 a owl:Class ;
         UBERON:0005156 .
 
 UBERON:0006964 a owl:Class ;
-    rdfs:subClassOf UBERON:0010371 .
+    rdfs:subClassOf UBERON:0005156,
+        UBERON:0010371 .
 
 UBERON:0006965 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005423 .
+    rdfs:subClassOf UBERON:0005423 .
 
 UBERON:0006966 a owl:Class ;
     rdfs:subClassOf UBERON:0001982,
@@ -56751,13 +57791,11 @@ UBERON:0007194 a owl:Class ;
     rdfs:subClassOf UBERON:0010147 .
 
 UBERON:0007195 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003891,
+    rdfs:subClassOf UBERON:0003891,
         UBERON:0004120 .
 
 UBERON:0007196 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000062,
+    rdfs:subClassOf UBERON:0000062,
         UBERON:0004119 .
 
 UBERON:0007197 a owl:Class ;
@@ -57070,8 +58108,7 @@ UBERON:0007321 a owl:Class ;
     rdfs:subClassOf UBERON:0013145 .
 
 UBERON:0007324 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000064,
+    rdfs:subClassOf UBERON:0000064,
         UBERON:0004119 .
 
 UBERON:0007329 a owl:Class ;
@@ -57795,8 +58832,7 @@ UBERON:0007844 a owl:Class ;
     rdfs:subClassOf UBERON:0004765 .
 
 UBERON:0007845 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002384 .
+    rdfs:subClassOf UBERON:0002384 .
 
 UBERON:0007846 a owl:Class ;
     rdfs:subClassOf UBERON:0007845,
@@ -58227,8 +59263,7 @@ UBERON:0008439 a owl:Class ;
         UBERON:0006015 .
 
 UBERON:0008440 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002470 .
+    rdfs:subClassOf UBERON:0002470 .
 
 UBERON:0008441 a owl:Class ;
     rdfs:subClassOf UBERON:0002398,
@@ -58272,7 +59307,6 @@ UBERON:0008454 a owl:Class ;
 
 UBERON:0008455 a owl:Class ;
     rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897,
         UBERON:0004518 .
 
 UBERON:0008456 a owl:Class ;
@@ -58318,8 +59352,7 @@ UBERON:0008523 a owl:Class ;
     rdfs:subClassOf UBERON:0005493 .
 
 UBERON:0008529 a owl:Class ;
-    rdfs:subClassOf UBERON:0002000,
-        UBERON:0003897 .
+    rdfs:subClassOf UBERON:0002000 .
 
 UBERON:0008537 a owl:Class ;
     rdfs:subClassOf UBERON:0002000 .
@@ -58429,7 +59462,6 @@ UBERON:0008609 a owl:Class ;
 
 UBERON:0008611 a owl:Class ;
     rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897,
         UBERON:0004518 .
 
 UBERON:0008612 a owl:Class ;
@@ -58683,8 +59715,7 @@ UBERON:0008845 a owl:Class ;
     rdfs:subClassOf UBERON:0000211 .
 
 UBERON:0008846 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000211 .
+    rdfs:subClassOf UBERON:0000211 .
 
 UBERON:0008847 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -58795,8 +59826,7 @@ UBERON:0008885 a owl:Class ;
     rdfs:subClassOf UBERON:0001874 .
 
 UBERON:0008886 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0007798 .
+    rdfs:subClassOf UBERON:0007798 .
 
 UBERON:0008887 a owl:Class ;
     rdfs:subClassOf UBERON:0001593 .
@@ -59002,8 +60032,7 @@ UBERON:0008959 a owl:Class ;
     rdfs:subClassOf UBERON:0004530 .
 
 UBERON:0008960 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0010053 .
+    rdfs:subClassOf UBERON:0010053 .
 
 UBERON:0008961 a owl:Class ;
     rdfs:subClassOf UBERON:0002184 .
@@ -59324,8 +60353,7 @@ UBERON:0009115 a owl:Class ;
         UBERON:0005178 .
 
 UBERON:0009116 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003295,
+    rdfs:subClassOf UBERON:0003295,
         UBERON:0004177,
         UBERON:0005057,
         UBERON:0005058,
@@ -60246,8 +61274,7 @@ UBERON:0009857 a owl:Class ;
     rdfs:subClassOf UBERON:0000464 .
 
 UBERON:0009858 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000158 .
+    rdfs:subClassOf UBERON:0000158 .
 
 UBERON:0009859 a owl:Class ;
     rdfs:subClassOf UBERON:0000158 .
@@ -61029,8 +62056,7 @@ UBERON:0010189 a owl:Class ;
         UBERON:0006675 .
 
 UBERON:0010190 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000481 .
+    rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0010191 a owl:Class ;
     rdfs:subClassOf UBERON:0011216 .
@@ -61076,8 +62102,7 @@ UBERON:0010209 a owl:Class ;
         UBERON:0005160 .
 
 UBERON:0010210 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000463 .
+    rdfs:subClassOf UBERON:0000463 .
 
 UBERON:0010211 a owl:Class ;
     rdfs:subClassOf UBERON:0002384 .
@@ -61605,8 +62630,7 @@ UBERON:0010393 a owl:Class ;
     rdfs:subClassOf UBERON:0010394 .
 
 UBERON:0010394 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005057,
+    rdfs:subClassOf UBERON:0005057,
         UBERON:0010001 .
 
 UBERON:0010395 a owl:Class ;
@@ -62222,8 +63246,7 @@ UBERON:0010742 a owl:Class ;
     rdfs:subClassOf UBERON:0010740 .
 
 UBERON:0010743 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0034925 .
+    rdfs:subClassOf UBERON:0034925 .
 
 UBERON:0010744 a owl:Class ;
     rdfs:subClassOf UBERON:0011095,
@@ -62579,8 +63602,7 @@ UBERON:0010948 a owl:Class ;
         UBERON:0014892 .
 
 UBERON:0010949 a owl:Class ;
-    rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897 .
+    rdfs:subClassOf UBERON:0002377 .
 
 UBERON:0010950 a owl:Class ;
     rdfs:subClassOf UBERON:0002376 .
@@ -62709,8 +63731,7 @@ UBERON:0011012 a owl:Class ;
     rdfs:subClassOf UBERON:0001500 .
 
 UBERON:0011013 a owl:Class ;
-    rdfs:subClassOf UBERON:0003897,
-        UBERON:0004518 .
+    rdfs:subClassOf UBERON:0004518 .
 
 UBERON:0011014 a owl:Class ;
     rdfs:subClassOf UBERON:0011013 .
@@ -63148,8 +64169,7 @@ UBERON:0011233 a owl:Class ;
     rdfs:subClassOf UBERON:0007616 .
 
 UBERON:0011234 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0011236 a owl:Class ;
     rdfs:subClassOf UBERON:0008982 .
@@ -63197,7 +64217,6 @@ UBERON:0011250 a owl:Class ;
 
 UBERON:0011251 a owl:Class ;
     rdfs:subClassOf UBERON:0002377,
-        UBERON:0003897,
         UBERON:0004518 .
 
 UBERON:0011252 a owl:Class ;
@@ -63414,13 +64433,11 @@ UBERON:0011350 a owl:Class ;
     rdfs:subClassOf UBERON:0002384 .
 
 UBERON:0011357 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000476,
+    rdfs:subClassOf UBERON:0000476,
         UBERON:0004121 .
 
 UBERON:0011358 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000073,
+    rdfs:subClassOf UBERON:0000073,
         UBERON:0004121 .
 
 UBERON:0011359 a owl:Class ;
@@ -63500,7 +64517,7 @@ UBERON:0011387 a owl:Class ;
     rdfs:subClassOf UBERON:0011389 .
 
 UBERON:0011388 a owl:Class ;
-    rdfs:subClassOf UBERON:0005156,
+    rdfs:subClassOf UBERON:0003135,
         UBERON:0011389 .
 
 UBERON:0011389 a owl:Class ;
@@ -63541,15 +64558,13 @@ UBERON:0011510 a owl:Class ;
     rdfs:subClassOf UBERON:0000063 .
 
 UBERON:0011511 a owl:Class ;
-    rdfs:subClassOf UBERON:0001325,
-        UBERON:0003897 .
+    rdfs:subClassOf UBERON:0001325 .
 
 UBERON:0011512 a owl:Class ;
     rdfs:subClassOf UBERON:0001325 .
 
 UBERON:0011528 a owl:Class ;
-    rdfs:subClassOf UBERON:0001325,
-        UBERON:0003897 .
+    rdfs:subClassOf UBERON:0001325 .
 
 UBERON:0011531 a owl:Class ;
     rdfs:subClassOf UBERON:0011528 .
@@ -64089,8 +65104,7 @@ UBERON:0011801 a owl:Class ;
         UBERON:0011585 .
 
 UBERON:0011802 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0005423 .
+    rdfs:subClassOf UBERON:0005423 .
 
 UBERON:0011803 a owl:Class ;
     rdfs:subClassOf UBERON:0003104,
@@ -64145,8 +65159,7 @@ UBERON:0011822 a owl:Class ;
         UBERON:0011823 .
 
 UBERON:0011823 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0002384 .
+    rdfs:subClassOf UBERON:0002384 .
 
 UBERON:0011824 a owl:Class ;
     rdfs:subClassOf UBERON:0011822 .
@@ -64213,8 +65226,7 @@ UBERON:0011859 a owl:Class ;
         UBERON:0004121 .
 
 UBERON:0011860 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000476 .
+    rdfs:subClassOf UBERON:0000476 .
 
 UBERON:0011861 a owl:Class ;
     rdfs:subClassOf UBERON:0004120,
@@ -64378,8 +65390,7 @@ UBERON:0011931 a owl:Class ;
     rdfs:subClassOf UBERON:0010171 .
 
 UBERON:0011932 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000063 .
+    rdfs:subClassOf UBERON:0000063 .
 
 UBERON:0011933 a owl:Class ;
     rdfs:subClassOf UBERON:0011932 .
@@ -64438,12 +65449,10 @@ UBERON:0011952 a owl:Class ;
     rdfs:subClassOf UBERON:0000483 .
 
 UBERON:0011953 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0009870 .
+    rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0011954 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0009870 .
+    rdfs:subClassOf UBERON:0009870 .
 
 UBERON:0011955 a owl:Class ;
     rdfs:subClassOf UBERON:0001143 .
@@ -64723,8 +65732,7 @@ UBERON:0012124 a owl:Class ;
     rdfs:subClassOf UBERON:0001480 .
 
 UBERON:0012125 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000467 .
+    rdfs:subClassOf UBERON:0000467 .
 
 UBERON:0012126 a owl:Class ;
     rdfs:subClassOf UBERON:0011679 .
@@ -64916,8 +65924,7 @@ UBERON:0012248 a owl:Class ;
     rdfs:subClassOf UBERON:0001295 .
 
 UBERON:0012249 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000064,
+    rdfs:subClassOf UBERON:0000064,
         UBERON:0005156 .
 
 UBERON:0012250 a owl:Class ;
@@ -65046,8 +66053,7 @@ UBERON:0012293 a owl:Class ;
     rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0012294 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004120,
+    rdfs:subClassOf UBERON:0004120,
         UBERON:0005156,
         UBERON:0013522 .
 
@@ -65260,8 +66266,7 @@ UBERON:0012363 a owl:Class ;
         UBERON:0005911 .
 
 UBERON:0012364 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000463 .
+    rdfs:subClassOf UBERON:0000463 .
 
 UBERON:0012367 a owl:Class ;
     rdfs:subClassOf UBERON:0018261 .
@@ -65350,8 +66355,7 @@ UBERON:0012429 a owl:Class ;
         UBERON:0034769 .
 
 UBERON:0012430 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004121,
+    rdfs:subClassOf UBERON:0004121,
         UBERON:0004923,
         UBERON:0010314 .
 
@@ -65837,8 +66841,7 @@ UBERON:0013181 a owl:Class ;
     rdfs:subClassOf UBERON:0008845 .
 
 UBERON:0013182 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000479 .
+    rdfs:subClassOf UBERON:0000479 .
 
 UBERON:0013188 a owl:Class ;
     rdfs:subClassOf UBERON:0000481,
@@ -65912,8 +66915,7 @@ UBERON:0013213 a owl:Class ;
     rdfs:subClassOf UBERON:0006969 .
 
 UBERON:0013216 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000481 .
+    rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0013217 a owl:Class ;
     rdfs:subClassOf UBERON:0010313,
@@ -66053,8 +67055,7 @@ UBERON:0013398 a owl:Class ;
         UBERON:0011362 .
 
 UBERON:0013399 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923,
+    rdfs:subClassOf UBERON:0004923,
         UBERON:0010313 .
 
 UBERON:0013403 a owl:Class ;
@@ -66617,8 +67618,7 @@ UBERON:0013656 a owl:Class ;
     rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0013657 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000481 .
+    rdfs:subClassOf UBERON:0000481 .
 
 UBERON:0013658 a owl:Class ;
     rdfs:subClassOf UBERON:0003103 .
@@ -67298,8 +68298,7 @@ UBERON:0014509 a owl:Class ;
     rdfs:subClassOf UBERON:0008846 .
 
 UBERON:0014510 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004923 .
+    rdfs:subClassOf UBERON:0004923 .
 
 UBERON:0014521 a owl:Class ;
     rdfs:subClassOf UBERON:0015233 .
@@ -68871,8 +69870,7 @@ UBERON:0015245 a owl:Class ;
         UBERON:0010001 .
 
 UBERON:0015246 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004119,
+    rdfs:subClassOf UBERON:0004119,
         UBERON:0015245 .
 
 UBERON:0015247 a owl:Class ;
@@ -69458,8 +70456,7 @@ UBERON:0016478 a owl:Class ;
         UBERON:0004119 .
 
 UBERON:0016479 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003893,
+    rdfs:subClassOf UBERON:0003893,
         UBERON:0004119 .
 
 UBERON:0016480 a owl:Class ;
@@ -70382,8 +71379,7 @@ UBERON:0018154 a owl:Class ;
     rdfs:subClassOf UBERON:0000211 .
 
 UBERON:0018155 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0008841,
+    rdfs:subClassOf UBERON:0008841,
         UBERON:0018154 .
 
 UBERON:0018156 a owl:Class ;
@@ -70404,17 +71400,14 @@ UBERON:0018160 a owl:Class ;
         UBERON:4100000 .
 
 UBERON:0018161 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0008845 .
+    rdfs:subClassOf UBERON:0008845 .
 
 UBERON:0018226 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004119,
+    rdfs:subClassOf UBERON:0004119,
         UBERON:0011216 .
 
 UBERON:0018227 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0003456,
+    rdfs:subClassOf UBERON:0003456,
         UBERON:0004119 .
 
 UBERON:0018228 a owl:Class ;
@@ -71739,8 +72732,7 @@ UBERON:0022286 a owl:Class ;
     rdfs:subClassOf UBERON:0000456 .
 
 UBERON:0022287 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000456,
+    rdfs:subClassOf UBERON:0000456,
         UBERON:0006314 .
 
 UBERON:0022288 a owl:Class ;
@@ -72042,7 +73034,8 @@ UBERON:0023740 a owl:Class ;
     rdfs:subClassOf UBERON:0005838 .
 
 UBERON:0023752 a owl:Class ;
-    rdfs:subClassOf UBERON:0002616 .
+    rdfs:subClassOf UBERON:0002616,
+        UBERON:0005156 .
 
 UBERON:0023787 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
@@ -72350,7 +73343,8 @@ UBERON:0027061 a owl:Class ;
 
 UBERON:0027109 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
-        UBERON:0004121 .
+        UBERON:0004121,
+        UBERON:0005156 .
 
 UBERON:0027113 a owl:Class ;
     rdfs:subClassOf UBERON:0014687 .
@@ -72829,8 +73823,7 @@ UBERON:0034765 a owl:Class ;
     rdfs:subClassOf UBERON:0016475 .
 
 UBERON:0034766 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0001444 .
+    rdfs:subClassOf UBERON:0001444 .
 
 UBERON:0034767 a owl:Class ;
     rdfs:subClassOf UBERON:0000464 .
@@ -73119,8 +74112,7 @@ UBERON:0034928 a owl:Class ;
     rdfs:subClassOf UBERON:0036215 .
 
 UBERON:0034929 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0010000 .
+    rdfs:subClassOf UBERON:0010000 .
 
 UBERON:0034930 a owl:Class ;
     rdfs:subClassOf UBERON:0000022 .
@@ -73160,12 +74152,10 @@ UBERON:0034940 a owl:Class ;
     rdfs:subClassOf UBERON:0010161 .
 
 UBERON:0034941 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0000064 .
+    rdfs:subClassOf UBERON:0000064 .
 
 UBERON:0034942 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0012451 .
+    rdfs:subClassOf UBERON:0012451 .
 
 UBERON:0034943 a owl:Class ;
     rdfs:subClassOf UBERON:0005408 .
@@ -73487,8 +74477,7 @@ UBERON:0035091 a owl:Class ;
     rdfs:subClassOf UBERON:0003665 .
 
 UBERON:0035092 a owl:Class ;
-    rdfs:subClassOf UBERON:0003897,
-        UBERON:0035091 .
+    rdfs:subClassOf UBERON:0035091 .
 
 UBERON:0035093 a owl:Class ;
     rdfs:subClassOf UBERON:0035091 .
@@ -73504,8 +74493,7 @@ UBERON:0035096 a owl:Class ;
         UBERON:0008982 .
 
 UBERON:0035097 a owl:Class ;
-    rdfs:subClassOf UBERON:0003897,
-        UBERON:0035091 .
+    rdfs:subClassOf UBERON:0035091 .
 
 UBERON:0035098 a owl:Class ;
     rdfs:subClassOf UBERON:0005156,
@@ -74510,12 +75498,10 @@ UBERON:0035845 a owl:Class ;
     rdfs:subClassOf UBERON:0002384 .
 
 UBERON:0035846 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0035845 .
+    rdfs:subClassOf UBERON:0035845 .
 
 UBERON:0035847 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0035845 .
+    rdfs:subClassOf UBERON:0035845 .
 
 UBERON:0035848 a owl:Class ;
     rdfs:subClassOf UBERON:0005913,
@@ -82705,9 +83691,6 @@ UBERON:3010142 a owl:Class ;
 UBERON:3010144 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
-UBERON:3010146 a owl:Class ;
-    rdfs:subClassOf UBERON:0006813 .
-
 UBERON:3010163 a owl:Class ;
     rdfs:subClassOf UBERON:3000981 .
 
@@ -83021,7 +84004,8 @@ UBERON:3010529 a owl:Class ;
 
 UBERON:3010541 a owl:Class ;
     rdfs:subClassOf UBERON:0000064,
-        UBERON:0004121 .
+        UBERON:0004121,
+        UBERON:0005156 .
 
 UBERON:3010557 a owl:Class ;
     rdfs:subClassOf UBERON:0004529 .
@@ -86192,7 +87176,8 @@ UBERON:7500056 a owl:Class ;
     rdfs:subClassOf UBERON:0007120 .
 
 UBERON:7500057 a owl:Class ;
-    rdfs:subClassOf UBERON:0013619 .
+    rdfs:subClassOf UBERON:0013619,
+        UBERON:7500055 .
 
 UBERON:7500058 a owl:Class ;
     rdfs:subClassOf UBERON:0016452 .
@@ -86494,8 +87479,7 @@ UBERON:8410002 a owl:Class ;
     rdfs:subClassOf UBERON:0001473 .
 
 UBERON:8410003 a owl:Class ;
-    rdfs:subClassOf PR:000050567,
-        UBERON:0004119,
+    rdfs:subClassOf UBERON:0004119,
         UBERON:0010000 .
 
 UBERON:8410004 a owl:Class ;
@@ -87586,5 +88570,253 @@ UBERON:8600041 a owl:Class ;
 UBERON:8600042 a owl:Class ;
     rdfs:subClassOf UBERON:0001473,
         UBERON:0005156 .
+
+UBERON:8600043 a owl:Class ;
+    rdfs:subClassOf UBERON:0001256 .
+
+UBERON:8600044 a owl:Class ;
+    rdfs:subClassOf UBERON:8600043 .
+
+UBERON:8600045 a owl:Class ;
+    rdfs:subClassOf UBERON:8600043 .
+
+UBERON:8600046 a owl:Class ;
+    rdfs:subClassOf UBERON:0001256 .
+
+UBERON:8600047 a owl:Class ;
+    rdfs:subClassOf UBERON:0001256 .
+
+UBERON:8600048 a owl:Class ;
+    rdfs:subClassOf UBERON:0000064,
+        UBERON:0004120 .
+
+UBERON:8600049 a owl:Class ;
+    rdfs:subClassOf UBERON:0006984 .
+
+UBERON:8600050 a owl:Class ;
+    rdfs:subClassOf UBERON:0000061 .
+
+UBERON:8600051 a owl:Class ;
+    rdfs:subClassOf UBERON:0003512,
+        UBERON:0005194 .
+
+UBERON:8600052 a owl:Class ;
+    rdfs:subClassOf UBERON:0003512,
+        UBERON:0005194 .
+
+UBERON:8600053 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003502 .
+
+UBERON:8600054 a owl:Class ;
+    rdfs:subClassOf UBERON:0005194 .
+
+UBERON:8600055 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003498 .
+
+UBERON:8600056 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003520 .
+
+UBERON:8600057 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638 .
+
+UBERON:8600058 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0005156 .
+
+UBERON:8600059 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003502 .
+
+UBERON:8600060 a owl:Class ;
+    rdfs:subClassOf UBERON:0003469,
+        UBERON:0003512 .
+
+UBERON:8600061 a owl:Class ;
+    rdfs:subClassOf UBERON:8600024 .
+
+UBERON:8600062 a owl:Class ;
+    rdfs:subClassOf UBERON:0012320 .
+
+UBERON:8600063 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003834 .
+
+UBERON:8600064 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003834 .
+
+UBERON:8600065 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003516 .
+
+UBERON:8600066 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0004121,
+        UBERON:0004258 .
+
+UBERON:8600067 a owl:Class ;
+    rdfs:subClassOf UBERON:8600024 .
+
+UBERON:8600068 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600069 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600070 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600071 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600072 a owl:Class ;
+    rdfs:subClassOf UBERON:0001593,
+        UBERON:0006876 .
+
+UBERON:8600073 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638 .
+
+UBERON:8600074 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638 .
+
+UBERON:8600075 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003502 .
+
+UBERON:8600076 a owl:Class ;
+    rdfs:subClassOf UBERON:0001593,
+        UBERON:0006876,
+        UBERON:0036303 .
+
+UBERON:8600077 a owl:Class ;
+    rdfs:subClassOf UBERON:0003469,
+        UBERON:0003512,
+        UBERON:0010369 .
+
+UBERON:8600078 a owl:Class ;
+    rdfs:subClassOf UBERON:0012320,
+        UBERON:0035398 .
+
+UBERON:8600079 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600080 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003834 .
+
+UBERON:8600081 a owl:Class ;
+    rdfs:subClassOf UBERON:0003469,
+        UBERON:0003834 .
+
+UBERON:8600082 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003516 .
+
+UBERON:8600083 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003516 .
+
+UBERON:8600084 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0001979,
+        UBERON:0003520 .
+
+UBERON:8600085 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0001979,
+        UBERON:0015796 .
+
+UBERON:8600086 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600087 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600088 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600089 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0004121,
+        UBERON:0009141 .
+
+UBERON:8600090 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003499,
+        UBERON:0005156 .
+
+UBERON:8600091 a owl:Class ;
+    rdfs:subClassOf UBERON:0003496,
+        UBERON:0009141 .
+
+UBERON:8600092 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003507 .
+
+UBERON:8600093 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003507 .
+
+UBERON:8600094 a owl:Class ;
+    rdfs:subClassOf UBERON:0003469,
+        UBERON:0003495,
+        UBERON:0003512 .
+
+UBERON:8600095 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600096 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600097 a owl:Class ;
+    rdfs:subClassOf UBERON:0001610,
+        UBERON:0003496 .
+
+UBERON:8600098 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600099 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600100 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600101 a owl:Class ;
+    rdfs:subClassOf UBERON:0001637,
+        UBERON:0003496 .
+
+UBERON:8600102 a owl:Class ;
+    rdfs:subClassOf UBERON:0003834,
+        UBERON:0035395 .
+
+UBERON:8600103 a owl:Class ;
+    rdfs:subClassOf UBERON:0001593,
+        UBERON:0006876,
+        UBERON:0036303 .
+
+UBERON:8600104 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0004121,
+        UBERON:0004258 .
+
+UBERON:8600105 a owl:Class ;
+    rdfs:subClassOf UBERON:0001638,
+        UBERON:0003520 .
 
 ### Serialized using the ttlser deterministic serializer v1.2.2

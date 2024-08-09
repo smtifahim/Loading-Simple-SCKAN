@@ -35,6 +35,12 @@
 @prefix NLXCELL: <http://uri.neuinfo.org/nif/nifstd/nlx_cell_> .
 @prefix NLXWIKI: <http://neurolex.org/wiki/> .
 @prefix mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/> .
+@prefix prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/> .
+@prefix femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/> .
+@prefix semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/> .
+@prefix kidney: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/> .
+@prefix liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/> .
+@prefix senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/> .
 @prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_> .
 @prefix NLXNEURNT: <http://uri.neuinfo.org/nif/nifstd/nlx_neuron_nt_> .
 @base <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/simple-sckan.ttl> .

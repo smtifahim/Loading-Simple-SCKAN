@@ -1,0 +1,168 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix TEMP: <http://uri.interlex.org/temp/uris/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+TEMP:MISSING_Left-thirtneenth-thoracic-spinal-ganglion
+    a owl:Class ;
+    rdfs:label "Left thirtneenth thoracic spinal ganglion" .
+
+TEMP:MISSING_Posterior-root-of-left-thirteenth-thoracic-nerve
+    a owl:Class ;
+    rdfs:label "Posterior root of left thirteenth thoracic nerve" .
+
+TEMP:MISSING_Posterior-root-of-rigth-thirteenth-thoracic-nerve
+    a owl:Class ;
+    rdfs:label "Posterior root of rigth thirteenth thoracic nerve" .
+
+TEMP:MISSING_Rigth-thirtneenth-thoracic-spinal-ganglion
+    a owl:Class ;
+    rdfs:label "Rigth thirtneenth thoracic spinal ganglion" .
+
+TEMP:MISSING_abdominal-vagal-nerve
+    a owl:Class ;
+    rdfs:label "abdominal vagal nerve" .
+
+TEMP:MISSING_dorsal-grey-horn-of-L1
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of L1" .
+
+TEMP:MISSING_dorsal-grey-horn-of-L2
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of L2" .
+
+TEMP:MISSING_dorsal-grey-horn-of-L3
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of L3" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T10
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T10" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T11
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T11" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T12
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T12" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T7
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T7" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T8
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T8" .
+
+TEMP:MISSING_dorsal-grey-horn-of-T9
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of T9" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-L1
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left L1" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-L2
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left L2" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T10
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T10" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T11
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T11" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T12
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T12" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T13
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T13" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T8
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T8" .
+
+TEMP:MISSING_dorsal-grey-horn-of-left-T9
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of left T9" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-L1
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth L1" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T10
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T10" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T11
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T11" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T12
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T12" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T13
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T13" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T6
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T6" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T7
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T7" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T8
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T8" .
+
+TEMP:MISSING_dorsal-grey-horn-of-rigth-T9
+    a owl:Class ;
+    rdfs:label "dorsal grey horn of rigth T9" .
+
+TEMP:MISSING_esophageal-plexus
+    a owl:Class ;
+    rdfs:label "esophageal plexus" .
+
+TEMP:MISSING_intramural-ganglia-of-the-kidney
+    a owl:Class ;
+    rdfs:label "intramural ganglia of the kidney" .
+
+TEMP:MISSING_lower-ureter
+    a owl:Class ;
+    rdfs:label "lower ureter" .
+
+TEMP:MISSING_main-renal-artery
+    a owl:Class ;
+    rdfs:label "main renal artery" .
+
+TEMP:MISSING_posterior-hepatic-plexus
+    a owl:Class ;
+    rdfs:label "posterior hepatic plexus" .
+
+TEMP:MISSING_renal-ganglion
+    a owl:Class ;
+    rdfs:label "renal ganglion" .
+
+TEMP:MISSING_renal-nerve-plexus-ganglion
+    a owl:Class ;
+    rdfs:label "renal nerve plexus ganglion" .
+
+TEMP:MISSING_segmental-renal-artery
+    a owl:Class ;
+    rdfs:label "segmental renal artery" .
+
+TEMP:MISSING_upper-ureter
+    a owl:Class ;
+    rdfs:label "upper ureter" .
+
+TEMP:MISSING_white-communicating-ramus
+    a owl:Class ;
+    rdfs:label "white communicating ramus" .
