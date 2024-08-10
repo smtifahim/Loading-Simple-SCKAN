@@ -2599,7 +2599,7 @@ mmset1:13 ilxtr:hasAxonLocation ILX:0793714 ;
    ilxtr:isObservedInSpecies NCBITaxon:10141 .
 mmset1:14 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0005363 , UBERON:0002370 ;
-   ilxtr:hasAxonTerminalLocation UBERON:0002370 ;
+   ilxtr:hasAxonSensoryLocation UBERON:0002370 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
