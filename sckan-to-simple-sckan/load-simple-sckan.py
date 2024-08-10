@@ -43,7 +43,9 @@ input_files = {
     'uberon.ttl'                 : './input_ttl/uberon.ttl',
     'uberon-reasoned.ttl'        : './input_ttl/uberon-reasoned.ttl',
     'simple-sckan-properties.ttl': './input_ttl/simple-sckan-properties.ttl',
-    'simple-sckan-constructs.rq' : './sparql-query/simple-sckan-constructs.rq'
+    'simple-sckan-constructs.rq' : './sparql-query/simple-sckan-constructs.rq',
+    'simplified-partonomy.rq'    : './sparql-query/simplified-partonomy.rq'
+    
 }
 
 # generated output files for simple-sckan
@@ -181,6 +183,13 @@ conn.add(stardog.content.File(input_files['uberon-reasoned.ttl']))
 
 conn.commit()
 print ("Step 7: Done!")
+
+print ("\nStep 8: Executing insert query for simplified partonomy. Please wait...")
+with open(input_files['simplified-partonomy.rq'], 'r') as file:
+    query = file.read()
+    print ("        Running insert query.")
+    conn.update(query)
+print ("Step 8: Done!")
 
 # print ("\nStep 8: Saving the database as a local file...")
 # # with open(generated_files['npo-stardog-graph.ttl'], "wb") as result_file:
