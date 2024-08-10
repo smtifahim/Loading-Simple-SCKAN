@@ -1,0 +1,20 @@
+@prefix build: <http://uri.interlex.org/tgbugs/uris/readable/build/> .
+@prefix buildid: <http://uri.interlex.org/tgbugs/uris/readable/build/id/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Individuals
+
+build:prov a build:Record,
+        owl:NamedIndividual ;
+    rdfs:label "graph build and load provenance record" ;
+    build:date "2024-08-02" ;
+    build:datetime "2024-08-02T01:19:06,057677Z" ;
+    build:epoch 1722561546 ;
+    build:id buildid:c40031c7-8c6f-4152-8be4-aed028bac63d ;
+    build:metaVersion "0" ;
+    build:time "01:19:06.057677" ;
+    build:type build:Blazegraph .
+
+### Serialized using the ttlser deterministic serializer v1.2.2
