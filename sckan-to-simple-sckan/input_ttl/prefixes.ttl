@@ -187,12 +187,17 @@ PREFIX build: <http://uri.interlex.org/tgbugs/uris/readable/build/>
 PREFIX buildid: <http://uri.interlex.org/tgbugs/uris/readable/build/id/>
 PREFIX mod: <http://uri.interlex.org/tgbugs/uris/readable/modality/>
 PREFIX prot: <http://uri.interlex.org/tgbugs/uris/readable/protocol/>
+PREFIX femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/>
+PREFIX kidney: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/>
+PREFIX liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/>
 PREFIX mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
 PREFIX mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
 PREFIX mmset3: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset3/>
 PREFIX mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
 PREFIX prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
 PREFIX semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
+PREFIX senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/>
+PREFIX swglnd: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/swglnd/>
 PREFIX sparc: <http://uri.interlex.org/tgbugs/uris/readable/sparc/>
 PREFIX tech: <http://uri.interlex.org/tgbugs/uris/readable/technique/>
 PREFIX wax.sd.ver: <http://uri.interlex.org/waxholm/uris/sd/versions/>
