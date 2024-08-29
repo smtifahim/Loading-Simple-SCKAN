@@ -1,7 +1,7 @@
 # This script assumes that the stardog server is running on the localhost, and the input turtle files are located under ./input_ttl directory. 
 # It geneates the files necessary for simple sckan based on npo.ttl input file. It connects with Stardog DB server and loads the necessary data.
 # This script also assumes that stardog python wrapper is installed in your system.
-# (version: 1.0; @Author: Fahim Imam)
+# (version: 1.5; @Author: Fahim Imam)
 
 
 import os
@@ -43,8 +43,9 @@ input_files = {
     'uberon.ttl'                 : './input_ttl/uberon.ttl',
     'uberon-reasoned.ttl'        : './input_ttl/uberon-reasoned.ttl',
     'simple-sckan-properties.ttl': './input_ttl/simple-sckan-properties.ttl',
+    'prov-record.ttl'            : './input_ttl/prov-record.ttl',
     'simple-sckan-constructs.rq' : './sparql-query/simple-sckan-constructs.rq',
-    'simplified-partonomy.rq'    : './sparql-query/simplified-partonomy.rq'
+    'simplified-partonomy.rq'    : './sparql-query/simplified-partonomy-query.rq'
     
 }
 
@@ -79,7 +80,7 @@ def createNewDatabase(admin, db_name):
     print ("        The new database '" + db_name + "' is created.")
     return db
 
-print ("\nThe Simple SCKAN loading process started.\nThere are 8 steps in this process (Step 0 to Step 7).")    
+print ("\nThe Simple SCKAN loading process started.\nThere are 10 steps in this process (Step 0 to Step 9).")    
 with stardog.Admin(**conn_details) as admin:  
     
     print ("\nStep 0: Checking Stardog server status..")
@@ -181,17 +182,23 @@ conn.add(stardog.content.File(input_files['uberon.ttl']))
 print ("        Adding uberon-reasoned.ttl to the database.")
 conn.add(stardog.content.File(input_files['uberon-reasoned.ttl']))
 
-conn.commit()
 print ("Step 7: Done!")
 
-print ("\nStep 8: Executing insert query for simplified partonomy. Please wait...")
+print ("\nStep 8: Adding prov-record.ttl to the database. Please wait...")
+conn.add(stardog.content.File(input_files['prov-record.ttl']))
+
+print ("Step 8: Done!")
+conn.commit()
+
+print ("\nStep 9: Executing insert query for simplified partonomy. Please wait...")
 with open(input_files['simplified-partonomy.rq'], 'r') as file:
     query = file.read()
     print ("        Running insert query.")
     conn.update(query)
-print ("Step 8: Done!")
+print ("Step 9: Done!")
 
-# print ("\nStep 8: Saving the database as a local file...")
+
+# print ("\nStep 10: Saving the database as a local file...")
 # # with open(generated_files['npo-stardog-graph.ttl'], "wb") as result_file:
 # #     result_file.write (conn.export()) # saves only in ttl
 # #     result_file.close()
@@ -199,7 +206,7 @@ print ("Step 8: Done!")
 # command = f'stardog data export --format trig {db_name} {output_file}'
 # subprocess.run(command, shell=True)
 # print ("        File saved at: " + generated_files['npo-stardog-graph.trig'])
-# print ("Step 8: Done!")
+# print ("Step 10: Done!")
         
 print ("\nEnd of program execution. All steps executed successfully.\n\n")
 conn.close()
