@@ -32,7 +32,7 @@ conn_details = {
   'password': 'w8399Hzj78exJkaebz'
 }
 
-db_name = 'NPO-SIMPLE-SCKAN-TEST'
+db_name = 'SIMPLE-SCKAN-TEST-SEP'
 
 
 # input files needed for simple-sckan
@@ -76,7 +76,9 @@ def createNewDatabase(admin, db_name):
         print ("        Dropping the existing database named '" + db_name + "'")
         db = admin.database(db_name)
         db.drop()
-    db = admin.new_database(db_name)
+    # create options with edge.properties set to True
+    options = {"edge.properties": True}
+    db = admin.new_database(db_name, options=options)
     print ("        The new database '" + db_name + "' is created.")
     return db
 
