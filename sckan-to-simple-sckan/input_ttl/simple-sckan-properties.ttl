@@ -11,7 +11,7 @@
                                                                                          owl:versionIRI <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/simple-sckan.ttl/1.0.0> ;
                                                                                          rdfs:comment "The Simple SCKAN ontology provides a query-friendly layer on top of the NPO. It includes a set of simplified annotation properties derived from the complex OWL axioms in NPO. This ontology file requires importing npo.ttl." ;
                                                                                          rdfs:label "The Simple SCKAN Properties" ;
-                                                                                         owl:versionInfo "2023-05-01" .
+                                                                                         owl:versionInfo "2024-09-28" .
 
 #################################################################
 #    Annotation properties
@@ -19,76 +19,125 @@
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasAxonLocation
 ilxtr:hasAxonLocation rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon is located in." ;
+                      rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonLocatedIn" ;
+                      rdfs:label "hasAxonLocation" ;
                       rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasAxonSensoryLocation
 ilxtr:hasAxonSensoryLocation rdf:type owl:AnnotationProperty ;
+                             rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon sensory terminal (i.e., the axon sensory subcellular element) is located in." ;
+                             rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonSensorySubcellularElementIn" ;
+                             rdfs:label "hasSensoryAxonTerminalLocation" ;
                              rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasAxonTerminalLocation
 ilxtr:hasAxonTerminalLocation rdf:type owl:AnnotationProperty ;
+                              rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon terminal (i.e., the axon presynaptic element) is located in." ;
+                              rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonPresynapticElementIn" ;
+                              rdfs:label "hasAxonTerminalLocation" ;
                               rdfs:subPropertyOf ilxtr:hasConnectedLocation .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/hasAxonToSensoryTerminal
+ilxtr:hasAxonToSensoryTerminal rdf:type owl:AnnotationProperty ;
+                               rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon distally projects to the axon sensory terminal (i.e., the axon sensory subcellular element)." ;
+                               rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonLeadingToSensorySubcellularElementIn" ;
+                               rdfs:label "hasAxonLeadingToSensoryTerminal" ;
+                               rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasCircuitRole
 ilxtr:hasCircuitRole rdf:type owl:AnnotationProperty ;
+                     rdfs:comment "Expresses a relation between a neuron population and its circuit role phenotype. Possible phenotype values: Intrinsic, Motor, Sensory, and Projection." ;
+                     rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasCircuitRolePhenotype" ;
+                     rdfs:label "hasCircuitRole" ;
                      rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasConnectedLocation
 ilxtr:hasConnectedLocation rdf:type owl:AnnotationProperty ;
+                           rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where it is connected to. This property is not used for direct assertions." ;
+                           rdfs:label "hasConnectedLocation" ;
                            rdfs:subPropertyOf ilxtr:hasSimpleSckanProperty .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasDendriteLocation
 ilxtr:hasDendriteLocation rdf:type owl:AnnotationProperty ;
+                          rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its dendrite is located in." ;
+                          rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasDendriteLocatedIn" ;
+                          rdfs:label "hasDendriteLocation" ;
                           rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasForwardConnection
 ilxtr:hasForwardConnection rdf:type owl:AnnotationProperty ;
+                           rdfs:comment "Expresses a relationship to specify the synaptic forward connection from a presynaptic neuron population to a postsynaptic neuron population." ;
+                           rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasForwardConnectionPhenotype" ;
+                           rdfs:label "hasForwardConnection" ;
                            rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasFunctionalCircuitRole
 ilxtr:hasFunctionalCircuitRole rdf:type owl:AnnotationProperty ;
+                               rdfs:comment "Expresses a relation between a neuron population and its immediate effect on postsynaptic cells. Possible phenotype value: Excitatory or Inhibitory." ;
+                               rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasFunctionalCircuitRolePhenotype" ;
+                               rdfs:label "hasFunctionalCircuitRole" ;
                                rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasNeuronalPhenotype
 ilxtr:hasNeuronalPhenotype rdf:type owl:AnnotationProperty ;
+                           rdfs:comment "Expresses a relationship between a neuron population and its Autonomic Nervous System (ANS) phenotype. This property is used to specify the phenotype associated with distinct ANS subdivisions. Possible phenotype values: parasympathetic, sympathetic, pre- or post ganglionic, and entaric phenotypes." ;
+                           rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAnatomicalSystemPhenotype" ;
+                           rdfs:label "hasANSPhenotype" ;
                            rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/hasNonLocationalPhenotype
+ilxtr:hasNonLocationalPhenotype rdf:type owl:AnnotationProperty ;
+                                rdfs:comment "Expresses a relationship between a neuron population and its non-locational phenotype. This is not used for direct assertions." ;
+                                rdfs:label "hasNonLocationalPhenotype" ;
+                                rdfs:subPropertyOf ilxtr:hasSimpleSckanProperty .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasPhenotypicSex
 ilxtr:hasPhenotypicSex rdf:type owl:AnnotationProperty ;
+                       rdfs:comment "Expresses a relationship between a neuron population and a biological sex. This is used when a neuron population has been observed in a specific sex." ;
+                       rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasBiologicalSex" ;
+                       rdfs:label "hasPhenotypicSex" ;
                        rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasProjection
 ilxtr:hasProjection rdf:type owl:AnnotationProperty ;
+                    rdfs:comment "Expresses a relation between a neuron population and a brain region where the neuron population sends axons towards. Possible phenotype values: Spinal cord descending projection, Spinal cord ascending projection, Intestino fugal projection, Anterior projecting, Posterior projecting" ;
+                    rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasProjectionPhenotype" ;
+                    rdfs:label "hasProjection" ;
                     rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasSimpleSckanProperty
-ilxtr:hasSimpleSckanProperty rdf:type owl:AnnotationProperty .
+ilxtr:hasSimpleSckanProperty rdf:type owl:AnnotationProperty ;
+                             rdfs:label "hasSimpleSckanProperty" .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasSomaLocation
 ilxtr:hasSomaLocation rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its soma is located in." ;
+                      rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasSomaLocatedIn" ;
+                      rdfs:label "hasSomaLocation" ;
                       rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/isObservedInSpecies
 ilxtr:isObservedInSpecies rdf:type owl:AnnotationProperty ;
+                          rdfs:comment "Expresses a relationship between a neuron population and a taxon. Used when a neuron population has been observed in a specific species. Phossible phenotype value: species from NCBI Taxonomy." ;
+                          rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasInstanceInTaxon" ;
+                          rdfs:label "isObservedInSpecies" ;
                           rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
-
-
-###  http://uri.interlex.org/tgbugs/uris/readable/hasNonLocationalPhenotype
-ilxtr:hasNonLocationalPhenotype rdf:type owl:AnnotationProperty ;
-                                rdfs:subPropertyOf ilxtr:hasSimpleSckanProperty .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

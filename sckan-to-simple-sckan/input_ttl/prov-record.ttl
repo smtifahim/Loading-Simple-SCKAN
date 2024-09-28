@@ -9,12 +9,12 @@
 build:prov a build:Record,
         owl:NamedIndividual ;
     rdfs:label "graph build and load provenance record" ;
-    build:date "2024-08-29" ;
-    build:datetime "2024-08-29T00:00:00Z" ;
-    build:epoch 1724889600 ;
-    build:id buildid:5cf08ae1-f0c6-45aa-b512-1e9385d5ce78 ;
+    build:date "2024-09-21" ;
+    build:datetime "2024-09-21T06:32:28,709973Z" ;
+    build:epoch 1726900348 ;
+    build:id buildid:1c9dbeb4-e720-421b-9688-8e09b3b475e0 ;
     build:metaVersion "0" ;
-    build:time "00:00:00" ;
+    build:time "06:32:28.709973" ;
     build:type build:Blazegraph .
 
 ### Serialized using the ttlser deterministic serializer v1.2.2
