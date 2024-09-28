@@ -85,35 +85,81 @@
    owl:versionIRI <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/simple-sckan.ttl/1.0.0> ;
    rdfs:comment "The Simple SCKAN ontology provides a query-friendly layer on top of the NPO. It includes a set of simplified annotation properties derived from the complex OWL axioms in NPO. This ontology file requires importing npo.ttl." ;
    rdfs:label "The Simple SCKAN Properties" ;
-   owl:versionInfo "2023-05-01" .
+   owl:versionInfo "2024-09-28" .
 ilxtr:hasAxonLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon is located in." ;
+   rdfs:label "hasAxonLocation" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonLocatedIn" ;
    rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 ilxtr:hasConnectedLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where it is connected to. This property is not used for direct assertions." ;
+   rdfs:label "hasConnectedLocation" ;
    rdfs:subPropertyOf ilxtr:hasSimpleSckanProperty .
 ilxtr:hasAxonSensoryLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon sensory terminal (i.e., the axon sensory subcellular element) is located in." ;
+   rdfs:label "hasSensoryAxonTerminalLocation" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonSensorySubcellularElementIn" ;
    rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 ilxtr:hasAxonTerminalLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon terminal (i.e., the axon presynaptic element) is located in." ;
+   rdfs:label "hasAxonTerminalLocation" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonPresynapticElementIn" ;
+   rdfs:subPropertyOf ilxtr:hasConnectedLocation .
+ilxtr:hasAxonToSensoryTerminal a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its axon distally projects to the axon sensory terminal (i.e., the axon sensory subcellular element)." ;
+   rdfs:label "hasAxonLeadingToSensoryTerminal" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAxonLeadingToSensorySubcellularElementIn" ;
    rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 ilxtr:hasCircuitRole a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and its circuit role phenotype. Possible phenotype values: Intrinsic, Motor, Sensory, and Projection." ;
+   rdfs:label "hasCircuitRole" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasCircuitRolePhenotype" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasNonLocationalPhenotype a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relationship between a neuron population and its non-locational phenotype. This is not used for direct assertions." ;
+   rdfs:label "hasNonLocationalPhenotype" ;
    rdfs:subPropertyOf ilxtr:hasSimpleSckanProperty .
-ilxtr:hasSimpleSckanProperty a owl:AnnotationProperty .
+ilxtr:hasSimpleSckanProperty a owl:AnnotationProperty ;
+   rdfs:label "hasSimpleSckanProperty" .
 ilxtr:hasDendriteLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its dendrite is located in." ;
+   rdfs:label "hasDendriteLocation" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasDendriteLocatedIn" ;
    rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 ilxtr:hasForwardConnection a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relationship to specify the synaptic forward connection from a presynaptic neuron population to a postsynaptic neuron population." ;
+   rdfs:label "hasForwardConnection" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasForwardConnectionPhenotype" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasFunctionalCircuitRole a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and its immediate effect on postsynaptic cells. Possible phenotype value: Excitatory or Inhibitory." ;
+   rdfs:label "hasFunctionalCircuitRole" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasFunctionalCircuitRolePhenotype" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasNeuronalPhenotype a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relationship between a neuron population and its Autonomic Nervous System (ANS) phenotype. This property is used to specify the phenotype associated with distinct ANS subdivisions. Possible phenotype values: parasympathetic, sympathetic, pre- or post ganglionic, and entaric phenotypes." ;
+   rdfs:label "hasANSPhenotype" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasAnatomicalSystemPhenotype" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasPhenotypicSex a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relationship between a neuron population and a biological sex. This is used when a neuron population has been observed in a specific sex." ;
+   rdfs:label "hasPhenotypicSex" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasBiologicalSex" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasProjection a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and a brain region where the neuron population sends axons towards. Possible phenotype values: Spinal cord descending projection, Spinal cord ascending projection, Intestino fugal projection, Anterior projecting, Posterior projecting" ;
+   rdfs:label "hasProjection" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasProjectionPhenotype" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 ilxtr:hasSomaLocation a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relation between a neuron population and the anatomical structure where its soma is located in." ;
+   rdfs:label "hasSomaLocation" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasSomaLocatedIn" ;
    rdfs:subPropertyOf ilxtr:hasConnectedLocation .
 ilxtr:isObservedInSpecies a owl:AnnotationProperty ;
+   rdfs:comment "Expresses a relationship between a neuron population and a taxon. Used when a neuron population has been observed in a specific species. Phossible phenotype value: species from NCBI Taxonomy." ;
+   rdfs:label "isObservedInSpecies" ;
+   rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasInstanceInTaxon" ;
    rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 femrep:30 ilxtr:hasAxonLocation ILX:0794916 ;
    ilxtr:hasConnectedLocation ILX:0794916 , ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0007715 , UBERON:0007716 ;
@@ -123,29 +169,29 @@ femrep:30 ilxtr:hasAxonLocation ILX:0794916 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0007715 , UBERON:0007716 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:31 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0003715 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0003715 , ILX:0794765 ;
+femrep:31 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 , ILX:0794765 ;
    ilxtr:hasAxonTerminalLocation ILX:0794765 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:32 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0003715 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0003715 , ILX:0794767 ;
+femrep:32 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 , ILX:0794767 ;
    ilxtr:hasAxonTerminalLocation ILX:0794767 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:33 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0003715 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0003715 , UBERON:0003984 ;
+femrep:33 ilxtr:hasAxonLocation ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , ILX:0794730 , UBERON:0001964 , UBERON:0018681 , UBERON:0018683 , UBERON:0003984 ;
    ilxtr:hasAxonTerminalLocation UBERON:0003984 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:34 ilxtr:hasAxonLocation UBERON:0003715 ;
-   ilxtr:hasConnectedLocation UBERON:0007715 , UBERON:0007716 , UBERON:0003715 , ILX:0794764 ;
+femrep:34 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0018679 ;
+   ilxtr:hasConnectedLocation UBERON:0007715 , UBERON:0007716 , UBERON:0018683 , UBERON:0018679 , ILX:0794764 ;
    ilxtr:hasAxonTerminalLocation ILX:0794764 ;
    ilxtr:hasForwardConnection femrep:35 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
@@ -181,8 +227,8 @@ femrep:38 ilxtr:hasAxonLocation ILX:0793822 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793082 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:39 ilxtr:hasAxonLocation UBERON:0003715 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , UBERON:0006465 , UBERON:0006466 , ILX:0793082 ;
+femrep:39 ilxtr:hasAxonLocation UBERON:0018680 ;
+   ilxtr:hasConnectedLocation UBERON:0006465 , UBERON:0006466 , ILX:0793082 , UBERON:0018680 ;
    ilxtr:hasAxonTerminalLocation ILX:0793082 ;
    ilxtr:hasForwardConnection femrep:38 , femrep:40 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
@@ -190,11 +236,11 @@ femrep:39 ilxtr:hasAxonLocation UBERON:0003715 ;
    ilxtr:hasSomaLocation UBERON:0006465 , UBERON:0006466 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 femrep:40 ilxtr:hasAxonLocation ILX:0793832 ;
-   ilxtr:hasConnectedLocation ILX:0793832 , UBERON:0002118 , UBERON:0002262 , UBERON:0005479 ;
+   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0793082 , UBERON:0002118 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002118 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation UBERON:0002262 , UBERON:0005479 ;
+   ilxtr:hasSomaLocation ILX:0793082 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 femrep:40-1 ilxtr:hasAxonLocation ILX:0793832 ;
    ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793832 , UBERON:0002118 ;
@@ -211,22 +257,22 @@ femrep:41 ilxtr:hasAxonLocation ILX:0794916 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0007715 , UBERON:0007716 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:42 ilxtr:hasAxonLocation UBERON:0003715 , UBERON:0005303 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , ILX:0794768 ;
+femrep:42 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0005303 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , ILX:0794768 ;
    ilxtr:hasAxonTerminalLocation ILX:0794768 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0786933 , ILX:0788315 , ILX:0790472 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:43 ilxtr:hasAxonLocation UBERON:0003715 , UBERON:0005303 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , ILX:0794766 ;
+femrep:43 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0005303 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , ILX:0794766 ;
    ilxtr:hasAxonTerminalLocation ILX:0794766 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0786933 , ILX:0788315 , ILX:0790472 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:44 ilxtr:hasAxonLocation UBERON:0003715 , UBERON:0005303 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , UBERON:0000002 ;
+femrep:44 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0005303 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0786933 , ILX:0788315 , ILX:0790472 , UBERON:0005303 , UBERON:0000002 ;
    ilxtr:hasAxonTerminalLocation UBERON:0000002 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
@@ -268,42 +314,47 @@ femrep:56 ilxtr:hasAxonLocation UBERON:0011929 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793823 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:60 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002261 ;
+femrep:60 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0005303 , UBERON:0002261 , ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , ILX:0794769 , ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 ;
    ilxtr:hasAxonSensoryLocation ILX:0794769 ;
    ilxtr:hasAxonTerminalLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0005303 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:61 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002261 ;
+femrep:61 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0005303 , UBERON:0002261 , ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 , UBERON:0000992 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000992 ;
    ilxtr:hasAxonTerminalLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0005303 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:62 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0002261 ;
+femrep:62 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0018675 , UBERON:0002261 , ILX:0738432 , UBERON:0006460 , UBERON:0006461 , ILX:0794770 , ILX:0793360 , UBERON:0002860 , UBERON:0002861 ;
    ilxtr:hasAxonSensoryLocation ILX:0794770 ;
    ilxtr:hasAxonTerminalLocation ILX:0738432 , UBERON:0006460 , UBERON:0006461 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018675 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793360 , UBERON:0002860 , UBERON:0002861 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:63 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0002261 ;
+femrep:63 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0000002 , UBERON:0018675 , UBERON:0002261 , ILX:0738432 , UBERON:0006460 , UBERON:0006461 , ILX:0793360 , UBERON:0002860 , UBERON:0002861 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000002 ;
    ilxtr:hasAxonTerminalLocation ILX:0738432 , UBERON:0006460 , UBERON:0006461 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018675 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793360 , UBERON:0002860 , UBERON:0002861 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-femrep:64 ilxtr:hasAxonLocation ILX:0794476 , UBERON:0001759 ;
+femrep:64 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0000002 , ILX:0794476 , UBERON:0001759 , UBERON:0009050 , UBERON:0000995 , UBERON:0005363 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000002 , UBERON:0000995 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794476 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
@@ -359,22 +410,22 @@ femrep:72 ilxtr:hasAxonLocation ILX:0793808 , UBERON:0011926 ;
    ilxtr:hasSomaLocation UBERON:0016508 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:73 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002013 , UBERON:0002014 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 ;
-   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0002013 , UBERON:0002014 , UBERON:0006467 , UBERON:0006468 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 , ILX:0794733 ;
-   ilxtr:hasAxonTerminalLocation ILX:0794733 ;
+   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0002013 , UBERON:0002014 , UBERON:0006467 , UBERON:0006468 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 , ILX:0794910 ;
+   ilxtr:hasAxonTerminalLocation ILX:0794910 ;
    ilxtr:hasForwardConnection femrep:74 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:74 ilxtr:hasAxonLocation UBERON:0011926 ;
-   ilxtr:hasConnectedLocation UBERON:0011926 , ILX:0794733 , ILX:0794735 , UBERON:0012648 ;
+   ilxtr:hasConnectedLocation UBERON:0011926 , ILX:0794910 , ILX:0794735 , UBERON:0012648 ;
    ilxtr:hasAxonTerminalLocation ILX:0794735 , UBERON:0012648 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0794733 ;
+   ilxtr:hasSomaLocation ILX:0794910 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:75 ilxtr:hasAxonLocation UBERON:0018681 , UBERON:0018683 ;
-   ilxtr:hasConnectedLocation ILX:0794730 , UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 , UBERON:0018681 , UBERON:0018683 ;
+   ilxtr:hasConnectedLocation ILX:0794730 , UBERON:0018681 , UBERON:0018683 , UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 ;
    ilxtr:hasAxonTerminalLocation ILX:0794730 ;
    ilxtr:hasForwardConnection femrep:76 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
@@ -389,33 +440,33 @@ femrep:76 ilxtr:hasAxonLocation ILX:0793832 , UBERON:0005303 , UBERON:0002013 , 
    ilxtr:hasSomaLocation ILX:0794730 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:77 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002013 , UBERON:0002014 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 ;
-   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0002013 , UBERON:0002014 , UBERON:0006467 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 , ILX:0794733 ;
-   ilxtr:hasAxonTerminalLocation ILX:0794733 ;
+   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0002013 , UBERON:0002014 , UBERON:0006467 , ILX:0794732 , UBERON:0002010 , UBERON:0005488 , ILX:0794910 ;
+   ilxtr:hasAxonTerminalLocation ILX:0794910 ;
    ilxtr:hasForwardConnection femrep:78 , femrep:79 , femrep:80 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0006466 , UBERON:0006467 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:78 ilxtr:hasAxonLocation ILX:0793832 ;
-   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794733 , UBERON:0006960 ;
+   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794910 , UBERON:0006960 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006960 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0794733 ;
+   ilxtr:hasSomaLocation ILX:0794910 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:79 ilxtr:hasAxonLocation ILX:0793832 ;
-   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794733 , UBERON:0001190 ;
+   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794910 , UBERON:0001190 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001190 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0794733 ;
+   ilxtr:hasSomaLocation ILX:0794910 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:80 ilxtr:hasAxonLocation ILX:0793832 ;
-   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794733 , UBERON:0001305 ;
+   ilxtr:hasConnectedLocation ILX:0793832 , ILX:0794910 , UBERON:0001305 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001305 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0794733 ;
+   ilxtr:hasSomaLocation ILX:0794910 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 femrep:81 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002013 , UBERON:0002014 ;
    ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0006448 , UBERON:0002013 , UBERON:0002014 , UBERON:0016508 , UBERON:0006467 , UBERON:0006468 ;
@@ -517,42 +568,47 @@ femrep:94 ilxtr:hasAxonLocation UBERON:0011929 , ILX:0793808 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0016508 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-femrep:100 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0002261 ;
+femrep:100 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0018675 , UBERON:0002261 , UBERON:0006461 , UBERON:0002861 , UBERON:0006462 , UBERON:0006463 , UBERON:0000996 , UBERON:0002862 , UBERON:0007713 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000996 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018675 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0002861 , UBERON:0002862 , UBERON:0007713 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-femrep:101 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0002261 ;
+femrep:101 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0000002 , UBERON:0018675 , UBERON:0002261 , UBERON:0006461 , UBERON:0002861 , UBERON:0006462 , UBERON:0006463 , UBERON:0002862 , UBERON:0007713 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000002 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018675 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0002861 , UBERON:0002862 , UBERON:0007713 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-femrep:102 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002261 ;
-   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0000995 , UBERON:0006467 , UBERON:0006468 , UBERON:0002853 ;
+femrep:102 ilxtr:hasAxonLocation UBERON:0002261 ;
+   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0000995 , UBERON:0006467 , UBERON:0006468 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000995 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 ;
-   ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
-   ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002853 ;
-   ilxtr:isObservedInSpecies NCBITaxon:9606 .
-femrep:103 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002261 ;
-   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0000002 , UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0006467 , UBERON:0006468 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
-   ilxtr:hasAxonSensoryLocation UBERON:0000002 ;
-   ilxtr:hasAxonTerminalLocation UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0005303 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-femrep:104 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0011390 ;
+femrep:103 ilxtr:hasAxonLocation UBERON:0002261 ;
+   ilxtr:hasConnectedLocation UBERON:0006466 , UBERON:0005303 , UBERON:0000002 , UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0006467 , UBERON:0006468 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
+   ilxtr:hasAxonSensoryLocation UBERON:0000002 ;
+   ilxtr:hasAxonTerminalLocation UBERON:0006466 , UBERON:0006448 , UBERON:0006450 , UBERON:0006467 , UBERON:0006468 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0005303 ;
+   ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
+   ilxtr:hasPhenotypicSex PATO:0000383 ;
+   ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
+   ilxtr:isObservedInSpecies NCBITaxon:9606 .
+femrep:104 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006461 , UBERON:0002861 , UBERON:0006462 , UBERON:0006463 , UBERON:0002862 , UBERON:0007713 , UBERON:0011390 , UBERON:0002411 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002411 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0011390 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0002861 , UBERON:0002862 , UBERON:0007713 ;
@@ -642,18 +698,19 @@ ilxtr:neuron-type-aacar-10v ilxtr:hasAxonLocation ilxtr:cardiac-interganglionic-
    ilxtr:hasForwardConnection ilxtr:neuron-type-aacar-7v , ilxtr:neuron-type-aacar-8v , ilxtr:neuron-type-aacar-10a ;
    ilxtr:hasSomaLocation ILX:0793556 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 , NCBITaxon:9615 , NCBITaxon:9825 .
-ilxtr:neuron-type-aacar-11 ilxtr:hasAxonLocation UBERON:0001759 , ilxtr:vago-sympathetic-trunk , UBERON:0001896 ;
+ilxtr:neuron-type-aacar-11 ilxtr:hasAxonLocation ilxtr:vago-sympathetic-trunk , UBERON:0001896 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , ilxtr:vago-sympathetic-trunk , UBERON:0001896 , UBERON:0002078 , UBERON:0002079 , UBERON:0002080 , UBERON:0002084 , UBERON:0002348 , UBERON:0000947 , UBERON:0002012 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002078 , UBERON:0002079 , UBERON:0002080 , UBERON:0002084 , UBERON:0002348 , UBERON:0000947 , UBERON:0002012 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001759 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-aacar-1 ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 , NCBITaxon:9615 , NCBITaxon:9825 .
-ilxtr:neuron-type-aacar-12 ilxtr:hasAxonLocation ILX:0738312 ;
-   ilxtr:hasConnectedLocation UBERON:0002440 , UBERON:0001990 , UBERON:0000947 , UBERON:0002012 , ILX:0738312 ;
+ilxtr:neuron-type-aacar-12 ilxtr:hasConnectedLocation UBERON:0002440 , UBERON:0001990 , UBERON:0000947 , UBERON:0002012 , ILX:0738312 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000947 , UBERON:0002012 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002440 , UBERON:0001990 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0738312 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-aacar-2i , ilxtr:neuron-type-aacar-2m ;
    ilxtr:hasSomaLocation UBERON:0002440 , UBERON:0001990 ;
@@ -722,34 +779,38 @@ ilxtr:neuron-type-bolew-unbranched-7 ilxtr:hasAxonLocation UBERON:0006470 , UBER
    ilxtr:hasForwardConnection ilxtr:neuron-type-bolew-unbranched-2 , ilxtr:neuron-type-bolew-unbranched-3 ;
    ilxtr:hasProjection ilxtr:SpinalCordDescendingProjectionPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005807 .
-ilxtr:neuron-type-bolew-unbranched-8 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0738312 , ILX:0738304 ;
+ilxtr:neuron-type-bolew-unbranched-8 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0738304 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , ILX:0738312 , ILX:0738304 , ILX:0738316 ;
    ilxtr:hasAxonSensoryLocation ILX:0738316 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0738312 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 .
-ilxtr:neuron-type-bolew-unbranched-9 ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0001737 , UBERON:0011326 ;
-   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , UBERON:0001737 , UBERON:0011326 , ILX:0738317 ;
+ilxtr:neuron-type-bolew-unbranched-9 ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0001737 ;
+   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , UBERON:0011326 , UBERON:0001737 , ILX:0738317 ;
    ilxtr:hasAxonSensoryLocation ILX:0738317 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0011326 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 .
-ilxtr:neuron-type-bolew-unbranched-10 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0789339 ;
+ilxtr:neuron-type-bolew-unbranched-10 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , ILX:0789339 , ILX:0738318 ;
    ilxtr:hasAxonSensoryLocation ILX:0738318 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0789339 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 .
-ilxtr:neuron-type-bolew-unbranched-11 ilxtr:hasAxonLocation ILX:0738313 , UBERON:0001649 ;
+ilxtr:neuron-type-bolew-unbranched-11 ilxtr:hasAxonLocation UBERON:0001649 ;
    ilxtr:hasConnectedLocation UBERON:0009050 , ILX:0738313 , UBERON:0001649 , UBERON:0001629 , UBERON:0005360 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001629 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0738313 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005360 .
-ilxtr:neuron-type-bolew-unbranched-12 ilxtr:hasAxonLocation UBERON:0009009 ;
-   ilxtr:hasConnectedLocation UBERON:0009050 , UBERON:0005360 , UBERON:0009009 , UBERON:0003708 ;
+ilxtr:neuron-type-bolew-unbranched-12 ilxtr:hasConnectedLocation UBERON:0009050 , UBERON:0005360 , UBERON:0009009 , UBERON:0003708 ;
    ilxtr:hasAxonSensoryLocation UBERON:0003708 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0009009 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005360 .
 ilxtr:neuron-type-bolew-unbranched-13 ilxtr:hasAxonLocation UBERON:0002440 , UBERON:0001990 , ILX:0738290 , ILX:0738292 ;
@@ -853,8 +914,8 @@ ilxtr:neuron-type-bolew-unbranched-29 ilxtr:hasAxonLocation UBERON:0002024 ;
    ilxtr:hasDendriteLocation UBERON:0001989 ;
    ilxtr:hasNeuronalPhenotype ilxtr:PostGanglionicPhenotype , ilxtr:SympatheticPhenotype ;
    ilxtr:hasSomaLocation UBERON:0001989 .
-ilxtr:neuron-type-bromo-1 ilxtr:hasAxonLocation ILX:0789862 , UBERON:0003715 , UBERON:0002318 , ILX:0785825 , ILX:0788022 , ILX:0792627 , ILX:0793220 , UBERON:0000961 , UBERON:0001235 , UBERON:0014617 ;
-   ilxtr:hasConnectedLocation ILX:0789862 , UBERON:0003715 , UBERON:0006465 , UBERON:0006466 , ILX:0793357 , UBERON:0006448 , UBERON:0006467 , UBERON:0006468 , UBERON:0006452 , UBERON:0006453 , UBERON:0006454 , UBERON:0006457 , UBERON:0006458 , UBERON:0006459 , UBERON:0002318 , ILX:0785825 , ILX:0788022 , ILX:0792627 , ILX:0793220 , UBERON:0000961 , UBERON:0001235 , UBERON:0014617 , UBERON:0001236 , UBERON:0006455 , UBERON:0006456 ;
+ilxtr:neuron-type-bromo-1 ilxtr:hasAxonLocation ILX:0789862 , UBERON:0018679 , UBERON:0002318 , ILX:0785825 , ILX:0788022 , ILX:0792627 , ILX:0793220 , UBERON:0000961 , UBERON:0001235 , UBERON:0014617 ;
+   ilxtr:hasConnectedLocation ILX:0789862 , UBERON:0018679 , UBERON:0006465 , UBERON:0006466 , ILX:0793357 , UBERON:0006448 , UBERON:0006467 , UBERON:0006468 , UBERON:0006452 , UBERON:0006453 , UBERON:0006454 , UBERON:0006457 , UBERON:0006458 , UBERON:0006459 , UBERON:0002318 , ILX:0785825 , ILX:0788022 , ILX:0792627 , ILX:0793220 , UBERON:0000961 , UBERON:0001235 , UBERON:0014617 , UBERON:0001236 , UBERON:0006455 , UBERON:0006456 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001236 ;
    ilxtr:hasNeuronalPhenotype ilxtr:SympatheticPhenotype , ilxtr:PreGanglionicPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006465 , UBERON:0006466 , ILX:0793357 , UBERON:0006448 , UBERON:0006467 , UBERON:0006468 , UBERON:0006452 , UBERON:0006453 , UBERON:0006454 , UBERON:0006457 , UBERON:0006458 , UBERON:0006459 , UBERON:0006455 , UBERON:0006456 .
@@ -911,15 +972,15 @@ ilxtr:neuron-type-keast-5 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0002318 
    ilxtr:hasNeuronalPhenotype ilxtr:ParasympatheticPhenotype , ilxtr:PreGanglionicPhenotype ;
    ilxtr:hasSomaLocation ILX:0738432 , UBERON:0006460 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-ilxtr:neuron-type-keast-6 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0018683 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
-   ilxtr:hasConnectedLocation UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0016508 , UBERON:0018683 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
+ilxtr:neuron-type-keast-6 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0005303 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0016508 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
    ilxtr:hasAxonTerminalLocation UBERON:0016508 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-keast-2 ;
    ilxtr:hasNeuronalPhenotype ilxtr:SympatheticPhenotype , ilxtr:PreGanglionicPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006448 , UBERON:0006450 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 ilxtr:neuron-type-keast-7 ilxtr:hasAxonLocation UBERON:0018683 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
-   ilxtr:hasConnectedLocation UBERON:0006448 , UBERON:0006450 , UBERON:0018683 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , UBERON:0006448 , UBERON:0006450 , UBERON:0002318 , ILX:0785825 , ILX:0793220 , UBERON:0005453 , ILX:0785421 , ILX:0785733 , ILX:0788675 , ILX:0793221 ;
    ilxtr:hasAxonTerminalLocation UBERON:0005453 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-keast-3 ;
    ilxtr:hasNeuronalPhenotype ilxtr:SympatheticPhenotype , ilxtr:PreGanglionicPhenotype ;
@@ -938,24 +999,27 @@ ilxtr:neuron-type-keast-9 ilxtr:hasAxonLocation UBERON:0011390 , UBERON:0002318 
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation ILX:0738432 , UBERON:0006447 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-ilxtr:neuron-type-keast-10 ilxtr:hasAxonLocation UBERON:0018675 , UBERON:0016508 , UBERON:0002318 , ILX:0793559 ;
+ilxtr:neuron-type-keast-10 ilxtr:hasAxonLocation UBERON:0002318 ;
    ilxtr:hasConnectedLocation UBERON:0018675 , ILX:0738432 , UBERON:0006460 , ILX:0793360 , UBERON:0002860 , UBERON:0016508 , UBERON:0002318 , ILX:0793559 , ILX:0738433 , UBERON:0001258 , ILX:0793663 , ILX:0793664 ;
    ilxtr:hasAxonSensoryLocation ILX:0738433 , UBERON:0001258 , ILX:0793663 , ILX:0793664 ;
    ilxtr:hasAxonTerminalLocation ILX:0738432 , UBERON:0006460 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018675 , UBERON:0016508 , ILX:0793559 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0793360 , UBERON:0002860 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-ilxtr:neuron-type-keast-11 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0016508 , UBERON:0018683 , UBERON:0002318 , ILX:0793559 , UBERON:0005453 ;
-   ilxtr:hasConnectedLocation UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0016508 , UBERON:0018683 , UBERON:0002318 , ILX:0793559 , ILX:0738433 , UBERON:0001258 , UBERON:0005453 , ILX:0793663 , ILX:0793664 ;
+ilxtr:neuron-type-keast-11 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0002318 , UBERON:0005453 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , UBERON:0005303 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0016508 , UBERON:0002318 , ILX:0793559 , ILX:0738433 , UBERON:0001258 , UBERON:0005453 , ILX:0793663 , ILX:0793664 ;
    ilxtr:hasAxonSensoryLocation ILX:0738433 , UBERON:0001258 , ILX:0793663 , ILX:0793664 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 , UBERON:0006450 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018683 , UBERON:0016508 , ILX:0793559 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-ilxtr:neuron-type-keast-12 ilxtr:hasAxonLocation UBERON:0011390 , UBERON:0002318 ;
+ilxtr:neuron-type-keast-12 ilxtr:hasAxonLocation UBERON:0002318 ;
    ilxtr:hasConnectedLocation ILX:0738432 , UBERON:0006460 , ILX:0793360 , UBERON:0002860 , UBERON:0011390 , UBERON:0002318 , ILX:0793141 ;
    ilxtr:hasAxonSensoryLocation ILX:0793141 ;
    ilxtr:hasAxonTerminalLocation ILX:0738432 , UBERON:0006460 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0011390 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0793360 , UBERON:0002860 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
@@ -1014,8 +1078,8 @@ ilxtr:neuron-type-keast-20 ilxtr:hasAxonLocation UBERON:0006465 , UBERON:0006466
    ilxtr:hasProjection ilxtr:SpinalCordDescendingProjectionPhenotype ;
    ilxtr:hasSomaLocation UBERON:0007632 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-ilxtr:neuron-type-pancr-1 ilxtr:hasAxonLocation ILX:0790146 , ILX:0791062 , ILX:0786141 , ILX:0789947 , UBERON:0002318 , ILX:0784378 , ILX:0784721 , ILX:0788026 , ILX:0789966 , ILX:0790482 , ILX:0791932 , UBERON:0018680 ;
-   ilxtr:hasConnectedLocation UBERON:0006465 , UBERON:0002262 , UBERON:0005479 , ILX:0790146 , ILX:0791062 , ILX:0786141 , ILX:0789947 , UBERON:0006453 , UBERON:0006454 , UBERON:0002318 , UBERON:0006455 , UBERON:0006456 , ILX:0784378 , ILX:0784721 , ILX:0788026 , ILX:0789966 , ILX:0790482 , ILX:0791932 , UBERON:0018680 ;
+ilxtr:neuron-type-pancr-1 ilxtr:hasAxonLocation UBERON:0018680 , ILX:0790146 , ILX:0791062 , ILX:0786141 , ILX:0789947 , UBERON:0002318 , ILX:0784378 , ILX:0784721 , ILX:0788026 , ILX:0789966 , ILX:0790482 , ILX:0791932 ;
+   ilxtr:hasConnectedLocation UBERON:0006465 , UBERON:0018680 , ILX:0790146 , ILX:0791062 , ILX:0786141 , ILX:0789947 , UBERON:0006453 , UBERON:0006454 , UBERON:0002318 , UBERON:0006455 , UBERON:0006456 , ILX:0784378 , ILX:0784721 , ILX:0788026 , ILX:0789966 , ILX:0790482 , ILX:0791932 , UBERON:0002262 , UBERON:0005479 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002262 , UBERON:0005479 ;
    ilxtr:hasDendriteLocation UBERON:0006465 , UBERON:0006453 , UBERON:0006454 , UBERON:0006455 , UBERON:0006456 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-pancr-2 ;
@@ -1044,16 +1108,17 @@ ilxtr:neuron-type-pancr-5 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasDendriteLocation UBERON:0002870 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-pancr-3 ;
    ilxtr:hasSomaLocation UBERON:0002870 .
-ilxtr:neuron-type-sdcol-b ilxtr:hasAxonLocation ILX:0788315 , ILX:0790472 , UBERON:0018683 , UBERON:0002318 , ILX:0785932 , ILX:0787520 , ILX:0788536 , ILX:0789968 , ILX:0793361 , ILX:0793362 ;
-   ilxtr:hasConnectedLocation ILX:0788315 , ILX:0790472 , UBERON:0006449 , UBERON:0006451 , UBERON:0018683 , UBERON:0002318 , UBERON:0005453 , ILX:0785932 , ILX:0787520 , ILX:0788536 , ILX:0789968 , ILX:0793361 , ILX:0793362 ;
+ilxtr:neuron-type-sdcol-b ilxtr:hasAxonLocation UBERON:0018683 , ILX:0788315 , ILX:0790472 , UBERON:0002318 , ILX:0785932 , ILX:0787520 , ILX:0788536 , ILX:0789968 , ILX:0793361 , ILX:0793362 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0788315 , ILX:0790472 , UBERON:0006449 , UBERON:0006451 , UBERON:0002318 , UBERON:0005453 , ILX:0785932 , ILX:0787520 , ILX:0788536 , ILX:0789968 , ILX:0793361 , ILX:0793362 ;
    ilxtr:hasAxonTerminalLocation UBERON:0005453 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-sdcol-d , ilxtr:neuron-type-sdcol-f , ilxtr:neuron-type-sdcol-g , ilxtr:neuron-type-sdcol-h ;
    ilxtr:hasNeuronalPhenotype ilxtr:SympatheticPhenotype , ilxtr:PreGanglionicPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006449 , UBERON:0006451 .
-ilxtr:neuron-type-sdcol-c ilxtr:hasAxonLocation UBERON:0002318 , ILX:0773760 , ILX:0776070 , ILX:0793632 ;
+ilxtr:neuron-type-sdcol-c ilxtr:hasAxonLocation UBERON:0002318 ;
    ilxtr:hasConnectedLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 , UBERON:0002318 , UBERON:0006447 , ILX:0773760 , ILX:0776070 , ILX:0793632 , ILX:0770759 , ILX:0771089 , ILX:0793657 , ILX:0793659 , UBERON:0002859 ;
    ilxtr:hasAxonSensoryLocation ILX:0770759 , ILX:0771089 , ILX:0793657 , ILX:0793659 ;
    ilxtr:hasAxonTerminalLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006447 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0773760 , ILX:0776070 , ILX:0793632 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0793359 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0003943 , UBERON:0002859 .
 ilxtr:neuron-type-sdcol-d ilxtr:hasAxonLocation ILX:0773760 , ILX:0776070 , ILX:0793632 , ILX:0770759 , ILX:0771089 , ILX:0793657 , ILX:0793659 ;
@@ -1141,7 +1206,7 @@ ilxtr:neuron-type-sdcol-q-prime ilxtr:hasAxonLocation ILX:0776070 , ILX:0793632 
    ilxtr:hasProjection ilxtr:IntestinoFugalProjectionPhenotype ;
    ilxtr:hasSomaLocation ILX:0793657 .
 ilxtr:neuron-type-splen-1 ilxtr:hasAxonLocation UBERON:0018680 ;
-   ilxtr:hasConnectedLocation ILX:0793082 , UBERON:0006453 , UBERON:0006454 , UBERON:0006455 , UBERON:0006456 , UBERON:0018680 ;
+   ilxtr:hasConnectedLocation ILX:0793082 , UBERON:0018680 , UBERON:0006453 , UBERON:0006454 , UBERON:0006455 , UBERON:0006456 ;
    ilxtr:hasAxonTerminalLocation ILX:0793082 ;
    ilxtr:hasDendriteLocation UBERON:0006453 , UBERON:0006454 , UBERON:0006455 , UBERON:0006456 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-splen-5 ;
@@ -1163,6 +1228,7 @@ ilxtr:neuron-type-splen-4 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , UBERON:0000468 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000468 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001759 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-splen-3 ;
    ilxtr:hasSomaLocation UBERON:0005363 .
@@ -1192,10 +1258,11 @@ ilxtr:neuron-type-sstom-4 ilxtr:hasConnectedLocation UBERON:0009050 , UBERON:000
    ilxtr:hasDendriteLocation UBERON:0009050 ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-sstom-1 ;
    ilxtr:hasSomaLocation UBERON:0009050 .
-ilxtr:neuron-type-sstom-5 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0793660 , UBERON:0001200 , UBERON:0001201 , UBERON:0001203 , UBERON:0001975 , UBERON:0008862 ;
+ilxtr:neuron-type-sstom-5 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , ILX:0793660 , UBERON:0001200 , UBERON:0001201 , UBERON:0001203 , UBERON:0001975 , UBERON:0008862 , ILX:0793656 , UBERON:0001199 , UBERON:0008857 , UBERON:0008863 , UBERON:0009960 , UBERON:0009961 , UBERON:0013473 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001199 , UBERON:0008857 , UBERON:0008863 , UBERON:0009960 , UBERON:0009961 , UBERON:0013473 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 , ILX:0793656 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001759 , ILX:0793660 , UBERON:0001200 , UBERON:0001201 , UBERON:0001203 , UBERON:0001975 , UBERON:0008862 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasForwardConnection ilxtr:neuron-type-sstom-4 , ilxtr:neuron-type-sstom-6 ;
    ilxtr:hasSomaLocation UBERON:0005363 .
@@ -1233,6 +1300,7 @@ ilxtr:neuron-type-sstom-12 ilxtr:hasAxonLocation UBERON:0001200 , UBERON:0001203
 kidney:131 ilxtr:hasAxonLocation UBERON:0018681 ;
    ilxtr:hasConnectedLocation ILX:0794730 , UBERON:0018681 , ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793818 ;
    ilxtr:hasAxonTerminalLocation ILX:0794730 ;
+   ilxtr:hasForwardConnection kidney:132 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793818 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1243,8 +1311,9 @@ kidney:132 ilxtr:hasAxonLocation UBERON:0018676 ;
    ilxtr:hasSomaLocation ILX:0794730 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 kidney:133 ilxtr:hasAxonLocation UBERON:0001964 ;
-   ilxtr:hasConnectedLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793818 , UBERON:0001964 , ILX:0795057 ;
+   ilxtr:hasConnectedLocation UBERON:0001964 , ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793818 , ILX:0795057 ;
    ilxtr:hasAxonTerminalLocation ILX:0795057 ;
+   ilxtr:hasForwardConnection kidney:134 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793818 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1257,6 +1326,7 @@ kidney:134 ilxtr:hasAxonLocation UBERON:0018676 ;
 kidney:135 ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0018676 , ILX:0794853 , UBERON:0003535 , UBERON:0035772 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0002870 , UBERON:0018676 , ILX:0794853 , UBERON:0003535 , UBERON:0035772 , ILX:0795056 ;
    ilxtr:hasAxonTerminalLocation ILX:0795056 ;
+   ilxtr:hasForwardConnection kidney:136 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1269,6 +1339,7 @@ kidney:136 ilxtr:hasAxonLocation UBERON:0011929 ;
 kidney:137 ilxtr:hasAxonLocation UBERON:0005303 , UBERON:0018675 , UBERON:0002014 ;
    ilxtr:hasConnectedLocation UBERON:0005303 , UBERON:0018675 , UBERON:0006461 , UBERON:0002014 , UBERON:0006462 , UBERON:0006463 , ILX:0795056 ;
    ilxtr:hasAxonTerminalLocation ILX:0795056 ;
+   ilxtr:hasForwardConnection kidney:138 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1278,118 +1349,144 @@ kidney:138 ilxtr:hasAxonLocation UBERON:0011929 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-post ;
    ilxtr:hasSomaLocation ILX:0795056 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-kidney:139 ilxtr:hasAxonLocation UBERON:0018681 , UBERON:0001964 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 ;
-   ilxtr:hasConnectedLocation UBERON:0002857 , UBERON:0018681 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0795054 , UBERON:0001964 , UBERON:0001184 , UBERON:0002113 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 ;
+kidney:139 ilxtr:hasAxonLocation ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 ;
+   ilxtr:hasConnectedLocation UBERON:0001964 , UBERON:0018681 , UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0795054 , UBERON:0001184 , UBERON:0002113 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 ;
    ilxtr:hasAxonSensoryLocation ILX:0795054 , UBERON:0001184 , UBERON:0002113 ;
    ilxtr:hasAxonTerminalLocation ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001964 , UBERON:0018681 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 kidney:140 ilxtr:hasAxonLocation ILX:0731969 ;
    ilxtr:hasConnectedLocation ILX:0794730 , ILX:0794764 , UBERON:0006465 , UBERON:0006466 , UBERON:0006467 , UBERON:0006468 , ILX:0731969 ;
    ilxtr:hasAxonTerminalLocation ILX:0794730 , ILX:0794764 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-pre ;
+   ilxtr:hasForwardConnection kidney:141 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation UBERON:0006465 , UBERON:0006466 , UBERON:0006467 , UBERON:0006468 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
 kidney:141 ilxtr:hasAxonLocation UBERON:0011926 ;
    ilxtr:hasConnectedLocation ILX:0794730 , ILX:0794764 , UBERON:0011926 , UBERON:0002113 , UBERON:0005006 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002113 , UBERON:0005006 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-post ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasSomaLocation ILX:0794730 , ILX:0794764 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
 kidney:142 ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0018676 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0002870 , UBERON:0018676 , ILX:0795057 ;
    ilxtr:hasAxonTerminalLocation ILX:0795057 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-para-pre ;
+   ilxtr:hasForwardConnection kidney:143 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
 kidney:143 ilxtr:hasAxonLocation UBERON:0011929 ;
    ilxtr:hasConnectedLocation UBERON:0011929 , ILX:0795057 , UBERON:0001184 , ILX:0795058 , UBERON:0001224 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001184 , ILX:0795058 , UBERON:0001224 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-para-post ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-post ;
    ilxtr:hasSomaLocation ILX:0795057 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
-kidney:144 ilxtr:hasAxonLocation UBERON:0018681 , UBERON:0001964 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0792058 ;
-   ilxtr:hasConnectedLocation UBERON:0002856 , UBERON:0002857 , UBERON:0018681 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , UBERON:0001964 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 , ILX:0792058 , ILX:0795030 , UBERON:0001225 , UBERON:0001230 , UBERON:0003517 ;
+kidney:144 ilxtr:hasAxonLocation ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0792058 ;
+   ilxtr:hasConnectedLocation UBERON:0001964 , UBERON:0018681 , UBERON:0002856 , UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0787665 , ILX:0787779 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 , ILX:0792058 , ILX:0795030 , UBERON:0001225 , UBERON:0001230 , UBERON:0003517 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001225 , UBERON:0001230 , UBERON:0003517 ;
    ilxtr:hasAxonTerminalLocation ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795029 , ILX:0795030 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001964 , UBERON:0018681 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
-kidney:145 ilxtr:hasAxonLocation ILX:0794476 , UBERON:0001759 ;
+kidney:145 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation ILX:0794476 , UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , UBERON:0005006 ;
    ilxtr:hasAxonSensoryLocation UBERON:0005006 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794476 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
-kidney:146 ilxtr:hasAxonLocation UBERON:0003715 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0003715 , UBERON:0005479 , ILX:0786933 , ILX:0788315 , ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006468 , ILX:0795057 ;
-   ilxtr:hasAxonTerminalLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0005479 , ILX:0786933 , ILX:0788315 , ILX:0795057 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-pre ;
+kidney:146 ilxtr:hasAxonLocation ILX:0793220 , ILX:0793221 , ILX:0793361 , ILX:0793218 , ILX:0793219 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0786933 , ILX:0788315 , ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006468 , ILX:0793220 , ILX:0793221 , ILX:0793361 , ILX:0793218 , ILX:0793219 ;
+   ilxtr:hasAxonTerminalLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0786933 , ILX:0788315 ;
+   ilxtr:hasForwardConnection kidney:147 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006468 ;
    ilxtr:isObservedInSpecies NCBITaxon:9685 .
-kidney:147 ilxtr:hasAxonLocation UBERON:0018676 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0005479 , ILX:0786933 , ILX:0788315 , UBERON:0018676 , ILX:0795057 , UBERON:0002113 ;
-   ilxtr:hasAxonTerminalLocation UBERON:0002113 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-post ;
-   ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0005479 , ILX:0786933 , ILX:0788315 , ILX:0795057 ;
+kidney:146-1 ilxtr:hasAxonLocation UBERON:0001964 , UBERON:0018683 ;
+   ilxtr:hasConnectedLocation UBERON:0001964 , UBERON:0018683 , ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006468 , UBERON:0005479 , ILX:0795057 ;
+   ilxtr:hasAxonTerminalLocation UBERON:0005479 , ILX:0795057 ;
+   ilxtr:hasForwardConnection kidney:147-1 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
+   ilxtr:hasSomaLocation ILX:0793357 , UBERON:0006448 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0006468 ;
    ilxtr:isObservedInSpecies NCBITaxon:9685 .
-kidney:148 ilxtr:hasAxonLocation UBERON:0018683 , ILX:0787779 , ILX:0792058 , ILX:0787227 ;
-   ilxtr:hasConnectedLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0018683 , UBERON:0002113 , ILX:0787779 , ILX:0795029 , ILX:0792058 , ILX:0795030 , ILX:0787227 , ILX:0795031 ;
+kidney:147 ilxtr:hasAxonLocation UBERON:0001964 , UBERON:0018683 , UBERON:0018676 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0001964 , UBERON:0018683 , ILX:0786933 , ILX:0788315 , UBERON:0018676 , UBERON:0002113 ;
+   ilxtr:hasAxonTerminalLocation UBERON:0002113 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
+   ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0786933 , ILX:0788315 ;
+   ilxtr:isObservedInSpecies NCBITaxon:9685 .
+kidney:147-1 ilxtr:hasAxonLocation UBERON:0018676 ;
+   ilxtr:hasConnectedLocation UBERON:0005479 , UBERON:0018676 , ILX:0795057 , UBERON:0002113 ;
+   ilxtr:hasAxonTerminalLocation UBERON:0002113 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
+   ilxtr:hasSomaLocation UBERON:0005479 , ILX:0795057 ;
+   ilxtr:isObservedInSpecies NCBITaxon:9685 .
+kidney:148 ilxtr:hasAxonLocation ILX:0787779 , ILX:0792058 , ILX:0787227 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , UBERON:0002856 , UBERON:0002857 , UBERON:0002858 , UBERON:0002113 , ILX:0787779 , ILX:0795029 , ILX:0792058 , ILX:0795030 , ILX:0787227 , ILX:0795031 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002113 ;
    ilxtr:hasAxonTerminalLocation ILX:0795029 , ILX:0795030 , ILX:0795031 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018683 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 , UBERON:0002858 ;
    ilxtr:isObservedInSpecies NCBITaxon:9685 .
 kidney:149 ilxtr:hasAxonLocation ILX:0793220 , ILX:0793218 , ILX:0793219 ;
    ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , ILX:0793220 , ILX:0793816 , ILX:0793818 , ILX:0793218 , ILX:0793219 , ILX:0793817 ;
    ilxtr:hasAxonTerminalLocation ILX:0739295 , ILX:0787009 , ILX:0789862 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-pre ;
+   ilxtr:hasForwardConnection kidney:150 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793816 , ILX:0793818 , ILX:0793817 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-kidney:150 ilxtr:hasAxonLocation UBERON:0003715 , UBERON:0018676 ;
-   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0003715 , UBERON:0018676 , UBERON:0002303 , UBERON:0004639 , UBERON:0004640 , UBERON:0001225 , UBERON:0006851 , UBERON:0006853 ;
+kidney:150 ilxtr:hasAxonLocation UBERON:0001964 , UBERON:0018676 ;
+   ilxtr:hasConnectedLocation ILX:0739295 , ILX:0787009 , ILX:0789862 , UBERON:0001964 , UBERON:0018676 , UBERON:0002303 , UBERON:0004639 , UBERON:0004640 , UBERON:0001225 , UBERON:0006851 , UBERON:0006853 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002303 , UBERON:0004639 , UBERON:0004640 , UBERON:0001225 , UBERON:0006851 , UBERON:0006853 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-post ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasSomaLocation ILX:0739295 , ILX:0787009 , ILX:0789862 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 kidney:151 ilxtr:hasAxonLocation UBERON:0002010 , ILX:0793220 , ILX:0793218 , ILX:0793219 ;
    ilxtr:hasConnectedLocation ILX:0794764 , ILX:0793082 , UBERON:0002010 , ILX:0793220 , ILX:0793816 , ILX:0793818 , ILX:0793218 , ILX:0793219 , ILX:0793817 ;
    ilxtr:hasAxonTerminalLocation ILX:0794764 , ILX:0793082 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-pre ;
+   ilxtr:hasForwardConnection kidney:152 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793816 , ILX:0793818 , ILX:0793817 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 kidney:152 ilxtr:hasAxonLocation UBERON:0018676 ;
    ilxtr:hasConnectedLocation ILX:0794764 , ILX:0793082 , UBERON:0018676 , UBERON:0002303 , UBERON:0004639 , UBERON:0004640 , UBERON:0001225 , UBERON:0006851 , UBERON:0006853 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002303 , UBERON:0004639 , UBERON:0004640 , UBERON:0001225 , UBERON:0006851 , UBERON:0006853 ;
-   ilxtr:hasCircuitRole ilxtr:neuron-phenotype-sym-post ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasSomaLocation ILX:0794764 , ILX:0793082 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-kidney:153 ilxtr:hasAxonLocation UBERON:0018683 , ILX:0784588 , ILX:0784992 , ILX:0785488 , ILX:0786788 , ILX:0789839 , ILX:0790414 , ILX:0792342 , ILX:0795050 ;
+kidney:153 ilxtr:hasAxonLocation ILX:0784588 , ILX:0784992 , ILX:0785488 , ILX:0786788 , ILX:0789839 , ILX:0790414 , ILX:0792342 , ILX:0795050 ;
    ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0784588 , ILX:0784992 , ILX:0785488 , ILX:0786788 , ILX:0789839 , ILX:0790414 , ILX:0792342 , ILX:0795050 , ILX:0795032 , ILX:0795033 , ILX:0795034 , ILX:0795035 , ILX:0795036 , ILX:0795037 , ILX:0795038 , ILX:0795039 , UBERON:0004538 , ILX:0785409 , ILX:0785729 , ILX:0786477 , ILX:0787810 , ILX:0790494 , ILX:0792057 , ILX:0792508 , ILX:0795052 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004538 ;
    ilxtr:hasAxonTerminalLocation ILX:0795032 , ILX:0795033 , ILX:0795034 , ILX:0795035 , ILX:0795036 , ILX:0795037 , ILX:0795038 , ILX:0795039 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018683 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0785409 , ILX:0785729 , ILX:0786477 , ILX:0787810 , ILX:0790494 , ILX:0792057 , ILX:0792508 , ILX:0795052 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-kidney:154 ilxtr:hasAxonLocation UBERON:0018683 , ILX:0785098 , ILX:0785477 , ILX:0785947 , ILX:0786402 , ILX:0786793 , ILX:0786813 , ILX:0787781 , ILX:0792995 , ILX:0795049 ;
+kidney:154 ilxtr:hasAxonLocation ILX:0785098 , ILX:0785477 , ILX:0785947 , ILX:0786402 , ILX:0786793 , ILX:0786813 , ILX:0787781 , ILX:0792995 , ILX:0795049 ;
    ilxtr:hasConnectedLocation UBERON:0018683 , ILX:0785098 , ILX:0785477 , ILX:0785947 , ILX:0786402 , ILX:0786793 , ILX:0786813 , ILX:0787781 , ILX:0792995 , ILX:0795049 , ILX:0795040 , ILX:0795041 , ILX:0795042 , ILX:0795043 , ILX:0795044 , ILX:0795045 , ILX:0795046 , ILX:0795047 , ILX:0795048 , UBERON:0004539 , ILX:0785659 , ILX:0786372 , ILX:0786989 , ILX:0787285 , ILX:0788647 , ILX:0788711 , ILX:0791153 , ILX:0791527 , ILX:0795051 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004539 ;
    ilxtr:hasAxonTerminalLocation ILX:0795040 , ILX:0795041 , ILX:0795042 , ILX:0795043 , ILX:0795044 , ILX:0795045 , ILX:0795046 , ILX:0795047 , ILX:0795048 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018683 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0785659 , ILX:0786372 , ILX:0786989 , ILX:0787285 , ILX:0788647 , ILX:0788711 , ILX:0791153 , ILX:0791527 , ILX:0795051 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-kidney:155 ilxtr:hasAxonLocation ILX:0794476 , UBERON:0001759 ;
+kidney:155 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation ILX:0794476 , UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , UBERON:0002113 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002113 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794476 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 liver:105 ilxtr:hasAxonLocation UBERON:0018679 ;
-   ilxtr:hasConnectedLocation ILX:0793082 , ILX:0793814 , ILX:0793815 , ILX:0793816 , UBERON:0018679 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
+   ilxtr:hasConnectedLocation UBERON:0018679 , ILX:0793082 , ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:hasAxonTerminalLocation ILX:0793082 ;
+   ilxtr:hasForwardConnection liver:106 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
@@ -1398,6 +1495,13 @@ liver:106 ilxtr:hasAxonLocation ILX:0795008 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001193 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
    ilxtr:hasSomaLocation ILX:0793082 ;
+   ilxtr:isObservedInSpecies NCBITaxon:10116 .
+liver:107 ilxtr:hasAxonLocation UBERON:0018679 ;
+   ilxtr:hasConnectedLocation UBERON:0018679 , ILX:0793082 , ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
+   ilxtr:hasAxonTerminalLocation ILX:0793082 ;
+   ilxtr:hasForwardConnection liver:108 ;
+   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
+   ilxtr:hasSomaLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 liver:108 ilxtr:hasAxonLocation ILX:0795009 ;
    ilxtr:hasConnectedLocation ILX:0793082 , ILX:0795009 , UBERON:0002017 ;
@@ -1408,6 +1512,7 @@ liver:108 ilxtr:hasAxonLocation ILX:0795009 ;
 liver:109 ilxtr:hasAxonLocation ILX:0790553 , ILX:0793826 , ILX:0794142 ;
    ilxtr:hasConnectedLocation UBERON:0002870 , ILX:0790553 , ILX:0793826 , ILX:0794142 , ILX:0795010 ;
    ilxtr:hasAxonTerminalLocation ILX:0795010 ;
+   ilxtr:hasForwardConnection liver:110 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
@@ -1420,6 +1525,7 @@ liver:110 ilxtr:hasAxonLocation ILX:0795008 ;
 liver:111 ilxtr:hasAxonLocation ILX:0793827 , ILX:0794141 , ILX:0794506 ;
    ilxtr:hasConnectedLocation UBERON:0001719 , ILX:0795010 , ILX:0793827 , ILX:0794141 , ILX:0794506 ;
    ilxtr:hasAxonTerminalLocation ILX:0795010 ;
+   ilxtr:hasForwardConnection liver:112 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0001719 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
@@ -1429,30 +1535,34 @@ liver:112 ilxtr:hasAxonLocation ILX:0795009 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-post ;
    ilxtr:hasSomaLocation ILX:0795010 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-liver:113 ilxtr:hasAxonLocation UBERON:0003715 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0784605 , ILX:0789741 , ILX:0792624 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , UBERON:0002017 , UBERON:0002394 , ILX:0784605 , ILX:0789741 , ILX:0792624 , ILX:0795023 , ILX:0795024 , ILX:0795025 , UBERON:0001279 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
+liver:113 ilxtr:hasAxonLocation ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0784605 , ILX:0789741 , ILX:0792624 ;
+   ilxtr:hasConnectedLocation UBERON:0018679 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , UBERON:0002017 , UBERON:0002394 , ILX:0784605 , ILX:0789741 , ILX:0792624 , ILX:0795023 , ILX:0795024 , ILX:0795025 , UBERON:0001279 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002017 , UBERON:0002394 , UBERON:0001279 ;
    ilxtr:hasAxonTerminalLocation ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795023 , ILX:0795024 , ILX:0795025 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018679 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-liver:114 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0793826 ;
+liver:114 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0002017 , ILX:0793826 , UBERON:0002394 , UBERON:0015423 , ILX:0790316 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002017 , UBERON:0002394 , UBERON:0015423 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0793826 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0790316 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
-liver:115 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0793827 , ILX:0789580 , ILX:0795011 ;
+liver:115 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0002017 , ILX:0793827 , UBERON:0002394 , ILX:0789580 , ILX:0795011 , ILX:0792433 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002017 , UBERON:0002394 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0793827 , ILX:0789580 , ILX:0795011 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation ILX:0792433 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 liver:116 ilxtr:hasAxonLocation UBERON:0018680 ;
    ilxtr:hasConnectedLocation UBERON:0018680 , ILX:0793814 , ILX:0793811 , ILX:0793812 , ILX:0793813 , ILX:0795012 ;
    ilxtr:hasAxonTerminalLocation ILX:0795012 ;
+   ilxtr:hasForwardConnection liver:117 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1465,6 +1575,7 @@ liver:117 ilxtr:hasAxonLocation ILX:0795008 ;
 liver:118 ilxtr:hasAxonLocation UBERON:0018680 ;
    ilxtr:hasConnectedLocation UBERON:0018680 , ILX:0793814 , ILX:0793811 , ILX:0793812 , ILX:0793813 , ILX:0795014 ;
    ilxtr:hasAxonTerminalLocation ILX:0795014 ;
+   ilxtr:hasForwardConnection liver:119 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1490,6 +1601,7 @@ liver:121 ilxtr:hasAxonLocation ILX:0771304 ;
 liver:122 ilxtr:hasAxonLocation ILX:0790553 , ILX:0793826 , ILX:0794142 ;
    ilxtr:hasConnectedLocation UBERON:0002870 , ILX:0790553 , ILX:0793826 , ILX:0794142 , ILX:0795010 ;
    ilxtr:hasAxonTerminalLocation ILX:0795010 ;
+   ilxtr:hasForwardConnection liver:123 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1502,6 +1614,7 @@ liver:123 ilxtr:hasAxonLocation ILX:0795008 ;
 liver:124 ilxtr:hasAxonLocation ILX:0793827 , ILX:0794141 , ILX:0794506 ;
    ilxtr:hasConnectedLocation UBERON:0002870 , ILX:0795010 , ILX:0793827 , ILX:0794141 , ILX:0794506 ;
    ilxtr:hasAxonTerminalLocation ILX:0795010 ;
+   ilxtr:hasForwardConnection liver:125 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -1511,23 +1624,26 @@ liver:125 ilxtr:hasAxonLocation ILX:0795009 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-post ;
    ilxtr:hasSomaLocation ILX:0795010 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-liver:126 ilxtr:hasAxonLocation UBERON:0003715 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0784605 , ILX:0789741 , ILX:0792624 ;
-   ilxtr:hasConnectedLocation UBERON:0003715 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , UBERON:0002017 , UBERON:0002394 , ILX:0784605 , ILX:0789741 , ILX:0792624 , ILX:0795023 , ILX:0795024 , ILX:0795025 , UBERON:0001279 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
+liver:126 ilxtr:hasAxonLocation ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0784605 , ILX:0789741 , ILX:0792624 ;
+   ilxtr:hasConnectedLocation UBERON:0018679 , UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , ILX:0787665 , ILX:0789892 , ILX:0790338 , ILX:0795026 , ILX:0795027 , ILX:0795028 , UBERON:0002017 , UBERON:0002394 , ILX:0784605 , ILX:0789741 , ILX:0792624 , ILX:0795023 , ILX:0795024 , ILX:0795025 , UBERON:0001279 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002017 , UBERON:0002394 , UBERON:0001279 ;
    ilxtr:hasAxonTerminalLocation ILX:0795026 , ILX:0795027 , ILX:0795028 , ILX:0795023 , ILX:0795024 , ILX:0795025 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0018679 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002853 , UBERON:0002854 , UBERON:0002855 , UBERON:0002850 , UBERON:0002851 , UBERON:0002852 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-liver:127 ilxtr:hasAxonLocation UBERON:0001759 , ILX:0793826 ;
+liver:127 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0005363 , ILX:0793826 , UBERON:0002394 , UBERON:0015423 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002394 , UBERON:0015423 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0793826 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 liver:130 ilxtr:hasAxonLocation UBERON:0018679 ;
-   ilxtr:hasConnectedLocation ILX:0794730 , ILX:0793082 , ILX:0793814 , ILX:0793815 , ILX:0793816 , UBERON:0018679 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
+   ilxtr:hasConnectedLocation ILX:0794730 , UBERON:0018679 , ILX:0793082 , ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:hasAxonTerminalLocation ILX:0794730 , ILX:0793082 ;
+   ilxtr:hasForwardConnection liver:131 , liver:132 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793814 , ILX:0793815 , ILX:0793816 , ILX:0793811 , ILX:0793812 , ILX:0793813 ;
    ilxtr:isObservedInSpecies NCBITaxon:10090 .
@@ -1598,9 +1714,9 @@ mmset1:13 ilxtr:hasAxonLocation ILX:0793714 ;
    ilxtr:hasNeuronalPhenotype ilxtr:EntericPhenotype ;
    ilxtr:hasSomaLocation ILX:0793735 ;
    ilxtr:isObservedInSpecies NCBITaxon:10141 .
-mmset1:14 ilxtr:hasAxonLocation UBERON:0001759 ;
-   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0005363 , UBERON:0002370 ;
+mmset1:14 ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0005363 , UBERON:0002370 ;
    ilxtr:hasAxonSensoryLocation UBERON:0002370 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001759 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
@@ -1704,40 +1820,41 @@ mmset4:3e ilxtr:hasAxonLocation UBERON:0002014 , ILX:0793808 , ILX:0793809 ;
    ilxtr:hasSomaLocation UBERON:0016508 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 mmset4:4a ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0035772 ;
-   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , UBERON:0035772 , ILX:0793833 ;
-   ilxtr:hasAxonTerminalLocation ILX:0793833 ;
+   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0009050 , ILX:0794910 , UBERON:0035772 ;
+   ilxtr:hasAxonTerminalLocation ILX:0794910 ;
    ilxtr:hasForwardConnection mmset4:5 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0009050 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 mmset4:4b ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0035772 ;
-   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0001719 , UBERON:0035772 , ILX:0793833 ;
-   ilxtr:hasAxonTerminalLocation ILX:0793833 ;
+   ilxtr:hasConnectedLocation UBERON:0001759 , ILX:0794910 , UBERON:0001719 , UBERON:0035772 ;
+   ilxtr:hasAxonTerminalLocation ILX:0794910 ;
    ilxtr:hasForwardConnection mmset4:5 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0001719 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 mmset4:4c ilxtr:hasAxonLocation UBERON:0001759 , UBERON:0035772 ;
-   ilxtr:hasConnectedLocation UBERON:0001759 , UBERON:0002870 , UBERON:0035772 , ILX:0793833 ;
-   ilxtr:hasAxonTerminalLocation ILX:0793833 ;
+   ilxtr:hasConnectedLocation UBERON:0001759 , ILX:0794910 , UBERON:0002870 , UBERON:0035772 ;
+   ilxtr:hasAxonTerminalLocation ILX:0794910 ;
    ilxtr:hasForwardConnection mmset4:5 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-pre ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0002870 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 mmset4:5 ilxtr:hasAxonLocation ILX:0793832 ;
-   ilxtr:hasConnectedLocation ILX:0793832 , UBERON:0000992 , ILX:0793833 ;
+   ilxtr:hasConnectedLocation ILX:0793832 , UBERON:0000992 , ILX:0794910 ;
    ilxtr:hasAxonTerminalLocation UBERON:0000992 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-para-post ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0793833 ;
+   ilxtr:hasSomaLocation ILX:0794910 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 .
 mmset4:6 ilxtr:hasAxonLocation UBERON:0001759 ;
    ilxtr:hasConnectedLocation UBERON:0000992 , UBERON:0001759 , UBERON:0009050 , UBERON:0005363 ;
    ilxtr:hasAxonSensoryLocation UBERON:0000992 ;
    ilxtr:hasAxonTerminalLocation UBERON:0009050 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001759 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation UBERON:0005363 ;
@@ -1765,21 +1882,14 @@ mmset4:9 ilxtr:hasAxonLocation ILX:0793832 , UBERON:0035772 ;
    ilxtr:hasPhenotypicSex PATO:0000383 ;
    ilxtr:hasSomaLocation ILX:0793821 ;
    ilxtr:isObservedInSpecies NCBITaxon:10116 , NCBITaxon:9606 .
-mmset4:10 ilxtr:hasAxonLocation ILX:0793822 ;
-   ilxtr:hasConnectedLocation ILX:0793822 , ILX:0793082 , UBERON:0000992 ;
-   ilxtr:hasAxonTerminalLocation UBERON:0000992 ;
-   ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-post ;
-   ilxtr:hasPhenotypicSex PATO:0000383 ;
-   ilxtr:hasSomaLocation ILX:0793082 ;
-   ilxtr:isObservedInSpecies NCBITaxon:10116 .
 mmset4:11 ilxtr:hasAxonLocation UBERON:0018680 ;
-   ilxtr:hasConnectedLocation UBERON:0001236 , UBERON:0018680 , ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
+   ilxtr:hasConnectedLocation UBERON:0018680 , UBERON:0001236 , ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001236 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 mmset4:12 ilxtr:hasAxonLocation UBERON:0018680 ;
-   ilxtr:hasConnectedLocation UBERON:0002262 , UBERON:0018680 , ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
+   ilxtr:hasConnectedLocation UBERON:0018680 , UBERON:0002262 , ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
    ilxtr:hasAxonTerminalLocation UBERON:0002262 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
    ilxtr:hasSomaLocation ILX:0793811 , ILX:0793812 , ILX:0793700 , ILX:0793701 ;
@@ -5770,7 +5880,7 @@ prostate:18 ilxtr:hasAxonLocation UBERON:0011929 ;
    ilxtr:hasSomaLocation UBERON:0016508 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 prostate:24 ilxtr:hasAxonLocation UBERON:0018683 ;
-   ilxtr:hasConnectedLocation UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0018683 , UBERON:0005453 , UBERON:0006447 ;
+   ilxtr:hasConnectedLocation UBERON:0018683 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0005453 , UBERON:0006447 ;
    ilxtr:hasAxonTerminalLocation UBERON:0005453 ;
    ilxtr:hasForwardConnection prostate:25 ;
    ilxtr:hasNeuronalPhenotype ilxtr:neuron-phenotype-sym-pre ;
@@ -5974,8 +6084,14 @@ senmot:10 ilxtr:hasAxonLocation UBERON:0001148 ;
    ilxtr:hasSomaLocation UBERON:0006470 , UBERON:0006493 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 senmot:11 ilxtr:hasAxonLocation UBERON:0001148 , ILX:0795018 ;
-   ilxtr:hasConnectedLocation UBERON:0006493 , UBERON:0006492 , UBERON:0001148 , ILX:0795018 , UBERON:0001501 ;
-   ilxtr:hasAxonTerminalLocation UBERON:0001501 ;
+   ilxtr:hasConnectedLocation UBERON:0006493 , UBERON:0006492 , UBERON:0001148 , ILX:0795018 , ILX:0795064 ;
+   ilxtr:hasAxonTerminalLocation ILX:0795064 ;
+   ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
+   ilxtr:hasSomaLocation UBERON:0006493 , UBERON:0006492 ;
+   ilxtr:isObservedInSpecies NCBITaxon:9606 .
+senmot:12 ilxtr:hasAxonLocation UBERON:0001148 , ILX:0795018 ;
+   ilxtr:hasConnectedLocation UBERON:0006493 , UBERON:0006492 , UBERON:0001148 , ILX:0795018 , ILX:0795065 ;
+   ilxtr:hasAxonTerminalLocation ILX:0795065 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006493 , UBERON:0006492 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -6003,31 +6119,35 @@ senmot:16 ilxtr:hasAxonLocation ILX:0794950 , ILX:0794966 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006470 , UBERON:0006493 , UBERON:0006492 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:17 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0003724 ;
+senmot:17 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006493 , UBERON:0002843 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0003724 , UBERON:0016884 , UBERON:0002842 ;
    ilxtr:hasAxonSensoryLocation UBERON:0016884 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0003724 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:18 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0003724 , ILX:0794951 ;
+senmot:18 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006493 , UBERON:0002843 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0003724 , UBERON:0016884 , UBERON:0002842 , ILX:0794951 ;
    ilxtr:hasAxonSensoryLocation UBERON:0016884 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0003724 , ILX:0794951 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:19 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794967 ;
+senmot:19 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006493 , UBERON:0002843 , UBERON:0007711 , UBERON:0006492 , ILX:0794967 , UBERON:0003228 ;
    ilxtr:hasAxonSensoryLocation UBERON:0003228 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006493 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794967 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0007711 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:20 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0003724 , ILX:0794951 ;
+senmot:20 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006493 , UBERON:0002843 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0003724 , UBERON:0002842 , ILX:0794951 , UBERON:0011011 ;
    ilxtr:hasAxonSensoryLocation UBERON:0011011 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0003724 , ILX:0794951 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -6074,50 +6194,56 @@ senmot:27 ilxtr:hasAxonLocation ILX:0794969 ;
    ilxtr:hasSomaLocation UBERON:0006457 , UBERON:0006470 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
 senmot:28 ilxtr:hasAxonLocation ILX:0794969 ;
-   ilxtr:hasConnectedLocation UBERON:0006457 , UBERON:0006470 , UBERON:0001501 , ILX:0794969 ;
+   ilxtr:hasConnectedLocation UBERON:0006457 , UBERON:0006470 , ILX:0794969 , UBERON:0001501 ;
    ilxtr:hasAxonTerminalLocation UBERON:0001501 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006457 , UBERON:0006470 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:29 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794970 ;
+senmot:29 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0002844 , UBERON:0002845 , ILX:0794970 , UBERON:0005278 , UBERON:0013777 , UBERON:4200013 ;
    ilxtr:hasAxonSensoryLocation UBERON:0005278 , UBERON:0013777 , UBERON:4200013 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794970 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002844 , UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:30 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794952 ;
+senmot:30 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0002845 , ILX:0794952 , UBERON:0004263 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004263 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794952 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:31 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794953 ;
+senmot:31 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0002844 , UBERON:0002845 , ILX:0794953 , UBERON:0003403 ;
    ilxtr:hasAxonSensoryLocation UBERON:0003403 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794953 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002844 , UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:32 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001494 ;
+senmot:32 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0001494 , ILX:0794971 ;
    ilxtr:hasAxonSensoryLocation ILX:0794971 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001494 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:33 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001494 ;
+senmot:33 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0001494 , ILX:0794954 , ILX:0794955 ;
    ilxtr:hasAxonSensoryLocation ILX:0794954 , ILX:0794955 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001494 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:34 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001494 ;
+senmot:34 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0001494 , UBERON:0005278 , ILX:0794960 ;
    ilxtr:hasAxonSensoryLocation UBERON:0005278 , ILX:0794960 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001494 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -6265,66 +6391,75 @@ senmot:58 ilxtr:hasAxonLocation ILX:0794967 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006470 , UBERON:0006493 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:59 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001493 ;
+senmot:59 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006491 , UBERON:0002842 , UBERON:0001493 , UBERON:0001470 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001470 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006491 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001493 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:60 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0741757 ;
+senmot:60 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , ILX:0741757 , UBERON:0001483 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001483 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0741757 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:61 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0795005 ;
+senmot:61 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , UBERON:0004263 , ILX:0795005 , UBERON:0001517 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004263 , UBERON:0001517 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0795005 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:62 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0741799 ;
+senmot:62 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , UBERON:0004263 , ILX:0741799 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004263 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0741799 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:63 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001492 ;
+senmot:63 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , UBERON:0003403 , UBERON:0001492 ;
    ilxtr:hasAxonSensoryLocation UBERON:0003403 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001492 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:64 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794967 ;
+senmot:64 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , ILX:0794967 , ILX:0794962 ;
    ilxtr:hasAxonSensoryLocation ILX:0794962 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794967 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:65 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794967 ;
+senmot:65 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , ILX:0794967 , ILX:0794961 , UBERON:0011968 ;
    ilxtr:hasAxonSensoryLocation ILX:0794961 , UBERON:0011968 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794967 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:66 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001492 ;
+senmot:66 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0002842 , UBERON:0001492 , UBERON:0001463 , UBERON:0003622 , UBERON:0003623 , UBERON:0005276 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001463 , UBERON:0003622 , UBERON:0003623 , UBERON:0005276 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006457 , UBERON:0006470 , UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001492 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0002844 , UBERON:0002845 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:67 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0003724 , ILX:0794951 ;
+senmot:67 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006493 , UBERON:0002843 , UBERON:0007711 , UBERON:0006491 , UBERON:0006492 , UBERON:0003724 , UBERON:0002842 , ILX:0794951 , UBERON:0003403 , UBERON:0005276 ;
    ilxtr:hasAxonSensoryLocation UBERON:0003403 , UBERON:0005276 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006493 , UBERON:0006491 , UBERON:0006492 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0003724 , ILX:0794951 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002843 , UBERON:0007711 , UBERON:0002842 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -6430,10 +6565,11 @@ senmot:84 ilxtr:hasAxonLocation ILX:0788777 , ILX:0773631 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:85 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0011390 ;
+senmot:85 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006461 , UBERON:0002861 , UBERON:0006462 , UBERON:0006463 , UBERON:0002862 , UBERON:0007713 , UBERON:0011390 , ILX:0794987 , UBERON:0001331 , UBERON:0005298 ;
    ilxtr:hasAxonSensoryLocation ILX:0794987 , UBERON:0001331 , UBERON:0005298 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006461 , UBERON:0006462 , UBERON:0006463 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0011390 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002861 , UBERON:0002862 , UBERON:0007713 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
@@ -6877,87 +7013,99 @@ senmot:159 ilxtr:hasAxonLocation UBERON:0035110 ;
    ilxtr:hasCircuitRole ilxtr:MotorPhenotype ;
    ilxtr:hasSomaLocation UBERON:0006461 , UBERON:0006462 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:160 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794996 ;
+senmot:160 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006448 , UBERON:0002857 , ILX:0794987 , ILX:0794996 , UBERON:0004262 ;
    ilxtr:hasAxonSensoryLocation ILX:0794987 , UBERON:0004262 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794996 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:161 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794997 ;
+senmot:161 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , UBERON:0004262 , ILX:0794997 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004262 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 , UBERON:0006450 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794997 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:162 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794998 ;
+senmot:162 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , ILX:0794998 , UBERON:0015479 ;
    ilxtr:hasAxonSensoryLocation UBERON:0015479 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 , UBERON:0006450 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794998 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:163 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794998 ;
+senmot:163 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006448 , UBERON:0006450 , UBERON:0002856 , UBERON:0002857 , ILX:0794998 , UBERON:0004085 , UBERON:0035258 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004085 , UBERON:0035258 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 , UBERON:0006450 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794998 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:164 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001267 ;
+senmot:164 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0002856 , UBERON:0002858 , UBERON:0003943 , UBERON:0001267 , UBERON:0004262 , UBERON:0001510 , UBERON:0001511 , UBERON:0001513 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004262 , UBERON:0001510 , UBERON:0001511 , UBERON:0001513 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006449 , UBERON:0006450 , UBERON:0006451 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001267 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002858 , UBERON:0003943 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:165 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0005465 ;
+senmot:165 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006449 , UBERON:0006450 , UBERON:0006451 , UBERON:0002856 , UBERON:0002858 , UBERON:0003943 , UBERON:0005465 , UBERON:0004262 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004262 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006449 , UBERON:0006450 , UBERON:0006451 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0005465 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002858 , UBERON:0003943 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:166 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001322 ;
+senmot:166 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006451 , UBERON:0003943 , UBERON:0006460 , UBERON:0006461 , UBERON:0002860 , UBERON:0002861 , UBERON:0006462 , UBERON:0002862 , UBERON:0006447 , UBERON:0002859 , UBERON:0001322 , UBERON:0001511 , UBERON:0001513 ;
    ilxtr:hasAxonSensoryLocation UBERON:0001511 , UBERON:0001513 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006451 , UBERON:0006460 , UBERON:0006461 , UBERON:0006462 , UBERON:0006447 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001322 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0003943 , UBERON:0002860 , UBERON:0002861 , UBERON:0002862 , UBERON:0002859 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:167 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0794999 ;
+senmot:167 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006449 , UBERON:0006450 , UBERON:0002856 , UBERON:0002858 , UBERON:0004262 , ILX:0794999 , UBERON:0001366 , UBERON:0011015 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004262 , UBERON:0001366 , UBERON:0011015 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006449 , UBERON:0006450 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0794999 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002856 , UBERON:0002858 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:168 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0795000 ;
+senmot:168 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006460 , UBERON:0006461 , UBERON:0002860 , UBERON:0002861 , UBERON:0006462 , UBERON:0002862 , UBERON:0004262 , ILX:0795000 , UBERON:0036014 ;
    ilxtr:hasAxonSensoryLocation UBERON:0004262 , UBERON:0036014 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006460 , UBERON:0006461 , UBERON:0006462 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0795000 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002860 , UBERON:0002861 , UBERON:0002862 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:169 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0795001 ;
+senmot:169 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006461 , UBERON:0002861 , UBERON:0006462 , UBERON:0002862 , UBERON:0036014 , ILX:0795001 ;
    ilxtr:hasAxonSensoryLocation UBERON:0036014 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006461 , UBERON:0006462 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0795001 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002861 , UBERON:0002862 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:170 ilxtr:hasAxonLocation UBERON:0002261 , UBERON:0001492 , UBERON:0035111 ;
+senmot:170 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006451 , UBERON:0003943 , UBERON:0006460 , UBERON:0006461 , UBERON:0002860 , UBERON:0002861 , UBERON:0006462 , UBERON:0002862 , UBERON:0006447 , UBERON:0002859 , UBERON:0001492 , UBERON:0035111 , UBERON:0008338 ;
    ilxtr:hasAxonSensoryLocation UBERON:0008338 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006451 , UBERON:0006460 , UBERON:0006461 , UBERON:0006462 , UBERON:0006447 ;
+   ilxtr:hasAxonToSensoryTerminal UBERON:0001492 , UBERON:0035111 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0003943 , UBERON:0002860 , UBERON:0002861 , UBERON:0002862 , UBERON:0002859 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
-senmot:171 ilxtr:hasAxonLocation UBERON:0002261 , ILX:0795002 ;
+senmot:171 ilxtr:hasAxonLocation UBERON:0002261 ;
    ilxtr:hasConnectedLocation UBERON:0002261 , UBERON:0006448 , UBERON:0002857 , ILX:0795002 , ILX:0795003 , ILX:0795004 ;
    ilxtr:hasAxonSensoryLocation ILX:0795003 , ILX:0795004 ;
    ilxtr:hasAxonTerminalLocation UBERON:0006448 ;
+   ilxtr:hasAxonToSensoryTerminal ILX:0795002 ;
    ilxtr:hasCircuitRole ilxtr:SensoryPhenotype ;
    ilxtr:hasSomaLocation UBERON:0002857 ;
    ilxtr:isObservedInSpecies NCBITaxon:9606 .
