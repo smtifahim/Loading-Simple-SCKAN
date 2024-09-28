@@ -1,3 +1,4 @@
+# September 27, 2024 version. Includes ilxtr:hasAxonLeadingToSensorySubcellularElementIn
 # August 1, 2023 version. Includes ilxtr:hasAnatomicalSystemPhenotype instead of ilxtr:hasPhenotype.
 # CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
 # This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
@@ -59,14 +60,17 @@ WHERE
       (ilxtr:hasAxonLocatedIn ilxtr:hasAxonLocation)
       (ilxtr:hasDendriteLocatedIn ilxtr:hasDendriteLocation)
       (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasAxonSensoryLocation)
+      (ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasAxonToSensoryTerminal)
+			
                
-          # treat all locational phenotype properties above as hasConnectedLocation in NPO-Simple/Simple SCKAN
+      # treat all locational phenotype properties above as hasConnectedLocation in NPO-Simple/Simple SCKAN
           (ilxtr:hasAxonPresynapticElementIn ilxtr:hasConnectedLocation)
           (ilxtr:hasSomaLocatedInLayer ilxtr:hasConnectedLocation)
           (ilxtr:hasSomaLocatedIn ilxtr:hasConnectedLocation) 
           (ilxtr:hasAxonLocatedIn ilxtr:hasConnectedLocation)
           (ilxtr:hasDendriteLocatedIn ilxtr:hasConnectedLocation)
           (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+					(ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasConnectedLocation)
       
        # mapping properties for other phenotypes
       (ilxtr:hasForwardConnectionPhenotype ilxtr:hasForwardConnection)
