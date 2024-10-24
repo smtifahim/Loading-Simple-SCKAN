@@ -76,7 +76,7 @@ def createNewDatabase(admin, db_name):
         print ("        Dropping the existing database named '" + db_name + "'")
         db = admin.database(db_name)
         db.drop()
-    # create options with edge.properties set to True
+    # create options with edge.properties set to True. This supports rdf* queries
     options = {"edge.properties": True}
     db = admin.new_database(db_name, options=options)
     print ("        The new database '" + db_name + "' is created.")
