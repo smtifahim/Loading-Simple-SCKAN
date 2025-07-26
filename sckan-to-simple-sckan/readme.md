@@ -26,14 +26,15 @@ You will need to specify the current endpoint, username, and password  in `load-
 After each [Pre-release or Release of SCKAN](https://github.com/SciCrunch/NIF-Ontology/releases) we need to replace the turtle files under the `input_ttl` directory with the corresponing files used in the SCKAN release. For now, this is a manual process that  involves the following steps:
 
 * Download the file where the name ends with `sckan.zip` from the release link and extract the files
-* Under the directory called `data` select and copy the following 4 files:
+* Under the directory called `data` , select and copy the following 5 files:
   * (1) `npo-merged.ttl`
   * (2) `npo-merged-reasoned.ttl`
   * (3) `uberon.ttl`
   * (4) `uberon-reasoned.ttl`
+  * (5)  `prov-record.ttl`
 * Paste the four files above under `input_ttl`.
 
-The other two input files required for the transformation process are the following.
+The other input files required for the transformation process are the following. Please note: the following files don't need to be updated unless there are changes in the specification of NPO's relational properties.
 
 * `input_ttl/simple-sckan-properties.ttl` and `sparql-query/simple-sckan-constructs.rq`
 
@@ -41,6 +42,9 @@ The other two input files required for the transformation process are the follow
   * Updating these files would require the knowledge of updated relational properties used in NPO for SCKAN.
     * Add or update any prefixes in `sparql-query/simple-sckan-constructs.rq` based on the updated  `npo-merged.ttl`.
   * Otherwise, these two files do not need to be replaced or updated too frequently.
+* The INSERT queries to simplify the queries for `part of`, `surrounds`, `supplies` relations. 
+  * These queries are stored under `sparql-query` directory
+  * simplified-partial order query is stored under `sparql-query/simplified-partial-order-queries.rq` which is used to simplify the partial order representation of axonal paths using an rdf-star relation called `hasNextNode`. 
 
 ### Output Files
 
