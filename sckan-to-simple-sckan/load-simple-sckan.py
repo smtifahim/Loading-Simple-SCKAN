@@ -29,10 +29,10 @@ from turtle_utilities import fixURIPrefixes
 conn_details = {
   'endpoint': 'https://sd-c1e74c63.stardog.cloud:5820',
   'username': 'sparc-admin',
-  'password': 'w8399Hzj78exJkaebz'
+  'password': 'password from 1password'
 }
 
-db_name = 'SIMPLE-SCKAN-TEST-SEP'
+db_name = 'SCKAN-NOV-2025'
 
 
 # input files needed for simple-sckan
@@ -44,9 +44,10 @@ input_files = {
     'uberon-reasoned.ttl'        : './input_ttl/uberon-reasoned.ttl',
     'simple-sckan-properties.ttl': './input_ttl/simple-sckan-properties.ttl',
     'prov-record.ttl'            : './input_ttl/prov-record.ttl',
+    'region-layer-pairs.ttl'     : './input_ttl/region-layer-pairs.ttl', # generated from region-layer-pairs.csv and region_layer.py
     'simple-sckan-constructs.rq' : './sparql-query/simple-sckan-constructs.rq',
-    'simplified-partonomy.rq'    : './sparql-query/simplified-partonomy-query.rq'
-    
+    'simplified-partonomy.rq'    : './sparql-query/simplified-partonomy-query.rq',
+    'partial-order-rdfstar.ttl'  : './input_ttl/partial-order-rdfstar.ttl'    
 }
 
 # generated output files for simple-sckan
@@ -105,6 +106,10 @@ with stardog.Connection(db_name, **conn_details) as conn:
     conn.add(stardog.content.File(input_files['npo.ttl']))
     print ("        Adding npo-merged-reasoned.ttl to the database.")    
     conn.add(stardog.content.File(input_files['npo-reasoned.ttl']))
+    print ("        Adding region-layer-pairs.ttl to the database.")    
+    conn.add(stardog.content.File(input_files['region-layer-pairs.ttl']))
+    print ("        Adding partial-order-rdfstar.ttl to the database.")    
+    conn.add(stardog.content.File(input_files['partial-order-rdfstar.ttl']))
     conn.commit()
 print ("Step 3: Done!")
        
@@ -136,7 +141,7 @@ print ("Step 4: Done!")
 print ("\nStep 5: Adding Simple SCKAN to the database. Please wait...")
 # temporarily creating a database called 'simple sckan'  
 db_ss = createNewDatabase(admin, 'simple-sckan')
-db_ss.import_namespaces(stardog.content.File(input_files['npo.ttl']))
+db_ss.import_namespaces(stardog.content.File(input_files['prefixes.ttl']))
 
 conn_ss = stardog.Connection('simple-sckan', **conn_details)
 conn_ss.begin()
@@ -164,7 +169,7 @@ db_ss.drop() # simple-sckan database is no longer needed to be there in the data
 conn_ss.close()
 print ("Step 5: Done!")
     
-## Step 6 begins.
+# Step 6 begins.
 print ("\nStep 6: Saving npo-simple-sckan-merged.ttl...")
 with open(generated_files['npo-simple-sckan-merged.ttl'], "wb") as result_file:
     result_file.write (conn.export())

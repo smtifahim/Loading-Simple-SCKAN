@@ -19,11 +19,9 @@ INSERT { ?tissue_structure ilxtr:surrounds ?organ_structure }
 
 WHERE
 {
-     
     ?tissue_structure rdfs:subClassOf* [rdf:type owl:Restriction ;
                                            owl:onProperty RO:0002221 ; # surrounds relation http://purl.obolibrary.org/obo/RO_0002221
                                            owl:someValuesFrom ?organ_structure].
- 
     ## To test with SELECT statement
     # FILTER (?organ_structure_label = 'prostate gland')
     # ?tissue_structure rdfs:label ?tissue_structure_label. 

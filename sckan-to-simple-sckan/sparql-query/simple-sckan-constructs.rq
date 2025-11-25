@@ -1,20 +1,17 @@
+# November 11, 2025 version. Includes region-layer pairs for locational phenotypes. Also included hasMolecularPhenotype.
 # September 27, 2024 version. Includes ilxtr:hasAxonLeadingToSensorySubcellularElementIn
 # August 1, 2023 version. Includes ilxtr:hasAnatomicalSystemPhenotype instead of ilxtr:hasPhenotype.
 # CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
 # This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
 # axioms with intersections into individual superclass axioms
+# Last updated Nov 11, 2025. - Fahim Imam
 
 prefix BFO: <http://purl.obolibrary.org/obo/BFO_>
-prefix BIRNLEX: <http://uri.neuinfo.org/nif/nifstd/birnlex_>
+prefix partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
 prefix CL: <http://purl.obolibrary.org/obo/CL_>
-prefix FMA: <http://purl.org/sig/ont/fma/fma>
-prefix GO: <http://purl.obolibrary.org/obo/GO_>
 prefix ILX: <http://uri.interlex.org/base/ilx_>
 prefix ilxr: <http://uri.interlex.org/base/readable/>
 prefix ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
-prefix JAX: <http://jaxmice.jax.org/strain/>
-prefix MBA: <http://api.brain-map.org/api/v2/data/Structure/>
-prefix MIRO: <http://uri.interlex.org/MIRO/uris/readable/>
 prefix mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
 prefix mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
 prefix mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
@@ -26,20 +23,11 @@ prefix liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/>
 prefix senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/> 
 prefix swglnd: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/swglnd/>
 prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-prefix NIFEXT: <http://uri.neuinfo.org/nif/nifstd/nifext_>
-prefix NIFRID: <http://uri.neuinfo.org/nif/nifstd/readable/>
-prefix NIFSTD: <http://uri.neuinfo.org/nif/nifstd/>
 prefix NLX: <http://uri.neuinfo.org/nif/nifstd/nlx_>
-prefix NLXANAT: <http://uri.neuinfo.org/nif/nifstd/nlx_anat_>
-prefix NLXCELL: <http://uri.neuinfo.org/nif/nifstd/nlx_cell_>
-prefix NLXMOL: <http://uri.neuinfo.org/nif/nifstd/nlx_mol_>
-prefix NLXNEURNT: <http://uri.neuinfo.org/nif/nifstd/nlx_neuron_nt_>
-prefix NLXORG: <http://uri.neuinfo.org/nif/nifstd/nlx_organ_>
-prefix NLXWIKI: <http://neurolex.org/wiki/>
 prefix npokb: <http://uri.interlex.org/npo/uris/neurons/>
-prefix OBI: <http://purl.obolibrary.org/obo/OBI_>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
+prefix portal: <http://uri.interlex.org/composer/uris/set/portal/>
+prefix gastint: <http://uri.interlex.org/composer/uris/set/gastint/>
 prefix PATO: <http://purl.obolibrary.org/obo/PATO_>
 prefix PAXRAT: <http://uri.interlex.org/paxinos/uris/rat/labels/>
 prefix PAXSPN: <http://uri.interlex.org/paxinos/uris/spine/labels/>
@@ -48,96 +36,231 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix SAO: <http://uri.neuinfo.org/nif/nifstd/sao>
 prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 
-CONSTRUCT {?neuron_type ?npo_simple_prop ?object}
-WHERE
+CONSTRUCT
 {
-    VALUES (?npo_prop ?npo_simple_prop) 
-    {
-      # mapping properties for locational phenotypes
+  # Base triple - location always points to region (or concatenated region,layer for region+layer pairs)
+  <<?neuron_type ?npo_simple_prop_loc ?object_region_concat >> ilxtr:hasRegion ?object_region_raw;
+                                                                ilxtr:hasLayer ?object_layer;
+                                                                rdfs:label ?composite_label . # Keeping the label for simplified queries for now.
+  
+  ?neuron_type ?npo_simple_prop_nonloc ?object .
+}
+
+# For testing ...
+# SELECT DISTINCT 
+#   ?neuron_type 
+#   ?npo_simple_prop_loc 
+#   ?npo_simple_prop_nonloc
+#   ?object_region_concat
+#   ?object_region_raw
+#   ?object_layer
+#   ?composite_label
+
+WHERE 
+{
+  # For testing ...
+  # FILTER (regex(str(?neuron_type), "keast-1"))
+  
+  ?neuron_type rdfs:subClassOf+ ?sckan_neuron . #only consider SCKAN neurons
+  VALUES ?sckan_neuron { ilxtr:NeuronSparcNlp ilxtr:NeuronApinatSimple }
+
+  {
+    # ============================================================
+    # LOCATIONAL PHENOTYPES
+    # ============================================================
+    
+    VALUES (?npo_prop ?npo_simple_prop_loc) {
+      # locational phenotype mappings
       (ilxtr:hasAxonPresynapticElementIn ilxtr:hasAxonTerminalLocation)
-      (ilxtr:hasSomaLocatedIn ilxtr:hasSomaLocation) 
+      (ilxtr:hasSomaLocatedIn ilxtr:hasSomaLocation)
       (ilxtr:hasSomaLocatedInLayer ilxtr:hasSomaLocation)
       (ilxtr:hasAxonLocatedIn ilxtr:hasAxonLocation)
       (ilxtr:hasDendriteLocatedIn ilxtr:hasDendriteLocation)
       (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasAxonSensoryLocation)
       (ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasAxonToSensoryTerminal)
-			
-               
-      # treat all locational phenotype properties above as hasConnectedLocation in NPO-Simple/Simple SCKAN
-          (ilxtr:hasAxonPresynapticElementIn ilxtr:hasConnectedLocation)
-          (ilxtr:hasSomaLocatedInLayer ilxtr:hasConnectedLocation)
-          (ilxtr:hasSomaLocatedIn ilxtr:hasConnectedLocation) 
-          (ilxtr:hasAxonLocatedIn ilxtr:hasConnectedLocation)
-          (ilxtr:hasDendriteLocatedIn ilxtr:hasConnectedLocation)
-          (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasConnectedLocation)
-					(ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+
+      # treat locational phenotypes as hasConnectedLocation
+      (ilxtr:hasAxonPresynapticElementIn ilxtr:hasConnectedLocation)
+      (ilxtr:hasSomaLocatedInLayer ilxtr:hasConnectedLocation)
+      (ilxtr:hasSomaLocatedIn ilxtr:hasConnectedLocation)
+      (ilxtr:hasAxonLocatedIn ilxtr:hasConnectedLocation)
+      (ilxtr:hasDendriteLocatedIn ilxtr:hasConnectedLocation)
+      (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+      (ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+    }
+
+    {
+      # --- Locational phenotypes: Pattern 2 (region + layer) ---
+      ?neuron_type a owl:Class ;
+        (owl:equivalentClass | rdfs:subClassOf) [
+          a owl:Class ;
+          owl:intersectionOf ?bn0
+        ] .
+      ?bn0 rdf:rest*/rdf:first [
+        a owl:Restriction ;
+        owl:onProperty ?npo_prop ;
+        owl:someValuesFrom [
+          a owl:Restriction ;
+          owl:onProperty partOf: ;
+          owl:someValuesFrom [
+            a owl:Class ;
+            owl:intersectionOf ?bn1
+          ]
+        ]
+      ] .
+      ?bn1 rdf:rest*/rdf:first [
+        a owl:Restriction ;
+        owl:onProperty partOf: ;
+        owl:someValuesFrom ?term1
+      ] .
+      ?bn1 rdf:rest*/rdf:first [
+        a owl:Restriction ;
+        owl:onProperty partOf: ;
+        owl:someValuesFrom ?term2
+      ] .
       
-       # mapping properties for other phenotypes
+      FILTER(?term1 != ?term2)
+      
+      # Use ilxtr:hasRegion ONLY for internal logic
+      OPTIONAL { ?term1 ilxtr:hasRegion ?term2 . BIND(?term1 AS ?object_layer) BIND(?term2 AS ?object_region_raw) }
+      OPTIONAL { ?term2 ilxtr:hasRegion ?term1 . BIND(?term2 AS ?object_layer) BIND(?term1 AS ?object_region_raw) }
+      
+      FILTER(bound(?object_layer) && bound(?object_region_raw))
+      
+      OPTIONAL { ?object_region_raw rdfs:label ?region_l }
+      OPTIONAL { ?object_layer rdfs:label ?layer_l }
+      
+      # Create concatenated URI for region+layer
+      BIND(URI(CONCAT(STR(?object_region_raw), ",", STR(?object_layer))) AS ?object_region_concat)
+      
+      # Create composite label for region+layer
+      BIND(CONCAT(
+        COALESCE(?region_l, STR(?object_region_raw)), 
+        " (", 
+        COALESCE(?layer_l, STR(?object_layer)), 
+        ")"
+      ) AS ?composite_label)
+    }
+
+    UNION
+
+    {
+      # --- Locational phenotypes: Pattern 1 (region only) ---
+      ?neuron_type a owl:Class ;
+        (owl:equivalentClass | rdfs:subClassOf) [
+          a owl:Class ;
+          owl:intersectionOf ?bn0
+        ] .
+      ?bn0 rdf:rest*/rdf:first [
+        a owl:Restriction ;
+        owl:onProperty ?npo_prop ;
+        owl:someValuesFrom [
+          a owl:Restriction ;
+          owl:onProperty partOf: ;
+          owl:someValuesFrom ?object_region_raw
+        ]
+      ] .
+      
+    #   FILTER NOT EXISTS {
+    #     ?bn0 rdf:rest*/rdf:first [
+    #       a owl:Restriction ;
+    #       owl:onProperty ?npo_prop ;
+    #       owl:someValuesFrom [
+    #         a owl:Restriction ;
+    #         owl:onProperty partOf: ;
+    #         owl:someValuesFrom [
+    #           a owl:Class ;
+    #           owl:intersectionOf ?object_region_raw
+    #         ]
+    #       ]
+    #     ] .
+    #   }
+      
+      FILTER(!isBlank(?object_region_raw))
+
+      OPTIONAL { ?object_region_raw rdfs:label ?region_l }
+      
+      # For region-only, just use the region URI (no concatenation needed)
+      BIND(?object_region_raw AS ?object_region_concat)
+      
+      # For region-only, composite label is just the region label
+      BIND(?region_l AS ?composite_label)
+    }
+
+    UNION
+
+    {
+      # --- Locational phenotypes as superclass axioms ---
+      ?neuron_type a owl:Class ;
+        rdfs:subClassOf [
+          a owl:Restriction ;
+          owl:onProperty ?npo_prop ;
+          owl:someValuesFrom [
+            a owl:Restriction ;
+            owl:onProperty partOf: ;
+            owl:someValuesFrom ?object_region_raw
+          ]
+        ] .
+      
+      OPTIONAL { ?object_region_raw rdfs:label ?region_l }
+      
+      # For region-only, just use the region URI (no concatenation needed)
+      BIND(?object_region_raw AS ?object_region_concat)
+      
+      # For region-only, composite label is just the region label
+      BIND(?region_l AS ?composite_label)
+    }
+
+    FILTER (?npo_simple_prop_loc != ilxtr:hasConnectedLocation)
+  }
+  
+  UNION
+  
+  {
+    # ============================================================
+    # NON-LOCATIONAL PHENOTYPES
+    # ============================================================
+    
+    VALUES (?npo_prop ?npo_simple_prop_nonloc) {
+      # other phenotype mappings (non-locational)
       (ilxtr:hasForwardConnectionPhenotype ilxtr:hasForwardConnection)
       (ilxtr:hasFunctionalCircuitRolePhenotype ilxtr:hasFunctionalCircuitRole)
-      (ilxtr:hasAnatomicalSystemPhenotype ilxtr:hasNeuronalPhenotype)  #changed from ilxtr:hasPhenotype to ilxtr:hasAnatomicalSystemPhenotype
+      (ilxtr:hasAnatomicalSystemPhenotype ilxtr:hasNeuronalPhenotype)
       (ilxtr:hasProjectionPhenotype ilxtr:hasProjection)
       (ilxtr:hasCircuitRolePhenotype ilxtr:hasCircuitRole)
+      (ilxtr:hasMolecularPhenotype ilxtr:hasMolecule)
       (ilxtr:hasInstanceInTaxon ilxtr:isObservedInSpecies)
       (ilxtr:hasBiologicalSex ilxtr:hasPhenotypicSex)
     }
-    # For the neuron types with locational phenotypes specified withing the intersections of the equivalent axioms. 
+
     {
-    ?neuron_type a owl:Class;
-        (owl:equivalentClass | rdfs:subClassOf) 
-                             [
-                               rdf:type owl:Class ;
-                               owl:intersectionOf ?bn0
-                              ] .
-    ?bn0 rdf:rest*/rdf:first [
-                               rdf:type owl:Restriction ;
-                               owl:onProperty ?npo_prop ;
-                               owl:someValuesFrom [
-                                                    a owl:Restriction ;
-                                                    owl:onProperty partOf: ;
-                                                    owl:someValuesFrom ?object
-                                                  ] 
-                             ] .
+      # --- Other phenotypes in intersection form ---
+      ?neuron_type a owl:Class ;
+        (owl:equivalentClass | rdfs:subClassOf) [
+          a owl:Class ;
+          owl:intersectionOf ?bn0
+        ] .
+      ?bn0 rdf:rest*/rdf:first [
+        a owl:Restriction ;
+        owl:onProperty ?npo_prop ;
+        owl:someValuesFrom ?object
+      ] .
     }
 
-   UNION # For the neuron types with locational phenotype axioms as super classes e.g., http://uri.neuinfo.org/nif/nifstd/nlx_cell_20081201
+    UNION
+
     {
-    ?neuron_type a owl:Class;
-		         (rdfs:subClassOf)         
-                    [
-                    rdf:type owl:Restriction ;
-                             owl:onProperty ?npo_prop ; 		
-                             owl:someValuesFrom [rdf:type owl:Restriction ;
-                                                          owl:onProperty partOf: ; 
-                                                          owl:someValuesFrom ?object
-                                                ]
-                    ] .
+      # --- Other phenotypes as superclass axioms ---
+      ?neuron_type a owl:Class ;
+        rdfs:subClassOf [
+          a owl:Restriction ;
+          owl:onProperty ?npo_prop ;
+          owl:someValuesFrom ?object
+        ] .
     }
 
-  UNION # For neuron types with other phenotypes specified within the intersections of the eqivalent axioms.
-   {      
-        ?neuron_type a owl:Class;
-                (owl:equivalentClass | rdfs:subClassOf)
-                            [
-                                rdf:type owl:Class ;
-                                owl:intersectionOf ?bn0
-                            ] .
-        ?bn0 rdf:rest*/rdf:first [
-                                  rdf:type owl:Restriction ;
-                                           owl:onProperty ?npo_prop ;
-                                           owl:someValuesFrom ?object
-                                 ]
-    }
-    UNION # For neuron types with other phenotypes axioms specified as superclasses.
-    {
-      ?neuron_type a owl:Class;
-                    (rdfs:subClassOf)
-                    [
-                       rdf:type owl:Restriction ;
-                                owl:onProperty ?npo_prop ;
-                                owl:someValuesFrom ?object
-                    ]
-    }
-    
-FILTER (!isBLANK(?object))
+    FILTER(!isBlank(?object))
+  }
 }
+ORDER BY ?neuron_type ?npo_simple_prop_loc ?npo_simple_prop_nonloc
+# LIMIT 1000

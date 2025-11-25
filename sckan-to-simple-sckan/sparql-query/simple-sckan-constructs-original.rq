@@ -1,0 +1,143 @@
+# September 27, 2024 version. Includes ilxtr:hasAxonLeadingToSensorySubcellularElementIn
+# August 1, 2023 version. Includes ilxtr:hasAnatomicalSystemPhenotype instead of ilxtr:hasPhenotype.
+# CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
+# This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
+# axioms with intersections into individual superclass axioms
+
+prefix BFO: <http://purl.obolibrary.org/obo/BFO_>
+prefix BIRNLEX: <http://uri.neuinfo.org/nif/nifstd/birnlex_>
+prefix CL: <http://purl.obolibrary.org/obo/CL_>
+prefix FMA: <http://purl.org/sig/ont/fma/fma>
+prefix GO: <http://purl.obolibrary.org/obo/GO_>
+prefix ILX: <http://uri.interlex.org/base/ilx_>
+prefix ilxr: <http://uri.interlex.org/base/readable/>
+prefix ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+prefix JAX: <http://jaxmice.jax.org/strain/>
+prefix MBA: <http://api.brain-map.org/api/v2/data/Structure/>
+prefix MIRO: <http://uri.interlex.org/MIRO/uris/readable/>
+prefix mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
+prefix mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
+prefix mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
+prefix prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
+prefix femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/>
+prefix semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
+prefix kidney: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/> 
+prefix liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/>
+prefix senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/> 
+prefix swglnd: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/swglnd/>
+prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+prefix NIFEXT: <http://uri.neuinfo.org/nif/nifstd/nifext_>
+prefix NIFRID: <http://uri.neuinfo.org/nif/nifstd/readable/>
+prefix NIFSTD: <http://uri.neuinfo.org/nif/nifstd/>
+prefix NLX: <http://uri.neuinfo.org/nif/nifstd/nlx_>
+prefix NLXANAT: <http://uri.neuinfo.org/nif/nifstd/nlx_anat_>
+prefix NLXCELL: <http://uri.neuinfo.org/nif/nifstd/nlx_cell_>
+prefix NLXMOL: <http://uri.neuinfo.org/nif/nifstd/nlx_mol_>
+prefix NLXNEURNT: <http://uri.neuinfo.org/nif/nifstd/nlx_neuron_nt_>
+prefix NLXORG: <http://uri.neuinfo.org/nif/nifstd/nlx_organ_>
+prefix NLXWIKI: <http://neurolex.org/wiki/>
+prefix npokb: <http://uri.interlex.org/npo/uris/neurons/>
+prefix OBI: <http://purl.obolibrary.org/obo/OBI_>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
+prefix PATO: <http://purl.obolibrary.org/obo/PATO_>
+prefix PAXRAT: <http://uri.interlex.org/paxinos/uris/rat/labels/>
+prefix PAXSPN: <http://uri.interlex.org/paxinos/uris/spine/labels/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix SAO: <http://uri.neuinfo.org/nif/nifstd/sao>
+prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+
+CONSTRUCT {?neuron_type ?npo_simple_prop ?object}
+WHERE
+{
+    VALUES (?npo_prop ?npo_simple_prop) 
+    {
+      # mapping properties for locational phenotypes
+      (ilxtr:hasAxonPresynapticElementIn ilxtr:hasAxonTerminalLocation)
+      (ilxtr:hasSomaLocatedIn ilxtr:hasSomaLocation) 
+      (ilxtr:hasSomaLocatedInLayer ilxtr:hasSomaLocation)
+      (ilxtr:hasAxonLocatedIn ilxtr:hasAxonLocation)
+      (ilxtr:hasDendriteLocatedIn ilxtr:hasDendriteLocation)
+      (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasAxonSensoryLocation)
+      (ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasAxonToSensoryTerminal)
+			
+               
+      # treat all locational phenotype properties above as hasConnectedLocation in NPO-Simple/Simple SCKAN
+          (ilxtr:hasAxonPresynapticElementIn ilxtr:hasConnectedLocation)
+          (ilxtr:hasSomaLocatedInLayer ilxtr:hasConnectedLocation)
+          (ilxtr:hasSomaLocatedIn ilxtr:hasConnectedLocation) 
+          (ilxtr:hasAxonLocatedIn ilxtr:hasConnectedLocation)
+          (ilxtr:hasDendriteLocatedIn ilxtr:hasConnectedLocation)
+          (ilxtr:hasAxonSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+					(ilxtr:hasAxonLeadingToSensorySubcellularElementIn ilxtr:hasConnectedLocation)
+      
+       # mapping properties for other phenotypes
+      (ilxtr:hasForwardConnectionPhenotype ilxtr:hasForwardConnection)
+      (ilxtr:hasFunctionalCircuitRolePhenotype ilxtr:hasFunctionalCircuitRole)
+      (ilxtr:hasAnatomicalSystemPhenotype ilxtr:hasNeuronalPhenotype)  #changed from ilxtr:hasPhenotype to ilxtr:hasAnatomicalSystemPhenotype
+      (ilxtr:hasProjectionPhenotype ilxtr:hasProjection)
+      (ilxtr:hasCircuitRolePhenotype ilxtr:hasCircuitRole)
+      (ilxtr:hasInstanceInTaxon ilxtr:isObservedInSpecies)
+      (ilxtr:hasBiologicalSex ilxtr:hasPhenotypicSex)
+    }
+    # For the neuron types with locational phenotypes specified withing the intersections of the equivalent axioms. 
+    {
+    ?neuron_type a owl:Class;
+        (owl:equivalentClass | rdfs:subClassOf) 
+                             [
+                               rdf:type owl:Class ;
+                               owl:intersectionOf ?bn0
+                              ] .
+    ?bn0 rdf:rest*/rdf:first [
+                               rdf:type owl:Restriction ;
+                               owl:onProperty ?npo_prop ;
+                               owl:someValuesFrom [
+                                                    a owl:Restriction ;
+                                                    owl:onProperty partOf: ;
+                                                    owl:someValuesFrom ?object
+                                                  ] 
+                             ] .
+    }
+
+   UNION # For the neuron types with locational phenotype axioms as super classes e.g., http://uri.neuinfo.org/nif/nifstd/nlx_cell_20081201
+    {
+    ?neuron_type a owl:Class;
+		         (rdfs:subClassOf)         
+                    [
+                    rdf:type owl:Restriction ;
+                             owl:onProperty ?npo_prop ; 		
+                             owl:someValuesFrom [rdf:type owl:Restriction ;
+                                                          owl:onProperty partOf: ; 
+                                                          owl:someValuesFrom ?object
+                                                ]
+                    ] .
+    }
+
+  UNION # For neuron types with other phenotypes specified within the intersections of the eqivalent axioms.
+   {      
+        ?neuron_type a owl:Class;
+                (owl:equivalentClass | rdfs:subClassOf)
+                            [
+                                rdf:type owl:Class ;
+                                owl:intersectionOf ?bn0
+                            ] .
+        ?bn0 rdf:rest*/rdf:first [
+                                  rdf:type owl:Restriction ;
+                                           owl:onProperty ?npo_prop ;
+                                           owl:someValuesFrom ?object
+                                 ]
+    }
+    UNION # For neuron types with other phenotypes axioms specified as superclasses.
+    {
+      ?neuron_type a owl:Class;
+                    (rdfs:subClassOf)
+                    [
+                       rdf:type owl:Restriction ;
+                                owl:onProperty ?npo_prop ;
+                                owl:someValuesFrom ?object
+                    ]
+    }
+    
+FILTER (!isBLANK(?object))
+}

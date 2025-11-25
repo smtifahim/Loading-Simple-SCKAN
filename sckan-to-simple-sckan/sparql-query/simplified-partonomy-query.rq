@@ -1,31 +1,44 @@
-# INSERT pattern for Simple SCKAN's simplified partonomy using ilxtr:isPartOf relation - August 2024
+## Given a super_region label, this query returns all the sub_regions of the region either directly or transitively.
+## Given a sub_region, the query returns the super regions of the sub regions including the immediate one.    
+
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
-PREFIX ILX: <http://uri.interlex.org/base/ilx_>
-PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+PREFIX hasPart: <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
 PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
-
-# SELECT DISTINCT ?sub_region ?sub_region_label ?super_region ?super_region_label
+PREFIX ILX: <http://uri.interlex.org/base/ilx_>
 
 INSERT { ?sub_region ilxtr:isPartOf ?super_region }
 
+# For testing ..
+# Select DISTINCT ?sub_region ?sub_region_label ?super_region ?super_region_label
+
 WHERE
 {
-    ## To test with select statement uncomment the next two lines.
-    # FILTER (?super_region_label = 'heart')
-    # ?sub_region rdfs:label ?sub_region_label. ?super_region rdfs:label ?super_region_label. 
+   # FILTER (LCase(?super_region_label) = 'heart') #('visual system', 'optic nerve', 'thalamus', 'visual cortex'))
+   # FILTER (LCase(?sub_region_label) = 'tunica adventitia of the renal artery')
+   # FILTER (LCase(?sub_region_label) = 'renal artery')
+    
+   # Surrounds relation RO:0002221. Supplies relation from RO:0002178. 
+   # "vessel supplies blood to" using RO:0020101. Considereing all these as "broader" ilxtr:isPartOf
+   VALUES ?part_of {ILX:0112785 partOf: RO:0002178 RO:0002221 RO:0020101} # to include both UBERON partOf and ILX 'is Part Of' relation
+   # http://purl.obolibrary.org/obo/RO_0020101
 
-    
-    ## To include both UBERON partOf and ILX 'is Part Of' (ILX:0112785) relation
-    VALUES ?part_of {ILX:0112785 partOf:}
-    
-    ?sub_region rdfs:subClassOf* [rdf:type owl:Restriction ;
-                                           owl:onProperty ?part_of ; 
-                                           owl:someValuesFrom ?super_region].
-           
-    FILTER (CONTAINS (str(?sub_region), 'UBERON_') || CONTAINS (str(?sub_region), 'ilx_'))
-    FILTER (CONTAINS (str(?super_region), 'UBERON_') || CONTAINS (str(?super_region), 'ilx_'))
+   ?sub_region rdfs:subClassOf+ [rdf:type owl:Restriction ;
+                                            owl:onProperty ?part_of ; 
+                                            owl:someValuesFrom ?super_region].
+       
+   ?sub_region rdfs:label ?sub_region_label.
+   ?super_region rdfs:label ?super_region_label 
+
+   Filter (!REGEX(str(?sub_region), "CL_")) #exclude CL classes
+   Filter (!REGEX(str(?super_region), "CL_")) #exclude CL classes
+   FILTER (!isBlank(?sub_region))
+                        
 }
+# ORDER BY ?sub_region_label ?super_region_label
+# limit 1000

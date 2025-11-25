@@ -1,0 +1,474 @@
+@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
+@prefix ilx: <http://uri.interlex.org/base/> .
+@prefix ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+UBERON:0000379 a owl:Class ;
+    ilxtr:hasRegion UBERON:0003126 .
+
+UBERON:0000483 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001258,
+        UBERON:0006082 .
+
+UBERON:0001135 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001258,
+        UBERON:0006082 .
+
+UBERON:0001199 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0001200 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0001201 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0001203 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0001235 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002369 .
+
+UBERON:0001236 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002369 .
+
+UBERON:0001243 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000160 .
+
+UBERON:0001250 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+UBERON:0001959 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+UBERON:0001975 a owl:Class ;
+    ilxtr:hasRegion UBERON:0013473 .
+
+UBERON:0002165 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002078,
+        UBERON:0002079,
+        UBERON:0002080,
+        UBERON:0002084 .
+
+UBERON:0002181 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006460,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0002318 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006452,
+        UBERON:0006453,
+        UBERON:0006454,
+        UBERON:0006455,
+        UBERON:0006456,
+        UBERON:0006457,
+        UBERON:0006458,
+        UBERON:0006459,
+        UBERON:0006460,
+        UBERON:0006465,
+        UBERON:0006466,
+        UBERON:0006467,
+        UBERON:0006468,
+        UBERON:0006469,
+        UBERON:0006470,
+        UBERON:0006488,
+        UBERON:0006489,
+        UBERON:0006490,
+        UBERON:0006491,
+        UBERON:0006492,
+        UBERON:0006493,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0002348 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000948 .
+
+UBERON:0002349 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002078,
+        UBERON:0002079,
+        UBERON:0002080,
+        UBERON:0002084 .
+
+UBERON:0002384 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001258,
+        UBERON:0001263,
+        UBERON:0006082 .
+
+UBERON:0002439 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001165,
+        ilx:ilx_0774562 .
+
+UBERON:0003714 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000988,
+        UBERON:0001891,
+        UBERON:0001893,
+        UBERON:0001894,
+        UBERON:0001896,
+        UBERON:0006453,
+        UBERON:0006454,
+        UBERON:0006455,
+        UBERON:0006456 .
+
+UBERON:0004641 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+UBERON:0004664 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001496 .
+
+UBERON:0004677 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006460,
+        UBERON:0006493,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0004782 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001165,
+        ilx:ilx_0774562 .
+
+UBERON:0004982 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000388 .
+
+UBERON:0005020 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001723 .
+
+UBERON:0005734 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001182,
+        UBERON:0001193,
+        UBERON:0001194,
+        UBERON:0001195,
+        UBERON:0006637 .
+
+UBERON:0005769 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001263 .
+
+UBERON:0006118 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006460,
+        UBERON:0006493,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0007240 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002012 .
+
+UBERON:0008857 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0008862 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0008863 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001165,
+        ilx:ilx_0774562,
+        ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+UBERON:0009961 a owl:Class ;
+    ilxtr:hasRegion UBERON:0013473 .
+
+UBERON:0010398 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+UBERON:0015129 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000948 .
+
+UBERON:0016576 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006460,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0016578 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        UBERON:0006448,
+        UBERON:0006449,
+        UBERON:0006450,
+        UBERON:0006451,
+        UBERON:0006452,
+        UBERON:0006453,
+        UBERON:0006454,
+        UBERON:0006455,
+        UBERON:0006456,
+        UBERON:0006457,
+        UBERON:0006458,
+        UBERON:0006459,
+        UBERON:0006460,
+        UBERON:0006465,
+        UBERON:0006466,
+        UBERON:0006467,
+        UBERON:0006468,
+        UBERON:0006470,
+        UBERON:0006493,
+        ilx:ilx_0738432,
+        ilx:ilx_0793357 .
+
+UBERON:0016580 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006447,
+        ilx:ilx_0738432 .
+
+UBERON:0035965 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793641,
+        ilx:ilx_0793642,
+        ilx:ilx_0793643,
+        ilx:ilx_0793644,
+        ilx:ilx_0793645,
+        ilx:ilx_0793646,
+        ilx:ilx_0793663,
+        ilx:ilx_0793664 .
+
+UBERON:0037094 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001530 .
+
+ilx:ilx_0738304 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001508 .
+
+ilx:ilx_0738305 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001532 .
+
+ilx:ilx_0738306 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006457 .
+
+ilx:ilx_0738320 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001896 .
+
+ilx:ilx_0738321 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006490 .
+
+ilx:ilx_0738322 a owl:Class ;
+    ilxtr:hasRegion UBERON:0006491 .
+
+ilx:ilx_0738326 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001737 .
+
+ilx:ilx_0770759 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0771089 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0773760 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0775392 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002187 .
+
+ilx:ilx_0776070 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0793141 a owl:Class ;
+    ilxtr:hasRegion UBERON:0000057 .
+
+ilx:ilx_0793613 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001263 .
+
+ilx:ilx_0793656 a owl:Class ;
+    ilxtr:hasRegion ilx:ilx_0793558,
+        ilx:ilx_0793658 .
+
+ilx:ilx_0793657 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0793659 a owl:Class ;
+    ilxtr:hasRegion UBERON:0001158 .
+
+ilx:ilx_0793660 a owl:Class ;
+    ilxtr:hasRegion UBERON:0013473 .
+
+ilx:ilx_0793680 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+ilx:ilx_0793681 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002106 .
+
+ilx:ilx_0793684 a owl:Class ;
+    ilxtr:hasRegion UBERON:0003126 .
+
+ilx:ilx_0793764 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002185 .
+
+ilx:ilx_0793765 a owl:Class ;
+    ilxtr:hasRegion UBERON:0002186 .
+
+ilxtr:hasRegion a owl:AnnotationProperty .
+
+UBERON:0000057 a owl:Class .
+
+UBERON:0000160 a owl:Class .
+
+UBERON:0000388 a owl:Class .
+
+UBERON:0000988 a owl:Class .
+
+UBERON:0001182 a owl:Class .
+
+UBERON:0001193 a owl:Class .
+
+UBERON:0001194 a owl:Class .
+
+UBERON:0001195 a owl:Class .
+
+UBERON:0001496 a owl:Class .
+
+UBERON:0001508 a owl:Class .
+
+UBERON:0001530 a owl:Class .
+
+UBERON:0001532 a owl:Class .
+
+UBERON:0001723 a owl:Class .
+
+UBERON:0001737 a owl:Class .
+
+UBERON:0001891 a owl:Class .
+
+UBERON:0001893 a owl:Class .
+
+UBERON:0001894 a owl:Class .
+
+UBERON:0002012 a owl:Class .
+
+UBERON:0002185 a owl:Class .
+
+UBERON:0002186 a owl:Class .
+
+UBERON:0002187 a owl:Class .
+
+UBERON:0006469 a owl:Class .
+
+UBERON:0006488 a owl:Class .
+
+UBERON:0006489 a owl:Class .
+
+UBERON:0006492 a owl:Class .
+
+UBERON:0006637 a owl:Class .
+
+ilx:ilx_0793641 a owl:Class .
+
+ilx:ilx_0793642 a owl:Class .
+
+ilx:ilx_0793643 a owl:Class .
+
+ilx:ilx_0793644 a owl:Class .
+
+ilx:ilx_0793645 a owl:Class .
+
+ilx:ilx_0793646 a owl:Class .
+
+ilx:ilx_0793663 a owl:Class .
+
+ilx:ilx_0793664 a owl:Class .
+
+UBERON:0000948 a owl:Class .
+
+UBERON:0001896 a owl:Class .
+
+UBERON:0002078 a owl:Class .
+
+UBERON:0002079 a owl:Class .
+
+UBERON:0002080 a owl:Class .
+
+UBERON:0002084 a owl:Class .
+
+UBERON:0002369 a owl:Class .
+
+UBERON:0003126 a owl:Class .
+
+UBERON:0006452 a owl:Class .
+
+UBERON:0006458 a owl:Class .
+
+UBERON:0006459 a owl:Class .
+
+UBERON:0006465 a owl:Class .
+
+UBERON:0006466 a owl:Class .
+
+UBERON:0006467 a owl:Class .
+
+UBERON:0006468 a owl:Class .
+
+UBERON:0006470 a owl:Class .
+
+UBERON:0006490 a owl:Class .
+
+UBERON:0006491 a owl:Class .
+
+UBERON:0001165 a owl:Class .
+
+UBERON:0001258 a owl:Class .
+
+UBERON:0001263 a owl:Class .
+
+UBERON:0006082 a owl:Class .
+
+UBERON:0006453 a owl:Class .
+
+UBERON:0006454 a owl:Class .
+
+UBERON:0006455 a owl:Class .
+
+UBERON:0006456 a owl:Class .
+
+UBERON:0006457 a owl:Class .
+
+UBERON:0013473 a owl:Class .
+
+ilx:ilx_0774562 a owl:Class .
+
+UBERON:0006493 a owl:Class .
+
+UBERON:0001158 a owl:Class .
+
+UBERON:0002106 a owl:Class .
+
+UBERON:0006448 a owl:Class .
+
+UBERON:0006449 a owl:Class .
+
+UBERON:0006450 a owl:Class .
+
+UBERON:0006451 a owl:Class .
+
+UBERON:0006460 a owl:Class .
+
+ilx:ilx_0793357 a owl:Class .
+
+UBERON:0006447 a owl:Class .
+
+ilx:ilx_0738432 a owl:Class .
+
+ilx:ilx_0793558 a owl:Class .
+
+ilx:ilx_0793658 a owl:Class .
+
