@@ -1,459 +1,962 @@
+@prefix : <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/apinat-upper.ttl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#>.
-@prefix dc: <http://purl.org/dc/elements/1.1/>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix PMID: <http://www.ncbi.nlm.nih.gov/pubmed/> .
+@base <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/apinat-upper.ttl> .
+
+<https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/apinat-upper.ttl> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/source
+dc:source rdf:type owl:AnnotationProperty .
 
 
-<https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/apinat.ttl> a owl:Ontology.
+###  http://uri.interlex.org/tgbugs/uris/readable/literatureCitation
+ilxtr:literatureCitation rdf:type owl:AnnotationProperty .
 
 
-ilxtr:NeuronAacar a owl:Class ;
-    rdfs:label "neuron in the aacar cardiac model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/ard-arm-cardiac/docs/ard-arm-cardiac.svg> ;
-    ilxtr:literatureCitation PMID:27783854 .
+#################################################################
+#    Classes
+#################################################################
 
-ilxtr:NeuronBolew a owl:Class ;
-    rdfs:label "neuron in the bolew defensive breathing model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/bolser-lewis/docs/bolser-lewis.svg> ;
-    ilxtr:literatureCitation PMID:7782568,
-        PMID:7796149,
-        PMID:7813797,
-        PMID:7834356,
-        PMID:7836682,
-        PMID:7836686,
-        PMID:7903970,
-        PMID:7929567,
-        PMID:8100177,
-        PMID:8276896,
-        PMID:8332264,
-        PMID:8387586,
-        PMID:8506074,
-        PMID:8547955,
-        PMID:8577385,
-        PMID:8601611,
-        PMID:8624712,
-        PMID:8740667,
-        PMID:8788567,
-        PMID:8788934,
-        PMID:8811416,
-        PMID:8886382,
-        PMID:8951888,
-        PMID:8969167,
-        PMID:9004349,
-        PMID:9027733,
-        PMID:9133430,
-        PMID:9263908,
-        PMID:9409712,
-        PMID:9490839,
-        PMID:9502265,
-        PMID:9531559,
-        PMID:9573372,
-        PMID:9729290,
-        PMID:9733964,
-        PMID:9748253,
-        PMID:9749948,
-        PMID:9838124,
-        PMID:9915624,
-        PMID:9915630,
-        PMID:10225958,
-        PMID:10350567,
-        PMID:10366695,
-        PMID:10458655,
-        PMID:10494747,
-        PMID:10562289,
-        PMID:10578124,
-        PMID:10592284,
-        PMID:10658638,
-        PMID:10713972,
-        PMID:10733010,
-        PMID:10758340,
-        PMID:10811733,
-        PMID:10856295,
-        PMID:10924669,
-        PMID:11023630,
-        PMID:11160437,
-        PMID:11231083,
-        PMID:11282377,
-        PMID:11408533,
-        PMID:11429268,
-        PMID:11514262,
-        PMID:11641357,
-        PMID:11739175,
-        PMID:11742795,
-        PMID:11832397,
-        PMID:11855675,
-        PMID:11871776,
-        PMID:12063315,
-        PMID:12114323,
-        PMID:12122138,
-        PMID:12137971,
-        PMID:12388214,
-        PMID:12388215,
-        PMID:12388265,
-        PMID:12445685,
-        PMID:12527603,
-        PMID:12591925,
-        PMID:12626474,
-        PMID:12697739,
-        PMID:12765894,
-        PMID:12805022,
-        PMID:12932844,
-        PMID:13000765,
-        PMID:14519374,
-        PMID:14534153,
-        PMID:14609506,
-        PMID:14609949,
-        PMID:14627719,
-        PMID:14660500,
-        PMID:14678497,
-        PMID:14705045,
-        PMID:14946740,
-        PMID:15028638,
-        PMID:15034123,
-        PMID:15063691,
-        PMID:15175551,
-        PMID:15207256,
-        PMID:15358754,
-        PMID:15447661,
-        PMID:15447682,
-        PMID:15472118,
-        PMID:15479161,
-        PMID:15499024,
-        PMID:15561403,
-        PMID:15571768,
-        PMID:15616031,
-        PMID:15629763,
-        PMID:15664563,
-        PMID:15677340,
-        PMID:15716855,
-        PMID:15800194,
-        PMID:15843611,
-        PMID:15863454,
-        PMID:15878769,
-        PMID:15879294,
-        PMID:15896903,
-        PMID:15914466,
-        PMID:16051624,
-        PMID:16140403,
-        PMID:16163845,
-        PMID:16192990,
-        PMID:16357085,
-        PMID:16421279,
-        PMID:16457956,
-        PMID:16463381,
-        PMID:16467392,
-        PMID:16472784,
-        PMID:16556879,
-        PMID:16639428,
-        PMID:16683703,
-        PMID:16690040,
-        PMID:16695569,
-        PMID:16731638,
-        PMID:16772524,
-        PMID:16805851,
-        PMID:16873714,
-        PMID:16899065,
-        PMID:16966473,
-        PMID:16992618,
-        PMID:17010421,
-        PMID:17046837,
-        PMID:17116015,
-        PMID:17190804,
-        PMID:17198973,
-        PMID:17200432,
-        PMID:17291465,
-        PMID:17439984,
-        PMID:17466957,
-        PMID:17494952,
-        PMID:17548723,
-        PMID:17563416,
-        PMID:17564680,
-        PMID:17581829,
-        PMID:17659349,
-        PMID:17764667,
-        PMID:17850771,
-        PMID:18001283,
-        PMID:18215617,
-        PMID:18280799,
-        PMID:18342984,
-        PMID:18502401,
-        PMID:18509100,
-        PMID:18510863,
-        PMID:18541276,
-        PMID:18596110,
-        PMID:18668165,
-        PMID:18668683,
-        PMID:18708172,
-        PMID:18824142,
-        PMID:18834926,
-        PMID:18927268,
-        PMID:18949084,
-        PMID:18978039,
-        PMID:19022410,
-        PMID:19150858,
-        PMID:19224053,
-        PMID:19246694,
-        PMID:19410664,
-        PMID:19433582,
-        PMID:19536480,
-        PMID:19563784,
-        PMID:19563966,
-        PMID:20357072,
-        PMID:20452469,
-        PMID:20530461,
-        PMID:20620242,
-        PMID:20654344,
-        PMID:21168394,
-        PMID:21173073,
-        PMID:21334312,
-        PMID:21525432,
-        PMID:21536845,
-        PMID:21555000,
-        PMID:21729771,
-        PMID:22155207,
-        PMID:22187044,
-        PMID:22308161,
-        PMID:22364734,
-        PMID:22422797,
-        PMID:22546625,
-        PMID:22689348,
-        PMID:22728582,
-        PMID:22765871,
-        PMID:22965459,
-        PMID:22994521,
-        PMID:23153692,
-        PMID:23196432,
-        PMID:23949217,
-        PMID:23961347,
-        PMID:24036592,
-        PMID:24097160,
-        PMID:25583660,
-        PMID:25720414,
-        PMID:25862588,
-        PMID:26057593,
-        PMID:26087133,
-        PMID:26272445,
-        PMID:26303480,
-        PMID:26327233,
-        PMID:26808681,
-        PMID:27329243,
-        PMID:27570189,
-        PMID:27622862,
-        PMID:27692876,
-        PMID:27864234,
-        PMID:28473232,
-        PMID:28533756,
-        PMID:28637679,
-        PMID:28718507,
-        PMID:28801916,
-        PMID:29154859,
-        PMID:29169693,
-        PMID:29336842,
-        PMID:29524562,
-        PMID:29723577,
-        PMID:29775122,
-        PMID:30090059,
-        PMID:30222982 .
-
-ilxtr:NeuronBromo a owl:Class ;
-    rdfs:label "neuron in the bromo bronchomotor model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/bronchomotor/docs/bronchomotor.svg> ;
-    ilxtr:literatureCitation <https://doi.org/10.1016/B978-0-444-53491-0.09985-5>,
-        <https://doi.org/10.1016/j.mpaic.2008.08.005>,
-        PMID:2384334,
-        PMID:3198482,
-        PMID:8300416,
-        PMID:18579364 .
-
-ilxtr:NeuronKblad a owl:Class ;
-    rdfs:label "neuron in the kblad bladder model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/keast-bladder/docs/keast-bladder.svg> ;
-    ilxtr:literatureCitation PMID:86176,
-        PMID:758335,
-        PMID:1358408,
-        PMID:1619047,
-        PMID:1726105,
-        PMID:2567744,
-        PMID:2571623,
-        PMID:2713886,
-        PMID:2891149,
-        PMID:3225349,
-        PMID:3416186,
-        PMID:3558884,
-        PMID:3722467,
-        PMID:4700666,
-        PMID:6736301,
-        PMID:7174880,
-        PMID:7419745,
-        PMID:7636036,
-        PMID:7644029,
-        PMID:9421141,
-        PMID:9442414,
-        PMID:9622251,
-        PMID:10473279,
-        PMID:11382385,
-        PMID:11748568,
-        PMID:12401325,
-        PMID:12811806,
-        PMID:21283532,
-        PMID:30704972 .
-ilxtr:NeuronPancr a owl:Class ;
-    rdfs:label "neuron in the pancr pancreas model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/pancreas/docs/pancreas.svg> ;
-    ilxtr:literatureCitation PMID:30842720 .
-
-ilxtr:NeuronSdcol a owl:Class ;
-    rdfs:label "neuron in the sdcol descending colon model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/sawg-distal-colon/docs/sawg-distal-colon.svg> ;
-    ilxtr:literatureCitation PMID:4044907,
-        PMID:4044908,
-        PMID:4044909,
-        PMID:6736296,
-        PMID:8601295 .
-
-ilxtr:NeuronSplen a owl:Class ;
-    rdfs:label "neuron in the splen spleen model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/spleen/docs/spleen.svg> ;
-    ilxtr:literatureCitation PMID:14565534,
-        PMID:24411268,
-        PMID:32061636,
-        PMID:33491187 .
-
-ilxtr:NeuronSstom a owl:Class ;
-    rdfs:label "neuron in the sstom stomach model" ;
-    rdfs:subClassOf ilxtr:NeuronEBM ;
-    dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/sawg-stomach/docs/sawg-stomach.svg> ;
-    ilxtr:literatureCitation PMID:2902218,
-        PMID:11437981,
-        PMID:12576302,
-        PMID:18286675,
-        PMID:18364578,
-        PMID:18924442,
-        PMID:23438947,
-        PMID:24306100 .
-
-ilxtr:neuron-type-aacar-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-10a	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-10v	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-11	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-12	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-13	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-14	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-15	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-2i	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-2m	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-6	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-7a	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-7v	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-8a	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-8v	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-9a	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-aacar-9v	a owl:Class ; rdfs:subClassOf ilxtr:NeuronAacar.
-ilxtr:neuron-type-bolew-unbranched-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-10	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-11	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-12	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-13	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-14	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-15	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-16	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-17	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-18	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-19	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-20	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-21	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-22	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-23	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-24	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-25	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-26	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-27	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-28	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-29	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-6	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-7	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-8	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bolew-unbranched-9	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBolew.
-ilxtr:neuron-type-bromo-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-bromo-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-bromo-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-bromo-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-bromo-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-bromo-6	a owl:Class ; rdfs:subClassOf ilxtr:NeuronBromo.
-ilxtr:neuron-type-keast-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-10	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-11	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-12	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-13	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-14	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-15	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-16	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-17	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-18	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-19	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-20	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-6	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-7	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-8	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-keast-9	a owl:Class ; rdfs:subClassOf ilxtr:NeuronKblad.
-ilxtr:neuron-type-pancr-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronPancr.
-ilxtr:neuron-type-pancr-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronPancr.
-ilxtr:neuron-type-pancr-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronPancr.
-ilxtr:neuron-type-pancr-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronPancr.
-ilxtr:neuron-type-pancr-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronPancr.
-ilxtr:neuron-type-sdcol-b	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-c	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-d	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-f	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-g	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-h	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-i	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-j	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-j-prime	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-k	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-l	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-l-prime	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-m	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-n	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-o	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-p	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-q	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-sdcol-q-prime	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSdcol.
-ilxtr:neuron-type-splen-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-splen-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-splen-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-splen-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-splen-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-sstom-1	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSplen.
-ilxtr:neuron-type-sstom-10	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-11	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-12	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-2	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-3	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-4	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-5	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-6	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-7	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-8	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
-ilxtr:neuron-type-sstom-9	a owl:Class ; rdfs:subClassOf ilxtr:NeuronSstom.
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronAacar
+ilxtr:NeuronAacar rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/ard-arm-cardiac/docs/ard-arm-cardiac.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/27783854> ;
+                  rdfs:label "neuron in the aacar cardiac model" .
 
 
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronBolew
+ilxtr:NeuronBolew rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/bolser-lewis/docs/bolser-lewis.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/10225958> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10350567> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10366695> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10458655> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10494747> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10562289> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10578124> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10592284> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10658638> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10713972> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10733010> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10758340> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10811733> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10856295> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/10924669> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11023630> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11160437> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11231083> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11282377> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11408533> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11429268> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11514262> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11641357> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11739175> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11742795> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11832397> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11855675> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11871776> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12063315> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12114323> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12122138> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12137971> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12388214> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12388215> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12388265> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12445685> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12527603> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12591925> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12626474> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12697739> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12765894> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12805022> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12932844> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/13000765> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14519374> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14534153> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14609506> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14609949> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14627719> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14660500> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14678497> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14705045> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/14946740> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15028638> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15034123> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15063691> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15175551> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15207256> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15358754> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15447661> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15447682> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15472118> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15479161> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15499024> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15561403> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15571768> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15616031> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15629763> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15664563> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15677340> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15716855> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15800194> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15843611> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15863454> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15878769> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15879294> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15896903> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/15914466> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16051624> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16140403> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16163845> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16192990> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16357085> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16421279> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16457956> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16463381> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16467392> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16472784> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16556879> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16639428> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16683703> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16690040> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16695569> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16731638> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16772524> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16805851> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16873714> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16899065> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16966473> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/16992618> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17010421> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17046837> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17116015> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17190804> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17198973> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17200432> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17291465> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17439984> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17466957> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17494952> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17548723> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17563416> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17564680> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17581829> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17659349> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17764667> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/17850771> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18001283> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18215617> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18280799> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18342984> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18502401> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18509100> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18510863> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18541276> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18596110> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18668165> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18668683> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18708172> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18824142> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18834926> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18927268> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18949084> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18978039> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19022410> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19150858> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19224053> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19246694> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19410664> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19433582> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19536480> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19563784> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/19563966> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/20357072> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/20452469> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/20530461> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/20620242> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/20654344> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21168394> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21173073> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21334312> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21525432> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21536845> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21555000> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21729771> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22155207> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22187044> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22308161> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22364734> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22422797> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22546625> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22689348> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22728582> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22765871> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22965459> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/22994521> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/23153692> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/23196432> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/23949217> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/23961347> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/24036592> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/24097160> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/25583660> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/25720414> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/25862588> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26057593> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26087133> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26272445> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26303480> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26327233> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/26808681> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/27329243> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/27570189> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/27622862> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/27692876> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/27864234> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/28473232> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/28533756> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/28637679> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/28718507> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/28801916> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29154859> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29169693> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29336842> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29524562> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29723577> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/29775122> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/30090059> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/30222982> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7782568> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7796149> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7813797> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7834356> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7836682> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7836686> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7903970> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7929567> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8100177> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8276896> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8332264> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8387586> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8506074> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8547955> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8577385> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8601611> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8624712> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8740667> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8788567> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8788934> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8811416> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8886382> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8951888> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8969167> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9004349> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9027733> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9133430> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9263908> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9409712> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9490839> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9502265> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9531559> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9573372> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9729290> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9733964> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9748253> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9749948> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9838124> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9915624> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9915630> ;
+                  rdfs:label "neuron in the bolew defensive breathing model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronBromo
+ilxtr:NeuronBromo rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/bronchomotor/docs/bronchomotor.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/18579364> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2384334> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/3198482> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8300416> ,
+                                           <https://doi.org/10.1016/B978-0-444-53491-0.09985-5> ,
+                                           <https://doi.org/10.1016/j.mpaic.2008.08.005> ;
+                  rdfs:label "neuron in the bromo bronchomotor model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronEBM
+ilxtr:NeuronEBM rdf:type owl:Class .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronKblad
+ilxtr:NeuronKblad rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/keast-bladder/docs/keast-bladder.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/10473279> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11382385> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/11748568> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12401325> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12811806> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/1358408> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/1619047> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/1726105> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/21283532> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2567744> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2571623> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2713886> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2891149> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/30704972> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/3225349> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/3416186> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/3558884> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/3722467> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/4700666> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/6736301> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7174880> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7419745> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/758335> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7636036> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/7644029> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/86176> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9421141> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9442414> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/9622251> ;
+                  rdfs:label "neuron in the kblad bladder model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronPancr
+ilxtr:NeuronPancr rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/pancreas/docs/pancreas.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/30842720> ;
+                  rdfs:label "neuron in the pancr pancreas model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronSdcol
+ilxtr:NeuronSdcol rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/sawg-distal-colon/docs/sawg-distal-colon.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/4044907> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/4044908> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/4044909> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/6736296> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/8601295> ;
+                  rdfs:label "neuron in the sdcol descending colon model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronSplen
+ilxtr:NeuronSplen rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/spleen/docs/spleen.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/14565534> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/24411268> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/32061636> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/33491187> ;
+                  rdfs:label "neuron in the splen spleen model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/NeuronSstom
+ilxtr:NeuronSstom rdf:type owl:Class ;
+                  rdfs:subClassOf ilxtr:NeuronEBM ;
+                  dc:source <https://raw.githubusercontent.com/open-physiology/apinatomy-models/master/models/sawg-stomach/docs/sawg-stomach.svg> ;
+                  ilxtr:literatureCitation <http://www.ncbi.nlm.nih.gov/pubmed/11437981> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/12576302> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18286675> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18364578> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/18924442> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/23438947> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/24306100> ,
+                                           <http://www.ncbi.nlm.nih.gov/pubmed/2902218> ;
+                  rdfs:label "neuron in the sstom stomach model" .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-1
+ilxtr:neuron-type-aacar-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-10a
+ilxtr:neuron-type-aacar-10a rdf:type owl:Class ;
+                            rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-10v
+ilxtr:neuron-type-aacar-10v rdf:type owl:Class ;
+                            rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-11
+ilxtr:neuron-type-aacar-11 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-12
+ilxtr:neuron-type-aacar-12 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-13
+ilxtr:neuron-type-aacar-13 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-14
+ilxtr:neuron-type-aacar-14 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-15
+ilxtr:neuron-type-aacar-15 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-2i
+ilxtr:neuron-type-aacar-2i rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-2m
+ilxtr:neuron-type-aacar-2m rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-4
+ilxtr:neuron-type-aacar-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-5
+ilxtr:neuron-type-aacar-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-6
+ilxtr:neuron-type-aacar-6 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-7a
+ilxtr:neuron-type-aacar-7a rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-7v
+ilxtr:neuron-type-aacar-7v rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-8a
+ilxtr:neuron-type-aacar-8a rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-8v
+ilxtr:neuron-type-aacar-8v rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-9a
+ilxtr:neuron-type-aacar-9a rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-aacar-9v
+ilxtr:neuron-type-aacar-9v rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronAacar .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-1
+ilxtr:neuron-type-bolew-unbranched-1 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-10
+ilxtr:neuron-type-bolew-unbranched-10 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-11
+ilxtr:neuron-type-bolew-unbranched-11 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-12
+ilxtr:neuron-type-bolew-unbranched-12 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-13
+ilxtr:neuron-type-bolew-unbranched-13 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-14
+ilxtr:neuron-type-bolew-unbranched-14 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-15
+ilxtr:neuron-type-bolew-unbranched-15 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-16
+ilxtr:neuron-type-bolew-unbranched-16 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-17
+ilxtr:neuron-type-bolew-unbranched-17 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-18
+ilxtr:neuron-type-bolew-unbranched-18 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-19
+ilxtr:neuron-type-bolew-unbranched-19 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-2
+ilxtr:neuron-type-bolew-unbranched-2 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-20
+ilxtr:neuron-type-bolew-unbranched-20 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-21
+ilxtr:neuron-type-bolew-unbranched-21 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-22
+ilxtr:neuron-type-bolew-unbranched-22 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-23
+ilxtr:neuron-type-bolew-unbranched-23 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-24
+ilxtr:neuron-type-bolew-unbranched-24 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-25
+ilxtr:neuron-type-bolew-unbranched-25 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-26
+ilxtr:neuron-type-bolew-unbranched-26 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-27
+ilxtr:neuron-type-bolew-unbranched-27 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-28
+ilxtr:neuron-type-bolew-unbranched-28 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-29
+ilxtr:neuron-type-bolew-unbranched-29 rdf:type owl:Class ;
+                                      rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-3
+ilxtr:neuron-type-bolew-unbranched-3 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-4
+ilxtr:neuron-type-bolew-unbranched-4 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-5
+ilxtr:neuron-type-bolew-unbranched-5 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-6
+ilxtr:neuron-type-bolew-unbranched-6 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-7
+ilxtr:neuron-type-bolew-unbranched-7 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-8
+ilxtr:neuron-type-bolew-unbranched-8 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bolew-unbranched-9
+ilxtr:neuron-type-bolew-unbranched-9 rdf:type owl:Class ;
+                                     rdfs:subClassOf ilxtr:NeuronBolew .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-1
+ilxtr:neuron-type-bromo-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-2
+ilxtr:neuron-type-bromo-2 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-3
+ilxtr:neuron-type-bromo-3 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-4
+ilxtr:neuron-type-bromo-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-5
+ilxtr:neuron-type-bromo-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-bromo-6
+ilxtr:neuron-type-bromo-6 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronBromo .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-1
+ilxtr:neuron-type-keast-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-10
+ilxtr:neuron-type-keast-10 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-11
+ilxtr:neuron-type-keast-11 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-12
+ilxtr:neuron-type-keast-12 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-13
+ilxtr:neuron-type-keast-13 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-14
+ilxtr:neuron-type-keast-14 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-15
+ilxtr:neuron-type-keast-15 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-16
+ilxtr:neuron-type-keast-16 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-17
+ilxtr:neuron-type-keast-17 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-18
+ilxtr:neuron-type-keast-18 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-19
+ilxtr:neuron-type-keast-19 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-2
+ilxtr:neuron-type-keast-2 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-20
+ilxtr:neuron-type-keast-20 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-3
+ilxtr:neuron-type-keast-3 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-4
+ilxtr:neuron-type-keast-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-5
+ilxtr:neuron-type-keast-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-6
+ilxtr:neuron-type-keast-6 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-7
+ilxtr:neuron-type-keast-7 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-8
+ilxtr:neuron-type-keast-8 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-keast-9
+ilxtr:neuron-type-keast-9 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronKblad .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-pancr-1
+ilxtr:neuron-type-pancr-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronPancr .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-pancr-2
+ilxtr:neuron-type-pancr-2 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronPancr .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-pancr-3
+ilxtr:neuron-type-pancr-3 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronPancr .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-pancr-4
+ilxtr:neuron-type-pancr-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronPancr .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-pancr-5
+ilxtr:neuron-type-pancr-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronPancr .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-b
+ilxtr:neuron-type-sdcol-b rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-c
+ilxtr:neuron-type-sdcol-c rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-d
+ilxtr:neuron-type-sdcol-d rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-f
+ilxtr:neuron-type-sdcol-f rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-g
+ilxtr:neuron-type-sdcol-g rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-h
+ilxtr:neuron-type-sdcol-h rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-i
+ilxtr:neuron-type-sdcol-i rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-j
+ilxtr:neuron-type-sdcol-j rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-j-prime
+ilxtr:neuron-type-sdcol-j-prime rdf:type owl:Class ;
+                                rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-k
+ilxtr:neuron-type-sdcol-k rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-l
+ilxtr:neuron-type-sdcol-l rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-l-prime
+ilxtr:neuron-type-sdcol-l-prime rdf:type owl:Class ;
+                                rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-m
+ilxtr:neuron-type-sdcol-m rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-n
+ilxtr:neuron-type-sdcol-n rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-o
+ilxtr:neuron-type-sdcol-o rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-p
+ilxtr:neuron-type-sdcol-p rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-q
+ilxtr:neuron-type-sdcol-q rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sdcol-q-prime
+ilxtr:neuron-type-sdcol-q-prime rdf:type owl:Class ;
+                                rdfs:subClassOf ilxtr:NeuronSdcol .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-splen-1
+ilxtr:neuron-type-splen-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-splen-2
+ilxtr:neuron-type-splen-2 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-splen-3
+ilxtr:neuron-type-splen-3 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-splen-4
+ilxtr:neuron-type-splen-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-splen-5
+ilxtr:neuron-type-splen-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-1
+ilxtr:neuron-type-sstom-1 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSplen .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-10
+ilxtr:neuron-type-sstom-10 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-11
+ilxtr:neuron-type-sstom-11 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-12
+ilxtr:neuron-type-sstom-12 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-13
+ilxtr:neuron-type-sstom-13 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-14
+ilxtr:neuron-type-sstom-14 rdf:type owl:Class ;
+                           rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-2
+ilxtr:neuron-type-sstom-2 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-3
+ilxtr:neuron-type-sstom-3 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-4
+ilxtr:neuron-type-sstom-4 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-5
+ilxtr:neuron-type-sstom-5 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-6
+ilxtr:neuron-type-sstom-6 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-7
+ilxtr:neuron-type-sstom-7 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-8
+ilxtr:neuron-type-sstom-8 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  http://uri.interlex.org/tgbugs/uris/readable/neuron-type-sstom-9
+ilxtr:neuron-type-sstom-9 rdf:type owl:Class ;
+                          rdfs:subClassOf ilxtr:NeuronSstom .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
