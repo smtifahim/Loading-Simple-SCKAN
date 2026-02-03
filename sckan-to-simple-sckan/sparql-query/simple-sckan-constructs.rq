@@ -27,6 +27,7 @@ prefix NLX: <http://uri.neuinfo.org/nif/nifstd/nlx_>
 prefix npokb: <http://uri.interlex.org/npo/uris/neurons/>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix portal: <http://uri.interlex.org/composer/uris/set/portal/>
+prefix pain1: <http://uri.interlex.org/composer/uris/set/pain1/>
 prefix gastint: <http://uri.interlex.org/composer/uris/set/gastint/>
 prefix PATO: <http://purl.obolibrary.org/obo/PATO_>
 prefix PAXRAT: <http://uri.interlex.org/paxinos/uris/rat/labels/>
@@ -62,7 +63,7 @@ WHERE
   # FILTER (regex(str(?neuron_type), "keast-1"))
   
   ?neuron_type rdfs:subClassOf+ ?sckan_neuron . #only consider SCKAN neurons
-  VALUES ?sckan_neuron { ilxtr:NeuronSparcNlp ilxtr:NeuronApinatSimple }
+  VALUES ?sckan_neuron { ilxtr:NeuronComposer ilxtr:NeuronApinatComplex }
 
   {
     # ============================================================
@@ -229,6 +230,8 @@ WHERE
       (ilxtr:hasProjectionPhenotype ilxtr:hasProjection)
       (ilxtr:hasCircuitRolePhenotype ilxtr:hasCircuitRole)
       (ilxtr:hasMolecularPhenotype ilxtr:hasMolecule)
+      (ilxtr:hasAxonPhenotype ilxtr:hasAxonType)
+      (ilxtr:isMemberOfCircuit ilxtr:hasCircuitMembership)
       (ilxtr:hasInstanceInTaxon ilxtr:isObservedInSpecies)
       (ilxtr:hasBiologicalSex ilxtr:hasPhenotypicSex)
     }

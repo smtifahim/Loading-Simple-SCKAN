@@ -1,4 +1,4 @@
-@prefix : <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/dev-sckan/ttl/npo-sckan.ttl#> .
+@prefix : <file:///ERROR/EMPTY/PREFIX/BANNED/> .
 @prefix aibs.mus.lab: <http://uri.interlex.org/aibs/uris/mouse/labels/> .
 @prefix AIBSTL: <http://api.brain-map.org/api/v2/data/TransgenicLine/> .
 @prefix atom: <http://uri.interlex.org/tgbugs/uris/readable/atlas/> .
@@ -47,11 +47,11 @@
 @prefix TEMPIND: <http://uri.interlex.org/temp/uris/phenotype-indicators/> .
 @prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
 
-<https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/dev-sckan/ttl/npo-sckan.ttl> a owl:Ontology ;
+<https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/npo.ttl> a owl:Ontology ;
     rdfs:label "The Neuron Phenotype Ontology" ;
     dc:title "The Neuron Phenotype Ontology" ;
     dc:description "An ontology of neuron types based on the phenotypic dimensions of cells that can be measure experimentally." ;
-    owl:versionInfo "2025-11-10" ;
+    owl:versionInfo "2026-01-21" ;
     dc:contributor "Bernard de Bono - https://orcid.org/0000-0003-0638-5274",
         "Fahim Imam - https://orcid.org/0000-0003-4752-543X",
         "Ilias Ziogas - https://orcid.org/0000-0002-9210-2455",
@@ -66,13 +66,13 @@
     dcterms:license <http://spdx.org/licenses/CC-BY-4.0> ;
     doap:audience "researchers working on cell types and their phenotypes, whether they are collecting raw data, organizing existing data, or creating simulations of cell types" ;
     doap:bug-database <https://github.com/SciCrunch/NIF-Ontology/issues> ;
-    doap:GitRepository <https://github.com/SciCrunch/NIF-Ontology> ;
+    doap:GitRespository <https://github.com/SciCrunch/NIF-Ontology> ;
     ilxtr:imports <http://purl.obolibrary.org/obo/bfo.owl>,
-        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/dev-sckan/ttl/bridge/custom-neuron-bridge.ttl>,
-        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/dev-sckan/ttl/generated/allen-transgenic-lines.ttl>,
-        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/dev-sckan/ttl/generated/parcellation/mbaslim.ttl> ;
+        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/bridge/neuron-bridge.ttl>,
+        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/generated/allen-transgenic-lines.ttl>,
+        <https://raw.githubusercontent.com/SciCrunch/NIF-Ontology/neurons/ttl/generated/parcellation/mbaslim.ttl> ;
     ilxtr:indexNamespace npokb: ;
-    MIRO:axiom_patterns <https://github.com/SciCrunch/NIF-Ontology/blob/dev-sckan/docs/Neurons.md>,
+    MIRO:axiom_patterns <https://github.com/SciCrunch/NIF-Ontology/blob/neurons/docs/Neurons.md>,
         <https://github.com/tgbugs/pyontutils/blob/master/neurondm/docs/basic-model.org> ;
     MIRO:competition <https://github.com/obophenotype/cell-ontology> ;
     MIRO:dereferenceable_iris "`npokb:' and `ilxtr:' identifiers are not currently dereferenceable, but they are planned to be." ;
@@ -83,7 +83,7 @@
     MIRO:entity_naming_convention "`rdfs:label' must be automatically generated using neurondm. Labels are generated from the labels of the constituent phenotype values. Only restrictions specifying necessary criteria for defining the type (i.e. those that are contained in an `owl:equivalentClass' statement) are included when generating the name. The ordering of the dimensions is specified in https://github.com/tgbugs/pyontutils/blob/a5e9fcc70d56870e692c17cb7fadce735a281d02/neurondm/neurondm/core.py#L135-L389" ;
     MIRO:evaluation "No external evaluation has been conducted. See https://doi.org/10.1007/s12021-022-09566-7" ;
     MIRO:example_of_use <https://doi.org/10.1007/s12021-022-09566-7> ;
-    MIRO:identifier_generation_policy "`npokb:[0-9]+' identifiers are assigned sequentially via https://github.com/tgbugs/pyontutils/blob/a5e9fcc70d56870e692c17cb7fadce735a281d02/nifstd/nifstd_tools/map-identifiers.py#L20-L49. An index of issued identifiers is retained at https://github.com/SciCrunch/NIF-Ontology/blob/dev-sckan/ttl/generated/neurons/npokb-index.ttl. Note that the current implementation currently does not correctly handles cases where the constituent phenotypes of a class change." ;
+    MIRO:identifier_generation_policy "`npokb:[0-9]+' identifiers are assigned sequentially via https://github.com/tgbugs/pyontutils/blob/a5e9fcc70d56870e692c17cb7fadce735a281d02/nifstd/nifstd_tools/map-identifiers.py#L20-L49. An index of issued identifiers is retained at https://github.com/SciCrunch/NIF-Ontology/blob/neurons/ttl/generated/neurons/npokb-index.ttl. Note that the current implementation currently does not correctly handles cases where the constituent phenotypes of a class change." ;
     MIRO:knowledge_acquisition_methodology <https://doi.org/10.1007/s12021-022-09566-7> ;
     MIRO:knowledge_representation_language <http://www.w3.org/2002/07/owl> ;
     MIRO:methodological_framework <https://doi.org/10.1007/s12021-022-09566-7> ;
@@ -93,8 +93,7 @@
     MIRO:sustainability_plan "The npo is maintained as part of the NIF-Ontology." ;
     MIRO:testing "See `MIRO:axiom_patterns' and paper https://doi.org/10.1007/s12021-022-09566-7" ;
     MIRO:versioning_policy "Development versions of the ontology are released continuously and are identified by their git commit hashes. Stable versions are released periodically and can be accessed by their git tag." ;
-    prov:wasGeneratedBy <https://github.com/tgbugs/pyontutils/blob/d545af8339fa11b79969b3cc53a5d7d9d0c22952/neurondm/neurondm/build_custom.py#L1583>,
-        <https://github.com/tgbugs/pyontutils/blob/master/neurondm/neurondm/custom_build.py> .
+    prov:wasGeneratedBy <https://github.com/tgbugs/pyontutils/blob/master/neurondm/neurondm/build.py> .
 
 ### Annotation Properties
 
@@ -112,7 +111,7 @@ doap:audience a owl:AnnotationProperty .
 
 doap:bug-database a owl:AnnotationProperty .
 
-doap:GitRepository a owl:AnnotationProperty .
+doap:GitRespository a owl:AnnotationProperty .
 
 ilxtr:imports a owl:AnnotationProperty .
 
@@ -1134,18 +1133,6 @@ FMA:5875 a owl:Class ;
 FMA:5876 a owl:Class ;
     rdfs:subClassOf FMA:5874 .
 
-FMA:5884 a owl:Class ;
-    rdfs:subClassOf FMA:11195 .
-
-FMA:5889 a owl:Class ;
-    rdfs:subClassOf FMA:5884 .
-
-FMA:5890 a owl:Class ;
-    rdfs:subClassOf FMA:5889 .
-
-FMA:5891 a owl:Class ;
-    rdfs:subClassOf FMA:5890 .
-
 FMA:5980 a owl:Class ;
     rdfs:subClassOf FMA:14060 .
 
@@ -1163,12 +1150,6 @@ FMA:5985 a owl:Class ;
 
 FMA:6030 a owl:Class ;
     rdfs:subClassOf FMA:5982 .
-
-FMA:6472 a owl:Class ;
-    rdfs:subClassOf FMA:5891 .
-
-FMA:6473 a owl:Class ;
-    rdfs:subClassOf FMA:5891 .
 
 FMA:6797 a owl:Class ;
     rdfs:subClassOf FMA:5983 .
@@ -1229,77 +1210,468 @@ FMA:83115 a owl:Class ;
 FMA:305751 a owl:Class ;
     rdfs:subClassOf FMA:67165 .
 
+<http://uri.interlex.org/composer/uris/set/gastint/1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
 <http://uri.interlex.org/composer/uris/set/gastint/2> a owl:Class ;
-    rdfs:subClassOf mmset4:12 .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/3> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/4> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/5> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/6> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/7> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/8> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/9> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/10> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/11> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/12> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/13> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/14> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/15> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/16> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/17> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/18> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/19> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/gastint/20> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/6> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/7> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/8> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/9> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/10> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/11> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/composer/uris/set/pain1/12> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/portal/1> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/portal/2> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/portal/3> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/portal/4> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
 
 <http://uri.interlex.org/composer/uris/set/portal/5> a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-2i> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-2m> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-6> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-7a> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-7v> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-8a> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-8v> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-9a> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-9v> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-10a> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-10v> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-11> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-12> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-13> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-14> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-15> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-6> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-7> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-8> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-9> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-10> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-11> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-12> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-13> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-14> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-15> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-16> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-17> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-18> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-19> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-20> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-21> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-22> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-23> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-24> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-25> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-24> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-26> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-27> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-28> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-29> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-6> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-6> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-7> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-8> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-9> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-10> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-11> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-12> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-13> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-14> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-15> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-16> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-17> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-18> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-19> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-20> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-pancr-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-pancr-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-pancr-3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-pancr-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-pancr-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-b> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-c> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-d> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-f> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-g> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-h> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-i> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-j> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-j-prime> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-k> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-l> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-l-prime> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-m> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-n> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-o> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-p> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-q> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-q-prime> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-splen-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-splen-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-splen-3> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-splen-4> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-splen-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-1> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-2> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-3> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-4> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-5> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-6> a owl:Class ;
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1> .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-7> a owl:Class ;
+    owl:equivalentClass <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-9> ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-8> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-9> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-10> a owl:Class ;
+    owl:equivalentClass <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-8> ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-11> a owl:Class ;
+    owl:equivalentClass <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-13> ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-12> a owl:Class ;
+    owl:equivalentClass <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-14> ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-13> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
+<http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sstom-14> a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
 
 ILX:0100559 a owl:Class .
 
@@ -1311,6 +1683,9 @@ ILX:0104003 a owl:Class ;
 
 ILX:0105486 a owl:Class ;
     rdfs:subClassOf PATO:0001238 .
+
+ILX:0106328 a owl:Class ;
+    rdfs:subClassOf BFO:0000023 .
 
 ILX:0738290 a owl:Class ;
     rdfs:subClassOf UBERON:0000407 .
@@ -1381,6 +1756,9 @@ ILX:0738372 a owl:Class ;
 ILX:0738432 a owl:Class ;
     rdfs:subClassOf UBERON:0007716 .
 
+ILX:0738433 a owl:Class ;
+    rdfs:subClassOf UBERON:0001062 .
+
 ILX:0738444 a owl:Class ;
     rdfs:subClassOf UBERON:0001348 .
 
@@ -1391,10 +1769,10 @@ ILX:0739295 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
 ILX:0739296 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0739297 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0739299 a owl:Class ;
     rdfs:subClassOf ILX:0794914 .
@@ -1405,24 +1783,13 @@ ILX:0739303 a owl:Class ;
 ILX:0739304 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
-ILX:0744266 a owl:Class ;
-    rdfs:subClassOf ILX:0744936 .
-
 ILX:0744531 a owl:Class .
-
-ILX:0744761 a owl:Class ;
-    rdfs:subClassOf ILX:0744266 .
-
-ILX:0744936 a owl:Class .
 
 ILX:0746029 a owl:Class ;
     rdfs:subClassOf ILX:0744531 .
 
 ILX:0746147 a owl:Class ;
     rdfs:subClassOf ILX:0748695 .
-
-ILX:0746880 a owl:Class ;
-    rdfs:subClassOf ILX:0744761 .
 
 ILX:0748695 a owl:Class ;
     rdfs:subClassOf ILX:0746029 .
@@ -1498,6 +1865,9 @@ ILX:0784439 a owl:Class ;
 ILX:0784569 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
+ILX:0784694 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
 ILX:0784721 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
@@ -1507,6 +1877,9 @@ ILX:0784804 a owl:Class ;
 ILX:0785067 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
 
+ILX:0785076 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
 ILX:0785238 a owl:Class ;
     rdfs:subClassOf FMA:6030 .
 
@@ -1515,6 +1888,9 @@ ILX:0785409 a owl:Class ;
 
 ILX:0785421 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
+
+ILX:0785435 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
 
 ILX:0785542 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
@@ -1556,7 +1932,7 @@ ILX:0786722 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
 
 ILX:0786933 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0786989 a owl:Class ;
     rdfs:subClassOf UBERON:0002855 .
@@ -1569,6 +1945,9 @@ ILX:0787015 a owl:Class ;
 
 ILX:0787082 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
+
+ILX:0787443 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
 
 ILX:0787520 a owl:Class ;
     rdfs:subClassOf UBERON:0024382 .
@@ -1585,11 +1964,17 @@ ILX:0787810 a owl:Class ;
 ILX:0787946 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
 
+ILX:0787969 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
+ILX:0788022 a owl:Class ;
+    rdfs:subClassOf FMA:5876 .
+
 ILX:0788026 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
 ILX:0788315 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0788532 a owl:Class ;
     rdfs:subClassOf FMA:6030 .
@@ -1619,16 +2004,22 @@ ILX:0788945 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
 
 ILX:0789109 a owl:Class ;
-    rdfs:subClassOf FMA:6473 .
+    rdfs:subClassOf UBERON:8600122 .
+
+ILX:0789287 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
 
 ILX:0789339 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
+ILX:0789482 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
 ILX:0789655 a owl:Class ;
-    rdfs:subClassOf FMA:6473 .
+    rdfs:subClassOf UBERON:8600122 .
 
 ILX:0789862 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0789894 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
@@ -1649,10 +2040,10 @@ ILX:0790316 a owl:Class ;
     rdfs:subClassOf UBERON:0000045 .
 
 ILX:0790394 a owl:Class ;
-    rdfs:subClassOf FMA:6473 .
+    rdfs:subClassOf UBERON:8600122 .
 
 ILX:0790472 a owl:Class ;
-    rdfs:subClassOf FMA:6472 .
+    rdfs:subClassOf UBERON:8600121 .
 
 ILX:0790482 a owl:Class ;
     rdfs:subClassOf UBERON:0000961 .
@@ -1684,6 +2075,9 @@ ILX:0791527 a owl:Class ;
 ILX:0791560 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
 
+ILX:0791808 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
 ILX:0791932 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
 
@@ -1693,6 +2087,12 @@ ILX:0792048 a owl:Class ;
 ILX:0792057 a owl:Class ;
     rdfs:subClassOf UBERON:0002854 .
 
+ILX:0792132 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
+ILX:0792193 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
 ILX:0792409 a owl:Class ;
     rdfs:subClassOf FMA:14055 .
 
@@ -1701,6 +2101,12 @@ ILX:0792433 a owl:Class ;
 
 ILX:0792508 a owl:Class ;
     rdfs:subClassOf UBERON:0002853 .
+
+ILX:0792543 a owl:Class ;
+    rdfs:subClassOf UBERON:0003727 .
+
+ILX:0792627 a owl:Class ;
+    rdfs:subClassOf FMA:5875 .
 
 ILX:0792838 a owl:Class ;
     rdfs:subClassOf UBERON:0014617 .
@@ -1885,11 +2291,26 @@ ILX:0793663 a owl:Class ;
 ILX:0793664 a owl:Class ;
     rdfs:subClassOf UBERON:0001980 .
 
+ILX:0793667 a owl:Class ;
+    rdfs:subClassOf UBERON:0002439 .
+
+ILX:0793668 a owl:Class ;
+    rdfs:subClassOf UBERON:0002439 .
+
+ILX:0793669 a owl:Class ;
+    rdfs:subClassOf UBERON:0005769 .
+
+ILX:0793671 a owl:Class ;
+    rdfs:subClassOf UBERON:0005734 .
+
 ILX:0793673 a owl:Class ;
     rdfs:subClassOf UBERON:0001810 .
 
 ILX:0793674 a owl:Class ;
     rdfs:subClassOf UBERON:0001810 .
+
+ILX:0793675 a owl:Class ;
+    rdfs:subClassOf UBERON:0005734 .
 
 ILX:0793676 a owl:Class ;
     rdfs:subClassOf UBERON:0001810 .
@@ -2421,6 +2842,18 @@ ILX:0796488 a owl:Class ;
 ILX:0796498 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
 
+ILX:0796510 a owl:Class ;
+    rdfs:subClassOf UBERON:0006135 .
+
+ILX:0796514 a owl:Class ;
+    rdfs:subClassOf ILX:0796510 .
+
+ILX:0796516 a owl:Class ;
+    rdfs:subClassOf UBERON:0006136 .
+
+ILX:0796530 a owl:Class ;
+    rdfs:subClassOf ILX:0106328 .
+
 ILX:0796679 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
@@ -2438,6 +2871,9 @@ ILX:0797433 a owl:Class ;
 
 ILX:0797434 a owl:Class ;
     rdfs:subClassOf UBERON:0001062 .
+
+ILX:0797451 a owl:Class ;
+    rdfs:subClassOf UBERON:0003726 .
 
 ilxtr:AccommodatingSpikingPhenotype a owl:Class ;
     rdfs:subClassOf ilxtr:SpikingPhenotype .
@@ -2669,356 +3105,417 @@ ilxtr:neuron-phenotype-sym-pre a owl:Class ;
         ilxtr:SympatheticPhenotype .
 
 ilxtr:neuron-type-aacar-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-1>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-2i a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple,
+    rdfs:subClassOf ilxtr:NeuronAacar,
         NLXCELL:1003113 .
 
 ilxtr:neuron-type-aacar-2m a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple,
+    rdfs:subClassOf ilxtr:NeuronAacar,
         NLXCELL:1003113 .
 
 ilxtr:neuron-type-aacar-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-6 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-7a a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-7a>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-7v a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-7v>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-8a a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-8a>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-8v a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-8v>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-9a a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-9v a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-10a a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple,
+    rdfs:subClassOf ilxtr:NeuronAacar,
         NLXCELL:1003113 .
 
 ilxtr:neuron-type-aacar-10v a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple,
+    rdfs:subClassOf ilxtr:NeuronAacar,
         NLXCELL:1003113 .
 
 ilxtr:neuron-type-aacar-11 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-aacar-11>,
+        ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-12 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-13 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-aacar-14 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple,
+    rdfs:subClassOf ilxtr:NeuronAacar,
         NLXCELL:1003113 .
 
 ilxtr:neuron-type-aacar-15 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronAacar .
 
 ilxtr:neuron-type-bolew-unbranched-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-6 a owl:Class ;
-    rdfs:subClassOf ilxtr:neuron-type-aacar-1 .
+    rdfs:subClassOf ilxtr:neuron-type-aacar-1,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-7 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-8 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-8>,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-9 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-9>,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-10 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-10>,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-11 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-11>,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-12 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bolew-unbranched-12>,
+        ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-13 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-14 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-15 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-16 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-17 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-18 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-19 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-20 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-21 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-22 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-23 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-24 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-25 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-26 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-27 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-28 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bolew-unbranched-29 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBolew .
 
 ilxtr:neuron-type-bromo-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-bromo-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-2>,
+        ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-bromo-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-3>,
+        ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-bromo-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-4>,
+        ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-bromo-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-5>,
+        ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-bromo-6 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-bromo-6>,
+        ilxtr:NeuronBromo .
 
 ilxtr:neuron-type-keast-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:neuron-type-keast-2 .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-4>,
+        ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-6 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-7 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-8 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-8>,
+        ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-9 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-9>,
+        ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-10 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-11 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-12 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-keast-12>,
+        ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-13 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-14 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-15 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-16 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-17 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-18 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-19 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-keast-20 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronKblad .
 
 ilxtr:neuron-type-pancr-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronPancr .
 
 ilxtr:neuron-type-pancr-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronPancr .
 
 ilxtr:neuron-type-pancr-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronPancr .
 
 ilxtr:neuron-type-pancr-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronPancr .
 
 ilxtr:neuron-type-pancr-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronPancr .
 
 ilxtr:neuron-type-sdcol-b a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-c a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-c>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-d a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-f a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-f>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-g a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-g>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-h a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-h>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-i a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-i>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-j a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-j>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-j-prime a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-j-prime>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-k a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-k>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-l a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-l>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-l-prime a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-l-prime>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-m a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-m>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-n a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-n>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-o a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-o>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-p a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-p>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-q a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-q>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-sdcol-q-prime a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf <http://uri.interlex.org/tgbugs/uris/readable/apinat-simple/neuron-type-sdcol-q-prime>,
+        ilxtr:NeuronSdcol .
 
 ilxtr:neuron-type-splen-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSplen .
 
 ilxtr:neuron-type-splen-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSplen .
 
 ilxtr:neuron-type-splen-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:neuron-type-aacar-1 .
+    rdfs:subClassOf ilxtr:neuron-type-aacar-1,
+        ilxtr:NeuronSplen .
 
 ilxtr:neuron-type-splen-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSplen .
 
 ilxtr:neuron-type-splen-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSplen .
 
 ilxtr:neuron-type-sstom-1 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-2 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-4 a owl:Class ;
-    rdfs:subClassOf ilxtr:neuron-type-aacar-1 .
+    rdfs:subClassOf ilxtr:neuron-type-aacar-1,
+        ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-5 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-6 a owl:Class ;
-    rdfs:subClassOf ilxtr:neuron-type-aacar-1 .
+    rdfs:subClassOf ilxtr:neuron-type-aacar-1,
+        ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-7 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-8 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-9 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-10 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-11 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
 
 ilxtr:neuron-type-sstom-12 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+    rdfs:subClassOf ilxtr:NeuronSstom .
+
+ilxtr:neuron-type-sstom-13 a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSstom .
+
+ilxtr:neuron-type-sstom-14 a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronSstom .
+
+ilxtr:NeuronAacar a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
 
 ilxtr:NeuronACT a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronEBM .
 
+ilxtr:NeuronApinatComplex a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatSimple .
+
 ilxtr:NeuronApinatSimple a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronEBM .
+
+ilxtr:NeuronBolew a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
+ilxtr:NeuronBromo a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
+ilxtr:NeuronComposer a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronEBM .
 
 ilxtr:NeuronCUT a owl:Class ;
@@ -3030,11 +3527,26 @@ ilxtr:NeuronEBM a owl:Class ;
 ilxtr:NeuronHuang2017 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronEBM .
 
+ilxtr:NeuronKblad a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
 ilxtr:NeuronMarkram2015 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronEBM .
 
+ilxtr:NeuronPancr a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
+ilxtr:NeuronSdcol a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
 ilxtr:NeuronSparcNlp a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronEBM .
+    rdfs:subClassOf ilxtr:NeuronComposer .
+
+ilxtr:NeuronSplen a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
+
+ilxtr:NeuronSstom a owl:Class ;
+    rdfs:subClassOf ilxtr:NeuronApinatComplex .
 
 ilxtr:NonAccommodatingSpikingPhenotype a owl:Class ;
     rdfs:subClassOf ilxtr:SpikingPhenotype .
@@ -3045,20 +3557,25 @@ ilxtr:NOS1-creER a owl:Class ;
 ilxtr:ParasympatheticPhenotype a owl:Class ;
     rdfs:subClassOf ilxtr:ANSPopulationPhenotype .
 
-ilxtr:parcellationArtifact a owl:Class .
+ilxtr:parcellationArtifact a owl:Class ;
+    owl:equivalentClass atom:Artifact .
 
 ilxtr:parcellationAtlas a owl:Class ;
+    owl:equivalentClass atom:Atlas ;
     rdfs:subClassOf atom:Artifact,
         ilxtr:parcellationArtifact .
 
 ilxtr:parcellationLabel a owl:Class ;
+    owl:equivalentClass atom:Label ;
     rdfs:subClassOf UBERON:0001062 .
 
 ilxtr:parcellationRegion a owl:Class ;
+    owl:equivalentClass atom:Region ;
     rdfs:subClassOf atom:Label,
         ilxtr:parcellationLabel .
 
 ilxtr:parcellationTerminology a owl:Class ;
+    owl:equivalentClass atom:Terminology ;
     rdfs:subClassOf atom:Artifact,
         ilxtr:parcellationArtifact .
 
@@ -3422,6 +3939,7 @@ liver:111 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
 
 liver:112 a owl:Class ;
+    owl:equivalentClass liver:125 ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
 
 liver:113 a owl:Class ;
@@ -8053,7 +8571,8 @@ mmset2cn:1 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
 
 mmset2cn:3 a owl:Class ;
-    rdfs:subClassOf ilxtr:NeuronSparcNlp .
+    rdfs:subClassOf <http://uri.interlex.org/composer/uris/set/gastint/1>,
+        ilxtr:NeuronSparcNlp .
 
 mmset2cn:4 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
@@ -8817,6 +9336,7 @@ NIFEXT:84 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 NIFEXT:106 a owl:Class ;
+    owl:equivalentClass SAO:1438006234 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 NIFEXT:109 a owl:Class ;
@@ -9197,15 +9717,19 @@ npokb:5 a owl:Class ;
         npokb:7 .
 
 npokb:6 a owl:Class ;
+    owl:equivalentClass NLXNEURNT:090802 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:7 a owl:Class ;
+    owl:equivalentClass NLXNEURNT:090803 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:8 a owl:Class ;
+    owl:equivalentClass NLXNEURNT:090804 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:9 a owl:Class ;
+    owl:equivalentClass NLXCELL:0912003 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:10 a owl:Class ;
@@ -9289,15 +9813,18 @@ npokb:30 a owl:Class ;
         npokb:31 .
 
 npokb:31 a owl:Class ;
+    owl:equivalentClass NLXCELL:0912004 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:32 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:33 a owl:Class ;
+    owl:equivalentClass NLXNEURNT:090807 ;
     rdfs:subClassOf ilxtr:NeuronCUT .
 
 npokb:34 a owl:Class ;
+    owl:equivalentClass SAO:1866881837 ;
     rdfs:subClassOf NLXCELL:1003113,
         NLXNEURNT:090802,
         npokb:6 .
@@ -9306,6 +9833,7 @@ npokb:35 a owl:Class ;
     rdfs:subClassOf npokb:5 .
 
 npokb:36 a owl:Class ;
+    owl:equivalentClass NIFEXT:143 ;
     rdfs:subClassOf NLXCELL:1003113,
         NLXNEURNT:090803,
         npokb:7 .
@@ -14327,6 +14855,7 @@ SO:0000001 a owl:Class ;
 SO:0000110 a owl:Class .
 
 SO:0000704 a owl:Class ;
+    owl:equivalentClass ilxtr:gene ;
     rdfs:subClassOf SO:0001411 .
 
 SO:0001411 a owl:Class ;
@@ -14590,6 +15119,9 @@ UBERON:0000075 a owl:Class ;
 UBERON:0000079 a owl:Class ;
     rdfs:subClassOf UBERON:0000990 .
 
+UBERON:0000094 a owl:Class ;
+    rdfs:subClassOf UBERON:0000062 .
+
 UBERON:0000101 a owl:Class ;
     rdfs:subClassOf UBERON:0009912 .
 
@@ -14628,6 +15160,9 @@ UBERON:0000160 a owl:Class ;
 
 UBERON:0000165 a owl:Class ;
     rdfs:subClassOf UBERON:0004921 .
+
+UBERON:0000167 a owl:Class ;
+    rdfs:subClassOf UBERON:0002553 .
 
 UBERON:0000168 a owl:Class ;
     rdfs:subClassOf UBERON:0004921 .
@@ -14967,8 +15502,15 @@ UBERON:0001017 a owl:Class ;
     rdfs:subClassOf UBERON:0004121,
         UBERON:0011216 .
 
+UBERON:0001018 a owl:Class ;
+    rdfs:subClassOf UBERON:0000122,
+        UBERON:0011215 .
+
 UBERON:0001019 a owl:Class ;
     rdfs:subClassOf UBERON:0000122 .
+
+UBERON:0001020 a owl:Class ;
+    rdfs:subClassOf UBERON:0001018 .
 
 UBERON:0001021 a owl:Class ;
     rdfs:subClassOf UBERON:0000122 .
@@ -15456,6 +15998,9 @@ UBERON:0001482 a owl:Class ;
 UBERON:0001483 a owl:Class ;
     rdfs:subClassOf UBERON:0000014 .
 
+UBERON:0001484 a owl:Class ;
+    rdfs:subClassOf UBERON:0000094 .
+
 UBERON:0001489 a owl:Class ;
     rdfs:subClassOf UBERON:0003839,
         UBERON:0003841,
@@ -15671,6 +16216,11 @@ UBERON:0001666 a owl:Class ;
 UBERON:0001667 a owl:Class ;
     rdfs:subClassOf UBERON:0008230 .
 
+UBERON:0001675 a owl:Class ;
+    rdfs:subClassOf UBERON:0001714,
+        UBERON:0001800,
+        UBERON:0004121 .
+
 UBERON:0001678 a owl:Class ;
     rdfs:subClassOf UBERON:0008193 .
 
@@ -15701,6 +16251,10 @@ UBERON:0001714 a owl:Class ;
 UBERON:0001715 a owl:Class ;
     rdfs:subClassOf UBERON:0007245,
         UBERON:0019267 .
+
+UBERON:0001717 a owl:Class ;
+    rdfs:subClassOf UBERON:0004132,
+        UBERON:0007635 .
 
 UBERON:0001718 a owl:Class .
 
@@ -16415,10 +16969,17 @@ UBERON:0002257 a owl:Class ;
     rdfs:subClassOf UBERON:0015212,
         UBERON:0016550 .
 
+UBERON:0002258 a owl:Class ;
+    rdfs:subClassOf UBERON:0006127,
+        UBERON:0015212 .
+
 UBERON:0002259 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
 UBERON:0002260 a owl:Class ;
+    rdfs:subClassOf UBERON:0009623 .
+
+UBERON:0002261 a owl:Class ;
     rdfs:subClassOf UBERON:0009623 .
 
 UBERON:0002262 a owl:Class ;
@@ -16765,7 +17326,14 @@ UBERON:0002530 a owl:Class ;
 UBERON:0002544 a owl:Class ;
     rdfs:subClassOf UBERON:0005881 .
 
+UBERON:0002549 a owl:Class ;
+    rdfs:subClassOf UBERON:0004171,
+        UBERON:0007702 .
+
 UBERON:0002551 a owl:Class .
+
+UBERON:0002553 a owl:Class ;
+    rdfs:subClassOf UBERON:0000464 .
 
 UBERON:0002556 a owl:Class .
 
@@ -16797,11 +17365,13 @@ UBERON:0002589 a owl:Class .
 UBERON:0002590 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
-UBERON:0002591 a owl:Class .
+UBERON:0002591 a owl:Class ;
+    rdfs:subClassOf UBERON:0019263 .
 
 UBERON:0002592 a owl:Class .
 
-UBERON:0002596 a owl:Class .
+UBERON:0002596 a owl:Class ;
+    rdfs:subClassOf UBERON:0015233 .
 
 UBERON:0002597 a owl:Class .
 
@@ -16955,7 +17525,8 @@ UBERON:0002762 a owl:Class .
 
 UBERON:0002768 a owl:Class .
 
-UBERON:0002776 a owl:Class .
+UBERON:0002776 a owl:Class ;
+    rdfs:subClassOf UBERON:0015233 .
 
 UBERON:0002778 a owl:Class .
 
@@ -17090,7 +17661,8 @@ UBERON:0002862 a owl:Class ;
 
 UBERON:0002864 a owl:Class .
 
-UBERON:0002866 a owl:Class .
+UBERON:0002866 a owl:Class ;
+    rdfs:subClassOf UBERON:0019263 .
 
 UBERON:0002870 a owl:Class ;
     rdfs:subClassOf UBERON:0007635,
@@ -17106,7 +17678,8 @@ UBERON:0002872 a owl:Class ;
         UBERON:0004133,
         UBERON:0007635 .
 
-UBERON:0002873 a owl:Class .
+UBERON:0002873 a owl:Class ;
+    rdfs:subClassOf UBERON:0019263 .
 
 UBERON:0002876 a owl:Class .
 
@@ -17142,6 +17715,9 @@ UBERON:0002918 a owl:Class .
 
 UBERON:0002924 a owl:Class .
 
+UBERON:0002925 a owl:Class ;
+    rdfs:subClassOf UBERON:0000126 .
+
 UBERON:0002928 a owl:Class .
 
 UBERON:0002932 a owl:Class ;
@@ -17156,7 +17732,8 @@ UBERON:0002934 a owl:Class ;
 
 UBERON:0002942 a owl:Class .
 
-UBERON:0002945 a owl:Class .
+UBERON:0002945 a owl:Class ;
+    rdfs:subClassOf UBERON:0015233 .
 
 UBERON:0002949 a owl:Class .
 
@@ -17488,6 +18065,12 @@ UBERON:0003723 a owl:Class .
 UBERON:0003724 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
+UBERON:0003726 a owl:Class ;
+    rdfs:subClassOf UBERON:0001780 .
+
+UBERON:0003727 a owl:Class ;
+    rdfs:subClassOf UBERON:0001780 .
+
 UBERON:0003729 a owl:Class ;
     rdfs:subClassOf UBERON:0000344 .
 
@@ -17682,6 +18265,9 @@ UBERON:0004130 a owl:Class ;
     rdfs:subClassOf UBERON:0011215,
         UBERON:0016548 .
 
+UBERON:0004132 a owl:Class ;
+    rdfs:subClassOf UBERON:0002925 .
+
 UBERON:0004133 a owl:Class ;
     rdfs:subClassOf UBERON:0006331,
         UBERON:0009662 .
@@ -17689,7 +18275,11 @@ UBERON:0004133 a owl:Class ;
 UBERON:0004151 a owl:Class ;
     rdfs:subClassOf UBERON:0000064 .
 
-UBERON:0004170 a owl:Class .
+UBERON:0004170 a owl:Class ;
+    rdfs:subClassOf UBERON:0007838 .
+
+UBERON:0004171 a owl:Class ;
+    rdfs:subClassOf UBERON:0001018 .
 
 UBERON:0004175 a owl:Class ;
     rdfs:subClassOf UBERON:0003133 .
@@ -18276,6 +18866,9 @@ UBERON:0005462 a owl:Class ;
 UBERON:0005465 a owl:Class ;
     rdfs:subClassOf UBERON:0001021 .
 
+UBERON:0005473 a owl:Class ;
+    rdfs:subClassOf UBERON:0011676 .
+
 UBERON:0005476 a owl:Class ;
     rdfs:subClassOf UBERON:0002464 .
 
@@ -18416,6 +19009,12 @@ UBERON:0006133 a owl:Class ;
 
 UBERON:0006134 a owl:Class ;
     rdfs:subClassOf UBERON:0005162 .
+
+UBERON:0006135 a owl:Class ;
+    rdfs:subClassOf UBERON:0006134 .
+
+UBERON:0006136 a owl:Class ;
+    rdfs:subClassOf UBERON:0006134 .
 
 UBERON:0006331 a owl:Class ;
     rdfs:subClassOf UBERON:0002308 .
@@ -18776,6 +19375,9 @@ UBERON:0007639 a owl:Class ;
 UBERON:0007640 a owl:Class ;
     rdfs:subClassOf UBERON:0002305 .
 
+UBERON:0007641 a owl:Class ;
+    rdfs:subClassOf UBERON:0007245 .
+
 UBERON:0007651 a owl:Class ;
     rdfs:subClassOf UBERON:0000061 .
 
@@ -18792,7 +19394,14 @@ UBERON:0007685 a owl:Class ;
 UBERON:0007692 a owl:Class ;
     rdfs:subClassOf UBERON:0006569 .
 
-UBERON:0007703 a owl:Class .
+UBERON:0007699 a owl:Class ;
+    rdfs:subClassOf UBERON:0001018 .
+
+UBERON:0007702 a owl:Class ;
+    rdfs:subClassOf UBERON:0001018 .
+
+UBERON:0007703 a owl:Class ;
+    rdfs:subClassOf UBERON:0007702 .
 
 UBERON:0007710 a owl:Class .
 
@@ -18855,6 +19464,9 @@ UBERON:0007831 a owl:Class ;
 
 UBERON:0007832 a owl:Class ;
     rdfs:subClassOf UBERON:0010719 .
+
+UBERON:0007838 a owl:Class ;
+    rdfs:subClassOf UBERON:0008882 .
 
 UBERON:0008114 a owl:Class ;
     rdfs:subClassOf UBERON:0000982 .
@@ -18978,6 +19590,10 @@ UBERON:0008878 a owl:Class ;
     rdfs:subClassOf UBERON:0005451,
         UBERON:0008837 .
 
+UBERON:0008882 a owl:Class ;
+    rdfs:subClassOf UBERON:0001020,
+        UBERON:0007699 .
+
 UBERON:0008886 a owl:Class ;
     rdfs:subClassOf UBERON:0007798 .
 
@@ -19057,6 +19673,9 @@ UBERON:0009663 a owl:Class ;
 UBERON:0009675 a owl:Class ;
     rdfs:subClassOf UBERON:0001785 .
 
+UBERON:0009758 a owl:Class ;
+    rdfs:subClassOf UBERON:0007134 .
+
 UBERON:0009773 a owl:Class ;
     rdfs:subClassOf UBERON:0003914,
         UBERON:0006555 .
@@ -19098,6 +19717,9 @@ UBERON:0009951 a owl:Class ;
     rdfs:subClassOf UBERON:0002616 .
 
 UBERON:0009952 a owl:Class .
+
+UBERON:0009960 a owl:Class ;
+    rdfs:subClassOf UBERON:0012368 .
 
 UBERON:0009961 a owl:Class ;
     rdfs:subClassOf UBERON:0012369 .
@@ -19723,7 +20345,8 @@ UBERON:0014703 a owl:Class ;
     rdfs:subClassOf UBERON:0000490,
         UBERON:0010371 .
 
-UBERON:0014761 a owl:Class .
+UBERON:0014761 a owl:Class ;
+    rdfs:subClassOf UBERON:0007702 .
 
 UBERON:0014791 a owl:Class ;
     rdfs:subClassOf UBERON:0004474 .
@@ -20480,5 +21103,13 @@ UBERON:8600006 a owl:Class ;
 
 UBERON:8600017 a owl:Class ;
     rdfs:subClassOf UBERON:0000063 .
+
+UBERON:8600121 a owl:Class ;
+    rdfs:subClassOf UBERON:0001807,
+        UBERON:0009758 .
+
+UBERON:8600122 a owl:Class ;
+    rdfs:subClassOf UBERON:0001807,
+        UBERON:0009758 .
 
 ### Serialized using the ttlser deterministic serializer v1.2.3

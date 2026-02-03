@@ -269,20 +269,8 @@ ilx:ilx_0738322 a owl:Class ;
 ilx:ilx_0738326 a owl:Class ;
     ilxtr:hasRegion UBERON:0001737 .
 
-ilx:ilx_0770759 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
-
-ilx:ilx_0771089 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
-
-ilx:ilx_0773760 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
-
 ilx:ilx_0775392 a owl:Class ;
     ilxtr:hasRegion UBERON:0002187 .
-
-ilx:ilx_0776070 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
 
 ilx:ilx_0793141 a owl:Class ;
     ilxtr:hasRegion UBERON:0000057 .
@@ -293,12 +281,6 @@ ilx:ilx_0793613 a owl:Class ;
 ilx:ilx_0793656 a owl:Class ;
     ilxtr:hasRegion ilx:ilx_0793558,
         ilx:ilx_0793658 .
-
-ilx:ilx_0793657 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
-
-ilx:ilx_0793659 a owl:Class ;
-    ilxtr:hasRegion UBERON:0001158 .
 
 ilx:ilx_0793660 a owl:Class ;
     ilxtr:hasRegion UBERON:0013473 .
@@ -447,8 +429,6 @@ UBERON:0013473 a owl:Class .
 ilx:ilx_0774562 a owl:Class .
 
 UBERON:0006493 a owl:Class .
-
-UBERON:0001158 a owl:Class .
 
 UBERON:0002106 a owl:Class .
 

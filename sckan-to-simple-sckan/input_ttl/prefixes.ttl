@@ -63,6 +63,7 @@ PREFIX PATO: <http://purl.obolibrary.org/obo/PATO_/>
 PREFIX PAXRAT: <http://uri.interlex.org/paxinos/uris/rat/labels/>
 PREFIX PMID: <http://www.ncbi.nlm.nih.gov/pubmed/>
 PREFIX portal: <http://uri.interlex.org/composer/uris/set/portal/>
+PREFIX pain1: <http://uri.interlex.org/composer/uris/set/pain1/>
 PREFIX PR: <http://purl.obolibrary.org/obo/PR_/>
 PREFIX prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
 PREFIX prov: <http://www.w3.org/ns/prov#/>

@@ -1,4 +1,4 @@
-Region IRI, Layer IRI
+Region IRI,Layer IRI
 http://purl.obolibrary.org/obo/UBERON_0006490,http://uri.interlex.org/base/ilx_0738321
 http://purl.obolibrary.org/obo/UBERON_0006491,http://uri.interlex.org/base/ilx_0738322
 http://purl.obolibrary.org/obo/UBERON_0002106,http://purl.obolibrary.org/obo/UBERON_0004641
@@ -12,12 +12,6 @@ http://purl.obolibrary.org/obo/UBERON_0003126,http://uri.interlex.org/base/ilx_0
 http://purl.obolibrary.org/obo/UBERON_0002185,http://uri.interlex.org/base/ilx_0793764
 http://purl.obolibrary.org/obo/UBERON_0002186,http://uri.interlex.org/base/ilx_0793765
 http://purl.obolibrary.org/obo/UBERON_0002187,http://uri.interlex.org/base/ilx_0775392
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0793657
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0776070
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0771089
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0773760
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0793659
-http://purl.obolibrary.org/obo/UBERON_0001158,http://uri.interlex.org/base/ilx_0770759
 http://uri.interlex.org/base/ilx_0793646,http://purl.obolibrary.org/obo/UBERON_0035965
 http://purl.obolibrary.org/obo/UBERON_0001530,http://purl.obolibrary.org/obo/UBERON_0037094
 http://purl.obolibrary.org/obo/UBERON_0001532,http://uri.interlex.org/base/ilx_0738305
@@ -32,9 +26,14 @@ http://uri.interlex.org/base/ilx_0793558,http://purl.obolibrary.org/obo/UBERON_0
 http://uri.interlex.org/base/ilx_0793558,http://uri.interlex.org/base/ilx_0793656
 http://purl.obolibrary.org/obo/UBERON_0006457,http://uri.interlex.org/base/ilx_0738306
 http://purl.obolibrary.org/obo/UBERON_0001896,http://purl.obolibrary.org/obo/UBERON_0003714
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001201
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008863
 http://uri.interlex.org/base/ilx_0793658,http://uri.interlex.org/base/ilx_0793656
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008857
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008863
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008862
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001200
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001203
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001199
+http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001201
 http://purl.obolibrary.org/obo/UBERON_0001258,http://purl.obolibrary.org/obo/UBERON_0002384
 http://purl.obolibrary.org/obo/UBERON_0006082,http://purl.obolibrary.org/obo/UBERON_0002384
 http://uri.interlex.org/base/ilx_0793663,http://purl.obolibrary.org/obo/UBERON_0035965
@@ -157,14 +156,9 @@ http://purl.obolibrary.org/obo/UBERON_0006451,http://purl.obolibrary.org/obo/UBE
 http://purl.obolibrary.org/obo/UBERON_0006451,http://purl.obolibrary.org/obo/UBERON_0006118
 http://purl.obolibrary.org/obo/UBERON_0006451,http://purl.obolibrary.org/obo/UBERON_0002181
 http://purl.obolibrary.org/obo/UBERON_0000160,http://purl.obolibrary.org/obo/UBERON_0001243
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008857
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0008862
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001200
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001203
 http://purl.obolibrary.org/obo/UBERON_0013473,http://purl.obolibrary.org/obo/UBERON_0001975
 http://purl.obolibrary.org/obo/UBERON_0013473,http://purl.obolibrary.org/obo/UBERON_0009961
 http://purl.obolibrary.org/obo/UBERON_0013473,http://uri.interlex.org/base/ilx_0793660
-http://uri.interlex.org/base/ilx_0793658,http://purl.obolibrary.org/obo/UBERON_0001199
 http://uri.interlex.org/base/ilx_0793645,http://purl.obolibrary.org/obo/UBERON_0035965
 http://uri.interlex.org/base/ilx_0793643,http://purl.obolibrary.org/obo/UBERON_0035965
 http://uri.interlex.org/base/ilx_0793644,http://purl.obolibrary.org/obo/UBERON_0035965

@@ -29,10 +29,10 @@ from turtle_utilities import fixURIPrefixes
 conn_details = {
   'endpoint': 'https://sd-c1e74c63.stardog.cloud:5820',
   'username': 'sparc-admin',
-  'password': 'password from 1password'
+  'password': 'pwd from 1password'
 }
 
-db_name = 'SCKAN-NOV-2025'
+db_name = 'SCKAN-JAN-2026'
 
 
 # input files needed for simple-sckan

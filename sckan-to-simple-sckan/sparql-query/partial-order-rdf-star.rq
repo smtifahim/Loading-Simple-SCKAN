@@ -1,0 +1,59 @@
+# This is a construct query for rdfstar representation of partial orders with 
+# Region-Layer pairs. The input for this is the serializes neural-connectivity-rdfstar.ttl
+# file generated based on the sparql query on the blazegraph using a python script.
+# - Fahim Imam Jan 30, 2026
+
+PREFIX ex: <http://example.org/>
+PREFIX femrep: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/femrep/>
+PREFIX gastint: <http://uri.interlex.org/composer/uris/set/gastint/>
+PREFIX ILX: <http://uri.interlex.org/base/ilx_>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+PREFIX kidney: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/kidney/>
+PREFIX liver: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/liver/>
+PREFIX mmset1: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset1/>
+PREFIX mmset2cn: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset2cn/>
+PREFIX mmset4: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/mmset4/>
+PREFIX ilxcr: <http://uri.interlex.org/composer/uris/readable/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX portal: <http://uri.interlex.org/composer/uris/set/portal/>
+PREFIX pain1: <http://uri.interlex.org/composer/uris/set/pain1/>
+PREFIX prostate: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/prostate/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX semves: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/semves/>
+PREFIX senmot: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/senmot/>
+PREFIX swglnd: <http://uri.interlex.org/tgbugs/uris/readable/sparc-nlp/swglnd/>
+PREFIX UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+
+CONSTRUCT 
+{
+  ?V1 ilxtr:hasNextNode { ilxtr:isConnectedBy ?Neuron_IRI; 
+                          ilxtr:fromRegion ?region1;
+                          ilxtr:fromLayer ?layer1;
+                          ilxtr:toRegion ?region2;
+                          ilxtr:toLayer ?layer2
+                        } ?V2 .
+}
+WHERE
+{
+  << ?connectionId ex:connects ?region1 >> ex:to ?region2 ;
+                                           ex:via ?Neuron_IRI .
+
+  OPTIONAL { << ?connectionId ex:connects ?region1 >> ex:fromLayer ?layer1 }
+  OPTIONAL { << ?connectionId ex:connects ?region1 >> ex:toLayer ?layer2 }
+
+  BIND(
+    IF(BOUND(?layer1),
+      IRI(CONCAT(STR(?region1), ",", STR(?layer1))),
+      ?region1
+    ) AS ?V1
+  )
+  
+  BIND(
+    IF(BOUND(?layer2),
+      IRI(CONCAT(STR(?region2), ",", STR(?layer2))),
+      ?region2
+    ) AS ?V2
+  )
+}
+ORDER BY ?Neuron_IRI
