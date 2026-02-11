@@ -9,7 +9,11 @@ import sys
 import requests
 import subprocess
 import stardog
-from turtle_utilities import fixURIPrefixes 
+from turtle_utilities import fixURIPrefixes
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv() 
 
 ## Stardog DB connection details using local host 
 # conn_details = {
@@ -18,22 +22,14 @@ from turtle_utilities import fixURIPrefixes
 #   'password': 'admin'
 # }
 
-## Stardog DB connection details using scicrunch endpoint
-# conn_details = {
-#   'endpoint': 'https://stardog.scicrunch.io:5821',
-#   'username': 'admin',
-#   'password': 'password from 1password'
-# }
-
-# Stardog DB connection details using stradog cloud endpoint
+# Stardog DB connection details from environment variables
 conn_details = {
   'endpoint': 'https://sd-c1e74c63.stardog.cloud:5820',
-  'username': 'sparc-admin',
-  'password': 'pwd from 1password'
+  'username': os.getenv('STARDOG_USERNAME'),
+  'password': os.getenv('STARDOG_PASSWORD')
 }
 
-db_name = 'SCKAN-JAN-2026'
-
+db_name = 'SCKAN-FEB-2026'
 
 # input files needed for simple-sckan
 input_files = {
