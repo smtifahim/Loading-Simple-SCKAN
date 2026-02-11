@@ -8665,12 +8665,21 @@ NCBIGene:11535 a owl:Class ;
 NCBIGene:11548 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
+NCBIGene:11551 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Adra2a .
+
+NCBIGene:11910 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Atf3 .
+
 NCBIGene:11989 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
 NCBIGene:11998 a owl:Class ;
     rdfs:subClassOf SO:0000110,
         TEMPIND:Avp .
+
+NCBIGene:12167 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Bmpr1b .
 
 NCBIGene:12307 a owl:Class ;
     rdfs:subClassOf SO:0000110,
@@ -8720,6 +8729,9 @@ NCBIGene:12918 a owl:Class ;
     rdfs:subClassOf SO:0000110,
         TEMPIND:Crh .
 
+NCBIGene:13179 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Dcn .
+
 NCBIGene:13488 a owl:Class ;
     rdfs:subClassOf SO:0000110,
         TEMPIND:Drd1 .
@@ -8756,6 +8768,9 @@ NCBIGene:14799 a owl:Class ;
 
 NCBIGene:14802 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
+
+NCBIGene:14823 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Grm8 .
 
 NCBIGene:15560 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
@@ -8799,6 +8814,15 @@ NCBIGene:18188 a owl:Class ;
 
 NCBIGene:18195 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
+
+NCBIGene:18212 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Ntrk2 .
+
+NCBIGene:18213 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Ntrk3 .
+
+NCBIGene:18387 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Oprk1 .
 
 NCBIGene:18430 a owl:Class ;
     rdfs:subClassOf SO:0000110,
@@ -8858,9 +8882,15 @@ NCBIGene:20563 a owl:Class ;
 NCBIGene:20564 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
+NCBIGene:20600 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Smr2 .
+
 NCBIGene:20604 a owl:Class ;
     rdfs:subClassOf SO:0000110,
         TEMPIND:Sst .
+
+NCBIGene:20606 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Sstr2 .
 
 NCBIGene:20614 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
@@ -8969,6 +8999,9 @@ NCBIGene:64378 a owl:Class ;
 NCBIGene:67792 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
+NCBIGene:67860 a owl:Class ;
+    rdfs:subClassOf TEMPIND:S100a16 .
+
 NCBIGene:67865 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
@@ -8998,8 +9031,14 @@ NCBIGene:140919 a owl:Class ;
     rdfs:subClassOf SO:0000110,
         TEMPIND:Glutamate .
 
+NCBIGene:171382 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Trpm8 .
+
 NCBIGene:192199 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
+
+NCBIGene:193034 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Trpv1 .
 
 NCBIGene:194642 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
@@ -9013,8 +9052,17 @@ NCBIGene:210044 a owl:Class ;
 NCBIGene:210801 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
 
+NCBIGene:211578 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgprd .
+
 NCBIGene:230777 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
+
+NCBIGene:233222 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgpra3 .
+
+NCBIGene:233230 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgprb4 .
 
 NCBIGene:234094 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
@@ -9040,6 +9088,9 @@ NCBIGene:243764 a owl:Class ;
 
 NCBIGene:380684 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
+
+NCBIGene:381489 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Rxfp1 .
 
 NCBIGene:432530 a owl:Class ;
     rdfs:subClassOf SO:0000110 .
@@ -14136,8 +14187,56 @@ PR:000027222 a owl:Class ;
 PR:000030035 a owl:Class ;
     rdfs:subClassOf PR:000000001 .
 
+PR:000038104 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Smr2 .
+
 PR:000064867 a owl:Class ;
     rdfs:subClassOf CHEBI:23367 .
+
+PR:P15209 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Ntrk2 .
+
+PR:P30875 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Sstr2 .
+
+PR:P33534 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Oprk1 .
+
+PR:P36898 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Bmpr1b .
+
+PR:P47743 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Grm8 .
+
+PR:Q6R6I7 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Rxfp1 .
+
+PR:Q6VNS1 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Ntrk3 .
+
+PR:Q8BNE1 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Trpm8 .
+
+PR:Q9D708 a owl:Class ;
+    rdfs:subClassOf TEMPIND:S100a16 .
+
+PR:Q91WW3 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgpra3 .
+
+PR:Q91ZB8 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgprd .
+
+PR:Q91ZC0 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Mrgprb4 .
+
+PR:Q704Y3 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Trpv1 .
+
+PR:Q01338 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Adra2a .
+
+PR:Q60765 a owl:Class ;
+    rdfs:subClassOf TEMPIND:Atf3 .
 
 prostate:11 a owl:Class ;
     rdfs:subClassOf ilxtr:NeuronSparcNlp .
@@ -14891,7 +14990,16 @@ TEMPIND:ACh a owl:Class ;
 TEMPIND:Adm a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Adra2a a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Atf3 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:Avp a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Bmpr1b a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:Calb a owl:Class ;
@@ -14927,6 +15035,9 @@ TEMPIND:CreFlpDependentProteinFluorescingInSpectrumRed a owl:Class ;
 TEMPIND:Crh a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Dcn a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:Drd1 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
@@ -14948,16 +15059,37 @@ TEMPIND:GluR a owl:Class ;
 TEMPIND:Glutamate a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Grm8 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:Htr3a a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:Igf1 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Mrgpra3 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Mrgprb4 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Mrgprd a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:Nos1 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:Npy a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Ntrk2 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Ntrk3 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Oprk1 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:Oxtr a owl:Class ;
@@ -14972,13 +15104,31 @@ TEMPIND:ProteinFluorescingInSpectrumRed a owl:Class ;
 TEMPIND:Pvalb a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Rxfp1 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:S100a16 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:Serotonin a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Smr2 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:Sst a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
+TEMPIND:Sstr2 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
 TEMPIND:TH a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Trpm8 a owl:Class ;
+    rdfs:subClassOf ilxtr:PhenotypeIndicator .
+
+TEMPIND:Trpv1 a owl:Class ;
     rdfs:subClassOf ilxtr:PhenotypeIndicator .
 
 TEMPIND:VIP a owl:Class ;
