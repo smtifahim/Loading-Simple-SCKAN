@@ -57,6 +57,14 @@ ilxtr:hasAxonType rdf:type owl:AnnotationProperty ;
                   rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
+###  http://uri.interlex.org/tgbugs/uris/readable/hasCircuitMembership
+ilxtr:hasCircuitMembership rdf:type owl:AnnotationProperty ;
+                           rdfs:comment "Expresses a relationship between a neuron type and a circuit type that the neuron type is a member of. Implies that individual neurons of that type each have at least one forward or reverse connection with some other member of that circuit type." ;
+                           rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/isMemberOfCircuit" ;
+                           rdfs:label "hasCircuitMembership" ;
+                           rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
+
+
 ###  http://uri.interlex.org/tgbugs/uris/readable/hasCircuitRole
 ilxtr:hasCircuitRole rdf:type owl:AnnotationProperty ;
                      rdfs:comment "Expresses a relation between a neuron population and its circuit role phenotype. Possible phenotype values: Intrinsic, Motor, Sensory, and Projection." ;
@@ -146,14 +154,6 @@ ilxtr:hasSomaLocation rdf:type owl:AnnotationProperty ;
                       rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/hasSomaLocatedIn" ;
                       rdfs:label "hasSomaLocation" ;
                       rdfs:subPropertyOf ilxtr:hasConnectedLocation .
-
-
-###  http://uri.interlex.org/tgbugs/uris/readable/hasCircuitMembership
-ilxtr:isMemberOf rdf:type owl:AnnotationProperty ;
-                 rdfs:comment "Expresses a relationship between a neuron type and a circuit type that the neuron type is a member of. Implies that individual neurons of that type each have at least one forward or reverse connection with some other member of that circuit type." ;
-                 rdfs:isDefinedBy "http://uri.interlex.org/tgbugs/uris/readable/isMemberOfCircuit" ;
-                 rdfs:label "hasCircuitMembership" ;
-                 rdfs:subPropertyOf ilxtr:hasNonLocationalPhenotype .
 
 
 ###  http://uri.interlex.org/tgbugs/uris/readable/isObservedInSpecies
