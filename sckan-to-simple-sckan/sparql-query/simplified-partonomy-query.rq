@@ -1,5 +1,12 @@
-## Given a super_region label, this query returns all the sub_regions of the region either directly or transitively.
-## Given a sub_region, the query returns the super regions of the sub regions including the immediate one.    
+# This query considers the following relations as "broader" ilxtr:isPartOf relation:
+# - UBERON partOf relation (BFO_0000050)
+# - ILX 'is Part Of' relation (ILX:0112785)
+# - RO:0002178 (surrounds relation)
+# - RO:0002221 (supplies relation)
+# - RO:0020101 (vessel supplies blood to relation)
+# The query excludes CL classes and blank nodes.
+# For testing, you can uncomment the FILTER lines to filter by specific region labels.  
+# - Fahim Imam, November 12, 2025
 
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -14,9 +21,11 @@ PREFIX ILX: <http://uri.interlex.org/base/ilx_>
 
 INSERT { ?sub_region ilxtr:isPartOf ?super_region }
 
-# For testing ..
-# Select DISTINCT ?sub_region ?sub_region_label ?super_region ?super_region_label
+## For testing ..
+## Given a super_region label, this query returns all the sub_regions of the region either directly or transitively.
+## Given a sub_region, the query returns the super regions of the sub regions including the immediate one.
 
+# Select DISTINCT ?sub_region ?sub_region_label ?super_region ?super_region_label
 WHERE
 {
    # FILTER (LCase(?super_region_label) = 'heart') #('visual system', 'optic nerve', 'thalamus', 'visual cortex'))
