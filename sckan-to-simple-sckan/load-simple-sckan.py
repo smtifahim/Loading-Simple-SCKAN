@@ -29,7 +29,8 @@ conn_details = {
   'password': os.getenv('STARDOG_PASSWORD')
 }
 
-db_name = 'SCKAN-FEB-2026'
+db_name = 'SCKAN-MAR-2026' # name of the database to be created in stardog. 
+                           # You can change it if you want, but remember it will remove any existing database with the same name.
 
 # input files needed for simple-sckan
 input_files = {
