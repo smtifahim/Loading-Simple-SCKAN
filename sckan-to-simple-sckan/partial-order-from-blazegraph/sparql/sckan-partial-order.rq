@@ -1,0 +1,70 @@
+## SCKAN Partial Order Query: This query retrieves pairs of regions and layers that are in a partial order relationship according to the 'neuronPartialOrder' property. 
+## It checks for different combinations of regions and layers in the partial order and ensures that the pairs are drawn from the same partial order.
+## The results are ordered by subject, region, and layer. For now, this query ONLY works in blazegraph.
+## Original source: https://github.com/SciCrunch/sparc-curation/blob/master/docs/queries.org#npo-partial-orders
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+select distinct
+?s
+?region_1 ?layer_1
+?region_2 ?layer_2
+where {
+  # common
+  ?s ilxtr:neuronPartialOrder ?o .
+  ?o (rdf:rest|rdf:first)* ?r1 .
+  ?r1 (rdf:rest|rdf:first)* ?r2 .
+
+  { # region       region
+    ?region_1 a owl:Class .
+    ?region_2 a owl:Class .
+
+    ?r1 rdf:first ?region_1 .
+    ?r2 rdf:first ?region_2 .
+    filter (?mediator = ?r1)  # draw only from the same partial order
+    ?mediator rdf:first ?region_1 .  # car
+    ?mediator rdf:rest+/rdf:first/rdf:first ?region_2 .  # caadr
+  }
+  union
+  { # region layer region
+    ?region_1 a owl:Class .
+    ?layer_1 a owl:Class .
+    ?region_2 a owl:Class .
+
+    ?r1 rdf:first [ ?region_1 ?layer_1 ] .
+    ?r2 rdf:first ?region_2 .
+    filter (?mediator = ?r1)  # draw only from the same partial order
+    ?mediator rdf:first [ ?region_1 ?layer_1 ] .  # car
+    ?mediator rdf:rest+/rdf:first/rdf:first ?region_2 .  # caadr
+  }
+  union
+  { # region       region layer
+    ?region_1 a owl:Class .
+    ?region_2 a owl:Class .
+    ?layer_2 a owl:Class .
+
+    ?r1 rdf:first ?region_1 .
+    ?r2 rdf:first [ ?region_2 ?layer_2 ] .
+    filter (?mediator = ?r1)  # draw only from the same partial order
+    ?mediator rdf:first ?region_1 .  # car
+    ?mediator rdf:rest+/rdf:first/rdf:first [ ?region_2 ?layer_2 ] .  # caadr
+  }
+  union
+  { # region layer region layer
+    ?region_1 a owl:Class .
+    ?layer_1 a owl:Class .
+    ?region_2 a owl:Class .
+    ?layer_2 a owl:Class .
+
+    ?r1 rdf:first [ ?region_1 ?layer_1 ] .
+    ?r2 rdf:first [ ?region_2 ?layer_2 ] .
+    filter (?mediator = ?r1)  # draw only from the same partial order
+    ?mediator rdf:first [ ?region_1 ?layer_1 ] .  # car
+    ?mediator rdf:rest+/rdf:first/rdf:first [ ?region_2 ?layer_2 ] .  # caadr
+  }
+} order by ?s ?region_1 ?layer_1 ?region_2 ?layer_2
+# limit 900
