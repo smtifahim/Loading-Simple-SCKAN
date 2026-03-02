@@ -1,10 +1,13 @@
+# January 30, 2026 version. Includes simple sckan properties for hasAxonPhenotype (hasAxonType)and isMemberOfCircuit (hasCircuitMembership).
 # November 11, 2025 version. Includes region-layer pairs for locational phenotypes. Also included hasMolecularPhenotype.
 # September 27, 2024 version. Includes ilxtr:hasAxonLeadingToSensorySubcellularElementIn
 # August 1, 2023 version. Includes ilxtr:hasAnatomicalSystemPhenotype instead of ilxtr:hasPhenotype.
 # CONSTRUCT patterns for Simple SCKAN properties based on NPO. 
 # This one is for "unprocessed" NPO; i.e, taking NPO as it is without converting equivalent 
 # axioms with intersections into individual superclass axioms
-# Last updated Nov 11, 2025. - Fahim Imam
+# NOTE: This query assumes that the database (e.g., Stardog) has support for RDF-star, which is needed to represent the region+layer pairs for locational phenotypes.
+# If the database does not support RDF-star, we can modify the query to use a different approach for representing region+layer pairs (e.g. using a blank node or a custom class to represent the combination of region and layer).
+# Last updated Jan 30, 2026. - Fahim Imam
 
 prefix BFO: <http://purl.obolibrary.org/obo/BFO_>
 prefix partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
