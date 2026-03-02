@@ -1,0 +1,35 @@
+# INSERT pattern for Simple SCKAN's simplified supplies relation from UBERON using ilxtr:suppliesTo relation
+# Supplies: Relation between an arterial structure and another structure, where the arterial structure acts as 
+# a conduit channeling fluid, substance or energy.
+# - September 2024
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX partOf: <http://purl.obolibrary.org/obo/BFO_0000050>
+PREFIX ilxtr: <http://uri.interlex.org/tgbugs/uris/readable/>
+PREFIX UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+
+INSERT { ?arterial_structure ilxtr:suppliesTo ?organ_structure }
+
+# To Test with SELECT statement
+# SELECT
+# ?arterial_structure ?arterial_structure_label
+# ?organ_structure ?organ_structure_label
+
+WHERE
+{
+     
+    ?arterial_structure rdfs:subClassOf* [rdf:type owl:Restriction ;
+                                           owl:onProperty RO:0002178 ; # Supplies relation from RO:0002178
+                                           owl:someValuesFrom ?organ_structure].
+ 
+    ## To test with SELECT statement
+    # FILTER (?organ_structure_label = 'ovary')
+    # ?arterial_structure rdfs:label ?arterial_structure_label. 
+    # ?organ_structure rdfs:label ?organ_structure_label.
+   
+    FILTER (CONTAINS (str(?arterial_structure), 'UBERON_') || CONTAINS (str(?arterial_structure), 'ilx_'))
+    FILTER (CONTAINS (str(?organ_structure), 'UBERON_') || CONTAINS (str(?organ_structure), 'ilx_'))
+}
